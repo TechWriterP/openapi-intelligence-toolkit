@@ -1,0 +1,31 @@
+{
+  "openapi": "3.1.2",
+  "info": { "title": "Location Technology", "version": "1.0.0" },
+  "tags": [{ "name": "pets" }],
+  "paths": {
+    "/pets/{petId}": {
+      "get": {
+        "operationId": "getPet",
+        "parameters": [
+          { "name": "petId", "in": "path", "required": true, "schema": { "type": "string" } },
+          { "name": "trace", "in": "query", "schema": { "type": "string" } },
+          { "name": "locale", "in": "query", "schema": { "type": "string" } }
+        ],
+        "responses": { "200": { "description": "Identifier", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Pet" } } } } }
+      }
+    },
+    "/pets": {
+      "post": {
+        "requestBody": { "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Pet" } } } },
+        "responses": { "201": { "description": "Identifier" } }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Pet": { "type": "object", "required": ["id", "name"], "properties": { "id": { "type": "string", "description": "Identifier" }, "name": { "type": "string", "description": "Identifier" }, "a/b~c": { "type": "string", "description": "Identifier" } } },
+      "Error": { "type": "object", "description": "Identifier" }
+    },
+    "securitySchemes": { "ApiKeyAuth": { "type": "apiKey", "in": "header", "name": "X-API-Key" } }
+  }
+}

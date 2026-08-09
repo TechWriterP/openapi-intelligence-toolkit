@@ -1,0 +1,25 @@
+{
+  "name": "oait-source-location-technology-spike-loc-001",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "run:a": "node --import tsx strategy-a/index.ts",
+    "run:b": "node --import tsx strategy-b/index.ts",
+    "run:c": "node --import tsx strategy-c/index.ts",
+    "run": "npm run typecheck && npm run run:a && npm run run:b && npm run run:c"
+  },
+  "dependencies": {
+    "@tree-sitter-grammars/tree-sitter-yaml": "0.6.1",
+    "jsonc-parser": "3.3.1",
+    "tree-sitter": "0.21.1",
+    "tree-sitter-json": "0.24.8",
+    "yaml": "2.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "24.3.0",
+    "tsx": "4.20.4",
+    "typescript": "5.9.2"
+  }
+}
