@@ -1,0 +1,14 @@
+openapi: 3.1.2
+info: { title: Reference Spike, version: 1.0.0 }
+paths:
+  /pets/{petId}:
+    get:
+      responses:
+        '200':
+          description: A pet
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Pet' }
+components:
+  schemas:
+    Pet: { type: object, properties: { id: { type: string } } }

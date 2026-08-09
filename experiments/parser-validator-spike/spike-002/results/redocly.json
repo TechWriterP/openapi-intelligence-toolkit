@@ -1,0 +1,304 @@
+{
+  "candidate": "@redocly/openapi-core",
+  "version": "2.40.0",
+  "runtime": {
+    "node": "v24.18.0"
+  },
+  "candidateApis": [
+    "createConfig({})",
+    "bundle({ ref, config, dereference? })",
+    "bundleFromString({ source, absoluteRef, config })"
+  ],
+  "representationSummary": {
+    "parsed": "No parser-only safe public API used; bundle.parsed is bundled output.",
+    "bundled": "External objects are moved into the root components collection and refs are rewritten or replaced; fileDependencies lists loaded documents.",
+    "dereferenced": "dereference:true replaces refs and creates cyclic graphs for recursion."
+  },
+  "tests": [
+    {
+      "id": "INTERNAL_REF",
+      "status": "PASS",
+      "representation": "bundled",
+      "rawReference": "#/components/schemas/Pet",
+      "resolutionSucceeded": true,
+      "declarationDocument": "fixtures/internal/openapi.yaml",
+      "declarationPointer": "/paths/~1pets~1{petId}/get/responses/200/content/application~1json/schema",
+      "resolvedDocument": "fixtures/internal/openapi.yaml",
+      "resolvedPointer": "/components/schemas/Pet",
+      "rawReferencePreserved": true
+    },
+    {
+      "id": "MULTI_FILE_REF",
+      "status": "PARTIAL",
+      "representation": "bundled",
+      "rawReference": "./schemas/Pet.yaml",
+      "resolutionSucceeded": true,
+      "declarationDocumentPreservedInOutput": false,
+      "targetDocumentListedAsFileDependency": true,
+      "rawReferencePreserved": false,
+      "bundledReference": "#/components/schemas/Pet",
+      "fileDependencies": [
+        "/Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-002/fixtures/multi-file/openapi.yaml",
+        "/Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-002/fixtures/multi-file/schemas/Pet.yaml"
+      ],
+      "notes": [
+        "The external schema is moved to components and the original ref is rewritten; fileDependencies identifies loaded files but does not map a declaration to its target."
+      ]
+    },
+    {
+      "id": "EXTERNAL_REF_WITH_POINTER",
+      "status": "PARTIAL",
+      "representation": "bundled",
+      "rawReference": "./schemas/models.yaml#/Pet",
+      "resolutionSucceeded": true,
+      "rawReferencePreserved": false,
+      "targetDocumentsListed": [
+        "/Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-002/fixtures/nested/openapi.yaml",
+        "/Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-002/fixtures/nested/schemas/models.yaml",
+        "/Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-002/fixtures/nested/schemas/common.yaml"
+      ],
+      "resolvedPointerPreserved": false
+    },
+    {
+      "id": "NESTED_REFERENCES",
+      "status": "PARTIAL",
+      "representation": "bundled",
+      "resolutionSucceeded": true,
+      "expectedChain": [
+        "openapi.yaml",
+        "schemas/models.yaml#/Pet",
+        "schemas/common.yaml#/Identifier"
+      ],
+      "fileDependencies": [
+        "/Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-002/fixtures/nested/openapi.yaml",
+        "/Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-002/fixtures/nested/schemas/models.yaml",
+        "/Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-002/fixtures/nested/schemas/common.yaml"
+      ],
+      "chainDirectlyExposed": false,
+      "notes": [
+        "All source documents are listed, but ordered reference hops and raw fragments are lost in bundled output."
+      ]
+    },
+    {
+      "id": "SHARED_TARGET",
+      "status": "PARTIAL",
+      "representation": "bundled",
+      "resolutionSucceeded": true,
+      "declarationCountInSource": 2,
+      "targetLoadedOnceInDependencies": true,
+      "separateDeclarationProvenancePreserved": false
+    },
+    {
+      "id": "RECURSIVE_REFERENCE",
+      "status": "PASS",
+      "representation": "bundled and dereferenced",
+      "resolutionSucceeded": true,
+      "terminates": true,
+      "bundledLeavesReferenceBoundary": true,
+      "dereferenceThrew": false,
+      "dereferenceProblems": [],
+      "dereferencedCreatesCyclicGraph": true,
+      "notes": [
+        "Default bundling terminates with a recursive internal reference. dereference:true also terminates and produces a cyclic JavaScript graph."
+      ]
+    },
+    {
+      "id": "MISSING_INTERNAL_TARGET",
+      "status": "PASS",
+      "representation": "bundled",
+      "resolutionSucceeded": false,
+      "rawReference": "#/components/schemas/DoesNotExist",
+      "referenceRetained": true,
+      "processingContinued": true,
+      "diagnostics": [
+        {
+          "type": "NormalizedProblem",
+          "message": "Can't resolve $ref",
+          "ruleId": "bundler",
+          "severity": "error",
+          "location": [
+            {
+              "source": {
+                "absoluteRef": "/Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-002/fixtures/unresolved/openapi.yaml",
+                "body": "openapi: 3.1.2\ninfo: { title: Reference Spike, version: 1.0.0 }\npaths: {}\ncomponents:\n  schemas:\n    Broken: { $ref: '#/components/schemas/DoesNotExist' }\n"
+              },
+              "pointer": "#/components/schemas/Broken",
+              "reportOnKey": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MISSING_FILE",
+      "status": "PASS",
+      "representation": "bundled",
+      "resolutionSucceeded": false,
+      "rawReference": "./schemas/Missing.yaml",
+      "referenceRetained": true,
+      "processingContinued": true,
+      "diagnostics": [
+        {
+          "type": "NormalizedProblem",
+          "message": "Can't resolve $ref: ENOENT: no such file or directory '/Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-002/fixtures/unresolved/schemas/Missing.yaml'",
+          "ruleId": "bundler",
+          "severity": "error",
+          "location": [
+            {
+              "source": {
+                "absoluteRef": "/Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-002/fixtures/unresolved/missing-file.yaml",
+                "body": "openapi: 3.1.2\ninfo: { title: Reference Spike, version: 1.0.0 }\npaths: {}\ncomponents:\n  schemas:\n    Broken: { $ref: './schemas/Missing.yaml' }\n"
+              },
+              "pointer": "#/components/schemas/Broken",
+              "reportOnKey": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "INVALID_POINTER",
+      "status": "PASS",
+      "representation": "bundled",
+      "resolutionSucceeded": false,
+      "rawReference": "./schemas/models.yaml#/DoesNotExist",
+      "referenceRetained": true,
+      "processingContinued": true,
+      "diagnostics": [
+        {
+          "type": "NormalizedProblem",
+          "message": "Can't resolve $ref",
+          "ruleId": "bundler",
+          "severity": "error",
+          "location": [
+            {
+              "source": {
+                "absoluteRef": "/Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-002/fixtures/invalid-pointer/openapi.yaml",
+                "body": "openapi: 3.1.2\ninfo: { title: Reference Spike, version: 1.0.0 }\npaths: {}\ncomponents:\n  schemas:\n    Broken: { $ref: './schemas/models.yaml#/DoesNotExist' }\n"
+              },
+              "pointer": "#/components/schemas/Broken",
+              "reportOnKey": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REMOTE_ENABLED",
+      "status": "PASS",
+      "representation": "bundled",
+      "rawReference": "http://127.0.0.1:<dynamic-port>/RemotePet.yaml",
+      "requestCount": 1,
+      "resolutionSucceeded": true,
+      "fileDependencies": [
+        "http://127.0.0.1:<dynamic-port>/RemotePet.yaml"
+      ],
+      "notes": [
+        "Default documented bundling automatically fetched the HTTP reference."
+      ]
+    },
+    {
+      "id": "REMOTE_DISABLED",
+      "status": "NOT_SUPPORTED",
+      "representation": "bundled",
+      "resolutionSucceeded": null,
+      "notes": [
+        "The documented safe API describes an optional externalRefResolver but does not document a supported network-deny configuration or custom resolver implementation contract. No private workaround was used."
+      ]
+    },
+    {
+      "id": "FILESYSTEM_BOUNDARY",
+      "status": "NOT_SUPPORTED",
+      "representation": "bundled",
+      "defaultResolutionEscapedIntendedRoot": true,
+      "outsideFileListedAsDependency": true,
+      "notes": [
+        "Default resolution followed ../outside.yaml. The documented safe API provides no allowed-root option; OAIT would need an owned loader/boundary before invoking Redocly."
+      ]
+    },
+    {
+      "id": "RAW_REF_PRESERVATION",
+      "status": "PARTIAL",
+      "internalPreserved": true,
+      "externalPreserved": false
+    },
+    {
+      "id": "DECLARATION_DOCUMENT",
+      "status": "PARTIAL",
+      "rootAndDependenciesAvailable": true,
+      "directlyAttachedToBundledReference": false
+    },
+    {
+      "id": "TARGET_DOCUMENT",
+      "status": "PARTIAL",
+      "sourceDocumentsListedInFileDependencies": true,
+      "perReferenceTargetMapping": false
+    },
+    {
+      "id": "REFERENCE_CHAIN_EVIDENCE",
+      "status": "PARTIAL",
+      "directOrderedChain": false,
+      "reconstructableOnlyByOaitScanningOriginalSources": true
+    },
+    {
+      "id": "NETWORK_CONTROL",
+      "status": "NOT_SUPPORTED",
+      "notes": [
+        "No documented deny/allow hook was identified in the public safe API."
+      ]
+    },
+    {
+      "id": "DOCUMENTED_API_ONLY",
+      "status": "PASS",
+      "undocumentedOrPrivateApisUsed": false
+    }
+  ],
+  "mutation": {
+    "fixtureFilesChanged": false,
+    "beforeHashes": {
+      "fixtures/filesystem-boundary/outside.yaml": "7572b9bd8622a7c87045134b43c5a3ebd0e439139a67c85caf3e79e6706db114",
+      "fixtures/filesystem-boundary/project/openapi.yaml": "9a88de9b8bbdcb9ad43d9b58220a7f9900ce80add7d9ff12d0174b04fdc13818",
+      "fixtures/internal/openapi.yaml": "28a82611363758fd41634f1b806af36f0eb73c6e984c63178f32ab1a021cfce2",
+      "fixtures/invalid-pointer/openapi.yaml": "54a902ea3c535266e9e8cb919ae3936bfc527c28298e957d4b0b81b361e011cc",
+      "fixtures/invalid-pointer/schemas/models.yaml": "5e2465f1521ed6a3cbbe9898b3450e6840457d3152cf5227241ff7da7b2f9f80",
+      "fixtures/multi-file/openapi.yaml": "a5bfa1667b0e2fd90a250f10f90deb63cffc451208ea0c9f3523ecb8b8bda285",
+      "fixtures/multi-file/schemas/Pet.yaml": "2389ee1a16d014eb11f4147550282540b09beebeaf5db8e81e63f80977a69a75",
+      "fixtures/nested/openapi.yaml": "8c5e6f780afed6edb3c2c4449d2af3b7322ce7fa3c99a29fb0f2b0fc8592e37c",
+      "fixtures/nested/schemas/common.yaml": "07adaa06fd9cafb62bbbd0d753ff06f6566c681afe3bb0835a174f7b0c829e34",
+      "fixtures/nested/schemas/models.yaml": "14cb9b1d58bb9bec1519ab96f383f5a79c82248578d4aff9e5aae65d75ab8684",
+      "fixtures/recursive/openapi.yaml": "aff719cd5567ce8e5102de8e685f70567be394069fe20beb737a83f620f0d72d",
+      "fixtures/recursive/schemas/Node.yaml": "018798a059a55594e06f6279603f2d2da1f8ca38eb610f4b243397643b937bff",
+      "fixtures/remote/RemotePet.yaml": "e2534803362be8dbff159de2c75adc535f1affb9e1d6e9f2f5c997499858d6f5",
+      "fixtures/remote/openapi.yaml": "c71ba0d8c25d1912d9bf5cba60373d5f538c1fcef503c198def116c0b57ae36e",
+      "fixtures/shared-target/openapi.yaml": "b06980462ccbe542705f49748fb355ec87d33966d36cfd4a0c7a40448f83bba4",
+      "fixtures/shared-target/schemas/Pet.yaml": "2389ee1a16d014eb11f4147550282540b09beebeaf5db8e81e63f80977a69a75",
+      "fixtures/unresolved/missing-file.yaml": "71ee7abb07867f276342f6f2ac4d4b078358a3f7eff88911541534f947e676df",
+      "fixtures/unresolved/openapi.yaml": "76bdb5d1af8d9e4a2899a7c66671c232f7d52ba6213730b63e0a9bfc0dfb5d57"
+    },
+    "afterHashes": {
+      "fixtures/filesystem-boundary/outside.yaml": "7572b9bd8622a7c87045134b43c5a3ebd0e439139a67c85caf3e79e6706db114",
+      "fixtures/filesystem-boundary/project/openapi.yaml": "9a88de9b8bbdcb9ad43d9b58220a7f9900ce80add7d9ff12d0174b04fdc13818",
+      "fixtures/internal/openapi.yaml": "28a82611363758fd41634f1b806af36f0eb73c6e984c63178f32ab1a021cfce2",
+      "fixtures/invalid-pointer/openapi.yaml": "54a902ea3c535266e9e8cb919ae3936bfc527c28298e957d4b0b81b361e011cc",
+      "fixtures/invalid-pointer/schemas/models.yaml": "5e2465f1521ed6a3cbbe9898b3450e6840457d3152cf5227241ff7da7b2f9f80",
+      "fixtures/multi-file/openapi.yaml": "a5bfa1667b0e2fd90a250f10f90deb63cffc451208ea0c9f3523ecb8b8bda285",
+      "fixtures/multi-file/schemas/Pet.yaml": "2389ee1a16d014eb11f4147550282540b09beebeaf5db8e81e63f80977a69a75",
+      "fixtures/nested/openapi.yaml": "8c5e6f780afed6edb3c2c4449d2af3b7322ce7fa3c99a29fb0f2b0fc8592e37c",
+      "fixtures/nested/schemas/common.yaml": "07adaa06fd9cafb62bbbd0d753ff06f6566c681afe3bb0835a174f7b0c829e34",
+      "fixtures/nested/schemas/models.yaml": "14cb9b1d58bb9bec1519ab96f383f5a79c82248578d4aff9e5aae65d75ab8684",
+      "fixtures/recursive/openapi.yaml": "aff719cd5567ce8e5102de8e685f70567be394069fe20beb737a83f620f0d72d",
+      "fixtures/recursive/schemas/Node.yaml": "018798a059a55594e06f6279603f2d2da1f8ca38eb610f4b243397643b937bff",
+      "fixtures/remote/RemotePet.yaml": "e2534803362be8dbff159de2c75adc535f1affb9e1d6e9f2f5c997499858d6f5",
+      "fixtures/remote/openapi.yaml": "c71ba0d8c25d1912d9bf5cba60373d5f538c1fcef503c198def116c0b57ae36e",
+      "fixtures/shared-target/openapi.yaml": "b06980462ccbe542705f49748fb355ec87d33966d36cfd4a0c7a40448f83bba4",
+      "fixtures/shared-target/schemas/Pet.yaml": "2389ee1a16d014eb11f4147550282540b09beebeaf5db8e81e63f80977a69a75",
+      "fixtures/unresolved/missing-file.yaml": "71ee7abb07867f276342f6f2ac4d4b078358a3f7eff88911541534f947e676df",
+      "fixtures/unresolved/openapi.yaml": "76bdb5d1af8d9e4a2899a7c66671c232f7d52ba6213730b63e0a9bfc0dfb5d57"
+    }
+  },
+  "typescript": {
+    "compiler": "typescript 5.9.2",
+    "compiledWithSkipLibCheck": true,
+    "inheritedIssuesFromSpike001": true
+  }
+}

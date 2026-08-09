@@ -1,0 +1,304 @@
+{
+  "candidate": "@scalar/openapi-parser",
+  "version": "0.28.10",
+  "supportingPublicPackage": {
+    "name": "@scalar/json-magic",
+    "version": "0.12.19"
+  },
+  "runtime": {
+    "node": "v24.18.0"
+  },
+  "candidateApis": [
+    "dereference(value, { onDereference })"
+  ],
+  "documentedSupportingApis": [
+    "bundle(input, options)",
+    "readFiles()",
+    "fetchUrls()",
+    "parseYaml()",
+    "LoaderPlugin",
+    "urlMap",
+    "lifecycle hooks"
+  ],
+  "representationSummary": {
+    "parsed": "Loader plugins parse YAML while loading.",
+    "bundled": "External documents copied under x-ext; external refs rewritten; x-ext-urls maps hashes to normalized resources.",
+    "dereferenced": "Scalar dereference replaces refs; recursive input becomes a cyclic JavaScript graph."
+  },
+  "tests": [
+    {
+      "id": "INTERNAL_REF",
+      "status": "PASS",
+      "representation": "bundled",
+      "rawReference": "#/components/schemas/Pet",
+      "resolutionSucceeded": true,
+      "declarationDocument": "fixtures/internal/openapi.yaml",
+      "declarationPointer": "/paths/~1pets~1{petId}/get/responses/200/content/application~1json/schema",
+      "resolvedDocument": "fixtures/internal/openapi.yaml",
+      "resolvedPointer": "/components/schemas/Pet",
+      "rawReferencePreserved": true,
+      "notes": [
+        "Internal references remain reference boundaries during bundling."
+      ]
+    },
+    {
+      "id": "MULTI_FILE_REF",
+      "status": "PARTIAL",
+      "representation": "bundled",
+      "rawReference": "./schemas/Pet.yaml",
+      "resolutionSucceeded": true,
+      "declarationDocument": "fixtures/multi-file/openapi.yaml",
+      "declarationPointer": "/paths/~1pets~1{petId}/get/responses/200/content/application~1json/schema",
+      "resolvedDocument": "schemas/Pet.yaml",
+      "resolvedPointer": "",
+      "rawReferencePreserved": false,
+      "bundledReference": "#/x-ext/15966c3",
+      "urlMap": {
+        "15966c3": "schemas/Pet.yaml"
+      },
+      "notes": [
+        "urlMap preserves a normalized target path, but the raw reference is rewritten and declaration-document identity is not attached to the returned reference."
+      ]
+    },
+    {
+      "id": "EXTERNAL_REF_WITH_POINTER",
+      "status": "PARTIAL",
+      "representation": "bundled",
+      "rawReference": "./schemas/models.yaml#/Pet",
+      "resolutionSucceeded": true,
+      "declarationDocument": "fixtures/nested/openapi.yaml",
+      "declarationPointer": "/components/schemas/Pet",
+      "resolvedDocument": "schemas/models.yaml",
+      "resolvedPointer": "/Pet",
+      "rawReferencePreserved": false,
+      "urlMap": {
+        "0e56213": "schemas/models.yaml",
+        "0d5e96c": "schemas/common.yaml"
+      }
+    },
+    {
+      "id": "NESTED_REFERENCES",
+      "status": "PARTIAL",
+      "representation": "bundled",
+      "resolutionSucceeded": true,
+      "expectedChain": [
+        "openapi.yaml",
+        "schemas/models.yaml#/Pet",
+        "schemas/common.yaml#/Identifier"
+      ],
+      "observedUrlMap": {
+        "0e56213": "schemas/models.yaml",
+        "0d5e96c": "schemas/common.yaml"
+      },
+      "observedEvents": [
+        {
+          "rawReference": "./schemas/models.yaml#/Pet",
+          "declarationPointer": "/components/schemas/Pet"
+        },
+        {
+          "rawReference": "./common.yaml#/Identifier",
+          "declarationPointer": "/x-ext/0e56213/[object Object]/Pet/properties/id"
+        }
+      ],
+      "chainDirectlyExposed": false,
+      "chainReconstructableWithSourceScanning": true,
+      "notes": [
+        "The URL map identifies both external documents; the ordered declaration-to-target chain is not returned as a first-class structure."
+      ]
+    },
+    {
+      "id": "SHARED_TARGET",
+      "status": "PARTIAL",
+      "representation": "bundled",
+      "resolutionSucceeded": true,
+      "declarationCountInSource": 2,
+      "targetDocumentCountInUrlMap": 1,
+      "separateDeclarationProvenancePreserved": false,
+      "notes": [
+        "Both bundled references target the same x-ext entry, but declaration provenance is not attached after rewrite."
+      ]
+    },
+    {
+      "id": "RECURSIVE_REFERENCE",
+      "status": "PASS",
+      "representation": "bundled and dereferenced",
+      "resolutionSucceeded": true,
+      "bundledLeavesReferenceBoundary": true,
+      "dereferenceErrors": [],
+      "dereferencedCreatesCyclicGraph": true,
+      "terminates": true,
+      "notes": [
+        "Bundling safely retains a recursive $ref; dereferencing terminates and creates a cyclic JavaScript graph."
+      ]
+    },
+    {
+      "id": "MISSING_INTERNAL_TARGET",
+      "status": "PASS",
+      "representation": "bundle followed by dereference",
+      "resolutionSucceeded": false,
+      "rawReference": "#/components/schemas/DoesNotExist",
+      "referenceRetained": true,
+      "processingContinued": true,
+      "diagnostics": [
+        {
+          "code": "INVALID_REFERENCE",
+          "message": "Can't resolve reference: #/components/schemas/DoesNotExist"
+        }
+      ],
+      "notes": [
+        "The bundler alone does not validate internal pointers; documented dereference supplies INVALID_REFERENCE."
+      ]
+    },
+    {
+      "id": "MISSING_FILE",
+      "status": "PASS",
+      "representation": "bundle followed by dereference",
+      "resolutionSucceeded": false,
+      "rawReference": "./schemas/Missing.yaml",
+      "referenceRetained": true,
+      "processingContinued": true,
+      "diagnostics": [
+        {
+          "code": "EXTERNAL_REFERENCE_NOT_FOUND",
+          "message": "Can't resolve external reference: ./schemas/Missing.yaml"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "INVALID_POINTER",
+      "status": "PASS",
+      "representation": "bundle followed by dereference",
+      "resolutionSucceeded": false,
+      "rawReference": "./schemas/models.yaml#/DoesNotExist",
+      "referenceRetained": true,
+      "processingContinued": true,
+      "diagnostics": [
+        {
+          "code": "INVALID_REFERENCE",
+          "message": "Can't resolve reference: #/x-ext/0e56213/DoesNotExist"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "REMOTE_ENABLED",
+      "status": "PASS",
+      "representation": "bundled",
+      "rawReference": "http://127.0.0.1:<dynamic-port>/RemotePet.yaml",
+      "requestCount": 1,
+      "resolutionSucceeded": true,
+      "notes": [
+        "Network retrieval occurs only because the documented fetchUrls plugin was supplied."
+      ]
+    },
+    {
+      "id": "REMOTE_DISABLED",
+      "status": "PASS",
+      "representation": "bundled",
+      "requestCount": 0,
+      "resolutionSucceeded": false,
+      "referenceRetained": true,
+      "control": "Omit fetchUrls loader plugin"
+    },
+    {
+      "id": "FILESYSTEM_BOUNDARY",
+      "status": "PASS",
+      "representation": "bundled",
+      "defaultResolutionEscapedIntendedRoot": true,
+      "controlledResolutionDenied": true,
+      "controlledOutputRetainsReference": true,
+      "control": "Documented custom LoaderPlugin wrapping readFiles()",
+      "notes": [
+        "Default readFiles has no allowed-root option. OAIT can enforce a boundary with a documented custom loader plugin."
+      ]
+    },
+    {
+      "id": "RAW_REF_PRESERVATION",
+      "status": "PARTIAL",
+      "internalPreserved": true,
+      "externalPreserved": false,
+      "notes": [
+        "External refs are rewritten to internal x-ext pointers; urlMap preserves normalized external resource paths, not the exact raw spelling including fragments."
+      ]
+    },
+    {
+      "id": "DECLARATION_DOCUMENT",
+      "status": "PARTIAL",
+      "directlyAttachedToBundledReference": false,
+      "reconstructableFromOriginalSources": true
+    },
+    {
+      "id": "TARGET_DOCUMENT",
+      "status": "PASS",
+      "availableThroughDocumentedUrlMap": true,
+      "urlMapExample": {
+        "15966c3": "schemas/Pet.yaml"
+      }
+    },
+    {
+      "id": "REFERENCE_CHAIN_EVIDENCE",
+      "status": "PARTIAL",
+      "directOrderedChain": false,
+      "reconstructableByOaitSourceScanningPlusUrlMap": true
+    },
+    {
+      "id": "NETWORK_CONTROL",
+      "status": "PASS",
+      "control": "Explicit plugin allow-list; omit fetchUrls to prevent HTTP(S) loading."
+    },
+    {
+      "id": "DOCUMENTED_API_ONLY",
+      "status": "PASS",
+      "undocumentedOrPrivateApisUsed": false
+    }
+  ],
+  "mutation": {
+    "fixtureFilesChanged": false,
+    "beforeHashes": {
+      "fixtures/filesystem-boundary/outside.yaml": "7572b9bd8622a7c87045134b43c5a3ebd0e439139a67c85caf3e79e6706db114",
+      "fixtures/filesystem-boundary/project/openapi.yaml": "9a88de9b8bbdcb9ad43d9b58220a7f9900ce80add7d9ff12d0174b04fdc13818",
+      "fixtures/internal/openapi.yaml": "28a82611363758fd41634f1b806af36f0eb73c6e984c63178f32ab1a021cfce2",
+      "fixtures/invalid-pointer/openapi.yaml": "54a902ea3c535266e9e8cb919ae3936bfc527c28298e957d4b0b81b361e011cc",
+      "fixtures/invalid-pointer/schemas/models.yaml": "5e2465f1521ed6a3cbbe9898b3450e6840457d3152cf5227241ff7da7b2f9f80",
+      "fixtures/multi-file/openapi.yaml": "a5bfa1667b0e2fd90a250f10f90deb63cffc451208ea0c9f3523ecb8b8bda285",
+      "fixtures/multi-file/schemas/Pet.yaml": "2389ee1a16d014eb11f4147550282540b09beebeaf5db8e81e63f80977a69a75",
+      "fixtures/nested/openapi.yaml": "8c5e6f780afed6edb3c2c4449d2af3b7322ce7fa3c99a29fb0f2b0fc8592e37c",
+      "fixtures/nested/schemas/common.yaml": "07adaa06fd9cafb62bbbd0d753ff06f6566c681afe3bb0835a174f7b0c829e34",
+      "fixtures/nested/schemas/models.yaml": "14cb9b1d58bb9bec1519ab96f383f5a79c82248578d4aff9e5aae65d75ab8684",
+      "fixtures/recursive/openapi.yaml": "aff719cd5567ce8e5102de8e685f70567be394069fe20beb737a83f620f0d72d",
+      "fixtures/recursive/schemas/Node.yaml": "018798a059a55594e06f6279603f2d2da1f8ca38eb610f4b243397643b937bff",
+      "fixtures/remote/RemotePet.yaml": "e2534803362be8dbff159de2c75adc535f1affb9e1d6e9f2f5c997499858d6f5",
+      "fixtures/remote/openapi.yaml": "c71ba0d8c25d1912d9bf5cba60373d5f538c1fcef503c198def116c0b57ae36e",
+      "fixtures/shared-target/openapi.yaml": "b06980462ccbe542705f49748fb355ec87d33966d36cfd4a0c7a40448f83bba4",
+      "fixtures/shared-target/schemas/Pet.yaml": "2389ee1a16d014eb11f4147550282540b09beebeaf5db8e81e63f80977a69a75",
+      "fixtures/unresolved/missing-file.yaml": "71ee7abb07867f276342f6f2ac4d4b078358a3f7eff88911541534f947e676df",
+      "fixtures/unresolved/openapi.yaml": "76bdb5d1af8d9e4a2899a7c66671c232f7d52ba6213730b63e0a9bfc0dfb5d57"
+    },
+    "afterHashes": {
+      "fixtures/filesystem-boundary/outside.yaml": "7572b9bd8622a7c87045134b43c5a3ebd0e439139a67c85caf3e79e6706db114",
+      "fixtures/filesystem-boundary/project/openapi.yaml": "9a88de9b8bbdcb9ad43d9b58220a7f9900ce80add7d9ff12d0174b04fdc13818",
+      "fixtures/internal/openapi.yaml": "28a82611363758fd41634f1b806af36f0eb73c6e984c63178f32ab1a021cfce2",
+      "fixtures/invalid-pointer/openapi.yaml": "54a902ea3c535266e9e8cb919ae3936bfc527c28298e957d4b0b81b361e011cc",
+      "fixtures/invalid-pointer/schemas/models.yaml": "5e2465f1521ed6a3cbbe9898b3450e6840457d3152cf5227241ff7da7b2f9f80",
+      "fixtures/multi-file/openapi.yaml": "a5bfa1667b0e2fd90a250f10f90deb63cffc451208ea0c9f3523ecb8b8bda285",
+      "fixtures/multi-file/schemas/Pet.yaml": "2389ee1a16d014eb11f4147550282540b09beebeaf5db8e81e63f80977a69a75",
+      "fixtures/nested/openapi.yaml": "8c5e6f780afed6edb3c2c4449d2af3b7322ce7fa3c99a29fb0f2b0fc8592e37c",
+      "fixtures/nested/schemas/common.yaml": "07adaa06fd9cafb62bbbd0d753ff06f6566c681afe3bb0835a174f7b0c829e34",
+      "fixtures/nested/schemas/models.yaml": "14cb9b1d58bb9bec1519ab96f383f5a79c82248578d4aff9e5aae65d75ab8684",
+      "fixtures/recursive/openapi.yaml": "aff719cd5567ce8e5102de8e685f70567be394069fe20beb737a83f620f0d72d",
+      "fixtures/recursive/schemas/Node.yaml": "018798a059a55594e06f6279603f2d2da1f8ca38eb610f4b243397643b937bff",
+      "fixtures/remote/RemotePet.yaml": "e2534803362be8dbff159de2c75adc535f1affb9e1d6e9f2f5c997499858d6f5",
+      "fixtures/remote/openapi.yaml": "c71ba0d8c25d1912d9bf5cba60373d5f538c1fcef503c198def116c0b57ae36e",
+      "fixtures/shared-target/openapi.yaml": "b06980462ccbe542705f49748fb355ec87d33966d36cfd4a0c7a40448f83bba4",
+      "fixtures/shared-target/schemas/Pet.yaml": "2389ee1a16d014eb11f4147550282540b09beebeaf5db8e81e63f80977a69a75",
+      "fixtures/unresolved/missing-file.yaml": "71ee7abb07867f276342f6f2ac4d4b078358a3f7eff88911541534f947e676df",
+      "fixtures/unresolved/openapi.yaml": "76bdb5d1af8d9e4a2899a7c66671c232f7d52ba6213730b63e0a9bfc0dfb5d57"
+    }
+  },
+  "typescript": {
+    "compiler": "typescript 5.9.2",
+    "compiledWithSkipLibCheck": true,
+    "inheritedIssuesFromSpike001": true
+  }
+}
