@@ -1,0 +1,21 @@
+{
+  "name": "oait-parser-validator-spike-001",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "run:scalar": "node --import tsx scalar/index.ts",
+    "run:redocly": "node --import tsx redocly/index.ts",
+    "run": "npm run typecheck && npm run run:scalar && npm run run:redocly"
+  },
+  "dependencies": {
+    "@redocly/openapi-core": "2.40.0",
+    "@scalar/openapi-parser": "0.28.10"
+  },
+  "devDependencies": {
+    "@types/node": "24.3.0",
+    "tsx": "4.20.4",
+    "typescript": "5.9.2"
+  }
+}

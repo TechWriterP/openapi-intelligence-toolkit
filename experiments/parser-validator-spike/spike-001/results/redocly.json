@@ -1,0 +1,214 @@
+{
+  "candidate": "@redocly/openapi-core",
+  "installedVersion": "2.40.0",
+  "runtime": {
+    "node": "v24.18.0"
+  },
+  "apiUsed": "createConfig({}), bundleFromString({ source, absoluteRef, config })",
+  "apiDocumentation": "Package README, Bundle from memory section",
+  "undocumentedOrPrivateApisNeeded": false,
+  "typescript": {
+    "compiler": "typescript 5.9.2",
+    "compiled": true,
+    "issues": [
+      "Full dependency declaration checking failed: transitive @redocly/config declarations reference undeclared React and @markdoc/markdoc types.",
+      "Experiment source compiles with skipLibCheck=true."
+    ]
+  },
+  "fixtures": [
+    {
+      "file": "openapi-3.0.yaml",
+      "format": "YAML",
+      "declaredOpenApiVersion": "3.0.4",
+      "processingSucceeded": true,
+      "status": "PASS",
+      "observed": {
+        "openapi": "3.0.4",
+        "title": "OAIT Parser Spike API",
+        "apiVersion": "1.0.0",
+        "pathFound": true,
+        "getOperationFound": true,
+        "operationId": "getPet",
+        "summary": "Get a pet",
+        "parameterFound": true,
+        "parameterRequired": true,
+        "response200Found": true,
+        "petSchemaFound": true,
+        "securitySchemeFound": true,
+        "responseSchemaReferencePreserved": true
+      },
+      "diagnostics": [],
+      "mutation": {
+        "inputMutated": false,
+        "outputRepresentation": "bundled parsed JavaScript object",
+        "declaredVersionPreserved": true,
+        "internalReferencePreserved": true,
+        "appearsToTransformSemanticContent": false
+      }
+    },
+    {
+      "file": "openapi-3.0.json",
+      "format": "JSON",
+      "declaredOpenApiVersion": "3.0.4",
+      "processingSucceeded": true,
+      "status": "PASS",
+      "observed": {
+        "openapi": "3.0.4",
+        "title": "OAIT Parser Spike API",
+        "apiVersion": "1.0.0",
+        "pathFound": true,
+        "getOperationFound": true,
+        "operationId": "getPet",
+        "summary": "Get a pet",
+        "parameterFound": true,
+        "parameterRequired": true,
+        "response200Found": true,
+        "petSchemaFound": true,
+        "securitySchemeFound": true,
+        "responseSchemaReferencePreserved": true
+      },
+      "diagnostics": [],
+      "mutation": {
+        "inputMutated": false,
+        "outputRepresentation": "bundled parsed JavaScript object",
+        "declaredVersionPreserved": true,
+        "internalReferencePreserved": true,
+        "appearsToTransformSemanticContent": false
+      }
+    },
+    {
+      "file": "openapi-3.1.yaml",
+      "format": "YAML",
+      "declaredOpenApiVersion": "3.1.2",
+      "processingSucceeded": true,
+      "status": "PASS",
+      "observed": {
+        "openapi": "3.1.2",
+        "title": "OAIT Parser Spike API",
+        "apiVersion": "1.0.0",
+        "pathFound": true,
+        "getOperationFound": true,
+        "operationId": "getPet",
+        "summary": "Get a pet",
+        "parameterFound": true,
+        "parameterRequired": true,
+        "response200Found": true,
+        "petSchemaFound": true,
+        "securitySchemeFound": true,
+        "responseSchemaReferencePreserved": true
+      },
+      "diagnostics": [],
+      "mutation": {
+        "inputMutated": false,
+        "outputRepresentation": "bundled parsed JavaScript object",
+        "declaredVersionPreserved": true,
+        "internalReferencePreserved": true,
+        "appearsToTransformSemanticContent": false
+      }
+    },
+    {
+      "file": "openapi-3.1.json",
+      "format": "JSON",
+      "declaredOpenApiVersion": "3.1.2",
+      "processingSucceeded": true,
+      "status": "PASS",
+      "observed": {
+        "openapi": "3.1.2",
+        "title": "OAIT Parser Spike API",
+        "apiVersion": "1.0.0",
+        "pathFound": true,
+        "getOperationFound": true,
+        "operationId": "getPet",
+        "summary": "Get a pet",
+        "parameterFound": true,
+        "parameterRequired": true,
+        "response200Found": true,
+        "petSchemaFound": true,
+        "securitySchemeFound": true,
+        "responseSchemaReferencePreserved": true
+      },
+      "diagnostics": [],
+      "mutation": {
+        "inputMutated": false,
+        "outputRepresentation": "bundled parsed JavaScript object",
+        "declaredVersionPreserved": true,
+        "internalReferencePreserved": true,
+        "appearsToTransformSemanticContent": false
+      }
+    },
+    {
+      "file": "openapi-3.2.yaml",
+      "format": "YAML",
+      "declaredOpenApiVersion": "3.2.0",
+      "processingSucceeded": true,
+      "status": "PASS",
+      "observed": {
+        "openapi": "3.2.0",
+        "title": "OAIT Parser Spike API",
+        "apiVersion": "1.0.0",
+        "pathFound": true,
+        "getOperationFound": true,
+        "operationId": "getPet",
+        "summary": "Get a pet",
+        "parameterFound": true,
+        "parameterRequired": true,
+        "response200Found": true,
+        "petSchemaFound": true,
+        "securitySchemeFound": true,
+        "responseSchemaReferencePreserved": true
+      },
+      "diagnostics": [],
+      "mutation": {
+        "inputMutated": false,
+        "outputRepresentation": "bundled parsed JavaScript object",
+        "declaredVersionPreserved": true,
+        "internalReferencePreserved": true,
+        "appearsToTransformSemanticContent": false
+      }
+    },
+    {
+      "file": "openapi-3.2.json",
+      "format": "JSON",
+      "declaredOpenApiVersion": "3.2.0",
+      "processingSucceeded": true,
+      "status": "PASS",
+      "observed": {
+        "openapi": "3.2.0",
+        "title": "OAIT Parser Spike API",
+        "apiVersion": "1.0.0",
+        "pathFound": true,
+        "getOperationFound": true,
+        "operationId": "getPet",
+        "summary": "Get a pet",
+        "parameterFound": true,
+        "parameterRequired": true,
+        "response200Found": true,
+        "petSchemaFound": true,
+        "securitySchemeFound": true,
+        "responseSchemaReferencePreserved": true
+      },
+      "diagnostics": [],
+      "mutation": {
+        "inputMutated": false,
+        "outputRepresentation": "bundled parsed JavaScript object",
+        "declaredVersionPreserved": true,
+        "internalReferencePreserved": true,
+        "appearsToTransformSemanticContent": false
+      }
+    }
+  ],
+  "invalidFixture": {
+    "file": "invalid.yaml",
+    "threw": true,
+    "returnedStructuredError": false,
+    "processingSucceeded": false,
+    "diagnostics": [
+      {
+        "type": "YamlParseError",
+        "message": "deficient indentation in \"/Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-001/fixtures/invalid.yaml\" (11:1)",
+        "location": null,
+        "code": null
+      }
+    ]
+  }
+}
