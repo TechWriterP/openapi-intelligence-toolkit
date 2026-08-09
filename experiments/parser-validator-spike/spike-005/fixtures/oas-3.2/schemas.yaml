@@ -1,0 +1,54 @@
+openapi: 3.2.0
+info: { title: OAS 3.2 schemas, version: 1.0.0 }
+paths: {}
+components:
+  schemas:
+    NullType: { type: [string, 'null'] }
+    NullableKeyword: { type: string, nullable: true }
+    BooleanTrue: true
+    BooleanFalse: false
+    Pet: { type: object, properties: { name: { type: string } } }
+    RefSibling: { $ref: '#/components/schemas/Pet', description: A pet., maxProperties: 20 }
+    Composition:
+      allOf:
+        - { $ref: '#/components/schemas/Pet' }
+        - oneOf: [{ type: object }, { anyOf: [true, { not: false }] }]
+    Node: { type: object, properties: { child: { $ref: '#/components/schemas/Node' } } }
+    A: { type: object, properties: { b: { $ref: '#/components/schemas/B' } } }
+    B: { type: object, properties: { a: { $ref: '#/components/schemas/A' } } }
+    SchemaOverride: { $schema: 'https://json-schema.org/draft/2020-12/schema', type: object }
+    UnknownKeyword: { type: string, acmeQualityScore: 42 }
+    Container:
+      $defs: { Identifier: { type: string, pattern: '^[A-Z0-9]+$' } }
+      type: object
+      properties: { id: { $ref: '#/components/schemas/Container/$defs/Identifier' } }
+    Modern:
+      type: array
+      const: [fixed]
+      contains: { type: string }
+      minContains: 1
+      maxContains: 2
+      prefixItems: [{ type: string }, { type: integer }]
+      unevaluatedProperties: false
+      dependentSchemas: { mode: { properties: { detail: { type: string } } } }
+    Anchored:
+      $id: https://example.test/schemas/anchored-32
+      $anchor: anchored
+      $dynamicAnchor: node
+      type: object
+      properties: { next: { $dynamicRef: '#node' } }
+    Rich:
+      $id: https://example.test/schemas/rich
+      title: Rich schema
+      description: Canonical fidelity fixture
+      type: object
+      format: custom-object
+      required: [id]
+      properties: { id: { $ref: '#/components/schemas/Rich/$defs/Identifier' }, state: { type: string } }
+      enum: [{ id: A }]
+      examples: [{ id: A, state: active }]
+      default: { id: A }
+      allOf: [{ type: object }]
+      $defs: { Identifier: { type: string } }
+      acmeQualityScore: 42
+      unevaluatedProperties: false

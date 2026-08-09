@@ -1,0 +1,9 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://example.test/schemas/customer
+$defs:
+  Identifier: { type: string }
+type: object
+acmeQualityScore: 42
+properties:
+  id: { $ref: '#/$defs/Identifier' }
+  parent: { $ref: '#' }

@@ -1,0 +1,4810 @@
+{
+  "environment": {
+    "date": "2026-08-09T17:52:35.181Z",
+    "node": "v24.18.0",
+    "platform": "darwin",
+    "architecture": "arm64",
+    "typescript": "5.9.2",
+    "module": "ESM/NodeNext",
+    "skipLibCheck": true
+  },
+  "candidate": {
+    "name": "@scalar/openapi-parser",
+    "version": "0.28.10",
+    "supporting": {
+      "name": "@scalar/json-magic",
+      "version": "0.12.19"
+    }
+  },
+  "candidateApis": [
+    "validate(source)",
+    "bundle(input, options)",
+    "readFiles()",
+    "lifecycle hooks",
+    "dereference(value)"
+  ],
+  "fixtureHashes": {
+    "before": {
+      "fixtures/oas-3.0/schemas.yaml": "b7a70f5a26eddebd2d8ddb28c1784d32429e75d0a8545c28d57ae9fe385faf07",
+      "fixtures/oas-3.1/default-dialect.yaml": "9abdfa8b589eb6a06a7fad86a47326d93aae7d1d30b0c722ea54f0b3e21db1ff",
+      "fixtures/oas-3.1/schemas.yaml": "972facb37bb3326a054f76d8e314cc23334555512b634f88cd737db09999de2d",
+      "fixtures/oas-3.2/default-dialect.yaml": "f6d2794e4f778a1451aa83398b10178806baa7c6d3e2401e5dcbd37d9a3e633c",
+      "fixtures/oas-3.2/schemas.yaml": "33963d8b5ecacd0d9e6b72d48ec12fa91a067fc352c4b2298a9ba5c6f9dffbb5",
+      "fixtures/referenced/openapi.yaml": "eaaee59045a3ac8a859808cfea3f5a8ee0c0e52c285b6a234c0627a8953244bd",
+      "fixtures/referenced/schemas/customer.yaml": "16efa9f4eee81235fea92498ebcf144c0a2609f8c9ee351ab749b059cb0214a2"
+    },
+    "after": {
+      "fixtures/oas-3.0/schemas.yaml": "b7a70f5a26eddebd2d8ddb28c1784d32429e75d0a8545c28d57ae9fe385faf07",
+      "fixtures/oas-3.1/default-dialect.yaml": "9abdfa8b589eb6a06a7fad86a47326d93aae7d1d30b0c722ea54f0b3e21db1ff",
+      "fixtures/oas-3.1/schemas.yaml": "972facb37bb3326a054f76d8e314cc23334555512b634f88cd737db09999de2d",
+      "fixtures/oas-3.2/default-dialect.yaml": "f6d2794e4f778a1451aa83398b10178806baa7c6d3e2401e5dcbd37d9a3e633c",
+      "fixtures/oas-3.2/schemas.yaml": "33963d8b5ecacd0d9e6b72d48ec12fa91a067fc352c4b2298a9ba5c6f9dffbb5",
+      "fixtures/referenced/openapi.yaml": "eaaee59045a3ac8a859808cfea3f5a8ee0c0e52c285b6a234c0627a8953244bd",
+      "fixtures/referenced/schemas/customer.yaml": "16efa9f4eee81235fea92498ebcf144c0a2609f8c9ee351ab749b059cb0214a2"
+    },
+    "changed": false
+  },
+  "fixtures": [
+    {
+      "path": "fixtures/oas-3.0/schemas.yaml",
+      "raw": {
+        "status": "PASS",
+        "valid": false,
+        "diagnostics": [
+          {
+            "message": "type must be object",
+            "path": "/components/schemas/BooleanTrue"
+          },
+          {
+            "message": "oneOf must match exactly one schema in oneOf",
+            "path": "/components/schemas/BooleanTrue"
+          },
+          {
+            "message": "type must be object",
+            "path": "/components/schemas/BooleanFalse"
+          },
+          {
+            "message": "oneOf must match exactly one schema in oneOf",
+            "path": "/components/schemas/BooleanFalse"
+          },
+          {
+            "message": "Property acmeQualityScore is not expected to be here",
+            "path": "/components/schemas/UnknownKeyword"
+          },
+          {
+            "message": "type must be string",
+            "path": "/components/schemas/TypeArrayControl/type"
+          },
+          {
+            "message": "enum must be equal to one of the allowed values",
+            "path": "/components/schemas/TypeArrayControl/type"
+          },
+          {
+            "message": "Property $schema is not expected to be here",
+            "path": "/components/schemas/SchemaKeywordControl"
+          },
+          {
+            "message": "Property $defs is not expected to be here",
+            "path": "/components/schemas/DefsControl"
+          }
+        ],
+        "documentFields": {
+          "openapi": "3.0.4"
+        },
+        "schemas": [
+          {
+            "openApiVersion": "3.0.4",
+            "name": "Baseline",
+            "sourcePointer": "/components/schemas/Baseline",
+            "schemaKind": "object",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "title",
+              "description",
+              "type",
+              "required",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "title": "Baseline",
+              "description": "Ordinary OAS 3.0 schema",
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer",
+                  "format": "int64"
+                },
+                "name": {
+                  "type": "string",
+                  "description": "Name"
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "active",
+                    "inactive"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.0.4",
+            "name": "Nullable",
+            "sourcePointer": "/components/schemas/Nullable",
+            "schemaKind": "object",
+            "types": [
+              "string"
+            ],
+            "keywords": [
+              "type",
+              "nullable"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "openApiVersion": "3.0.4",
+            "name": "NullableNoType",
+            "sourcePointer": "/components/schemas/NullableNoType",
+            "schemaKind": "object",
+            "types": [],
+            "keywords": [
+              "nullable"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "nullable": true
+            }
+          },
+          {
+            "openApiVersion": "3.0.4",
+            "name": "BooleanTrue",
+            "sourcePointer": "/components/schemas/BooleanTrue",
+            "schemaKind": "boolean",
+            "booleanValue": true,
+            "types": [],
+            "keywords": [],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": true
+          },
+          {
+            "openApiVersion": "3.0.4",
+            "name": "BooleanFalse",
+            "sourcePointer": "/components/schemas/BooleanFalse",
+            "schemaKind": "boolean",
+            "booleanValue": false,
+            "types": [],
+            "keywords": [],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": false
+          },
+          {
+            "openApiVersion": "3.0.4",
+            "name": "Pet",
+            "sourcePointer": "/components/schemas/Pet",
+            "schemaKind": "object",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.0.4",
+            "name": "RefSibling",
+            "sourcePointer": "/components/schemas/RefSibling",
+            "schemaKind": "object",
+            "types": [],
+            "keywords": [
+              "$ref",
+              "description",
+              "maxProperties"
+            ],
+            "ref": "#/components/schemas/Pet",
+            "refSiblingKeys": [
+              "description",
+              "maxProperties"
+            ],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "$ref": "#/components/schemas/Pet",
+              "description": "OAS 3.0 sibling control",
+              "maxProperties": 20
+            }
+          },
+          {
+            "openApiVersion": "3.0.4",
+            "name": "UnknownKeyword",
+            "sourcePointer": "/components/schemas/UnknownKeyword",
+            "schemaKind": "object",
+            "types": [
+              "string"
+            ],
+            "keywords": [
+              "type",
+              "acmeQualityScore"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "string",
+              "acmeQualityScore": 42
+            }
+          },
+          {
+            "openApiVersion": "3.0.4",
+            "name": "TypeArrayControl",
+            "sourcePointer": "/components/schemas/TypeArrayControl",
+            "schemaKind": "object",
+            "types": [
+              "string",
+              "null"
+            ],
+            "keywords": [
+              "type"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          {
+            "openApiVersion": "3.0.4",
+            "name": "SchemaKeywordControl",
+            "sourcePointer": "/components/schemas/SchemaKeywordControl",
+            "schemaKind": "object",
+            "declaredDialect": "https://json-schema.org/draft/2020-12/schema",
+            "types": [
+              "string"
+            ],
+            "keywords": [
+              "type",
+              "$schema"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "string",
+              "$schema": "https://json-schema.org/draft/2020-12/schema"
+            }
+          },
+          {
+            "openApiVersion": "3.0.4",
+            "name": "DefsControl",
+            "sourcePointer": "/components/schemas/DefsControl",
+            "schemaKind": "object",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "type",
+              "$defs"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "object",
+              "$defs": {
+                "Identifier": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "bundle": {
+        "status": "PASS",
+        "schemas": [
+          {
+            "openApiVersion": "3.0.4",
+            "name": "Baseline",
+            "sourcePointer": "/components/schemas/Baseline",
+            "schemaKind": "object",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "title",
+              "description",
+              "type",
+              "required",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "title": "Baseline",
+              "description": "Ordinary OAS 3.0 schema",
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer",
+                  "format": "int64"
+                },
+                "name": {
+                  "type": "string",
+                  "description": "Name"
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "active",
+                    "inactive"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.0.4",
+            "name": "Nullable",
+            "sourcePointer": "/components/schemas/Nullable",
+            "schemaKind": "object",
+            "types": [
+              "string"
+            ],
+            "keywords": [
+              "type",
+              "nullable"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "openApiVersion": "3.0.4",
+            "name": "NullableNoType",
+            "sourcePointer": "/components/schemas/NullableNoType",
+            "schemaKind": "object",
+            "types": [],
+            "keywords": [
+              "nullable"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "nullable": true
+            }
+          },
+          {
+            "openApiVersion": "3.0.4",
+            "name": "BooleanTrue",
+            "sourcePointer": "/components/schemas/BooleanTrue",
+            "schemaKind": "boolean",
+            "booleanValue": true,
+            "types": [],
+            "keywords": [],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": true
+          },
+          {
+            "openApiVersion": "3.0.4",
+            "name": "BooleanFalse",
+            "sourcePointer": "/components/schemas/BooleanFalse",
+            "schemaKind": "boolean",
+            "booleanValue": false,
+            "types": [],
+            "keywords": [],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": false
+          },
+          {
+            "openApiVersion": "3.0.4",
+            "name": "Pet",
+            "sourcePointer": "/components/schemas/Pet",
+            "schemaKind": "object",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.0.4",
+            "name": "RefSibling",
+            "sourcePointer": "/components/schemas/RefSibling",
+            "schemaKind": "object",
+            "types": [],
+            "keywords": [
+              "$ref",
+              "description",
+              "maxProperties"
+            ],
+            "ref": "#/components/schemas/Pet",
+            "refSiblingKeys": [
+              "description",
+              "maxProperties"
+            ],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "$ref": "#/components/schemas/Pet",
+              "description": "OAS 3.0 sibling control",
+              "maxProperties": 20
+            }
+          },
+          {
+            "openApiVersion": "3.0.4",
+            "name": "UnknownKeyword",
+            "sourcePointer": "/components/schemas/UnknownKeyword",
+            "schemaKind": "object",
+            "types": [
+              "string"
+            ],
+            "keywords": [
+              "type",
+              "acmeQualityScore"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "string",
+              "acmeQualityScore": 42
+            }
+          },
+          {
+            "openApiVersion": "3.0.4",
+            "name": "TypeArrayControl",
+            "sourcePointer": "/components/schemas/TypeArrayControl",
+            "schemaKind": "object",
+            "types": [
+              "string",
+              "null"
+            ],
+            "keywords": [
+              "type"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          {
+            "openApiVersion": "3.0.4",
+            "name": "SchemaKeywordControl",
+            "sourcePointer": "/components/schemas/SchemaKeywordControl",
+            "schemaKind": "object",
+            "declaredDialect": "https://json-schema.org/draft/2020-12/schema",
+            "types": [
+              "string"
+            ],
+            "keywords": [
+              "type",
+              "$schema"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "string",
+              "$schema": "https://json-schema.org/draft/2020-12/schema"
+            }
+          },
+          {
+            "openApiVersion": "3.0.4",
+            "name": "DefsControl",
+            "sourcePointer": "/components/schemas/DefsControl",
+            "schemaKind": "object",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "type",
+              "$defs"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "object",
+              "$defs": {
+                "Identifier": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "lifecycleSample": [
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Baseline"
+            ],
+            "keys": [
+              "title",
+              "description",
+              "type",
+              "required",
+              "properties"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Baseline",
+              "properties",
+              "id"
+            ],
+            "keys": [
+              "type",
+              "format"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Baseline",
+              "properties",
+              "name"
+            ],
+            "keys": [
+              "type",
+              "description"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Baseline",
+              "properties",
+              "status"
+            ],
+            "keys": [
+              "type",
+              "enum"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Nullable"
+            ],
+            "keys": [
+              "type",
+              "nullable"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Pet"
+            ],
+            "keys": [
+              "type",
+              "properties"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Pet",
+              "properties",
+              "name"
+            ],
+            "keys": [
+              "type"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "RefSibling"
+            ],
+            "keys": [
+              "$ref",
+              "description",
+              "maxProperties"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "UnknownKeyword"
+            ],
+            "keys": [
+              "type",
+              "acmeQualityScore"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "TypeArrayControl"
+            ],
+            "keys": [
+              "type"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "SchemaKeywordControl"
+            ],
+            "keys": [
+              "type",
+              "$schema"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "DefsControl"
+            ],
+            "keys": [
+              "type",
+              "$defs"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "DefsControl",
+              "$defs",
+              "Identifier"
+            ],
+            "keys": [
+              "type"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "path": "fixtures/oas-3.1/schemas.yaml",
+      "raw": {
+        "status": "PASS",
+        "valid": true,
+        "diagnostics": [],
+        "documentFields": {
+          "openapi": "3.1.2",
+          "jsonSchemaDialect": "https://example.test/schema/dialect"
+        },
+        "schemas": [
+          {
+            "openApiVersion": "3.1.2",
+            "name": "NullType",
+            "sourcePointer": "/components/schemas/NullType",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [
+              "string",
+              "null"
+            ],
+            "keywords": [
+              "type"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "NullableKeyword",
+            "sourcePointer": "/components/schemas/NullableKeyword",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [
+              "string"
+            ],
+            "keywords": [
+              "type",
+              "nullable"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "BooleanTrue",
+            "sourcePointer": "/components/schemas/BooleanTrue",
+            "schemaKind": "boolean",
+            "booleanValue": true,
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [],
+            "keywords": [],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": true
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "BooleanFalse",
+            "sourcePointer": "/components/schemas/BooleanFalse",
+            "schemaKind": "boolean",
+            "booleanValue": false,
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [],
+            "keywords": [],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": false
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "Pet",
+            "sourcePointer": "/components/schemas/Pet",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "RefSibling",
+            "sourcePointer": "/components/schemas/RefSibling",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [],
+            "keywords": [
+              "$ref",
+              "description",
+              "maxProperties"
+            ],
+            "ref": "#/components/schemas/Pet",
+            "refSiblingKeys": [
+              "description",
+              "maxProperties"
+            ],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "$ref": "#/components/schemas/Pet",
+              "description": "A pet.",
+              "maxProperties": 20
+            }
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "Composition",
+            "sourcePointer": "/components/schemas/Composition",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [],
+            "keywords": [
+              "oneOf"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 2,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "oneOf": [
+                {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Pet"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "tag": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "anyOf": [
+                    true,
+                    {
+                      "not": false
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "Node",
+            "sourcePointer": "/components/schemas/Node",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": true,
+            "canonical": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "string"
+                },
+                "child": {
+                  "$ref": "#/components/schemas/Node"
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "A",
+            "sourcePointer": "/components/schemas/A",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "object",
+              "properties": {
+                "b": {
+                  "$ref": "#/components/schemas/B"
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "B",
+            "sourcePointer": "/components/schemas/B",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "$ref": "#/components/schemas/A"
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "SchemaOverride",
+            "sourcePointer": "/components/schemas/SchemaOverride",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "declaredDialect": "https://json-schema.org/draft/2020-12/schema",
+            "expectedEffectiveDialect": "https://json-schema.org/draft/2020-12/schema",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "$schema",
+              "type"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "$schema": "https://json-schema.org/draft/2020-12/schema",
+              "type": "object"
+            }
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "UnknownKeyword",
+            "sourcePointer": "/components/schemas/UnknownKeyword",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [
+              "string"
+            ],
+            "keywords": [
+              "type",
+              "acmeQualityScore"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "string",
+              "acmeQualityScore": 42
+            }
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "Container",
+            "sourcePointer": "/components/schemas/Container",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "$defs",
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": true,
+            "canonical": {
+              "$defs": {
+                "Identifier": {
+                  "type": "string",
+                  "pattern": "^[A-Z0-9]+$"
+                }
+              },
+              "type": "object",
+              "properties": {
+                "id": {
+                  "$ref": "#/components/schemas/Container/$defs/Identifier"
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "Modern",
+            "sourcePointer": "/components/schemas/Modern",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [
+              "array"
+            ],
+            "keywords": [
+              "type",
+              "const",
+              "contains",
+              "minContains",
+              "maxContains",
+              "prefixItems",
+              "unevaluatedProperties",
+              "dependentSchemas"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "array",
+              "const": [
+                "fixed"
+              ],
+              "contains": {
+                "type": "string"
+              },
+              "minContains": 1,
+              "maxContains": 2,
+              "prefixItems": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ],
+              "unevaluatedProperties": false,
+              "dependentSchemas": {
+                "mode": {
+                  "properties": {
+                    "detail": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "Anchored",
+            "sourcePointer": "/components/schemas/Anchored",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "$id",
+              "$anchor",
+              "$dynamicAnchor",
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "$id": "https://example.test/schemas/anchored",
+              "$anchor": "anchored",
+              "$dynamicAnchor": "node",
+              "type": "object",
+              "properties": {
+                "next": {
+                  "$dynamicRef": "#node"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "bundle": {
+        "status": "PASS",
+        "schemas": [
+          {
+            "openApiVersion": "3.1.2",
+            "name": "NullType",
+            "sourcePointer": "/components/schemas/NullType",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [
+              "string",
+              "null"
+            ],
+            "keywords": [
+              "type"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "NullableKeyword",
+            "sourcePointer": "/components/schemas/NullableKeyword",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [
+              "string"
+            ],
+            "keywords": [
+              "type",
+              "nullable"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "BooleanTrue",
+            "sourcePointer": "/components/schemas/BooleanTrue",
+            "schemaKind": "boolean",
+            "booleanValue": true,
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [],
+            "keywords": [],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": true
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "BooleanFalse",
+            "sourcePointer": "/components/schemas/BooleanFalse",
+            "schemaKind": "boolean",
+            "booleanValue": false,
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [],
+            "keywords": [],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": false
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "Pet",
+            "sourcePointer": "/components/schemas/Pet",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "RefSibling",
+            "sourcePointer": "/components/schemas/RefSibling",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [],
+            "keywords": [
+              "$ref",
+              "description",
+              "maxProperties"
+            ],
+            "ref": "#/components/schemas/Pet",
+            "refSiblingKeys": [
+              "description",
+              "maxProperties"
+            ],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "$ref": "#/components/schemas/Pet",
+              "description": "A pet.",
+              "maxProperties": 20
+            }
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "Composition",
+            "sourcePointer": "/components/schemas/Composition",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [],
+            "keywords": [
+              "oneOf"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 2,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "oneOf": [
+                {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Pet"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "tag": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "anyOf": [
+                    true,
+                    {
+                      "not": false
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "Node",
+            "sourcePointer": "/components/schemas/Node",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": true,
+            "canonical": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "string"
+                },
+                "child": {
+                  "$ref": "#/components/schemas/Node"
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "A",
+            "sourcePointer": "/components/schemas/A",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "object",
+              "properties": {
+                "b": {
+                  "$ref": "#/components/schemas/B"
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "B",
+            "sourcePointer": "/components/schemas/B",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "$ref": "#/components/schemas/A"
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "SchemaOverride",
+            "sourcePointer": "/components/schemas/SchemaOverride",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "declaredDialect": "https://json-schema.org/draft/2020-12/schema",
+            "expectedEffectiveDialect": "https://json-schema.org/draft/2020-12/schema",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "$schema",
+              "type"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "$schema": "https://json-schema.org/draft/2020-12/schema",
+              "type": "object"
+            }
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "UnknownKeyword",
+            "sourcePointer": "/components/schemas/UnknownKeyword",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [
+              "string"
+            ],
+            "keywords": [
+              "type",
+              "acmeQualityScore"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "string",
+              "acmeQualityScore": 42
+            }
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "Container",
+            "sourcePointer": "/components/schemas/Container",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "$defs",
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": true,
+            "canonical": {
+              "$defs": {
+                "Identifier": {
+                  "type": "string",
+                  "pattern": "^[A-Z0-9]+$"
+                }
+              },
+              "type": "object",
+              "properties": {
+                "id": {
+                  "$ref": "#/components/schemas/Container/$defs/Identifier"
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "Modern",
+            "sourcePointer": "/components/schemas/Modern",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [
+              "array"
+            ],
+            "keywords": [
+              "type",
+              "const",
+              "contains",
+              "minContains",
+              "maxContains",
+              "prefixItems",
+              "unevaluatedProperties",
+              "dependentSchemas"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "array",
+              "const": [
+                "fixed"
+              ],
+              "contains": {
+                "type": "string"
+              },
+              "minContains": 1,
+              "maxContains": 2,
+              "prefixItems": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ],
+              "unevaluatedProperties": false,
+              "dependentSchemas": {
+                "mode": {
+                  "properties": {
+                    "detail": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.1.2",
+            "name": "Anchored",
+            "sourcePointer": "/components/schemas/Anchored",
+            "schemaKind": "object",
+            "documentDialect": "https://example.test/schema/dialect",
+            "expectedEffectiveDialect": "https://example.test/schema/dialect",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "$id",
+              "$anchor",
+              "$dynamicAnchor",
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "$id": "https://example.test/schemas/anchored",
+              "$anchor": "anchored",
+              "$dynamicAnchor": "node",
+              "type": "object",
+              "properties": {
+                "next": {
+                  "$dynamicRef": "#node"
+                }
+              }
+            }
+          }
+        ],
+        "lifecycleSample": [
+          {
+            "path": [
+              "components",
+              "schemas",
+              "NullType"
+            ],
+            "keys": [
+              "type"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "NullableKeyword"
+            ],
+            "keys": [
+              "type",
+              "nullable"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Pet"
+            ],
+            "keys": [
+              "type",
+              "properties"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Pet",
+              "properties",
+              "name"
+            ],
+            "keys": [
+              "type"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "RefSibling"
+            ],
+            "keys": [
+              "$ref",
+              "description",
+              "maxProperties"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Composition",
+              "oneOf",
+              "0",
+              "allOf",
+              "0"
+            ],
+            "keys": [
+              "$ref"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Composition",
+              "oneOf",
+              "0",
+              "allOf",
+              "1"
+            ],
+            "keys": [
+              "type",
+              "properties"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Composition",
+              "oneOf",
+              "0",
+              "allOf",
+              "1",
+              "properties",
+              "tag"
+            ],
+            "keys": [
+              "type"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Node"
+            ],
+            "keys": [
+              "type",
+              "properties"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Node",
+              "properties",
+              "value"
+            ],
+            "keys": [
+              "type"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Node",
+              "properties",
+              "child"
+            ],
+            "keys": [
+              "$ref"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "A"
+            ],
+            "keys": [
+              "type",
+              "properties"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "A",
+              "properties",
+              "b"
+            ],
+            "keys": [
+              "$ref"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "B"
+            ],
+            "keys": [
+              "type",
+              "properties"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "B",
+              "properties",
+              "a"
+            ],
+            "keys": [
+              "$ref"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "SchemaOverride"
+            ],
+            "keys": [
+              "$schema",
+              "type"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "UnknownKeyword"
+            ],
+            "keys": [
+              "type",
+              "acmeQualityScore"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Container"
+            ],
+            "keys": [
+              "$defs",
+              "type",
+              "properties"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Container",
+              "$defs",
+              "Identifier"
+            ],
+            "keys": [
+              "type",
+              "pattern"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Container",
+              "properties",
+              "id"
+            ],
+            "keys": [
+              "$ref"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Modern"
+            ],
+            "keys": [
+              "type",
+              "const",
+              "contains",
+              "minContains",
+              "maxContains",
+              "prefixItems",
+              "unevaluatedProperties",
+              "dependentSchemas"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Modern",
+              "contains"
+            ],
+            "keys": [
+              "type"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Modern",
+              "prefixItems",
+              "0"
+            ],
+            "keys": [
+              "type"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Modern",
+              "prefixItems",
+              "1"
+            ],
+            "keys": [
+              "type"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Modern",
+              "dependentSchemas",
+              "mode",
+              "properties",
+              "detail"
+            ],
+            "keys": [
+              "type"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Anchored"
+            ],
+            "keys": [
+              "$id",
+              "$anchor",
+              "$dynamicAnchor",
+              "type",
+              "properties"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "path": "fixtures/oas-3.1/default-dialect.yaml",
+      "raw": {
+        "status": "PASS",
+        "valid": true,
+        "diagnostics": [],
+        "documentFields": {
+          "openapi": "3.1.2"
+        },
+        "schemas": [
+          {
+            "openApiVersion": "3.1.2",
+            "name": "Defaulted",
+            "sourcePointer": "/components/schemas/Defaulted",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "string"
+            ],
+            "keywords": [
+              "type"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "bundle": {
+        "status": "PASS",
+        "schemas": [
+          {
+            "openApiVersion": "3.1.2",
+            "name": "Defaulted",
+            "sourcePointer": "/components/schemas/Defaulted",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "string"
+            ],
+            "keywords": [
+              "type"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "string"
+            }
+          }
+        ],
+        "lifecycleSample": [
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Defaulted"
+            ],
+            "keys": [
+              "type"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "path": "fixtures/oas-3.2/schemas.yaml",
+      "raw": {
+        "status": "PASS",
+        "valid": true,
+        "diagnostics": [],
+        "documentFields": {
+          "openapi": "3.2.0"
+        },
+        "schemas": [
+          {
+            "openApiVersion": "3.2.0",
+            "name": "NullType",
+            "sourcePointer": "/components/schemas/NullType",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "string",
+              "null"
+            ],
+            "keywords": [
+              "type"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "NullableKeyword",
+            "sourcePointer": "/components/schemas/NullableKeyword",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "string"
+            ],
+            "keywords": [
+              "type",
+              "nullable"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "BooleanTrue",
+            "sourcePointer": "/components/schemas/BooleanTrue",
+            "schemaKind": "boolean",
+            "booleanValue": true,
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [],
+            "keywords": [],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": true
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "BooleanFalse",
+            "sourcePointer": "/components/schemas/BooleanFalse",
+            "schemaKind": "boolean",
+            "booleanValue": false,
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [],
+            "keywords": [],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": false
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "Pet",
+            "sourcePointer": "/components/schemas/Pet",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "RefSibling",
+            "sourcePointer": "/components/schemas/RefSibling",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [],
+            "keywords": [
+              "$ref",
+              "description",
+              "maxProperties"
+            ],
+            "ref": "#/components/schemas/Pet",
+            "refSiblingKeys": [
+              "description",
+              "maxProperties"
+            ],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "$ref": "#/components/schemas/Pet",
+              "description": "A pet.",
+              "maxProperties": 20
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "Composition",
+            "sourcePointer": "/components/schemas/Composition",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [],
+            "keywords": [
+              "allOf"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 2,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Pet"
+                },
+                {
+                  "oneOf": [
+                    {
+                      "type": "object"
+                    },
+                    {
+                      "anyOf": [
+                        true,
+                        {
+                          "not": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "Node",
+            "sourcePointer": "/components/schemas/Node",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": true,
+            "canonical": {
+              "type": "object",
+              "properties": {
+                "child": {
+                  "$ref": "#/components/schemas/Node"
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "A",
+            "sourcePointer": "/components/schemas/A",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "object",
+              "properties": {
+                "b": {
+                  "$ref": "#/components/schemas/B"
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "B",
+            "sourcePointer": "/components/schemas/B",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "$ref": "#/components/schemas/A"
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "SchemaOverride",
+            "sourcePointer": "/components/schemas/SchemaOverride",
+            "schemaKind": "object",
+            "declaredDialect": "https://json-schema.org/draft/2020-12/schema",
+            "expectedEffectiveDialect": "https://json-schema.org/draft/2020-12/schema",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "$schema",
+              "type"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "$schema": "https://json-schema.org/draft/2020-12/schema",
+              "type": "object"
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "UnknownKeyword",
+            "sourcePointer": "/components/schemas/UnknownKeyword",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "string"
+            ],
+            "keywords": [
+              "type",
+              "acmeQualityScore"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "string",
+              "acmeQualityScore": 42
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "Container",
+            "sourcePointer": "/components/schemas/Container",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "$defs",
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": true,
+            "canonical": {
+              "$defs": {
+                "Identifier": {
+                  "type": "string",
+                  "pattern": "^[A-Z0-9]+$"
+                }
+              },
+              "type": "object",
+              "properties": {
+                "id": {
+                  "$ref": "#/components/schemas/Container/$defs/Identifier"
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "Modern",
+            "sourcePointer": "/components/schemas/Modern",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "array"
+            ],
+            "keywords": [
+              "type",
+              "const",
+              "contains",
+              "minContains",
+              "maxContains",
+              "prefixItems",
+              "unevaluatedProperties",
+              "dependentSchemas"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "array",
+              "const": [
+                "fixed"
+              ],
+              "contains": {
+                "type": "string"
+              },
+              "minContains": 1,
+              "maxContains": 2,
+              "prefixItems": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ],
+              "unevaluatedProperties": false,
+              "dependentSchemas": {
+                "mode": {
+                  "properties": {
+                    "detail": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "Anchored",
+            "sourcePointer": "/components/schemas/Anchored",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "$id",
+              "$anchor",
+              "$dynamicAnchor",
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "$id": "https://example.test/schemas/anchored-32",
+              "$anchor": "anchored",
+              "$dynamicAnchor": "node",
+              "type": "object",
+              "properties": {
+                "next": {
+                  "$dynamicRef": "#node"
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "Rich",
+            "sourcePointer": "/components/schemas/Rich",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "$id",
+              "title",
+              "description",
+              "type",
+              "format",
+              "required",
+              "properties",
+              "enum",
+              "examples",
+              "default",
+              "allOf",
+              "$defs",
+              "acmeQualityScore",
+              "unevaluatedProperties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 1,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": true,
+            "canonical": {
+              "$id": "https://example.test/schemas/rich",
+              "title": "Rich schema",
+              "description": "Canonical fidelity fixture",
+              "type": "object",
+              "format": "custom-object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "$ref": "#/components/schemas/Rich/$defs/Identifier"
+                },
+                "state": {
+                  "type": "string"
+                }
+              },
+              "enum": [
+                {
+                  "id": "A"
+                }
+              ],
+              "examples": [
+                {
+                  "id": "A",
+                  "state": "active"
+                }
+              ],
+              "default": {
+                "id": "A"
+              },
+              "allOf": [
+                {
+                  "type": "object"
+                }
+              ],
+              "$defs": {
+                "Identifier": {
+                  "type": "string"
+                }
+              },
+              "acmeQualityScore": 42,
+              "unevaluatedProperties": false
+            }
+          }
+        ]
+      },
+      "bundle": {
+        "status": "PASS",
+        "schemas": [
+          {
+            "openApiVersion": "3.2.0",
+            "name": "NullType",
+            "sourcePointer": "/components/schemas/NullType",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "string",
+              "null"
+            ],
+            "keywords": [
+              "type"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "NullableKeyword",
+            "sourcePointer": "/components/schemas/NullableKeyword",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "string"
+            ],
+            "keywords": [
+              "type",
+              "nullable"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "BooleanTrue",
+            "sourcePointer": "/components/schemas/BooleanTrue",
+            "schemaKind": "boolean",
+            "booleanValue": true,
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [],
+            "keywords": [],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": true
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "BooleanFalse",
+            "sourcePointer": "/components/schemas/BooleanFalse",
+            "schemaKind": "boolean",
+            "booleanValue": false,
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [],
+            "keywords": [],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": false
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "Pet",
+            "sourcePointer": "/components/schemas/Pet",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "RefSibling",
+            "sourcePointer": "/components/schemas/RefSibling",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [],
+            "keywords": [
+              "$ref",
+              "description",
+              "maxProperties"
+            ],
+            "ref": "#/components/schemas/Pet",
+            "refSiblingKeys": [
+              "description",
+              "maxProperties"
+            ],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "$ref": "#/components/schemas/Pet",
+              "description": "A pet.",
+              "maxProperties": 20
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "Composition",
+            "sourcePointer": "/components/schemas/Composition",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [],
+            "keywords": [
+              "allOf"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 2,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/Pet"
+                },
+                {
+                  "oneOf": [
+                    {
+                      "type": "object"
+                    },
+                    {
+                      "anyOf": [
+                        true,
+                        {
+                          "not": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "Node",
+            "sourcePointer": "/components/schemas/Node",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": true,
+            "canonical": {
+              "type": "object",
+              "properties": {
+                "child": {
+                  "$ref": "#/components/schemas/Node"
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "A",
+            "sourcePointer": "/components/schemas/A",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "object",
+              "properties": {
+                "b": {
+                  "$ref": "#/components/schemas/B"
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "B",
+            "sourcePointer": "/components/schemas/B",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "$ref": "#/components/schemas/A"
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "SchemaOverride",
+            "sourcePointer": "/components/schemas/SchemaOverride",
+            "schemaKind": "object",
+            "declaredDialect": "https://json-schema.org/draft/2020-12/schema",
+            "expectedEffectiveDialect": "https://json-schema.org/draft/2020-12/schema",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "$schema",
+              "type"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "$schema": "https://json-schema.org/draft/2020-12/schema",
+              "type": "object"
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "UnknownKeyword",
+            "sourcePointer": "/components/schemas/UnknownKeyword",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "string"
+            ],
+            "keywords": [
+              "type",
+              "acmeQualityScore"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "string",
+              "acmeQualityScore": 42
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "Container",
+            "sourcePointer": "/components/schemas/Container",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "$defs",
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": true,
+            "canonical": {
+              "$defs": {
+                "Identifier": {
+                  "type": "string",
+                  "pattern": "^[A-Z0-9]+$"
+                }
+              },
+              "type": "object",
+              "properties": {
+                "id": {
+                  "$ref": "#/components/schemas/Container/$defs/Identifier"
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "Modern",
+            "sourcePointer": "/components/schemas/Modern",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "array"
+            ],
+            "keywords": [
+              "type",
+              "const",
+              "contains",
+              "minContains",
+              "maxContains",
+              "prefixItems",
+              "unevaluatedProperties",
+              "dependentSchemas"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "array",
+              "const": [
+                "fixed"
+              ],
+              "contains": {
+                "type": "string"
+              },
+              "minContains": 1,
+              "maxContains": 2,
+              "prefixItems": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ],
+              "unevaluatedProperties": false,
+              "dependentSchemas": {
+                "mode": {
+                  "properties": {
+                    "detail": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "Anchored",
+            "sourcePointer": "/components/schemas/Anchored",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "$id",
+              "$anchor",
+              "$dynamicAnchor",
+              "type",
+              "properties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "$id": "https://example.test/schemas/anchored-32",
+              "$anchor": "anchored",
+              "$dynamicAnchor": "node",
+              "type": "object",
+              "properties": {
+                "next": {
+                  "$dynamicRef": "#node"
+                }
+              }
+            }
+          },
+          {
+            "openApiVersion": "3.2.0",
+            "name": "Rich",
+            "sourcePointer": "/components/schemas/Rich",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "object"
+            ],
+            "keywords": [
+              "$id",
+              "title",
+              "description",
+              "type",
+              "format",
+              "required",
+              "properties",
+              "enum",
+              "examples",
+              "default",
+              "allOf",
+              "$defs",
+              "acmeQualityScore",
+              "unevaluatedProperties"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 1,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": true,
+            "canonical": {
+              "$id": "https://example.test/schemas/rich",
+              "title": "Rich schema",
+              "description": "Canonical fidelity fixture",
+              "type": "object",
+              "format": "custom-object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "$ref": "#/components/schemas/Rich/$defs/Identifier"
+                },
+                "state": {
+                  "type": "string"
+                }
+              },
+              "enum": [
+                {
+                  "id": "A"
+                }
+              ],
+              "examples": [
+                {
+                  "id": "A",
+                  "state": "active"
+                }
+              ],
+              "default": {
+                "id": "A"
+              },
+              "allOf": [
+                {
+                  "type": "object"
+                }
+              ],
+              "$defs": {
+                "Identifier": {
+                  "type": "string"
+                }
+              },
+              "acmeQualityScore": 42,
+              "unevaluatedProperties": false
+            }
+          }
+        ],
+        "lifecycleSample": [
+          {
+            "path": [
+              "components",
+              "schemas",
+              "NullType"
+            ],
+            "keys": [
+              "type"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "NullableKeyword"
+            ],
+            "keys": [
+              "type",
+              "nullable"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Pet"
+            ],
+            "keys": [
+              "type",
+              "properties"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Pet",
+              "properties",
+              "name"
+            ],
+            "keys": [
+              "type"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "RefSibling"
+            ],
+            "keys": [
+              "$ref",
+              "description",
+              "maxProperties"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Composition",
+              "allOf",
+              "0"
+            ],
+            "keys": [
+              "$ref"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Composition",
+              "allOf",
+              "1",
+              "oneOf",
+              "0"
+            ],
+            "keys": [
+              "type"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Node"
+            ],
+            "keys": [
+              "type",
+              "properties"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Node",
+              "properties",
+              "child"
+            ],
+            "keys": [
+              "$ref"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "A"
+            ],
+            "keys": [
+              "type",
+              "properties"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "A",
+              "properties",
+              "b"
+            ],
+            "keys": [
+              "$ref"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "B"
+            ],
+            "keys": [
+              "type",
+              "properties"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "B",
+              "properties",
+              "a"
+            ],
+            "keys": [
+              "$ref"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "SchemaOverride"
+            ],
+            "keys": [
+              "$schema",
+              "type"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "UnknownKeyword"
+            ],
+            "keys": [
+              "type",
+              "acmeQualityScore"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Container"
+            ],
+            "keys": [
+              "$defs",
+              "type",
+              "properties"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Container",
+              "$defs",
+              "Identifier"
+            ],
+            "keys": [
+              "type",
+              "pattern"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Container",
+              "properties",
+              "id"
+            ],
+            "keys": [
+              "$ref"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Modern"
+            ],
+            "keys": [
+              "type",
+              "const",
+              "contains",
+              "minContains",
+              "maxContains",
+              "prefixItems",
+              "unevaluatedProperties",
+              "dependentSchemas"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Modern",
+              "contains"
+            ],
+            "keys": [
+              "type"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Modern",
+              "prefixItems",
+              "0"
+            ],
+            "keys": [
+              "type"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Modern",
+              "prefixItems",
+              "1"
+            ],
+            "keys": [
+              "type"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Modern",
+              "dependentSchemas",
+              "mode",
+              "properties",
+              "detail"
+            ],
+            "keys": [
+              "type"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Anchored"
+            ],
+            "keys": [
+              "$id",
+              "$anchor",
+              "$dynamicAnchor",
+              "type",
+              "properties"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Rich"
+            ],
+            "keys": [
+              "$id",
+              "title",
+              "description",
+              "type",
+              "format",
+              "required",
+              "properties",
+              "enum",
+              "examples",
+              "default",
+              "allOf",
+              "$defs",
+              "acmeQualityScore",
+              "unevaluatedProperties"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Rich",
+              "properties",
+              "id"
+            ],
+            "keys": [
+              "$ref"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Rich",
+              "properties",
+              "state"
+            ],
+            "keys": [
+              "type"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Rich",
+              "allOf",
+              "0"
+            ],
+            "keys": [
+              "type"
+            ]
+          },
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Rich",
+              "$defs",
+              "Identifier"
+            ],
+            "keys": [
+              "type"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "path": "fixtures/oas-3.2/default-dialect.yaml",
+      "raw": {
+        "status": "PASS",
+        "valid": true,
+        "diagnostics": [],
+        "documentFields": {
+          "openapi": "3.2.0"
+        },
+        "schemas": [
+          {
+            "openApiVersion": "3.2.0",
+            "name": "Defaulted",
+            "sourcePointer": "/components/schemas/Defaulted",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "string"
+            ],
+            "keywords": [
+              "type"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "bundle": {
+        "status": "PASS",
+        "schemas": [
+          {
+            "openApiVersion": "3.2.0",
+            "name": "Defaulted",
+            "sourcePointer": "/components/schemas/Defaulted",
+            "schemaKind": "object",
+            "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+            "types": [
+              "string"
+            ],
+            "keywords": [
+              "type"
+            ],
+            "refSiblingKeys": [],
+            "composition": {
+              "allOf": 0,
+              "oneOf": 0,
+              "anyOf": 0,
+              "hasNot": false
+            },
+            "hasRecursiveReference": false,
+            "canonical": {
+              "type": "string"
+            }
+          }
+        ],
+        "lifecycleSample": [
+          {
+            "path": [
+              "components",
+              "schemas",
+              "Defaulted"
+            ],
+            "keys": [
+              "type"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "oas30": {
+    "baseline": {
+      "openApiVersion": "3.0.4",
+      "name": "Baseline",
+      "sourcePointer": "/components/schemas/Baseline",
+      "schemaKind": "object",
+      "types": [
+        "object"
+      ],
+      "keywords": [
+        "title",
+        "description",
+        "type",
+        "required",
+        "properties"
+      ],
+      "refSiblingKeys": [],
+      "composition": {
+        "allOf": 0,
+        "oneOf": 0,
+        "anyOf": 0,
+        "hasNot": false
+      },
+      "hasRecursiveReference": false,
+      "canonical": {
+        "title": "Baseline",
+        "description": "Ordinary OAS 3.0 schema",
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "active",
+              "inactive"
+            ]
+          }
+        }
+      }
+    },
+    "nullable": {
+      "openApiVersion": "3.0.4",
+      "name": "Nullable",
+      "sourcePointer": "/components/schemas/Nullable",
+      "schemaKind": "object",
+      "types": [
+        "string"
+      ],
+      "keywords": [
+        "type",
+        "nullable"
+      ],
+      "refSiblingKeys": [],
+      "composition": {
+        "allOf": 0,
+        "oneOf": 0,
+        "anyOf": 0,
+        "hasNot": false
+      },
+      "hasRecursiveReference": false,
+      "canonical": {
+        "type": "string",
+        "nullable": true
+      }
+    },
+    "nullableWithoutType": {
+      "openApiVersion": "3.0.4",
+      "name": "NullableNoType",
+      "sourcePointer": "/components/schemas/NullableNoType",
+      "schemaKind": "object",
+      "types": [],
+      "keywords": [
+        "nullable"
+      ],
+      "refSiblingKeys": [],
+      "composition": {
+        "allOf": 0,
+        "oneOf": 0,
+        "anyOf": 0,
+        "hasNot": false
+      },
+      "hasRecursiveReference": false,
+      "canonical": {
+        "nullable": true
+      }
+    },
+    "booleanControls": [
+      {
+        "openApiVersion": "3.0.4",
+        "name": "BooleanTrue",
+        "sourcePointer": "/components/schemas/BooleanTrue",
+        "schemaKind": "boolean",
+        "booleanValue": true,
+        "types": [],
+        "keywords": [],
+        "refSiblingKeys": [],
+        "composition": {
+          "allOf": 0,
+          "oneOf": 0,
+          "anyOf": 0,
+          "hasNot": false
+        },
+        "hasRecursiveReference": false,
+        "canonical": true
+      },
+      {
+        "openApiVersion": "3.0.4",
+        "name": "BooleanFalse",
+        "sourcePointer": "/components/schemas/BooleanFalse",
+        "schemaKind": "boolean",
+        "booleanValue": false,
+        "types": [],
+        "keywords": [],
+        "refSiblingKeys": [],
+        "composition": {
+          "allOf": 0,
+          "oneOf": 0,
+          "anyOf": 0,
+          "hasNot": false
+        },
+        "hasRecursiveReference": false,
+        "canonical": false
+      }
+    ],
+    "refSibling": {
+      "openApiVersion": "3.0.4",
+      "name": "RefSibling",
+      "sourcePointer": "/components/schemas/RefSibling",
+      "schemaKind": "object",
+      "types": [],
+      "keywords": [
+        "$ref",
+        "description",
+        "maxProperties"
+      ],
+      "ref": "#/components/schemas/Pet",
+      "refSiblingKeys": [
+        "description",
+        "maxProperties"
+      ],
+      "composition": {
+        "allOf": 0,
+        "oneOf": 0,
+        "anyOf": 0,
+        "hasNot": false
+      },
+      "hasRecursiveReference": false,
+      "canonical": {
+        "$ref": "#/components/schemas/Pet",
+        "description": "OAS 3.0 sibling control",
+        "maxProperties": 20
+      }
+    },
+    "unknownKeyword": {
+      "openApiVersion": "3.0.4",
+      "name": "UnknownKeyword",
+      "sourcePointer": "/components/schemas/UnknownKeyword",
+      "schemaKind": "object",
+      "types": [
+        "string"
+      ],
+      "keywords": [
+        "type",
+        "acmeQualityScore"
+      ],
+      "refSiblingKeys": [],
+      "composition": {
+        "allOf": 0,
+        "oneOf": 0,
+        "anyOf": 0,
+        "hasNot": false
+      },
+      "hasRecursiveReference": false,
+      "canonical": {
+        "type": "string",
+        "acmeQualityScore": 42
+      }
+    }
+  },
+  "oas31": {
+    "nullType": {
+      "openApiVersion": "3.1.2",
+      "name": "NullType",
+      "sourcePointer": "/components/schemas/NullType",
+      "schemaKind": "object",
+      "documentDialect": "https://example.test/schema/dialect",
+      "expectedEffectiveDialect": "https://example.test/schema/dialect",
+      "types": [
+        "string",
+        "null"
+      ],
+      "keywords": [
+        "type"
+      ],
+      "refSiblingKeys": [],
+      "composition": {
+        "allOf": 0,
+        "oneOf": 0,
+        "anyOf": 0,
+        "hasNot": false
+      },
+      "hasRecursiveReference": false,
+      "canonical": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "booleans": [
+      {
+        "openApiVersion": "3.1.2",
+        "name": "BooleanTrue",
+        "sourcePointer": "/components/schemas/BooleanTrue",
+        "schemaKind": "boolean",
+        "booleanValue": true,
+        "documentDialect": "https://example.test/schema/dialect",
+        "expectedEffectiveDialect": "https://example.test/schema/dialect",
+        "types": [],
+        "keywords": [],
+        "refSiblingKeys": [],
+        "composition": {
+          "allOf": 0,
+          "oneOf": 0,
+          "anyOf": 0,
+          "hasNot": false
+        },
+        "hasRecursiveReference": false,
+        "canonical": true
+      },
+      {
+        "openApiVersion": "3.1.2",
+        "name": "BooleanFalse",
+        "sourcePointer": "/components/schemas/BooleanFalse",
+        "schemaKind": "boolean",
+        "booleanValue": false,
+        "documentDialect": "https://example.test/schema/dialect",
+        "expectedEffectiveDialect": "https://example.test/schema/dialect",
+        "types": [],
+        "keywords": [],
+        "refSiblingKeys": [],
+        "composition": {
+          "allOf": 0,
+          "oneOf": 0,
+          "anyOf": 0,
+          "hasNot": false
+        },
+        "hasRecursiveReference": false,
+        "canonical": false
+      }
+    ],
+    "nullableKeyword": {
+      "openApiVersion": "3.1.2",
+      "name": "NullableKeyword",
+      "sourcePointer": "/components/schemas/NullableKeyword",
+      "schemaKind": "object",
+      "documentDialect": "https://example.test/schema/dialect",
+      "expectedEffectiveDialect": "https://example.test/schema/dialect",
+      "types": [
+        "string"
+      ],
+      "keywords": [
+        "type",
+        "nullable"
+      ],
+      "refSiblingKeys": [],
+      "composition": {
+        "allOf": 0,
+        "oneOf": 0,
+        "anyOf": 0,
+        "hasNot": false
+      },
+      "hasRecursiveReference": false,
+      "canonical": {
+        "type": "string",
+        "nullable": true
+      }
+    }
+  },
+  "oas32": {
+    "nullType": {
+      "openApiVersion": "3.2.0",
+      "name": "NullType",
+      "sourcePointer": "/components/schemas/NullType",
+      "schemaKind": "object",
+      "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+      "types": [
+        "string",
+        "null"
+      ],
+      "keywords": [
+        "type"
+      ],
+      "refSiblingKeys": [],
+      "composition": {
+        "allOf": 0,
+        "oneOf": 0,
+        "anyOf": 0,
+        "hasNot": false
+      },
+      "hasRecursiveReference": false,
+      "canonical": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "booleans": [
+      {
+        "openApiVersion": "3.2.0",
+        "name": "BooleanTrue",
+        "sourcePointer": "/components/schemas/BooleanTrue",
+        "schemaKind": "boolean",
+        "booleanValue": true,
+        "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+        "types": [],
+        "keywords": [],
+        "refSiblingKeys": [],
+        "composition": {
+          "allOf": 0,
+          "oneOf": 0,
+          "anyOf": 0,
+          "hasNot": false
+        },
+        "hasRecursiveReference": false,
+        "canonical": true
+      },
+      {
+        "openApiVersion": "3.2.0",
+        "name": "BooleanFalse",
+        "sourcePointer": "/components/schemas/BooleanFalse",
+        "schemaKind": "boolean",
+        "booleanValue": false,
+        "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+        "types": [],
+        "keywords": [],
+        "refSiblingKeys": [],
+        "composition": {
+          "allOf": 0,
+          "oneOf": 0,
+          "anyOf": 0,
+          "hasNot": false
+        },
+        "hasRecursiveReference": false,
+        "canonical": false
+      }
+    ],
+    "nullableKeyword": {
+      "openApiVersion": "3.2.0",
+      "name": "NullableKeyword",
+      "sourcePointer": "/components/schemas/NullableKeyword",
+      "schemaKind": "object",
+      "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+      "types": [
+        "string"
+      ],
+      "keywords": [
+        "type",
+        "nullable"
+      ],
+      "refSiblingKeys": [],
+      "composition": {
+        "allOf": 0,
+        "oneOf": 0,
+        "anyOf": 0,
+        "hasNot": false
+      },
+      "hasRecursiveReference": false,
+      "canonical": {
+        "type": "string",
+        "nullable": true
+      }
+    }
+  },
+  "nullability": {
+    "oas30Representation": "nullable keyword retained without type-array rewrite",
+    "oas31And32Representation": "type array including null retained",
+    "nullable31And32": "PRESERVED but not assigned OAS 3.0 semantics"
+  },
+  "booleanSchemas": {
+    "identityPreserved": true,
+    "oas30Control": "PRESERVED with validation diagnostics where emitted"
+  },
+  "composition": {
+    "schema31": {
+      "openApiVersion": "3.1.2",
+      "name": "Composition",
+      "sourcePointer": "/components/schemas/Composition",
+      "schemaKind": "object",
+      "documentDialect": "https://example.test/schema/dialect",
+      "expectedEffectiveDialect": "https://example.test/schema/dialect",
+      "types": [],
+      "keywords": [
+        "oneOf"
+      ],
+      "refSiblingKeys": [],
+      "composition": {
+        "allOf": 0,
+        "oneOf": 2,
+        "anyOf": 0,
+        "hasNot": false
+      },
+      "hasRecursiveReference": false,
+      "canonical": {
+        "oneOf": [
+          {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/Pet"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "tag": {
+                    "type": "string"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "anyOf": [
+              true,
+              {
+                "not": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "schema32": {
+      "openApiVersion": "3.2.0",
+      "name": "Composition",
+      "sourcePointer": "/components/schemas/Composition",
+      "schemaKind": "object",
+      "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+      "types": [],
+      "keywords": [
+        "allOf"
+      ],
+      "refSiblingKeys": [],
+      "composition": {
+        "allOf": 2,
+        "oneOf": 0,
+        "anyOf": 0,
+        "hasNot": false
+      },
+      "hasRecursiveReference": false,
+      "canonical": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Pet"
+          },
+          {
+            "oneOf": [
+              {
+                "type": "object"
+              },
+              {
+                "anyOf": [
+                  true,
+                  {
+                    "not": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "recursion": {
+    "direct": {
+      "openApiVersion": "3.2.0",
+      "name": "Node",
+      "sourcePointer": "/components/schemas/Node",
+      "schemaKind": "object",
+      "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+      "types": [
+        "object"
+      ],
+      "keywords": [
+        "type",
+        "properties"
+      ],
+      "refSiblingKeys": [],
+      "composition": {
+        "allOf": 0,
+        "oneOf": 0,
+        "anyOf": 0,
+        "hasNot": false
+      },
+      "hasRecursiveReference": true,
+      "canonical": {
+        "type": "object",
+        "properties": {
+          "child": {
+            "$ref": "#/components/schemas/Node"
+          }
+        }
+      }
+    },
+    "mutual": [
+      {
+        "openApiVersion": "3.2.0",
+        "name": "A",
+        "sourcePointer": "/components/schemas/A",
+        "schemaKind": "object",
+        "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+        "types": [
+          "object"
+        ],
+        "keywords": [
+          "type",
+          "properties"
+        ],
+        "refSiblingKeys": [],
+        "composition": {
+          "allOf": 0,
+          "oneOf": 0,
+          "anyOf": 0,
+          "hasNot": false
+        },
+        "hasRecursiveReference": false,
+        "canonical": {
+          "type": "object",
+          "properties": {
+            "b": {
+              "$ref": "#/components/schemas/B"
+            }
+          }
+        }
+      },
+      {
+        "openApiVersion": "3.2.0",
+        "name": "B",
+        "sourcePointer": "/components/schemas/B",
+        "schemaKind": "object",
+        "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+        "types": [
+          "object"
+        ],
+        "keywords": [
+          "type",
+          "properties"
+        ],
+        "refSiblingKeys": [],
+        "composition": {
+          "allOf": 0,
+          "oneOf": 0,
+          "anyOf": 0,
+          "hasNot": false
+        },
+        "hasRecursiveReference": false,
+        "canonical": {
+          "type": "object",
+          "properties": {
+            "a": {
+              "$ref": "#/components/schemas/A"
+            }
+          }
+        }
+      }
+    ],
+    "dereferenceTerminates": true,
+    "dereferenceCreatesCyclicGraph": true,
+    "canonicalRetainsRefs": true
+  },
+  "references": {
+    "refSibling31": {
+      "openApiVersion": "3.1.2",
+      "name": "RefSibling",
+      "sourcePointer": "/components/schemas/RefSibling",
+      "schemaKind": "object",
+      "documentDialect": "https://example.test/schema/dialect",
+      "expectedEffectiveDialect": "https://example.test/schema/dialect",
+      "types": [],
+      "keywords": [
+        "$ref",
+        "description",
+        "maxProperties"
+      ],
+      "ref": "#/components/schemas/Pet",
+      "refSiblingKeys": [
+        "description",
+        "maxProperties"
+      ],
+      "composition": {
+        "allOf": 0,
+        "oneOf": 0,
+        "anyOf": 0,
+        "hasNot": false
+      },
+      "hasRecursiveReference": false,
+      "canonical": {
+        "$ref": "#/components/schemas/Pet",
+        "description": "A pet.",
+        "maxProperties": 20
+      }
+    },
+    "refSibling32": {
+      "openApiVersion": "3.2.0",
+      "name": "RefSibling",
+      "sourcePointer": "/components/schemas/RefSibling",
+      "schemaKind": "object",
+      "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+      "types": [],
+      "keywords": [
+        "$ref",
+        "description",
+        "maxProperties"
+      ],
+      "ref": "#/components/schemas/Pet",
+      "refSiblingKeys": [
+        "description",
+        "maxProperties"
+      ],
+      "composition": {
+        "allOf": 0,
+        "oneOf": 0,
+        "anyOf": 0,
+        "hasNot": false
+      },
+      "hasRecursiveReference": false,
+      "canonical": {
+        "$ref": "#/components/schemas/Pet",
+        "description": "A pet.",
+        "maxProperties": 20
+      }
+    },
+    "refSibling30": {
+      "openApiVersion": "3.0.4",
+      "name": "RefSibling",
+      "sourcePointer": "/components/schemas/RefSibling",
+      "schemaKind": "object",
+      "types": [],
+      "keywords": [
+        "$ref",
+        "description",
+        "maxProperties"
+      ],
+      "ref": "#/components/schemas/Pet",
+      "refSiblingKeys": [
+        "description",
+        "maxProperties"
+      ],
+      "composition": {
+        "allOf": 0,
+        "oneOf": 0,
+        "anyOf": 0,
+        "hasNot": false
+      },
+      "hasRecursiveReference": false,
+      "canonical": {
+        "$ref": "#/components/schemas/Pet",
+        "description": "OAS 3.0 sibling control",
+        "maxProperties": 20
+      }
+    }
+  },
+  "dialects": {
+    "documentDeclared": "https://example.test/schema/dialect",
+    "schemaOverride": {
+      "openApiVersion": "3.2.0",
+      "name": "SchemaOverride",
+      "sourcePointer": "/components/schemas/SchemaOverride",
+      "schemaKind": "object",
+      "declaredDialect": "https://json-schema.org/draft/2020-12/schema",
+      "expectedEffectiveDialect": "https://json-schema.org/draft/2020-12/schema",
+      "types": [
+        "object"
+      ],
+      "keywords": [
+        "$schema",
+        "type"
+      ],
+      "refSiblingKeys": [],
+      "composition": {
+        "allOf": 0,
+        "oneOf": 0,
+        "anyOf": 0,
+        "hasNot": false
+      },
+      "hasRecursiveReference": false,
+      "canonical": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object"
+      }
+    },
+    "default31": "https://spec.openapis.org/oas/3.1/dialect/base",
+    "default32": "https://spec.openapis.org/oas/3.1/dialect/base",
+    "fabricated32Uri": false
+  },
+  "unknownKeywords": {
+    "oas31": {
+      "openApiVersion": "3.1.2",
+      "name": "UnknownKeyword",
+      "sourcePointer": "/components/schemas/UnknownKeyword",
+      "schemaKind": "object",
+      "documentDialect": "https://example.test/schema/dialect",
+      "expectedEffectiveDialect": "https://example.test/schema/dialect",
+      "types": [
+        "string"
+      ],
+      "keywords": [
+        "type",
+        "acmeQualityScore"
+      ],
+      "refSiblingKeys": [],
+      "composition": {
+        "allOf": 0,
+        "oneOf": 0,
+        "anyOf": 0,
+        "hasNot": false
+      },
+      "hasRecursiveReference": false,
+      "canonical": {
+        "type": "string",
+        "acmeQualityScore": 42
+      }
+    },
+    "oas32": {
+      "openApiVersion": "3.2.0",
+      "name": "UnknownKeyword",
+      "sourcePointer": "/components/schemas/UnknownKeyword",
+      "schemaKind": "object",
+      "expectedEffectiveDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+      "types": [
+        "string"
+      ],
+      "keywords": [
+        "type",
+        "acmeQualityScore"
+      ],
+      "refSiblingKeys": [],
+      "composition": {
+        "allOf": 0,
+        "oneOf": 0,
+        "anyOf": 0,
+        "hasNot": false
+      },
+      "hasRecursiveReference": false,
+      "canonical": {
+        "type": "string",
+        "acmeQualityScore": 42
+      }
+    },
+    "oas30Control": {
+      "openApiVersion": "3.0.4",
+      "name": "UnknownKeyword",
+      "sourcePointer": "/components/schemas/UnknownKeyword",
+      "schemaKind": "object",
+      "types": [
+        "string"
+      ],
+      "keywords": [
+        "type",
+        "acmeQualityScore"
+      ],
+      "refSiblingKeys": [],
+      "composition": {
+        "allOf": 0,
+        "oneOf": 0,
+        "anyOf": 0,
+        "hasNot": false
+      },
+      "hasRecursiveReference": false,
+      "canonical": {
+        "type": "string",
+        "acmeQualityScore": 42
+      }
+    }
+  },
+  "modernKeywords": {
+    "expected": [
+      "const",
+      "contains",
+      "minContains",
+      "maxContains",
+      "prefixItems",
+      "unevaluatedProperties",
+      "dependentSchemas"
+    ],
+    "observed": [
+      "type",
+      "const",
+      "contains",
+      "minContains",
+      "maxContains",
+      "prefixItems",
+      "unevaluatedProperties",
+      "dependentSchemas"
+    ],
+    "missing": []
+  },
+  "externalSchema": {
+    "documentDefault": "https://example.test/default",
+    "sourceDocument": "fixtures/referenced/schemas/customer.yaml",
+    "sourcePointer": "",
+    "canonical": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "$id": "https://example.test/schemas/customer",
+      "$defs": {
+        "Identifier": {
+          "type": "string"
+        }
+      },
+      "type": "object",
+      "acmeQualityScore": 42,
+      "properties": {
+        "id": {
+          "$ref": "#/x-ext/df676da/$defs/Identifier"
+        },
+        "parent": {
+          "$ref": "#/x-ext/df676da"
+        }
+      }
+    },
+    "bundleTransformed": true,
+    "dereferenceErrors": []
+  },
+  "canonicalFidelity": {
+    "expectedKeywords": [
+      "$id",
+      "title",
+      "description",
+      "type",
+      "format",
+      "required",
+      "properties",
+      "enum",
+      "examples",
+      "default",
+      "allOf",
+      "$defs",
+      "acmeQualityScore",
+      "unevaluatedProperties"
+    ],
+    "observedKeywords": [
+      "$id",
+      "title",
+      "description",
+      "type",
+      "format",
+      "required",
+      "properties",
+      "enum",
+      "examples",
+      "default",
+      "allOf",
+      "$defs",
+      "acmeQualityScore",
+      "unevaluatedProperties"
+    ],
+    "missingKeywords": [],
+    "addedKeywords": [],
+    "rewrittenKeywords": [],
+    "canonical": {
+      "$id": "https://example.test/schemas/rich",
+      "title": "Rich schema",
+      "description": "Canonical fidelity fixture",
+      "type": "object",
+      "format": "custom-object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/components/schemas/Rich/$defs/Identifier"
+        },
+        "state": {
+          "type": "string"
+        }
+      },
+      "enum": [
+        {
+          "id": "A"
+        }
+      ],
+      "examples": [
+        {
+          "id": "A",
+          "state": "active"
+        }
+      ],
+      "default": {
+        "id": "A"
+      },
+      "allOf": [
+        {
+          "type": "object"
+        }
+      ],
+      "$defs": {
+        "Identifier": {
+          "type": "string"
+        }
+      },
+      "acmeQualityScore": 42,
+      "unevaluatedProperties": false
+    },
+    "candidateTypesLeaked": false
+  },
+  "sourceCorrelation": {
+    "representativePointers": [
+      "/components/schemas/Pet",
+      "/components/schemas/Pet/properties/name",
+      "/components/schemas/Node/properties/child/$ref",
+      "/components/schemas/Composition/oneOf/0",
+      "/components/schemas/Container/$defs/Identifier"
+    ],
+    "canonicalProvider": "OAIT"
+  },
+  "typescript": {
+    "filesScanned": 69,
+    "termEvidence": {
+      "boolean": true,
+      "jsonSchemaDialect": true,
+      "$schema": true,
+      "additionalProperties": true,
+      "type": true
+    },
+    "matchingFiles": [
+      "dist/configuration/index.d.ts",
+      "dist/index.d.ts",
+      "dist/lib/Validator/Validator.d.ts",
+      "dist/plugins/fetch-urls/fetch-urls.d.ts",
+      "dist/plugins/read-files/read-files.d.ts",
+      "dist/schemas/v2.0/schema.d.ts",
+      "dist/schemas/v3.0/schema.d.ts",
+      "dist/schemas/v3.1/schema.d.ts",
+      "dist/schemas/v3.2/schema.d.ts",
+      "dist/types/index.d.ts",
+      "dist/utils/betterAjvErrors/index.d.ts",
+      "dist/utils/betterAjvErrors/utils.d.ts"
+    ],
+    "runtime": {
+      "booleanSchemas": true,
+      "typeArrays": true,
+      "jsonSchemaDialect": true,
+      "$schema": true,
+      "unknownKeywords": true
+    },
+    "dependencyCompileRequiresSkipLibCheck": true
+  },
+  "transformations": {
+    "bundleSchemas": [
+      {
+        "path": "fixtures/oas-3.0/schemas.yaml",
+        "status": "PASS",
+        "count": 11
+      },
+      {
+        "path": "fixtures/oas-3.1/schemas.yaml",
+        "status": "PASS",
+        "count": 15
+      },
+      {
+        "path": "fixtures/oas-3.1/default-dialect.yaml",
+        "status": "PASS",
+        "count": 1
+      },
+      {
+        "path": "fixtures/oas-3.2/schemas.yaml",
+        "status": "PASS",
+        "count": 16
+      },
+      {
+        "path": "fixtures/oas-3.2/default-dialect.yaml",
+        "status": "PASS",
+        "count": 1
+      }
+    ],
+    "dereferenceCycleWarning": true,
+    "lifecyclePathsSecondary": true
+  },
+  "unexpectedBehavior": [
+    "Schema lifecycle paths are candidate paths only; transformed nested paths may contain noncanonical segments."
+  ],
+  "mandatoryGates": {
+    "oas30Representation": true,
+    "oas31Representation": true,
+    "oas32Representation": true,
+    "booleanSchemas": true,
+    "multiTypeNull": true,
+    "oas30Nullable": true,
+    "composition": true,
+    "recursiveStrategy": true,
+    "schemaRef": true,
+    "refSiblings": true,
+    "jsonSchemaDialect": true,
+    "schemaRootDialect": true,
+    "unknownKeyword": true,
+    "canonicalSchema": true,
+    "externalSchema": true,
+    "publicApisOnly": true
+  },
+  "allMandatoryGatesPassed": true,
+  "resultHash": "477bba634c41de84b667cec2ecd2ef9afc2a4f547bb5ae22ea6482ee7b561a19",
+  "resultHashScope": "SHA-256 of compact JSON excluding hash fields."
+}

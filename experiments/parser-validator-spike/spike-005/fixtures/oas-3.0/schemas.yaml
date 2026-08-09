@@ -1,0 +1,27 @@
+openapi: 3.0.4
+info: { title: OAS 3.0 schemas, version: 1.0.0 }
+paths: {}
+components:
+  schemas:
+    Baseline:
+      title: Baseline
+      description: Ordinary OAS 3.0 schema
+      type: object
+      required: [id]
+      properties:
+        id: { type: integer, format: int64 }
+        name: { type: string, description: Name }
+        status: { type: string, enum: [active, inactive] }
+    Nullable: { type: string, nullable: true }
+    NullableNoType: { nullable: true }
+    BooleanTrue: true
+    BooleanFalse: false
+    Pet: { type: object, properties: { name: { type: string } } }
+    RefSibling:
+      $ref: '#/components/schemas/Pet'
+      description: OAS 3.0 sibling control
+      maxProperties: 20
+    UnknownKeyword: { type: string, acmeQualityScore: 42 }
+    TypeArrayControl: { type: [string, 'null'] }
+    SchemaKeywordControl: { type: string, $schema: 'https://json-schema.org/draft/2020-12/schema' }
+    DefsControl: { type: object, $defs: { Identifier: { type: string } } }

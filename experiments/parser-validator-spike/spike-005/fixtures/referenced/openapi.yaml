@@ -1,0 +1,7 @@
+openapi: 3.2.0
+info: { title: External schema, version: 1.0.0 }
+jsonSchemaDialect: https://example.test/default
+paths: {}
+components:
+  schemas:
+    Customer: { $ref: ./schemas/customer.yaml }
