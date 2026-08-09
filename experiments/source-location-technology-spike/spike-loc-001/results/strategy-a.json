@@ -1,0 +1,2563 @@
+{
+  "strategy": "strategy-a",
+  "definition": "yaml@2.8.3 for YAML and JSON",
+  "environment": {
+    "date": "2026-08-09T15:46:47.080Z",
+    "node": "v24.18.0",
+    "platform": "darwin",
+    "architecture": "arm64",
+    "moduleMode": "ESM / NodeNext",
+    "typescript": "5.9.2"
+  },
+  "dependencies": {
+    "@tree-sitter-grammars/tree-sitter-yaml": "0.6.1",
+    "jsonc-parser": "3.3.1",
+    "tree-sitter": "0.21.1",
+    "tree-sitter-json": "0.24.8",
+    "yaml": "2.8.3",
+    "@types/node": "24.3.0",
+    "tsx": "4.20.4",
+    "typescript": "5.9.2"
+  },
+  "capabilities": {
+    "yamlExactRanges": "PASS",
+    "jsonExactRanges": "PASS",
+    "yamlLineColumn": "PASS",
+    "jsonLineColumn": "PASS",
+    "rfc6901PointerConstruction": "PASS",
+    "arrays": "PASS",
+    "escapedKeys": "PASS",
+    "duplicateScalarValues": "PASS",
+    "duplicateMappingKeys": "PARTIAL",
+    "yamlAnchors": "PARTIAL",
+    "yamlAliases": "PARTIAL",
+    "comments": "PASS",
+    "flowCollections": "PASS",
+    "blockScalars": "PASS",
+    "unicodePositions": "PASS",
+    "crlf": "PASS",
+    "bom": "PASS",
+    "malformedYamlRecovery": "PARTIAL",
+    "malformedJsonRecovery": "PARTIAL",
+    "strictJsonEnforcement": "PASS",
+    "multiDocumentYamlDetection": "PASS",
+    "sourceImmutability": "PASS",
+    "typescriptIntegration": "PASS",
+    "esmNodeNext": "PASS",
+    "crossPlatformSuitability": "PASS",
+    "nativeDependencyRequired": "NOT_APPLICABLE",
+    "publicApisOnly": "PASS"
+  },
+  "evidenceClassification": {
+    "pointer": "OAIT_OWNED",
+    "offset": "NATIVE",
+    "length": "NATIVE",
+    "line": "DERIVABLE",
+    "column": "DERIVABLE",
+    "documentIdentity": "OAIT_OWNED"
+  },
+  "anchorConvention": {
+    "mappingObject": "key start plus full source range",
+    "mappingProperty": "key start plus property range",
+    "arrayItem": "item value/node start plus node range",
+    "scalar": "key start for property; item/node start otherwise",
+    "refDeclaration": "$ref key start",
+    "recommendation": "Store both a full range and a presentation anchor."
+  },
+  "fixtures": [
+    {
+      "path": "fixtures/yaml/basic.yaml",
+      "format": "yaml",
+      "status": "PASS",
+      "expectedLocationsEstablishedIndependently": true,
+      "pointerAssertions": [
+        {
+          "pointer": "",
+          "found": true
+        },
+        {
+          "pointer": "/openapi",
+          "found": true
+        },
+        {
+          "pointer": "/info",
+          "found": true
+        },
+        {
+          "pointer": "/info/title",
+          "found": true
+        },
+        {
+          "pointer": "/info/version",
+          "found": true
+        },
+        {
+          "pointer": "/tags",
+          "found": true
+        },
+        {
+          "pointer": "/tags/0",
+          "found": true
+        },
+        {
+          "pointer": "/tags/0/name",
+          "found": true
+        },
+        {
+          "pointer": "/paths",
+          "found": true
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}",
+          "found": true
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get",
+          "found": true
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/operationId",
+          "found": true
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/parameters/0",
+          "found": true
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/parameters/1",
+          "found": true
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/parameters/2",
+          "found": true
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/responses/200",
+          "found": true
+        },
+        {
+          "pointer": "/paths/~1pets/post",
+          "found": true
+        },
+        {
+          "pointer": "/components",
+          "found": true
+        },
+        {
+          "pointer": "/components/schemas",
+          "found": true
+        },
+        {
+          "pointer": "/components/schemas/Pet",
+          "found": true
+        },
+        {
+          "pointer": "/components/schemas/Pet/properties/id",
+          "found": true
+        },
+        {
+          "pointer": "/components/schemas/Pet/properties/name",
+          "found": true
+        },
+        {
+          "pointer": "/components/schemas/Pet/properties/a~1b~0c",
+          "found": true
+        },
+        {
+          "pointer": "/components/securitySchemes/ApiKeyAuth",
+          "found": true
+        }
+      ],
+      "positionAssertions": [
+        {
+          "pointer": "",
+          "expected": {
+            "line": 1,
+            "column": 1
+          },
+          "actual": {
+            "line": 1,
+            "column": 1
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/openapi",
+          "expected": {
+            "line": 1,
+            "column": 1
+          },
+          "actual": {
+            "line": 1,
+            "column": 1
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/info",
+          "expected": {
+            "line": 2,
+            "column": 1
+          },
+          "actual": {
+            "line": 2,
+            "column": 1
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/info/title",
+          "expected": {
+            "line": 3,
+            "column": 3
+          },
+          "actual": {
+            "line": 3,
+            "column": 3
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/tags/0",
+          "expected": {
+            "line": 6,
+            "column": 5
+          },
+          "actual": {
+            "line": 6,
+            "column": 5
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/paths",
+          "expected": {
+            "line": 7,
+            "column": 1
+          },
+          "actual": {
+            "line": 7,
+            "column": 1
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}",
+          "expected": {
+            "line": 8,
+            "column": 3
+          },
+          "actual": {
+            "line": 8,
+            "column": 3
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get",
+          "expected": {
+            "line": 9,
+            "column": 5
+          },
+          "actual": {
+            "line": 9,
+            "column": 5
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/operationId",
+          "expected": {
+            "line": 10,
+            "column": 7
+          },
+          "actual": {
+            "line": 10,
+            "column": 7
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/components",
+          "expected": {
+            "line": 36,
+            "column": 1
+          },
+          "actual": {
+            "line": 36,
+            "column": 1
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/components/schemas/Pet",
+          "expected": {
+            "line": 38,
+            "column": 5
+          },
+          "actual": {
+            "line": 38,
+            "column": 5
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/components/schemas/Pet/properties/id",
+          "expected": {
+            "line": 42,
+            "column": 9
+          },
+          "actual": {
+            "line": 42,
+            "column": 9
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/components/schemas/Pet/properties/a~1b~0c",
+          "expected": {
+            "line": 44,
+            "column": 9
+          },
+          "actual": {
+            "line": 44,
+            "column": 9
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/components/securitySchemes/ApiKeyAuth",
+          "expected": {
+            "line": 47,
+            "column": 5
+          },
+          "actual": {
+            "line": 47,
+            "column": 5
+          },
+          "pass": true
+        }
+      ],
+      "entryCount": 71,
+      "diagnostics": [],
+      "recovery": "FULL_RECOVERY",
+      "metadata": {
+        "documentCount": 1
+      },
+      "sampleEntries": [
+        {
+          "pointer": "",
+          "offset": 0,
+          "length": 1192,
+          "line": 1,
+          "column": 1,
+          "anchor": "node-start"
+        },
+        {
+          "pointer": "/openapi",
+          "offset": 0,
+          "length": 15,
+          "line": 1,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/info",
+          "offset": 15,
+          "length": 52,
+          "line": 2,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/info/title",
+          "offset": 23,
+          "length": 27,
+          "line": 3,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/info/version",
+          "offset": 52,
+          "length": 15,
+          "line": 4,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/tags",
+          "offset": 67,
+          "length": 21,
+          "line": 5,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/tags/0",
+          "offset": 77,
+          "length": 11,
+          "line": 6,
+          "column": 5,
+          "anchor": "item-start"
+        },
+        {
+          "pointer": "/tags/0/name",
+          "offset": 77,
+          "length": 11,
+          "line": 6,
+          "column": 5,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths",
+          "offset": 88,
+          "length": 707,
+          "line": 7,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}",
+          "offset": 97,
+          "length": 498,
+          "line": 8,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get",
+          "offset": 116,
+          "length": 479,
+          "line": 9,
+          "column": 5,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/operationId",
+          "offset": 127,
+          "length": 20,
+          "line": 10,
+          "column": 7,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/parameters/0",
+          "offset": 175,
+          "length": 91,
+          "line": 12,
+          "column": 11,
+          "anchor": "item-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/parameters/1",
+          "offset": 276,
+          "length": 67,
+          "line": 16,
+          "column": 11,
+          "anchor": "item-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/parameters/2",
+          "offset": 353,
+          "length": 68,
+          "line": 19,
+          "column": 11,
+          "anchor": "item-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/responses/200",
+          "offset": 446,
+          "length": 149,
+          "line": 23,
+          "column": 9,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths/~1pets/post",
+          "offset": 608,
+          "length": 187,
+          "line": 29,
+          "column": 5,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/components",
+          "offset": 795,
+          "length": 397,
+          "line": 36,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/components/schemas",
+          "offset": 809,
+          "length": 302,
+          "line": 37,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/components/schemas/Pet",
+          "offset": 822,
+          "length": 236,
+          "line": 38,
+          "column": 5,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/components/schemas/Pet/properties/id",
+          "offset": 899,
+          "length": 46,
+          "line": 42,
+          "column": 9,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/components/schemas/Pet/properties/name",
+          "offset": 953,
+          "length": 48,
+          "line": 43,
+          "column": 9,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/components/schemas/Pet/properties/a~1b~0c",
+          "offset": 1009,
+          "length": 49,
+          "line": 44,
+          "column": 9,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/components/securitySchemes/ApiKeyAuth",
+          "offset": 1134,
+          "length": 58,
+          "line": 47,
+          "column": 5,
+          "anchor": "key-start"
+        }
+      ],
+      "inputHashBefore": "e49e77b1162b817079c7c43ab88fea4c24ccf0bce65f0393263f014818891746",
+      "inputHashAfter": "e49e77b1162b817079c7c43ab88fea4c24ccf0bce65f0393263f014818891746"
+    },
+    {
+      "path": "fixtures/json/basic.json",
+      "format": "json",
+      "status": "PASS",
+      "expectedLocationsEstablishedIndependently": true,
+      "pointerAssertions": [
+        {
+          "pointer": "",
+          "found": true
+        },
+        {
+          "pointer": "/openapi",
+          "found": true
+        },
+        {
+          "pointer": "/info",
+          "found": true
+        },
+        {
+          "pointer": "/info/title",
+          "found": true
+        },
+        {
+          "pointer": "/info/version",
+          "found": true
+        },
+        {
+          "pointer": "/tags",
+          "found": true
+        },
+        {
+          "pointer": "/tags/0",
+          "found": true
+        },
+        {
+          "pointer": "/tags/0/name",
+          "found": true
+        },
+        {
+          "pointer": "/paths",
+          "found": true
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}",
+          "found": true
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get",
+          "found": true
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/operationId",
+          "found": true
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/parameters/0",
+          "found": true
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/parameters/1",
+          "found": true
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/parameters/2",
+          "found": true
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/responses/200",
+          "found": true
+        },
+        {
+          "pointer": "/paths/~1pets/post",
+          "found": true
+        },
+        {
+          "pointer": "/components",
+          "found": true
+        },
+        {
+          "pointer": "/components/schemas",
+          "found": true
+        },
+        {
+          "pointer": "/components/schemas/Pet",
+          "found": true
+        },
+        {
+          "pointer": "/components/schemas/Pet/properties/id",
+          "found": true
+        },
+        {
+          "pointer": "/components/schemas/Pet/properties/name",
+          "found": true
+        },
+        {
+          "pointer": "/components/schemas/Pet/properties/a~1b~0c",
+          "found": true
+        },
+        {
+          "pointer": "/components/securitySchemes/ApiKeyAuth",
+          "found": true
+        }
+      ],
+      "positionAssertions": [
+        {
+          "pointer": "",
+          "expected": {
+            "line": 1,
+            "column": 1
+          },
+          "actual": {
+            "line": 1,
+            "column": 1
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/openapi",
+          "expected": {
+            "line": 2,
+            "column": 3
+          },
+          "actual": {
+            "line": 2,
+            "column": 3
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/info",
+          "expected": {
+            "line": 3,
+            "column": 3
+          },
+          "actual": {
+            "line": 3,
+            "column": 3
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/info/title",
+          "expected": {
+            "line": 3,
+            "column": 13
+          },
+          "actual": {
+            "line": 3,
+            "column": 13
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/tags/0",
+          "expected": {
+            "line": 4,
+            "column": 12
+          },
+          "actual": {
+            "line": 4,
+            "column": 12
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/paths",
+          "expected": {
+            "line": 5,
+            "column": 3
+          },
+          "actual": {
+            "line": 5,
+            "column": 3
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}",
+          "expected": {
+            "line": 6,
+            "column": 5
+          },
+          "actual": {
+            "line": 6,
+            "column": 5
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get",
+          "expected": {
+            "line": 7,
+            "column": 7
+          },
+          "actual": {
+            "line": 7,
+            "column": 7
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/operationId",
+          "expected": {
+            "line": 8,
+            "column": 9
+          },
+          "actual": {
+            "line": 8,
+            "column": 9
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/components",
+          "expected": {
+            "line": 24,
+            "column": 3
+          },
+          "actual": {
+            "line": 24,
+            "column": 3
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/components/schemas/Pet",
+          "expected": {
+            "line": 26,
+            "column": 7
+          },
+          "actual": {
+            "line": 26,
+            "column": 7
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/components/schemas/Pet/properties/id",
+          "expected": {
+            "line": 26,
+            "column": 78
+          },
+          "actual": {
+            "line": 26,
+            "column": 78
+          },
+          "pass": true
+        },
+        {
+          "pointer": "/components/securitySchemes/ApiKeyAuth",
+          "expected": {
+            "line": 29,
+            "column": 26
+          },
+          "actual": {
+            "line": 29,
+            "column": 26
+          },
+          "pass": true
+        }
+      ],
+      "entryCount": 71,
+      "diagnostics": [],
+      "recovery": "FULL_RECOVERY",
+      "metadata": {
+        "documentCount": 1,
+        "strictJsonByIndependentValidation": {
+          "valid": true,
+          "error": null
+        }
+      },
+      "sampleEntries": [
+        {
+          "pointer": "",
+          "offset": 0,
+          "length": 1359,
+          "line": 1,
+          "column": 1,
+          "anchor": "node-start"
+        },
+        {
+          "pointer": "/openapi",
+          "offset": 4,
+          "length": 18,
+          "line": 2,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/info",
+          "offset": 26,
+          "length": 62,
+          "line": 3,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/info/title",
+          "offset": 36,
+          "length": 30,
+          "line": 3,
+          "column": 13,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/info/version",
+          "offset": 68,
+          "length": 19,
+          "line": 3,
+          "column": 45,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/tags",
+          "offset": 92,
+          "length": 28,
+          "line": 4,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/tags/0",
+          "offset": 101,
+          "length": 18,
+          "line": 4,
+          "column": 12,
+          "anchor": "item-start"
+        },
+        {
+          "pointer": "/tags/0/name",
+          "offset": 103,
+          "length": 15,
+          "line": 4,
+          "column": 14,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths",
+          "offset": 124,
+          "length": 764,
+          "line": 5,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}",
+          "offset": 139,
+          "length": 519,
+          "line": 6,
+          "column": 5,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get",
+          "offset": 164,
+          "length": 489,
+          "line": 7,
+          "column": 7,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/operationId",
+          "offset": 181,
+          "length": 23,
+          "line": 8,
+          "column": 9,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/parameters/0",
+          "offset": 240,
+          "length": 83,
+          "line": 10,
+          "column": 11,
+          "anchor": "item-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/parameters/1",
+          "offset": 335,
+          "length": 66,
+          "line": 11,
+          "column": 11,
+          "anchor": "item-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/parameters/2",
+          "offset": 413,
+          "length": 76,
+          "line": 12,
+          "column": 11,
+          "anchor": "item-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/responses/200",
+          "offset": 515,
+          "length": 128,
+          "line": 14,
+          "column": 24,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths/~1pets/post",
+          "offset": 681,
+          "length": 198,
+          "line": 18,
+          "column": 7,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/components",
+          "offset": 892,
+          "length": 465,
+          "line": 24,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/components/schemas",
+          "offset": 912,
+          "length": 340,
+          "line": 25,
+          "column": 5,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/components/schemas/Pet",
+          "offset": 931,
+          "length": 249,
+          "line": 26,
+          "column": 7,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/components/schemas/Pet/properties/id",
+          "offset": 1002,
+          "length": 55,
+          "line": 26,
+          "column": 78,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/components/schemas/Pet/properties/name",
+          "offset": 1059,
+          "length": 57,
+          "line": 26,
+          "column": 135,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/components/schemas/Pet/properties/a~1b~0c",
+          "offset": 1118,
+          "length": 59,
+          "line": 26,
+          "column": 194,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/components/securitySchemes/ApiKeyAuth",
+          "offset": 1279,
+          "length": 72,
+          "line": 29,
+          "column": 26,
+          "anchor": "key-start"
+        }
+      ],
+      "inputHashBefore": "ee51fb1ee7a5eae64e62c41366523619a0e28cd7841e978d74b0626e7da042c1",
+      "inputHashAfter": "ee51fb1ee7a5eae64e62c41366523619a0e28cd7841e978d74b0626e7da042c1"
+    }
+  ],
+  "features": [
+    {
+      "path": "fixtures/yaml-features/features.yaml",
+      "format": "yaml",
+      "recovery": "FULL_RECOVERY",
+      "diagnostics": [],
+      "metadata": {
+        "documentCount": 1
+      },
+      "pointers": [
+        "",
+        "/commonParameter",
+        "/commonParameter/name",
+        "/commonParameter/in",
+        "/paths",
+        "/paths/~1pets~1{petId}",
+        "/paths/~1pets~1{petId}/get",
+        "/paths/~1pets~1{petId}/get/parameters",
+        "/paths/~1pets~1{petId}/get/parameters/0",
+        "/paths/~1pets~1{petId}/get/summary",
+        "/paths/~1pets~1{petId}/get/description",
+        "/paths/~1pets~1{petId}/get/x-flow",
+        "/paths/~1pets~1{petId}/get/x-flow/required",
+        "/paths/~1pets~1{petId}/get/x-flow/required/0",
+        "/paths/~1pets~1{petId}/get/x-flow/required/1",
+        "/paths/~1pets~1{petId}/get/x-flow/~0special~1key",
+        "/paths/quoted key",
+        "/paths/quoted key/value"
+      ],
+      "entries": [
+        {
+          "pointer": "",
+          "offset": 14,
+          "length": 380,
+          "line": 3,
+          "column": 1,
+          "anchor": "node-start"
+        },
+        {
+          "pointer": "/commonParameter",
+          "offset": 14,
+          "length": 64,
+          "line": 3,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/commonParameter/name",
+          "offset": 50,
+          "length": 15,
+          "line": 4,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/commonParameter/in",
+          "offset": 67,
+          "length": 11,
+          "line": 5,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths",
+          "offset": 78,
+          "length": 316,
+          "line": 6,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}",
+          "offset": 87,
+          "length": 274,
+          "line": 7,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get",
+          "offset": 108,
+          "length": 253,
+          "line": 8,
+          "column": 5,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/parameters",
+          "offset": 119,
+          "length": 39,
+          "line": 9,
+          "column": 7,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/parameters/0",
+          "offset": 141,
+          "length": 17,
+          "line": 10,
+          "column": 11,
+          "anchor": "item-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/summary",
+          "offset": 164,
+          "length": 73,
+          "line": 11,
+          "column": 7,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/description",
+          "offset": 243,
+          "length": 56,
+          "line": 14,
+          "column": 7,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/x-flow",
+          "offset": 305,
+          "length": 56,
+          "line": 17,
+          "column": 7,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/x-flow/required",
+          "offset": 315,
+          "length": 20,
+          "line": 17,
+          "column": 17,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/x-flow/required/0",
+          "offset": 326,
+          "length": 2,
+          "line": 17,
+          "column": 28,
+          "anchor": "item-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/x-flow/required/1",
+          "offset": 330,
+          "length": 4,
+          "line": 17,
+          "column": 32,
+          "anchor": "item-start"
+        },
+        {
+          "pointer": "/paths/~1pets~1{petId}/get/x-flow/~0special~1key",
+          "offset": 337,
+          "length": 22,
+          "line": 17,
+          "column": 39,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths/quoted key",
+          "offset": 363,
+          "length": 31,
+          "line": 18,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths/quoted key/value",
+          "offset": 379,
+          "length": 13,
+          "line": 18,
+          "column": 19,
+          "anchor": "key-start"
+        }
+      ]
+    },
+    {
+      "path": "fixtures/duplicates/yaml.yaml",
+      "format": "yaml",
+      "recovery": "PARTIAL_RECOVERY",
+      "diagnostics": [
+        {
+          "code": "DUPLICATE_KEY",
+          "offset": 49,
+          "length": 1,
+          "line": 4,
+          "column": 3
+        }
+      ],
+      "metadata": {
+        "documentCount": 1
+      },
+      "pointers": [
+        "",
+        "/root",
+        "/root/duplicate",
+        "/root/sibling",
+        "/root/other",
+        "/root/fifth"
+      ],
+      "entries": [
+        {
+          "pointer": "",
+          "offset": 0,
+          "length": 107,
+          "line": 1,
+          "column": 1,
+          "anchor": "node-start"
+        },
+        {
+          "pointer": "/root",
+          "offset": 0,
+          "length": 107,
+          "line": 1,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/root/duplicate",
+          "offset": 8,
+          "length": 17,
+          "line": 2,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/root/sibling",
+          "offset": 27,
+          "length": 20,
+          "line": 3,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/root/duplicate",
+          "offset": 49,
+          "length": 18,
+          "line": 4,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/root/other",
+          "offset": 69,
+          "length": 18,
+          "line": 5,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/root/fifth",
+          "offset": 89,
+          "length": 18,
+          "line": 6,
+          "column": 3,
+          "anchor": "key-start"
+        }
+      ]
+    },
+    {
+      "path": "fixtures/duplicates/json.json",
+      "format": "json",
+      "recovery": "PARTIAL_RECOVERY",
+      "diagnostics": [
+        {
+          "code": "DUPLICATE_KEY",
+          "offset": 55,
+          "length": 1,
+          "line": 4,
+          "column": 3
+        }
+      ],
+      "metadata": {
+        "documentCount": 1,
+        "strictJsonByIndependentValidation": {
+          "valid": true,
+          "error": null
+        }
+      },
+      "pointers": [
+        "",
+        "/duplicate",
+        "/sibling",
+        "/other",
+        "/fifth"
+      ],
+      "entries": [
+        {
+          "pointer": "",
+          "offset": 0,
+          "length": 129,
+          "line": 1,
+          "column": 1,
+          "anchor": "node-start"
+        },
+        {
+          "pointer": "/duplicate",
+          "offset": 4,
+          "length": 20,
+          "line": 2,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/sibling",
+          "offset": 28,
+          "length": 23,
+          "line": 3,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/duplicate",
+          "offset": 55,
+          "length": 21,
+          "line": 4,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/other",
+          "offset": 80,
+          "length": 21,
+          "line": 5,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/fifth",
+          "offset": 105,
+          "length": 22,
+          "line": 6,
+          "column": 3,
+          "anchor": "key-start"
+        }
+      ]
+    },
+    {
+      "path": "fixtures/unicode/positions.yaml",
+      "format": "yaml",
+      "recovery": "FULL_RECOVERY",
+      "diagnostics": [],
+      "metadata": {
+        "documentCount": 1
+      },
+      "pointers": [
+        "",
+        "/ascii",
+        "/accented",
+        "/japanese",
+        "/emoji",
+        "/afterEmoji",
+        "/nonBmp",
+        "/afterNonBmp"
+      ],
+      "entries": [
+        {
+          "pointer": "",
+          "offset": 0,
+          "length": 100,
+          "line": 1,
+          "column": 1,
+          "anchor": "node-start"
+        },
+        {
+          "pointer": "/ascii",
+          "offset": 0,
+          "length": 11,
+          "line": 1,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/accented",
+          "offset": 11,
+          "length": 15,
+          "line": 2,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/japanese",
+          "offset": 26,
+          "length": 14,
+          "line": 3,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/emoji",
+          "offset": 40,
+          "length": 10,
+          "line": 4,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/afterEmoji",
+          "offset": 50,
+          "length": 19,
+          "line": 5,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/nonBmp",
+          "offset": 69,
+          "length": 11,
+          "line": 6,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/afterNonBmp",
+          "offset": 80,
+          "length": 20,
+          "line": 7,
+          "column": 1,
+          "anchor": "key-start"
+        }
+      ]
+    },
+    {
+      "path": "fixtures/unicode/positions.json",
+      "format": "json",
+      "recovery": "FULL_RECOVERY",
+      "diagnostics": [],
+      "metadata": {
+        "documentCount": 1,
+        "strictJsonByIndependentValidation": {
+          "valid": true,
+          "error": null
+        }
+      },
+      "pointers": [
+        "",
+        "/ascii",
+        "/accented",
+        "/japanese",
+        "/emoji",
+        "/afterEmoji",
+        "/nonBmp",
+        "/afterNonBmp"
+      ],
+      "entries": [
+        {
+          "pointer": "",
+          "offset": 0,
+          "length": 123,
+          "line": 1,
+          "column": 1,
+          "anchor": "node-start"
+        },
+        {
+          "pointer": "/ascii",
+          "offset": 1,
+          "length": 13,
+          "line": 1,
+          "column": 2,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/accented",
+          "offset": 15,
+          "length": 17,
+          "line": 1,
+          "column": 16,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/japanese",
+          "offset": 33,
+          "length": 16,
+          "line": 1,
+          "column": 34,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/emoji",
+          "offset": 50,
+          "length": 12,
+          "line": 1,
+          "column": 51,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/afterEmoji",
+          "offset": 63,
+          "length": 21,
+          "line": 1,
+          "column": 63,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/nonBmp",
+          "offset": 85,
+          "length": 13,
+          "line": 1,
+          "column": 85,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/afterNonBmp",
+          "offset": 99,
+          "length": 22,
+          "line": 1,
+          "column": 98,
+          "anchor": "key-start"
+        }
+      ]
+    },
+    {
+      "path": "fixtures/line-endings/lf.yaml",
+      "format": "yaml",
+      "recovery": "FULL_RECOVERY",
+      "diagnostics": [],
+      "metadata": {
+        "documentCount": 1
+      },
+      "pointers": [
+        "",
+        "/openapi",
+        "/info",
+        "/info/title",
+        "/paths"
+      ],
+      "entries": [
+        {
+          "pointer": "",
+          "offset": 0,
+          "length": 53,
+          "line": 1,
+          "column": 1,
+          "anchor": "node-start"
+        },
+        {
+          "pointer": "/openapi",
+          "offset": 0,
+          "length": 15,
+          "line": 1,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/info",
+          "offset": 15,
+          "length": 28,
+          "line": 2,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/info/title",
+          "offset": 23,
+          "length": 20,
+          "line": 3,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths",
+          "offset": 43,
+          "length": 10,
+          "line": 4,
+          "column": 1,
+          "anchor": "key-start"
+        }
+      ]
+    },
+    {
+      "path": "fixtures/line-endings/crlf.yaml",
+      "format": "yaml",
+      "recovery": "FULL_RECOVERY",
+      "diagnostics": [],
+      "metadata": {
+        "documentCount": 1
+      },
+      "pointers": [
+        "",
+        "/openapi",
+        "/info",
+        "/info/title",
+        "/paths"
+      ],
+      "entries": [
+        {
+          "pointer": "",
+          "offset": 0,
+          "length": 57,
+          "line": 1,
+          "column": 1,
+          "anchor": "node-start"
+        },
+        {
+          "pointer": "/openapi",
+          "offset": 0,
+          "length": 16,
+          "line": 1,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/info",
+          "offset": 16,
+          "length": 30,
+          "line": 2,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/info/title",
+          "offset": 25,
+          "length": 21,
+          "line": 3,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths",
+          "offset": 46,
+          "length": 11,
+          "line": 4,
+          "column": 1,
+          "anchor": "key-start"
+        }
+      ]
+    },
+    {
+      "path": "fixtures/line-endings/bom.yaml",
+      "format": "yaml",
+      "recovery": "FULL_RECOVERY",
+      "diagnostics": [],
+      "metadata": {
+        "documentCount": 1
+      },
+      "pointers": [
+        "",
+        "/openapi",
+        "/info",
+        "/info/title",
+        "/paths"
+      ],
+      "entries": [
+        {
+          "pointer": "",
+          "offset": 1,
+          "length": 46,
+          "line": 1,
+          "column": 2,
+          "anchor": "node-start"
+        },
+        {
+          "pointer": "/openapi",
+          "offset": 1,
+          "length": 15,
+          "line": 1,
+          "column": 2,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/info",
+          "offset": 16,
+          "length": 21,
+          "line": 2,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/info/title",
+          "offset": 24,
+          "length": 11,
+          "line": 2,
+          "column": 9,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths",
+          "offset": 37,
+          "length": 10,
+          "line": 3,
+          "column": 1,
+          "anchor": "key-start"
+        }
+      ]
+    },
+    {
+      "path": "fixtures/yaml-features/multi-document.yaml",
+      "format": "yaml",
+      "recovery": "FULL_RECOVERY",
+      "diagnostics": [],
+      "metadata": {
+        "documentCount": 2
+      },
+      "pointers": [
+        "",
+        "/openapi"
+      ],
+      "entries": [
+        {
+          "pointer": "",
+          "offset": 4,
+          "length": 15,
+          "line": 2,
+          "column": 1,
+          "anchor": "node-start"
+        },
+        {
+          "pointer": "/openapi",
+          "offset": 4,
+          "length": 15,
+          "line": 2,
+          "column": 1,
+          "anchor": "key-start"
+        }
+      ]
+    },
+    {
+      "path": "fixtures/yaml/whitespace-compact.yaml",
+      "format": "yaml",
+      "recovery": "FULL_RECOVERY",
+      "diagnostics": [],
+      "metadata": {
+        "documentCount": 1
+      },
+      "pointers": [
+        "",
+        "/root",
+        "/root/child"
+      ],
+      "entries": [
+        {
+          "pointer": "",
+          "offset": 0,
+          "length": 21,
+          "line": 1,
+          "column": 1,
+          "anchor": "node-start"
+        },
+        {
+          "pointer": "/root",
+          "offset": 0,
+          "length": 21,
+          "line": 1,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/root/child",
+          "offset": 8,
+          "length": 13,
+          "line": 2,
+          "column": 3,
+          "anchor": "key-start"
+        }
+      ]
+    },
+    {
+      "path": "fixtures/yaml/whitespace-expanded.yaml",
+      "format": "yaml",
+      "recovery": "FULL_RECOVERY",
+      "diagnostics": [],
+      "metadata": {
+        "documentCount": 1
+      },
+      "pointers": [
+        "",
+        "/root",
+        "/root/child"
+      ],
+      "entries": [
+        {
+          "pointer": "",
+          "offset": 10,
+          "length": 40,
+          "line": 2,
+          "column": 1,
+          "anchor": "node-start"
+        },
+        {
+          "pointer": "/root",
+          "offset": 10,
+          "length": 40,
+          "line": 2,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/root/child",
+          "offset": 37,
+          "length": 13,
+          "line": 5,
+          "column": 3,
+          "anchor": "key-start"
+        }
+      ]
+    },
+    {
+      "path": "fixtures/yaml/reordered.yaml",
+      "format": "yaml",
+      "recovery": "FULL_RECOVERY",
+      "diagnostics": [],
+      "metadata": {
+        "documentCount": 1
+      },
+      "pointers": [
+        "",
+        "/paths",
+        "/info",
+        "/info/version",
+        "/info/title",
+        "/openapi"
+      ],
+      "entries": [
+        {
+          "pointer": "",
+          "offset": 0,
+          "length": 68,
+          "line": 1,
+          "column": 1,
+          "anchor": "node-start"
+        },
+        {
+          "pointer": "/paths",
+          "offset": 0,
+          "length": 10,
+          "line": 1,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/info",
+          "offset": 10,
+          "length": 43,
+          "line": 2,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/info/version",
+          "offset": 18,
+          "length": 14,
+          "line": 2,
+          "column": 9,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/info/title",
+          "offset": 34,
+          "length": 17,
+          "line": 2,
+          "column": 25,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/openapi",
+          "offset": 53,
+          "length": 15,
+          "line": 3,
+          "column": 1,
+          "anchor": "key-start"
+        }
+      ]
+    },
+    {
+      "path": "fixtures/multi-file/openapi.yaml",
+      "format": "yaml",
+      "recovery": "FULL_RECOVERY",
+      "diagnostics": [],
+      "metadata": {
+        "documentCount": 1
+      },
+      "pointers": [
+        "",
+        "/openapi",
+        "/info",
+        "/info/title",
+        "/info/version",
+        "/paths",
+        "/paths/~1pets",
+        "/paths/~1pets/$ref",
+        "/components",
+        "/components/schemas",
+        "/components/schemas/Pet",
+        "/components/schemas/Pet/$ref"
+      ],
+      "entries": [
+        {
+          "pointer": "",
+          "offset": 0,
+          "length": 172,
+          "line": 1,
+          "column": 1,
+          "anchor": "node-start"
+        },
+        {
+          "pointer": "/openapi",
+          "offset": 0,
+          "length": 15,
+          "line": 1,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/info",
+          "offset": 15,
+          "length": 44,
+          "line": 2,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/info/title",
+          "offset": 23,
+          "length": 17,
+          "line": 2,
+          "column": 9,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/info/version",
+          "offset": 42,
+          "length": 15,
+          "line": 2,
+          "column": 28,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths",
+          "offset": 59,
+          "length": 48,
+          "line": 3,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths/~1pets",
+          "offset": 68,
+          "length": 37,
+          "line": 3,
+          "column": 10,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/paths/~1pets/$ref",
+          "offset": 77,
+          "length": 26,
+          "line": 3,
+          "column": 19,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/components",
+          "offset": 107,
+          "length": 65,
+          "line": 4,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/components/schemas",
+          "offset": 121,
+          "length": 49,
+          "line": 4,
+          "column": 15,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/components/schemas/Pet",
+          "offset": 132,
+          "length": 36,
+          "line": 4,
+          "column": 26,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/components/schemas/Pet/$ref",
+          "offset": 139,
+          "length": 27,
+          "line": 4,
+          "column": 33,
+          "anchor": "key-start"
+        }
+      ]
+    },
+    {
+      "path": "fixtures/multi-file/paths/pets.yaml",
+      "format": "yaml",
+      "recovery": "FULL_RECOVERY",
+      "diagnostics": [],
+      "metadata": {
+        "documentCount": 1
+      },
+      "pointers": [
+        "",
+        "/get",
+        "/get/responses",
+        "/get/responses/200",
+        "/get/responses/200/content",
+        "/get/responses/200/content/application~1json",
+        "/get/responses/200/content/application~1json/schema",
+        "/get/responses/200/content/application~1json/schema/$ref"
+      ],
+      "entries": [
+        {
+          "pointer": "",
+          "offset": 0,
+          "length": 120,
+          "line": 1,
+          "column": 1,
+          "anchor": "node-start"
+        },
+        {
+          "pointer": "/get",
+          "offset": 0,
+          "length": 120,
+          "line": 1,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/get/responses",
+          "offset": 7,
+          "length": 113,
+          "line": 2,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/get/responses/200",
+          "offset": 22,
+          "length": 98,
+          "line": 3,
+          "column": 5,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/get/responses/200/content",
+          "offset": 35,
+          "length": 85,
+          "line": 4,
+          "column": 7,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/get/responses/200/content/application~1json",
+          "offset": 52,
+          "length": 68,
+          "line": 5,
+          "column": 9,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/get/responses/200/content/application~1json/schema",
+          "offset": 80,
+          "length": 40,
+          "line": 6,
+          "column": 11,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/get/responses/200/content/application~1json/schema/$ref",
+          "offset": 90,
+          "length": 28,
+          "line": 6,
+          "column": 21,
+          "anchor": "key-start"
+        }
+      ]
+    },
+    {
+      "path": "fixtures/multi-file/schemas/Pet.yaml",
+      "format": "yaml",
+      "recovery": "FULL_RECOVERY",
+      "diagnostics": [],
+      "metadata": {
+        "documentCount": 1
+      },
+      "pointers": [
+        "",
+        "/type",
+        "/properties",
+        "/properties/id",
+        "/properties/id/type"
+      ],
+      "entries": [
+        {
+          "pointer": "",
+          "offset": 0,
+          "length": 48,
+          "line": 1,
+          "column": 1,
+          "anchor": "node-start"
+        },
+        {
+          "pointer": "/type",
+          "offset": 0,
+          "length": 13,
+          "line": 1,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/properties",
+          "offset": 13,
+          "length": 35,
+          "line": 2,
+          "column": 1,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/properties/id",
+          "offset": 27,
+          "length": 21,
+          "line": 3,
+          "column": 3,
+          "anchor": "key-start"
+        },
+        {
+          "pointer": "/properties/id/type",
+          "offset": 33,
+          "length": 13,
+          "line": 3,
+          "column": 9,
+          "anchor": "key-start"
+        }
+      ]
+    }
+  ],
+  "diagnostics": [
+    {
+      "fixture": "yaml-invalid-indentation.yaml",
+      "threw": false,
+      "recovery": "PARTIAL_RECOVERY",
+      "diagnosticCount": 2,
+      "diagnostics": [
+        {
+          "code": "BLOCK_AS_IMPLICIT_KEY",
+          "offset": 27,
+          "length": 1,
+          "line": 3,
+          "column": 7
+        },
+        {
+          "code": "MULTILINE_IMPLICIT_KEY",
+          "offset": 27,
+          "length": 11,
+          "line": 3,
+          "column": 7
+        }
+      ],
+      "entryCount": 6,
+      "unaffectedSiblingIndexed": true,
+      "strictRejection": true
+    },
+    {
+      "fixture": "yaml-unterminated-quote.yaml",
+      "threw": false,
+      "recovery": "PARTIAL_RECOVERY",
+      "diagnosticCount": 1,
+      "diagnostics": [
+        {
+          "code": "MISSING_CHAR",
+          "offset": 55,
+          "length": 1,
+          "line": 4,
+          "column": 1
+        }
+      ],
+      "entryCount": 3,
+      "unaffectedSiblingIndexed": false,
+      "strictRejection": true
+    },
+    {
+      "fixture": "yaml-broken-flow.yaml",
+      "threw": false,
+      "recovery": "PARTIAL_RECOVERY",
+      "diagnosticCount": 1,
+      "diagnostics": [
+        {
+          "code": "BAD_INDENT",
+          "offset": 31,
+          "length": 1,
+          "line": 3,
+          "column": 1
+        }
+      ],
+      "entryCount": 6,
+      "unaffectedSiblingIndexed": true,
+      "strictRejection": true
+    },
+    {
+      "fixture": "yaml-invalid-mapping.yaml",
+      "threw": false,
+      "recovery": "PARTIAL_RECOVERY",
+      "diagnosticCount": 1,
+      "diagnostics": [
+        {
+          "code": "BLOCK_AS_IMPLICIT_KEY",
+          "offset": 21,
+          "length": 1,
+          "line": 2,
+          "column": 9
+        }
+      ],
+      "entryCount": 5,
+      "unaffectedSiblingIndexed": false,
+      "strictRejection": true
+    },
+    {
+      "fixture": "json-missing-comma.json",
+      "threw": false,
+      "recovery": "FULL_RECOVERY",
+      "diagnosticCount": 0,
+      "diagnostics": [],
+      "entryCount": 2,
+      "unaffectedSiblingIndexed": false,
+      "strictRejection": true
+    },
+    {
+      "fixture": "json-missing-brace.json",
+      "threw": false,
+      "recovery": "PARTIAL_RECOVERY",
+      "diagnosticCount": 1,
+      "diagnostics": [
+        {
+          "code": "MISSING_CHAR",
+          "offset": 23,
+          "length": 1,
+          "line": 2,
+          "column": 1
+        }
+      ],
+      "entryCount": 3,
+      "unaffectedSiblingIndexed": true,
+      "strictRejection": true
+    },
+    {
+      "fixture": "json-unterminated-string.json",
+      "threw": false,
+      "recovery": "PARTIAL_RECOVERY",
+      "diagnosticCount": 1,
+      "diagnostics": [
+        {
+          "code": "UNEXPECTED_TOKEN",
+          "offset": 27,
+          "length": 10,
+          "line": 1,
+          "column": 28
+        }
+      ],
+      "entryCount": 3,
+      "unaffectedSiblingIndexed": false,
+      "strictRejection": true
+    },
+    {
+      "fixture": "json-invalid-literal.json",
+      "threw": false,
+      "recovery": "FULL_RECOVERY",
+      "diagnosticCount": 0,
+      "diagnostics": [],
+      "entryCount": 3,
+      "unaffectedSiblingIndexed": true,
+      "strictRejection": true
+    },
+    {
+      "fixture": "json-trailing-comma.json",
+      "threw": false,
+      "recovery": "FULL_RECOVERY",
+      "diagnosticCount": 0,
+      "diagnostics": [],
+      "entryCount": 3,
+      "unaffectedSiblingIndexed": true,
+      "strictRejection": true
+    },
+    {
+      "fixture": "json-comment.json",
+      "threw": false,
+      "recovery": "FULL_RECOVERY",
+      "diagnosticCount": 0,
+      "diagnostics": [],
+      "entryCount": 2,
+      "unaffectedSiblingIndexed": false,
+      "strictRejection": true
+    }
+  ],
+  "performance": {
+    "yaml-500": {
+      "operations": 500,
+      "inputBytes": 58844,
+      "indexedEntries": 3006,
+      "samples": 3,
+      "warmups": 1,
+      "parse": {
+        "medianMs": 17.638,
+        "p95Ms": 25.208
+      },
+      "index": {
+        "medianMs": 2.164,
+        "p95Ms": 6.288
+      },
+      "total": {
+        "medianMs": 19.445,
+        "p95Ms": 31.496
+      },
+      "observedHeapDeltaBytes": {
+        "medianMs": 7402488,
+        "p95Ms": 11356952
+      }
+    },
+    "json-500": {
+      "operations": 500,
+      "inputBytes": 94887,
+      "indexedEntries": 3006,
+      "samples": 3,
+      "warmups": 1,
+      "parse": {
+        "medianMs": 18.019,
+        "p95Ms": 19.941
+      },
+      "index": {
+        "medianMs": 2.012,
+        "p95Ms": 2.066
+      },
+      "total": {
+        "medianMs": 20.031,
+        "p95Ms": 21.618
+      },
+      "observedHeapDeltaBytes": {
+        "medianMs": 0,
+        "p95Ms": 25962360
+      }
+    },
+    "yaml-2000": {
+      "operations": 2000,
+      "inputBytes": 237844,
+      "indexedEntries": 12006,
+      "samples": 3,
+      "warmups": 1,
+      "parse": {
+        "medianMs": 82.085,
+        "p95Ms": 86.028
+      },
+      "index": {
+        "medianMs": 7.137,
+        "p95Ms": 8.493
+      },
+      "total": {
+        "medianMs": 89.013,
+        "p95Ms": 94.521
+      },
+      "observedHeapDeltaBytes": {
+        "medianMs": 0,
+        "p95Ms": 49008632
+      }
+    },
+    "json-2000": {
+      "operations": 2000,
+      "inputBytes": 381887,
+      "indexedEntries": 12006,
+      "samples": 3,
+      "warmups": 1,
+      "parse": {
+        "medianMs": 79.08,
+        "p95Ms": 80.793
+      },
+      "index": {
+        "medianMs": 7.505,
+        "p95Ms": 9.113
+      },
+      "total": {
+        "medianMs": 88.194,
+        "p95Ms": 88.298
+      },
+      "observedHeapDeltaBytes": {
+        "medianMs": 45227368,
+        "p95Ms": 47665768
+      }
+    },
+    "yaml-10000": {
+      "operations": 10000,
+      "inputBytes": 1197844,
+      "indexedEntries": 60006,
+      "samples": 3,
+      "warmups": 1,
+      "parse": {
+        "medianMs": 1393.506,
+        "p95Ms": 1429.962
+      },
+      "index": {
+        "medianMs": 36.994,
+        "p95Ms": 38.702
+      },
+      "total": {
+        "medianMs": 1432.208,
+        "p95Ms": 1466.906
+      },
+      "observedHeapDeltaBytes": {
+        "medianMs": 64689792,
+        "p95Ms": 80732672
+      }
+    },
+    "json-10000": {
+      "operations": 10000,
+      "inputBytes": 1917887,
+      "indexedEntries": 60006,
+      "samples": 3,
+      "warmups": 1,
+      "parse": {
+        "medianMs": 808.592,
+        "p95Ms": 815.497
+      },
+      "index": {
+        "medianMs": 37.065,
+        "p95Ms": 37.075
+      },
+      "total": {
+        "medianMs": 845.429,
+        "p95Ms": 852.562
+      },
+      "observedHeapDeltaBytes": {
+        "medianMs": 124937448,
+        "p95Ms": 125165776
+      }
+    }
+  },
+  "memory": {
+    "methodology": "process.memoryUsage().heapUsed delta around parse plus index; five post-warm-up samples; GC not forced",
+    "limitation": "Directional and may be zero because garbage collection and retained objects are not isolated."
+  },
+  "operationalCharacteristics": {
+    "pureJavaScript": true,
+    "nativeBuild": false,
+    "license": "ISC",
+    "syncApi": true,
+    "esm": true,
+    "typescriptDeclarations": true,
+    "strictJsonLimitation": "YAML grammar accepts JSON extensions; independent JSON.parse validation is required.",
+    "publicApis": [
+      "parseAllDocuments",
+      "parseDocument",
+      "LineCounter",
+      "Node.range",
+      "isMap",
+      "isSeq",
+      "isScalar"
+    ]
+  },
+  "fixtureHashesBefore": {
+    "fixtures/duplicates/json.json": "bca50762da566540d4f698f85d1b59f64c9bd17042636022c9a943a015a59566",
+    "fixtures/duplicates/yaml.yaml": "5db30c973a6e3bc7b67a4ffc02e0648f98c22a248f3fafd13f66ffb14c2e7f22",
+    "fixtures/json/basic.json": "ee51fb1ee7a5eae64e62c41366523619a0e28cd7841e978d74b0626e7da042c1",
+    "fixtures/line-endings/bom.yaml": "c50c10ba9364c29f202d807de6d4b792ffd98135855f45ffa654488c6dc547f9",
+    "fixtures/line-endings/crlf.yaml": "0c694fd1e59b77dba6a9396608c7c0389c6f6f5a7e492d7046adcde3e95195c0",
+    "fixtures/line-endings/lf.yaml": "54fd98bdb96f55292864c0a630b113f9cf996da7cba1f5c0e51c22ac1f437630",
+    "fixtures/malformed/json-comment.json": "90c2644a592b5d40930c9fdfe80152161e5c8b29cc6166b25f617ed188678a9b",
+    "fixtures/malformed/json-invalid-literal.json": "d848d743499b449f0c9cd63b5be7fde31ff7835913f61feacac82b66d9e559fc",
+    "fixtures/malformed/json-missing-brace.json": "eee6be8e1560a9f787c499ee70b10dddeb0a78b27e07a16f31e3ae8a9a013190",
+    "fixtures/malformed/json-missing-comma.json": "214b572f3505a5e38b1f944b12411d64ccb9560495c44aafe2768f7fd792b092",
+    "fixtures/malformed/json-trailing-comma.json": "23a019c3c0958fc92cea6b6b25967ae8e9c728fe6c07cf66f3c0bf8cfd47d8d9",
+    "fixtures/malformed/json-unterminated-string.json": "d056c6490b9208e9efbe0c7775fd997382c4fee3137a4c4d111138caf9b9ddc7",
+    "fixtures/malformed/yaml-broken-flow.yaml": "b3008e578bbb9b4c654a3e81ee8bbfd55d88062b60bc5480c2cbaaddc163bc81",
+    "fixtures/malformed/yaml-invalid-indentation.yaml": "d67ef3cfeb73520287f9bcfddf8473883e0fb791ce90c8daf410b8d7bb3472bf",
+    "fixtures/malformed/yaml-invalid-mapping.yaml": "8106db1ee5c49a318995a3272b2c9a35e35b6048d5d20ce318c23f7ab3929a75",
+    "fixtures/malformed/yaml-unterminated-quote.yaml": "d40f14face588143f3b66dc54fcb66feebd0f106db8e06d1fed3945190c2a191",
+    "fixtures/multi-file/openapi.yaml": "3bfc5ca7272e8ab6e43908751177c96da117f628a0e6f567e8ed89423a21f2c5",
+    "fixtures/multi-file/paths/pets.yaml": "25f22748daf328b5a306e5050a6ea7f91ebb6b0f206727456cec90f43ace9768",
+    "fixtures/multi-file/schemas/Pet.yaml": "e2534803362be8dbff159de2c75adc535f1affb9e1d6e9f2f5c997499858d6f5",
+    "fixtures/unicode/positions.json": "43ddb6c14b0ab861a9338b359f1c1eb122f04f1a63c14f444ed95e63c9e2a1ab",
+    "fixtures/unicode/positions.yaml": "c4d2fd242442c2a25f33a9f01ed47075e6f89e9eadfe473fe8ae1870edd884cf",
+    "fixtures/yaml/basic.yaml": "e49e77b1162b817079c7c43ab88fea4c24ccf0bce65f0393263f014818891746",
+    "fixtures/yaml/reordered.yaml": "635e6ac38e0471e83e10c0af119ade03884bb8cc78ac5800e1431c3db4dd4575",
+    "fixtures/yaml/whitespace-compact.yaml": "f911c195126e67a8739d0760cbcccdb3ded0d7d207005935b52c9a8ee1aaaf12",
+    "fixtures/yaml/whitespace-expanded.yaml": "40485f0817403acd8f5a8a79e5ed88b042895662639d3f397c139d186366ba80",
+    "fixtures/yaml-features/features.yaml": "db8cf502ae52f30f14ed8996ff341e7dea4b047705c105ff383bd48b591813dc",
+    "fixtures/yaml-features/multi-document.yaml": "e4d972f94f8817d6092a2f606cc8e4277c6feac8bcf6c5333c6a2b23f7072cc7"
+  },
+  "fixtureHashesAfter": {
+    "fixtures/duplicates/json.json": "bca50762da566540d4f698f85d1b59f64c9bd17042636022c9a943a015a59566",
+    "fixtures/duplicates/yaml.yaml": "5db30c973a6e3bc7b67a4ffc02e0648f98c22a248f3fafd13f66ffb14c2e7f22",
+    "fixtures/json/basic.json": "ee51fb1ee7a5eae64e62c41366523619a0e28cd7841e978d74b0626e7da042c1",
+    "fixtures/line-endings/bom.yaml": "c50c10ba9364c29f202d807de6d4b792ffd98135855f45ffa654488c6dc547f9",
+    "fixtures/line-endings/crlf.yaml": "0c694fd1e59b77dba6a9396608c7c0389c6f6f5a7e492d7046adcde3e95195c0",
+    "fixtures/line-endings/lf.yaml": "54fd98bdb96f55292864c0a630b113f9cf996da7cba1f5c0e51c22ac1f437630",
+    "fixtures/malformed/json-comment.json": "90c2644a592b5d40930c9fdfe80152161e5c8b29cc6166b25f617ed188678a9b",
+    "fixtures/malformed/json-invalid-literal.json": "d848d743499b449f0c9cd63b5be7fde31ff7835913f61feacac82b66d9e559fc",
+    "fixtures/malformed/json-missing-brace.json": "eee6be8e1560a9f787c499ee70b10dddeb0a78b27e07a16f31e3ae8a9a013190",
+    "fixtures/malformed/json-missing-comma.json": "214b572f3505a5e38b1f944b12411d64ccb9560495c44aafe2768f7fd792b092",
+    "fixtures/malformed/json-trailing-comma.json": "23a019c3c0958fc92cea6b6b25967ae8e9c728fe6c07cf66f3c0bf8cfd47d8d9",
+    "fixtures/malformed/json-unterminated-string.json": "d056c6490b9208e9efbe0c7775fd997382c4fee3137a4c4d111138caf9b9ddc7",
+    "fixtures/malformed/yaml-broken-flow.yaml": "b3008e578bbb9b4c654a3e81ee8bbfd55d88062b60bc5480c2cbaaddc163bc81",
+    "fixtures/malformed/yaml-invalid-indentation.yaml": "d67ef3cfeb73520287f9bcfddf8473883e0fb791ce90c8daf410b8d7bb3472bf",
+    "fixtures/malformed/yaml-invalid-mapping.yaml": "8106db1ee5c49a318995a3272b2c9a35e35b6048d5d20ce318c23f7ab3929a75",
+    "fixtures/malformed/yaml-unterminated-quote.yaml": "d40f14face588143f3b66dc54fcb66feebd0f106db8e06d1fed3945190c2a191",
+    "fixtures/multi-file/openapi.yaml": "3bfc5ca7272e8ab6e43908751177c96da117f628a0e6f567e8ed89423a21f2c5",
+    "fixtures/multi-file/paths/pets.yaml": "25f22748daf328b5a306e5050a6ea7f91ebb6b0f206727456cec90f43ace9768",
+    "fixtures/multi-file/schemas/Pet.yaml": "e2534803362be8dbff159de2c75adc535f1affb9e1d6e9f2f5c997499858d6f5",
+    "fixtures/unicode/positions.json": "43ddb6c14b0ab861a9338b359f1c1eb122f04f1a63c14f444ed95e63c9e2a1ab",
+    "fixtures/unicode/positions.yaml": "c4d2fd242442c2a25f33a9f01ed47075e6f89e9eadfe473fe8ae1870edd884cf",
+    "fixtures/yaml/basic.yaml": "e49e77b1162b817079c7c43ab88fea4c24ccf0bce65f0393263f014818891746",
+    "fixtures/yaml/reordered.yaml": "635e6ac38e0471e83e10c0af119ade03884bb8cc78ac5800e1431c3db4dd4575",
+    "fixtures/yaml/whitespace-compact.yaml": "f911c195126e67a8739d0760cbcccdb3ded0d7d207005935b52c9a8ee1aaaf12",
+    "fixtures/yaml/whitespace-expanded.yaml": "40485f0817403acd8f5a8a79e5ed88b042895662639d3f397c139d186366ba80",
+    "fixtures/yaml-features/features.yaml": "db8cf502ae52f30f14ed8996ff341e7dea4b047705c105ff383bd48b591813dc",
+    "fixtures/yaml-features/multi-document.yaml": "e4d972f94f8817d6092a2f606cc8e4277c6feac8bcf6c5333c6a2b23f7072cc7"
+  },
+  "sourceImmutable": true,
+  "weightedDecision": {
+    "scores": {
+      "sourceFidelity": 5,
+      "malformedRecovery": 4,
+      "yamlCorrectness": 5,
+      "jsonFidelity": 3,
+      "pointerSuitability": 5,
+      "performanceMemory": 4,
+      "typescriptNode": 5,
+      "crossPlatform": 5,
+      "apiMaintenance": 5,
+      "licenseSecurityDependencies": 5
+    },
+    "weights": {
+      "sourceFidelity": 20,
+      "malformedRecovery": 15,
+      "yamlCorrectness": 15,
+      "jsonFidelity": 10,
+      "pointerSuitability": 10,
+      "performanceMemory": 10,
+      "typescriptNode": 5,
+      "crossPlatform": 5,
+      "apiMaintenance": 5,
+      "licenseSecurityDependencies": 5
+    },
+    "normalizedScoreOutOf100": 91
+  },
+  "mandatoryGates": {
+    "yamlStructuralIndexing": true,
+    "jsonStructuralIndexing": true,
+    "reliableOriginalRanges": true,
+    "canonicalPointers": true,
+    "arrays": true,
+    "escaping": true,
+    "duplicateScalarsDistinguishable": true,
+    "immutable": true,
+    "publicApisOnly": true,
+    "typesIsolated": true,
+    "noLicenseBlocker": true,
+    "installFeasible": true
+  },
+  "allMandatoryGatesPassed": true,
+  "resultHash": "03ad8162bd281192e6b5740c6f13567fdcbbb04ddb4580e7f05d70c710c8a510",
+  "resultHashScope": "SHA-256 of compact JSON for all preceding result fields, excluding resultHash and resultHashScope."
+}

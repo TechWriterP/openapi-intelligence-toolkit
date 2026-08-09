@@ -1,0 +1,7 @@
+{
+  "duplicate": "first",
+  "sibling": "Identifier",
+  "duplicate": "second",
+  "other": "Identifier",
+  "fifth": "Identifier"
+}

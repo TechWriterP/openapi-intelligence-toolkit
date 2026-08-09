@@ -1,0 +1,18 @@
+%YAML 1.2
+---
+commonParameter: &commonParameter
+  name: tenantId
+  in: header
+paths:
+  "/pets/{petId}":
+    get:
+      parameters:
+        - *commonParameter
+      summary: >
+        Folded summary with café,
+        日本語 and 😀 non-BMP.
+      description: |
+        First line.
+        Second line.
+      x-flow: { required: [id, name], "~special/key": value }
+  'quoted key': { value: ASCII }
