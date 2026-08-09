@@ -1,0 +1,19 @@
+openapi: 3.1.2
+info: { title: Reference Spike, version: 1.0.0 }
+paths:
+  /pets/{petId}:
+    get:
+      responses:
+        '200':
+          description: A pet
+          content:
+            application/json:
+              schema: { $ref: './schemas/Pet.yaml' }
+  /pets:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema: { $ref: './schemas/Pet.yaml' }
+      responses:
+        '201': { description: Created }
