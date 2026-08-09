@@ -1,0 +1,9 @@
+openapi: 3.2.0
+info: { title: Additional, version: 1.0.0 }
+paths:
+  /pets/{id}:
+    additionalOperations:
+      COPY: { operationId: copyPet, responses: { '200': { description: Copied } } }
+      PURGE: { operationId: purgePet, responses: { '204': { description: Purged } } }
+      POLL: { operationId: pollPet, responses: { '200': { description: Polled } } }
+      FOO: { operationId: fooPet, responses: { default: { description: Foo } } }

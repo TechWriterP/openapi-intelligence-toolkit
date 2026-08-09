@@ -1,0 +1,6 @@
+openapi: 3.2.0
+info: { title: Invalid additional, version: 1.0.0 }
+paths:
+  /invalid:
+    additionalOperations:
+      COPY: not-an-operation-object

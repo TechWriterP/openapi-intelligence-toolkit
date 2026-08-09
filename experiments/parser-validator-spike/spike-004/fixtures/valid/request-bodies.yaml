@@ -1,0 +1,14 @@
+openapi: 3.2.0
+info: { title: Bodies, version: 1.0.0 }
+paths:
+  /body:
+    query:
+      operationId: queryBody
+      requestBody: { content: { application/json: { schema: { $ref: '#/components/schemas/Payload' } } } }
+      responses: { '200': { description: ok } }
+    additionalOperations:
+      COPY:
+        operationId: copyBody
+        requestBody: { content: { application/json: { schema: { $ref: '#/components/schemas/Payload' } } } }
+        responses: { '200': { description: ok } }
+components: { schemas: { Payload: { type: object } } }

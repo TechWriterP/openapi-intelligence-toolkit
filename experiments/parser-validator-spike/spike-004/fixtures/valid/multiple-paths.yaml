@@ -1,0 +1,15 @@
+openapi: 3.2.0
+info: { title: Paths, version: 1.0.0 }
+paths:
+  /pets:
+    get: { operationId: getPets, responses: { '200': { description: ok } } }
+    post: { operationId: postPets, responses: { '200': { description: ok } } }
+  /search:
+    query: { operationId: queryPets, responses: { '200': { description: ok } } }
+  /pets/{id}:
+    parameters:
+      - { name: id, in: path, required: true, schema: { type: string } }
+    get: { operationId: getPet, responses: { '200': { description: ok } } }
+    delete: { operationId: deletePet, responses: { '204': { description: ok } } }
+    additionalOperations:
+      COPY: { operationId: copyPet, responses: { '200': { description: ok } } }

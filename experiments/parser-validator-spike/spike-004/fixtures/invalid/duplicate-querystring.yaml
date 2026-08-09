@@ -1,0 +1,10 @@
+openapi: 3.2.0
+info: { title: Duplicate querystring, version: 1.0.0 }
+paths:
+  /invalid:
+    query:
+      operationId: duplicateQuerystring
+      parameters:
+        - { name: first, in: querystring, content: { application/x-www-form-urlencoded: { schema: { type: object } } } }
+        - { name: second, in: querystring, content: { application/x-www-form-urlencoded: { schema: { type: object } } } }
+      responses: { '200': { description: ok } }
