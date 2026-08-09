@@ -1,0 +1,12 @@
+openapi: 3.2.0
+info: { title: Additional querystring, version: 1.0.0 }
+paths:
+  /search:
+    additionalOperations:
+      SEARCH:
+        operationId: additionalSearch
+        parameters:
+          - name: search
+            in: querystring
+            content: { application/x-www-form-urlencoded: { schema: { type: object } } }
+        responses: { '200': { description: Results } }

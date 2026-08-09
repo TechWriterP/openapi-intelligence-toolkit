@@ -1,0 +1,8 @@
+openapi: 3.2.0
+info: { title: Duplicate IDs, version: 1.0.0 }
+paths:
+  /duplicate:
+    get: { operationId: duplicateId, responses: { '200': { description: ok } } }
+    query: { operationId: duplicateId, responses: { '200': { description: ok } } }
+    additionalOperations:
+      COPY: { operationId: duplicateId, responses: { '200': { description: ok } } }

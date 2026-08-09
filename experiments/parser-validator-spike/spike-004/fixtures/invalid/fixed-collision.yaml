@@ -1,0 +1,7 @@
+openapi: 3.2.0
+info: { title: Collision, version: 1.0.0 }
+paths:
+  /collision:
+    post: { operationId: normalPost, responses: { '200': { description: ok } } }
+    additionalOperations:
+      POST: { operationId: duplicatePost, responses: { '200': { description: duplicate } } }

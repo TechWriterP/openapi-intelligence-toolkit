@@ -1,0 +1,10 @@
+openapi: 3.2.0
+info: { title: Parameters, version: 1.0.0 }
+paths:
+  /pets/{id}:
+    parameters:
+      - { name: id, in: path, required: true, schema: { type: string } }
+    get: { operationId: getPet, responses: { '200': { description: ok } } }
+    query: { operationId: queryPet, responses: { '200': { description: ok } } }
+    additionalOperations:
+      COPY: { operationId: copyPet, responses: { '200': { description: ok } } }

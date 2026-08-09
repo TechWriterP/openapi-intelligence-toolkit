@@ -1,0 +1,8 @@
+openapi: 3.2.0
+info: { title: Response summary, version: 1.0.0 }
+paths:
+  /summary:
+    query:
+      operationId: responseSummary
+      responses:
+        '200': { summary: Successful search, description: Full response description }

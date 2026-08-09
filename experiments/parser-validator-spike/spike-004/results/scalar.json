@@ -1,0 +1,3031 @@
+{
+  "environment": {
+    "date": "2026-08-09T17:09:05.284Z",
+    "node": "v24.18.0",
+    "platform": "darwin",
+    "architecture": "arm64",
+    "module": "ESM/NodeNext",
+    "typescript": "5.9.2",
+    "skipLibCheck": true
+  },
+  "candidate": {
+    "name": "@scalar/openapi-parser",
+    "version": "0.28.10",
+    "supportingPackage": {
+      "name": "@scalar/json-magic",
+      "version": "0.12.19"
+    }
+  },
+  "candidateApis": [
+    "validate(source)",
+    "bundle(input, options)",
+    "readFiles()",
+    "lifecycle hooks",
+    "dereference(value)"
+  ],
+  "fixtures": [
+    {
+      "fixture": "query-minimal.yaml",
+      "expectedOperationCount": 1,
+      "raw": {
+        "mode": "raw",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/search",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "query",
+            "httpMethod": "QUERY",
+            "operationId": "search",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1search/query",
+            "sourceDocumentUri": "fixtures/valid/query-minimal.yaml"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "validate.valid=true"
+        ]
+      },
+      "bundle": {
+        "mode": "bundle",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/search",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "query",
+            "httpMethod": "QUERY",
+            "operationId": "search",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1search/query"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "External resources, when present, may move under x-ext."
+        ]
+      },
+      "traversal": {
+        "mode": "traversal",
+        "status": "PASS",
+        "observedOperationLikeCallbacks": 1,
+        "paths": [
+          {
+            "path": [
+              "paths",
+              "/search",
+              "query"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "all-fixed.yaml",
+      "expectedOperationCount": 9,
+      "raw": {
+        "mode": "raw",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/all",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "get",
+            "httpMethod": "GET",
+            "operationId": "allGet",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1all/get",
+            "sourceDocumentUri": "fixtures/valid/all-fixed.yaml"
+          },
+          {
+            "path": "/all",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "put",
+            "httpMethod": "PUT",
+            "operationId": "allPut",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1all/put",
+            "sourceDocumentUri": "fixtures/valid/all-fixed.yaml"
+          },
+          {
+            "path": "/all",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "post",
+            "httpMethod": "POST",
+            "operationId": "allPost",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1all/post",
+            "sourceDocumentUri": "fixtures/valid/all-fixed.yaml"
+          },
+          {
+            "path": "/all",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "delete",
+            "httpMethod": "DELETE",
+            "operationId": "allDelete",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "204"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1all/delete",
+            "sourceDocumentUri": "fixtures/valid/all-fixed.yaml"
+          },
+          {
+            "path": "/all",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "options",
+            "httpMethod": "OPTIONS",
+            "operationId": "allOptions",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1all/options",
+            "sourceDocumentUri": "fixtures/valid/all-fixed.yaml"
+          },
+          {
+            "path": "/all",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "head",
+            "httpMethod": "HEAD",
+            "operationId": "allHead",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1all/head",
+            "sourceDocumentUri": "fixtures/valid/all-fixed.yaml"
+          },
+          {
+            "path": "/all",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "patch",
+            "httpMethod": "PATCH",
+            "operationId": "allPatch",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1all/patch",
+            "sourceDocumentUri": "fixtures/valid/all-fixed.yaml"
+          },
+          {
+            "path": "/all",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "trace",
+            "httpMethod": "TRACE",
+            "operationId": "allTrace",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1all/trace",
+            "sourceDocumentUri": "fixtures/valid/all-fixed.yaml"
+          },
+          {
+            "path": "/all",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "query",
+            "httpMethod": "QUERY",
+            "operationId": "allQuery",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1all/query",
+            "sourceDocumentUri": "fixtures/valid/all-fixed.yaml"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "validate.valid=true"
+        ]
+      },
+      "bundle": {
+        "mode": "bundle",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/all",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "get",
+            "httpMethod": "GET",
+            "operationId": "allGet",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1all/get"
+          },
+          {
+            "path": "/all",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "put",
+            "httpMethod": "PUT",
+            "operationId": "allPut",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1all/put"
+          },
+          {
+            "path": "/all",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "post",
+            "httpMethod": "POST",
+            "operationId": "allPost",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1all/post"
+          },
+          {
+            "path": "/all",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "delete",
+            "httpMethod": "DELETE",
+            "operationId": "allDelete",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "204"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1all/delete"
+          },
+          {
+            "path": "/all",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "options",
+            "httpMethod": "OPTIONS",
+            "operationId": "allOptions",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1all/options"
+          },
+          {
+            "path": "/all",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "head",
+            "httpMethod": "HEAD",
+            "operationId": "allHead",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1all/head"
+          },
+          {
+            "path": "/all",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "patch",
+            "httpMethod": "PATCH",
+            "operationId": "allPatch",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1all/patch"
+          },
+          {
+            "path": "/all",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "trace",
+            "httpMethod": "TRACE",
+            "operationId": "allTrace",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1all/trace"
+          },
+          {
+            "path": "/all",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "query",
+            "httpMethod": "QUERY",
+            "operationId": "allQuery",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1all/query"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "External resources, when present, may move under x-ext."
+        ]
+      },
+      "traversal": {
+        "mode": "traversal",
+        "status": "PASS",
+        "observedOperationLikeCallbacks": 9,
+        "paths": [
+          {
+            "path": [
+              "paths",
+              "/all",
+              "get"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/all",
+              "put"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/all",
+              "post"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/all",
+              "delete"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/all",
+              "options"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/all",
+              "head"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/all",
+              "patch"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/all",
+              "trace"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/all",
+              "query"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "additional-operations.yaml",
+      "expectedOperationCount": 4,
+      "raw": {
+        "mode": "raw",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "COPY",
+            "httpMethod": "COPY",
+            "operationId": "copyPet",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/additionalOperations/COPY",
+            "sourceDocumentUri": "fixtures/valid/additional-operations.yaml"
+          },
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "PURGE",
+            "httpMethod": "PURGE",
+            "operationId": "purgePet",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "204"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/additionalOperations/PURGE",
+            "sourceDocumentUri": "fixtures/valid/additional-operations.yaml"
+          },
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "POLL",
+            "httpMethod": "POLL",
+            "operationId": "pollPet",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/additionalOperations/POLL",
+            "sourceDocumentUri": "fixtures/valid/additional-operations.yaml"
+          },
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "FOO",
+            "httpMethod": "FOO",
+            "operationId": "fooPet",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "default"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/additionalOperations/FOO",
+            "sourceDocumentUri": "fixtures/valid/additional-operations.yaml"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "validate.valid=true"
+        ]
+      },
+      "bundle": {
+        "mode": "bundle",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "COPY",
+            "httpMethod": "COPY",
+            "operationId": "copyPet",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/additionalOperations/COPY"
+          },
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "PURGE",
+            "httpMethod": "PURGE",
+            "operationId": "purgePet",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "204"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/additionalOperations/PURGE"
+          },
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "POLL",
+            "httpMethod": "POLL",
+            "operationId": "pollPet",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/additionalOperations/POLL"
+          },
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "FOO",
+            "httpMethod": "FOO",
+            "operationId": "fooPet",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "default"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/additionalOperations/FOO"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "External resources, when present, may move under x-ext."
+        ]
+      },
+      "traversal": {
+        "mode": "traversal",
+        "status": "PASS",
+        "observedOperationLikeCallbacks": 4,
+        "paths": [
+          {
+            "path": [
+              "paths",
+              "/pets/{id}",
+              "additionalOperations",
+              "COPY"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/pets/{id}",
+              "additionalOperations",
+              "PURGE"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/pets/{id}",
+              "additionalOperations",
+              "POLL"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/pets/{id}",
+              "additionalOperations",
+              "FOO"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "mixed.yaml",
+      "expectedOperationCount": 5,
+      "raw": {
+        "mode": "raw",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "get",
+            "httpMethod": "GET",
+            "operationId": "getPet",
+            "parameterCount": 0,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/get",
+            "sourceDocumentUri": "fixtures/valid/mixed.yaml"
+          },
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "post",
+            "httpMethod": "POST",
+            "operationId": "postPet",
+            "parameterCount": 0,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/post",
+            "sourceDocumentUri": "fixtures/valid/mixed.yaml"
+          },
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "query",
+            "httpMethod": "QUERY",
+            "operationId": "queryPet",
+            "parameterCount": 0,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "4XX"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/query",
+            "sourceDocumentUri": "fixtures/valid/mixed.yaml"
+          },
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "COPY",
+            "httpMethod": "COPY",
+            "operationId": "copyPet",
+            "parameterCount": 0,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/additionalOperations/COPY",
+            "sourceDocumentUri": "fixtures/valid/mixed.yaml"
+          },
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "PURGE",
+            "httpMethod": "PURGE",
+            "operationId": "purgePet",
+            "parameterCount": 0,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "default"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/additionalOperations/PURGE",
+            "sourceDocumentUri": "fixtures/valid/mixed.yaml"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "validate.valid=true"
+        ]
+      },
+      "bundle": {
+        "mode": "bundle",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "get",
+            "httpMethod": "GET",
+            "operationId": "getPet",
+            "parameterCount": 0,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/get"
+          },
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "post",
+            "httpMethod": "POST",
+            "operationId": "postPet",
+            "parameterCount": 0,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/post"
+          },
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "query",
+            "httpMethod": "QUERY",
+            "operationId": "queryPet",
+            "parameterCount": 0,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "4XX"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/query"
+          },
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "COPY",
+            "httpMethod": "COPY",
+            "operationId": "copyPet",
+            "parameterCount": 0,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/additionalOperations/COPY"
+          },
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "PURGE",
+            "httpMethod": "PURGE",
+            "operationId": "purgePet",
+            "parameterCount": 0,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "default"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/additionalOperations/PURGE"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "External resources, when present, may move under x-ext."
+        ]
+      },
+      "traversal": {
+        "mode": "traversal",
+        "status": "PASS",
+        "observedOperationLikeCallbacks": 5,
+        "paths": [
+          {
+            "path": [
+              "paths",
+              "/pets/{id}",
+              "get"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/pets/{id}",
+              "post"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/pets/{id}",
+              "query"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/pets/{id}",
+              "additionalOperations",
+              "COPY"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/pets/{id}",
+              "additionalOperations",
+              "PURGE"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "multiple-paths.yaml",
+      "expectedOperationCount": 6,
+      "raw": {
+        "mode": "raw",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/pets",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "get",
+            "httpMethod": "GET",
+            "operationId": "getPets",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets/get",
+            "sourceDocumentUri": "fixtures/valid/multiple-paths.yaml"
+          },
+          {
+            "path": "/pets",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "post",
+            "httpMethod": "POST",
+            "operationId": "postPets",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets/post",
+            "sourceDocumentUri": "fixtures/valid/multiple-paths.yaml"
+          },
+          {
+            "path": "/search",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "query",
+            "httpMethod": "QUERY",
+            "operationId": "queryPets",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1search/query",
+            "sourceDocumentUri": "fixtures/valid/multiple-paths.yaml"
+          },
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "get",
+            "httpMethod": "GET",
+            "operationId": "getPet",
+            "parameterCount": 0,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/get",
+            "sourceDocumentUri": "fixtures/valid/multiple-paths.yaml"
+          },
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "delete",
+            "httpMethod": "DELETE",
+            "operationId": "deletePet",
+            "parameterCount": 0,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "204"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/delete",
+            "sourceDocumentUri": "fixtures/valid/multiple-paths.yaml"
+          },
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "COPY",
+            "httpMethod": "COPY",
+            "operationId": "copyPet",
+            "parameterCount": 0,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/additionalOperations/COPY",
+            "sourceDocumentUri": "fixtures/valid/multiple-paths.yaml"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "validate.valid=true"
+        ]
+      },
+      "bundle": {
+        "mode": "bundle",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/pets",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "get",
+            "httpMethod": "GET",
+            "operationId": "getPets",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets/get"
+          },
+          {
+            "path": "/pets",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "post",
+            "httpMethod": "POST",
+            "operationId": "postPets",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets/post"
+          },
+          {
+            "path": "/search",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "query",
+            "httpMethod": "QUERY",
+            "operationId": "queryPets",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1search/query"
+          },
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "get",
+            "httpMethod": "GET",
+            "operationId": "getPet",
+            "parameterCount": 0,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/get"
+          },
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "delete",
+            "httpMethod": "DELETE",
+            "operationId": "deletePet",
+            "parameterCount": 0,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "204"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/delete"
+          },
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "COPY",
+            "httpMethod": "COPY",
+            "operationId": "copyPet",
+            "parameterCount": 0,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/additionalOperations/COPY"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "External resources, when present, may move under x-ext."
+        ]
+      },
+      "traversal": {
+        "mode": "traversal",
+        "status": "PASS",
+        "observedOperationLikeCallbacks": 6,
+        "paths": [
+          {
+            "path": [
+              "paths",
+              "/pets",
+              "get"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/pets",
+              "post"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/search",
+              "query"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/pets/{id}",
+              "get"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/pets/{id}",
+              "delete"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/pets/{id}",
+              "additionalOperations",
+              "COPY"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "method-case.yaml",
+      "expectedOperationCount": 1,
+      "raw": {
+        "mode": "raw",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/case",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "MiXeD",
+            "httpMethod": "MiXeD",
+            "operationId": "mixedMethod",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1case/additionalOperations/MiXeD",
+            "sourceDocumentUri": "fixtures/valid/method-case.yaml"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "validate.valid=true"
+        ]
+      },
+      "bundle": {
+        "mode": "bundle",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/case",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "MiXeD",
+            "httpMethod": "MiXeD",
+            "operationId": "mixedMethod",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1case/additionalOperations/MiXeD"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "External resources, when present, may move under x-ext."
+        ]
+      },
+      "traversal": {
+        "mode": "traversal",
+        "status": "PASS",
+        "observedOperationLikeCallbacks": 1,
+        "paths": [
+          {
+            "path": [
+              "paths",
+              "/case",
+              "additionalOperations",
+              "MiXeD"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "path-parameters.yaml",
+      "expectedOperationCount": 3,
+      "raw": {
+        "mode": "raw",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "get",
+            "httpMethod": "GET",
+            "operationId": "getPet",
+            "parameterCount": 0,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/get",
+            "sourceDocumentUri": "fixtures/valid/path-parameters.yaml"
+          },
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "query",
+            "httpMethod": "QUERY",
+            "operationId": "queryPet",
+            "parameterCount": 0,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/query",
+            "sourceDocumentUri": "fixtures/valid/path-parameters.yaml"
+          },
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "COPY",
+            "httpMethod": "COPY",
+            "operationId": "copyPet",
+            "parameterCount": 0,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/additionalOperations/COPY",
+            "sourceDocumentUri": "fixtures/valid/path-parameters.yaml"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "validate.valid=true"
+        ]
+      },
+      "bundle": {
+        "mode": "bundle",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "get",
+            "httpMethod": "GET",
+            "operationId": "getPet",
+            "parameterCount": 0,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/get"
+          },
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "query",
+            "httpMethod": "QUERY",
+            "operationId": "queryPet",
+            "parameterCount": 0,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/query"
+          },
+          {
+            "path": "/pets/{id}",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "COPY",
+            "httpMethod": "COPY",
+            "operationId": "copyPet",
+            "parameterCount": 0,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1pets~1{id}/additionalOperations/COPY"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "External resources, when present, may move under x-ext."
+        ]
+      },
+      "traversal": {
+        "mode": "traversal",
+        "status": "PASS",
+        "observedOperationLikeCallbacks": 3,
+        "paths": [
+          {
+            "path": [
+              "paths",
+              "/pets/{id}",
+              "get"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/pets/{id}",
+              "query"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/pets/{id}",
+              "additionalOperations",
+              "COPY"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "parameter-overrides.yaml",
+      "expectedOperationCount": 2,
+      "raw": {
+        "mode": "raw",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/tenant",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "query",
+            "httpMethod": "QUERY",
+            "operationId": "tenantQuery",
+            "parameterCount": 1,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": true,
+            "sourcePointer": "/paths/~1tenant/query",
+            "sourceDocumentUri": "fixtures/valid/parameter-overrides.yaml"
+          },
+          {
+            "path": "/tenant",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "COPY",
+            "httpMethod": "COPY",
+            "operationId": "tenantCopy",
+            "parameterCount": 1,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": true,
+            "sourcePointer": "/paths/~1tenant/additionalOperations/COPY",
+            "sourceDocumentUri": "fixtures/valid/parameter-overrides.yaml"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "validate.valid=true"
+        ]
+      },
+      "bundle": {
+        "mode": "bundle",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/tenant",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "query",
+            "httpMethod": "QUERY",
+            "operationId": "tenantQuery",
+            "parameterCount": 1,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": true,
+            "sourcePointer": "/paths/~1tenant/query"
+          },
+          {
+            "path": "/tenant",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "COPY",
+            "httpMethod": "COPY",
+            "operationId": "tenantCopy",
+            "parameterCount": 1,
+            "pathParameterCount": 1,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": true,
+            "sourcePointer": "/paths/~1tenant/additionalOperations/COPY"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "External resources, when present, may move under x-ext."
+        ]
+      },
+      "traversal": {
+        "mode": "traversal",
+        "status": "PASS",
+        "observedOperationLikeCallbacks": 2,
+        "paths": [
+          {
+            "path": [
+              "paths",
+              "/tenant",
+              "query"
+            ],
+            "keys": [
+              "operationId",
+              "parameters",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/tenant",
+              "additionalOperations",
+              "COPY"
+            ],
+            "keys": [
+              "operationId",
+              "parameters",
+              "responses"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "querystring.yaml",
+      "expectedOperationCount": 1,
+      "raw": {
+        "mode": "raw",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/search",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "query",
+            "httpMethod": "QUERY",
+            "operationId": "structuredSearch",
+            "parameterCount": 1,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 1,
+            "nestedSchemasReachable": true,
+            "sourcePointer": "/paths/~1search/query",
+            "sourceDocumentUri": "fixtures/valid/querystring.yaml"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "validate.valid=true"
+        ]
+      },
+      "bundle": {
+        "mode": "bundle",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/search",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "query",
+            "httpMethod": "QUERY",
+            "operationId": "structuredSearch",
+            "parameterCount": 1,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 1,
+            "nestedSchemasReachable": true,
+            "sourcePointer": "/paths/~1search/query"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "External resources, when present, may move under x-ext."
+        ]
+      },
+      "traversal": {
+        "mode": "traversal",
+        "status": "PASS",
+        "observedOperationLikeCallbacks": 1,
+        "paths": [
+          {
+            "path": [
+              "paths",
+              "/search",
+              "query"
+            ],
+            "keys": [
+              "operationId",
+              "parameters",
+              "responses"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "additional-querystring.yaml",
+      "expectedOperationCount": 1,
+      "raw": {
+        "mode": "raw",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/search",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "SEARCH",
+            "httpMethod": "SEARCH",
+            "operationId": "additionalSearch",
+            "parameterCount": 1,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 1,
+            "nestedSchemasReachable": true,
+            "sourcePointer": "/paths/~1search/additionalOperations/SEARCH",
+            "sourceDocumentUri": "fixtures/valid/additional-querystring.yaml"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "validate.valid=true"
+        ]
+      },
+      "bundle": {
+        "mode": "bundle",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/search",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "SEARCH",
+            "httpMethod": "SEARCH",
+            "operationId": "additionalSearch",
+            "parameterCount": 1,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 1,
+            "nestedSchemasReachable": true,
+            "sourcePointer": "/paths/~1search/additionalOperations/SEARCH"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "External resources, when present, may move under x-ext."
+        ]
+      },
+      "traversal": {
+        "mode": "traversal",
+        "status": "PASS",
+        "observedOperationLikeCallbacks": 1,
+        "paths": [
+          {
+            "path": [
+              "paths",
+              "/search",
+              "additionalOperations",
+              "SEARCH"
+            ],
+            "keys": [
+              "operationId",
+              "parameters",
+              "responses"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "request-bodies.yaml",
+      "expectedOperationCount": 2,
+      "raw": {
+        "mode": "raw",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/body",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "query",
+            "httpMethod": "QUERY",
+            "operationId": "queryBody",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": true,
+            "requestBodyContentKeys": [
+              "application/json"
+            ],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": true,
+            "sourcePointer": "/paths/~1body/query",
+            "sourceDocumentUri": "fixtures/valid/request-bodies.yaml"
+          },
+          {
+            "path": "/body",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "COPY",
+            "httpMethod": "COPY",
+            "operationId": "copyBody",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": true,
+            "requestBodyContentKeys": [
+              "application/json"
+            ],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": true,
+            "sourcePointer": "/paths/~1body/additionalOperations/COPY",
+            "sourceDocumentUri": "fixtures/valid/request-bodies.yaml"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "validate.valid=true"
+        ]
+      },
+      "bundle": {
+        "mode": "bundle",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/body",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "query",
+            "httpMethod": "QUERY",
+            "operationId": "queryBody",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": true,
+            "requestBodyContentKeys": [
+              "application/json"
+            ],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": true,
+            "sourcePointer": "/paths/~1body/query"
+          },
+          {
+            "path": "/body",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "COPY",
+            "httpMethod": "COPY",
+            "operationId": "copyBody",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": true,
+            "requestBodyContentKeys": [
+              "application/json"
+            ],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": true,
+            "sourcePointer": "/paths/~1body/additionalOperations/COPY"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "External resources, when present, may move under x-ext."
+        ]
+      },
+      "traversal": {
+        "mode": "traversal",
+        "status": "PASS",
+        "observedOperationLikeCallbacks": 2,
+        "paths": [
+          {
+            "path": [
+              "paths",
+              "/body",
+              "query"
+            ],
+            "keys": [
+              "operationId",
+              "requestBody",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/body",
+              "additionalOperations",
+              "COPY"
+            ],
+            "keys": [
+              "operationId",
+              "requestBody",
+              "responses"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "response-summary.yaml",
+      "expectedOperationCount": 1,
+      "raw": {
+        "mode": "raw",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/summary",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "query",
+            "httpMethod": "QUERY",
+            "operationId": "responseSummary",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [
+              "Successful search"
+            ],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1summary/query",
+            "sourceDocumentUri": "fixtures/valid/response-summary.yaml"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "validate.valid=true"
+        ]
+      },
+      "bundle": {
+        "mode": "bundle",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/summary",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "query",
+            "httpMethod": "QUERY",
+            "operationId": "responseSummary",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [
+              "Successful search"
+            ],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1summary/query"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "External resources, when present, may move under x-ext."
+        ]
+      },
+      "traversal": {
+        "mode": "traversal",
+        "status": "PASS",
+        "observedOperationLikeCallbacks": 1,
+        "paths": [
+          {
+            "path": [
+              "paths",
+              "/summary",
+              "query"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fixture": "operation-ids.yaml",
+      "expectedOperationCount": 4,
+      "raw": {
+        "mode": "raw",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/ids",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "get",
+            "httpMethod": "GET",
+            "operationId": "getPets",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1ids/get",
+            "sourceDocumentUri": "fixtures/valid/operation-ids.yaml"
+          },
+          {
+            "path": "/ids",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "query",
+            "httpMethod": "QUERY",
+            "operationId": "queryPets",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1ids/query",
+            "sourceDocumentUri": "fixtures/valid/operation-ids.yaml"
+          },
+          {
+            "path": "/ids",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "COPY",
+            "httpMethod": "COPY",
+            "operationId": "copyPet",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1ids/additionalOperations/COPY",
+            "sourceDocumentUri": "fixtures/valid/operation-ids.yaml"
+          },
+          {
+            "path": "/ids",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "PURGE",
+            "httpMethod": "PURGE",
+            "operationId": "purgePet",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "204"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1ids/additionalOperations/PURGE",
+            "sourceDocumentUri": "fixtures/valid/operation-ids.yaml"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "validate.valid=true"
+        ]
+      },
+      "bundle": {
+        "mode": "bundle",
+        "status": "PASS",
+        "declaredVersion": "3.2.0",
+        "operations": [
+          {
+            "path": "/ids",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "get",
+            "httpMethod": "GET",
+            "operationId": "getPets",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1ids/get"
+          },
+          {
+            "path": "/ids",
+            "sourceKind": "fixed",
+            "declaredFieldOrKey": "query",
+            "httpMethod": "QUERY",
+            "operationId": "queryPets",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1ids/query"
+          },
+          {
+            "path": "/ids",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "COPY",
+            "httpMethod": "COPY",
+            "operationId": "copyPet",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "200"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1ids/additionalOperations/COPY"
+          },
+          {
+            "path": "/ids",
+            "sourceKind": "additional",
+            "declaredFieldOrKey": "PURGE",
+            "httpMethod": "PURGE",
+            "operationId": "purgePet",
+            "parameterCount": 0,
+            "pathParameterCount": 0,
+            "hasRequestBody": false,
+            "requestBodyContentKeys": [],
+            "responseKeys": [
+              "204"
+            ],
+            "responseSummaries": [],
+            "querystringParameters": 0,
+            "nestedSchemasReachable": false,
+            "sourcePointer": "/paths/~1ids/additionalOperations/PURGE"
+          }
+        ],
+        "diagnostics": [],
+        "notes": [
+          "External resources, when present, may move under x-ext."
+        ]
+      },
+      "traversal": {
+        "mode": "traversal",
+        "status": "PASS",
+        "observedOperationLikeCallbacks": 4,
+        "paths": [
+          {
+            "path": [
+              "paths",
+              "/ids",
+              "get"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/ids",
+              "query"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/ids",
+              "additionalOperations",
+              "COPY"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          },
+          {
+            "path": [
+              "paths",
+              "/ids",
+              "additionalOperations",
+              "PURGE"
+            ],
+            "keys": [
+              "operationId",
+              "responses"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "operationDiscovery": {
+    "experimentalVersionAware": true,
+    "sourcePointersOwnedByOait": true,
+    "manuallyEstablishedRepresentativePointers": [
+      "/paths/~1search/query",
+      "/paths/~1pets~1{id}/additionalOperations/COPY",
+      "/paths/~1pets~1{id}/additionalOperations/PURGE",
+      "/paths/~1search/query/parameters/0",
+      "/paths/~1search/query/responses/200"
+    ]
+  },
+  "rawParseResults": {
+    "allExpectedCountsMatch": true
+  },
+  "bundleResults": {
+    "allExpectedCountsMatch": true,
+    "referencedBundleRepresentation": "external Path Item moved under x-ext; dereference used separately for reachability"
+  },
+  "traversalResults": {
+    "lifecycleCallbacks": "operation-like nodes observed; paths are candidate-secondary evidence",
+    "referencedLifecycle": [
+      {
+        "path": [
+          "x-ext",
+          "039f9df",
+          "[object Object]",
+          "query"
+        ],
+        "keys": [
+          "operationId",
+          "parameters",
+          "responses"
+        ]
+      },
+      {
+        "path": [
+          "x-ext",
+          "039f9df",
+          "[object Object]",
+          "additionalOperations",
+          "COPY"
+        ],
+        "keys": [
+          "operationId",
+          "responses"
+        ]
+      }
+    ]
+  },
+  "referenced": {
+    "operations": [
+      {
+        "path": "/pets",
+        "sourceKind": "fixed",
+        "declaredFieldOrKey": "query",
+        "httpMethod": "QUERY",
+        "operationId": "referencedQuery",
+        "parameterCount": 1,
+        "pathParameterCount": 1,
+        "hasRequestBody": false,
+        "requestBodyContentKeys": [],
+        "responseKeys": [
+          "200"
+        ],
+        "responseSummaries": [],
+        "querystringParameters": 1,
+        "nestedSchemasReachable": true,
+        "sourcePointer": "/paths/~1pets/query",
+        "sourceDocumentUri": "fixtures/referenced/paths/pets.yaml"
+      },
+      {
+        "path": "/pets",
+        "sourceKind": "additional",
+        "declaredFieldOrKey": "COPY",
+        "httpMethod": "COPY",
+        "operationId": "referencedCopy",
+        "parameterCount": 0,
+        "pathParameterCount": 1,
+        "hasRequestBody": false,
+        "requestBodyContentKeys": [],
+        "responseKeys": [
+          "200"
+        ],
+        "responseSummaries": [],
+        "querystringParameters": 0,
+        "nestedSchemasReachable": true,
+        "sourcePointer": "/paths/~1pets/additionalOperations/COPY",
+        "sourceDocumentUri": "fixtures/referenced/paths/pets.yaml"
+      }
+    ],
+    "dereferenceErrors": []
+  },
+  "crossVersion": [
+    {
+      "fixture": "openapi-3.1.yaml",
+      "declaredVersion": "3.1.2",
+      "query": {
+        "preservation": "PRESERVED",
+        "semanticRecognition": "NOT_SEMANTICALLY_RECOGNIZED_BY_OAIT_VERSION_ADAPTER"
+      },
+      "additionalOperations": {
+        "preservation": "PRESERVED",
+        "semanticRecognition": "NOT_SEMANTICALLY_RECOGNIZED_BY_OAIT_VERSION_ADAPTER"
+      },
+      "someFutureFieldPreserved": true,
+      "versionAwareOperations": [
+        {
+          "path": "/control",
+          "sourceKind": "fixed",
+          "declaredFieldOrKey": "get",
+          "httpMethod": "GET",
+          "operationId": "controlGet31",
+          "parameterCount": 0,
+          "pathParameterCount": 0,
+          "hasRequestBody": false,
+          "requestBodyContentKeys": [],
+          "responseKeys": [
+            "200"
+          ],
+          "responseSummaries": [],
+          "querystringParameters": 0,
+          "nestedSchemasReachable": false,
+          "sourcePointer": "/paths/~1control/get"
+        }
+      ],
+      "hypotheticalWrong32DiscoveryForContrast": [
+        {
+          "path": "/control",
+          "sourceKind": "fixed",
+          "declaredFieldOrKey": "get",
+          "httpMethod": "GET",
+          "operationId": "controlGet31",
+          "parameterCount": 0,
+          "pathParameterCount": 0,
+          "hasRequestBody": false,
+          "requestBodyContentKeys": [],
+          "responseKeys": [
+            "200"
+          ],
+          "responseSummaries": [],
+          "querystringParameters": 0,
+          "nestedSchemasReachable": false,
+          "sourcePointer": "/paths/~1control/get"
+        },
+        {
+          "path": "/control",
+          "sourceKind": "fixed",
+          "declaredFieldOrKey": "query",
+          "httpMethod": "QUERY",
+          "operationId": "rawQuery31",
+          "parameterCount": 0,
+          "pathParameterCount": 0,
+          "hasRequestBody": false,
+          "requestBodyContentKeys": [],
+          "responseKeys": [
+            "200"
+          ],
+          "responseSummaries": [],
+          "querystringParameters": 0,
+          "nestedSchemasReachable": false,
+          "sourcePointer": "/paths/~1control/query"
+        },
+        {
+          "path": "/control",
+          "sourceKind": "additional",
+          "declaredFieldOrKey": "COPY",
+          "httpMethod": "COPY",
+          "operationId": "rawCopy31",
+          "parameterCount": 0,
+          "pathParameterCount": 0,
+          "hasRequestBody": false,
+          "requestBodyContentKeys": [],
+          "responseKeys": [
+            "200"
+          ],
+          "responseSummaries": [],
+          "querystringParameters": 0,
+          "nestedSchemasReachable": false,
+          "sourcePointer": "/paths/~1control/additionalOperations/COPY"
+        }
+      ],
+      "diagnostics": [
+        {
+          "message": "Property query is not expected to be here",
+          "path": "/paths/~1control"
+        },
+        {
+          "message": "Property additionalOperations is not expected to be here",
+          "path": "/paths/~1control"
+        },
+        {
+          "message": "Property someFutureField is not expected to be here",
+          "path": "/paths/~1control"
+        }
+      ]
+    },
+    {
+      "fixture": "openapi-3.0.yaml",
+      "declaredVersion": "3.0.4",
+      "query": {
+        "preservation": "PRESERVED",
+        "semanticRecognition": "NOT_SEMANTICALLY_RECOGNIZED_BY_OAIT_VERSION_ADAPTER"
+      },
+      "additionalOperations": {
+        "preservation": "PRESERVED",
+        "semanticRecognition": "NOT_SEMANTICALLY_RECOGNIZED_BY_OAIT_VERSION_ADAPTER"
+      },
+      "someFutureFieldPreserved": true,
+      "versionAwareOperations": [
+        {
+          "path": "/control",
+          "sourceKind": "fixed",
+          "declaredFieldOrKey": "post",
+          "httpMethod": "POST",
+          "operationId": "controlPost30",
+          "parameterCount": 0,
+          "pathParameterCount": 0,
+          "hasRequestBody": false,
+          "requestBodyContentKeys": [],
+          "responseKeys": [
+            "200"
+          ],
+          "responseSummaries": [],
+          "querystringParameters": 0,
+          "nestedSchemasReachable": false,
+          "sourcePointer": "/paths/~1control/post"
+        }
+      ],
+      "hypotheticalWrong32DiscoveryForContrast": [
+        {
+          "path": "/control",
+          "sourceKind": "fixed",
+          "declaredFieldOrKey": "post",
+          "httpMethod": "POST",
+          "operationId": "controlPost30",
+          "parameterCount": 0,
+          "pathParameterCount": 0,
+          "hasRequestBody": false,
+          "requestBodyContentKeys": [],
+          "responseKeys": [
+            "200"
+          ],
+          "responseSummaries": [],
+          "querystringParameters": 0,
+          "nestedSchemasReachable": false,
+          "sourcePointer": "/paths/~1control/post"
+        },
+        {
+          "path": "/control",
+          "sourceKind": "fixed",
+          "declaredFieldOrKey": "query",
+          "httpMethod": "QUERY",
+          "operationId": "rawQuery30",
+          "parameterCount": 0,
+          "pathParameterCount": 0,
+          "hasRequestBody": false,
+          "requestBodyContentKeys": [],
+          "responseKeys": [
+            "200"
+          ],
+          "responseSummaries": [],
+          "querystringParameters": 0,
+          "nestedSchemasReachable": false,
+          "sourcePointer": "/paths/~1control/query"
+        },
+        {
+          "path": "/control",
+          "sourceKind": "additional",
+          "declaredFieldOrKey": "COPY",
+          "httpMethod": "COPY",
+          "operationId": "rawCopy30",
+          "parameterCount": 0,
+          "pathParameterCount": 0,
+          "hasRequestBody": false,
+          "requestBodyContentKeys": [],
+          "responseKeys": [
+            "200"
+          ],
+          "responseSummaries": [],
+          "querystringParameters": 0,
+          "nestedSchemasReachable": false,
+          "sourcePointer": "/paths/~1control/additionalOperations/COPY"
+        }
+      ],
+      "diagnostics": [
+        {
+          "message": "Property query is not expected to be here",
+          "path": "/paths/~1control"
+        },
+        {
+          "message": "Property additionalOperations is not expected to be here",
+          "path": "/paths/~1control"
+        },
+        {
+          "message": "Property someFutureField is not expected to be here",
+          "path": "/paths/~1control"
+        }
+      ]
+    }
+  ],
+  "invalidCases": [
+    {
+      "fixture": "fixed-collision.yaml",
+      "classification": "PARSER_PRESERVES_WITH_DIAGNOSTIC",
+      "valid": false,
+      "diagnostics": [
+        {
+          "message": "if must match \"else\" schema",
+          "path": "/paths/~1collision"
+        },
+        {
+          "message": "not must NOT be valid",
+          "path": "/paths/~1collision/additionalOperations"
+        },
+        {
+          "message": "propertyNames property name must be valid",
+          "path": "/paths/~1collision/additionalOperations"
+        }
+      ],
+      "preservedOperations": [
+        {
+          "path": "/collision",
+          "sourceKind": "fixed",
+          "declaredFieldOrKey": "post",
+          "httpMethod": "POST",
+          "operationId": "normalPost",
+          "parameterCount": 0,
+          "pathParameterCount": 0,
+          "hasRequestBody": false,
+          "requestBodyContentKeys": [],
+          "responseKeys": [
+            "200"
+          ],
+          "responseSummaries": [],
+          "querystringParameters": 0,
+          "nestedSchemasReachable": false,
+          "sourcePointer": "/paths/~1collision/post"
+        },
+        {
+          "path": "/collision",
+          "sourceKind": "additional",
+          "declaredFieldOrKey": "POST",
+          "httpMethod": "POST",
+          "operationId": "duplicatePost",
+          "parameterCount": 0,
+          "pathParameterCount": 0,
+          "hasRequestBody": false,
+          "requestBodyContentKeys": [],
+          "responseKeys": [
+            "200"
+          ],
+          "responseSummaries": [],
+          "querystringParameters": 0,
+          "nestedSchemasReachable": false,
+          "sourcePointer": "/paths/~1collision/additionalOperations/POST"
+        }
+      ]
+    },
+    {
+      "fixture": "duplicate-querystring.yaml",
+      "classification": "PARSER_PRESERVES_WITH_DIAGNOSTIC",
+      "valid": false,
+      "diagnostics": [
+        {
+          "message": "if must match \"else\" schema",
+          "path": "/paths/~1invalid"
+        },
+        {
+          "message": "contains must contain at least 0 and no more than 1 valid item(s)",
+          "path": "/paths/~1invalid/query/parameters"
+        }
+      ],
+      "preservedOperations": [
+        {
+          "path": "/invalid",
+          "sourceKind": "fixed",
+          "declaredFieldOrKey": "query",
+          "httpMethod": "QUERY",
+          "operationId": "duplicateQuerystring",
+          "parameterCount": 2,
+          "pathParameterCount": 0,
+          "hasRequestBody": false,
+          "requestBodyContentKeys": [],
+          "responseKeys": [
+            "200"
+          ],
+          "responseSummaries": [],
+          "querystringParameters": 2,
+          "nestedSchemasReachable": true,
+          "sourcePointer": "/paths/~1invalid/query"
+        }
+      ]
+    },
+    {
+      "fixture": "query-and-querystring.yaml",
+      "classification": "PARSER_PRESERVES_WITH_DIAGNOSTIC",
+      "valid": false,
+      "diagnostics": [
+        {
+          "message": "if must match \"else\" schema",
+          "path": "/paths/~1invalid"
+        },
+        {
+          "message": "not must NOT be valid",
+          "path": "/paths/~1invalid/query/parameters"
+        }
+      ],
+      "preservedOperations": [
+        {
+          "path": "/invalid",
+          "sourceKind": "fixed",
+          "declaredFieldOrKey": "query",
+          "httpMethod": "QUERY",
+          "operationId": "invalidCombination",
+          "parameterCount": 2,
+          "pathParameterCount": 0,
+          "hasRequestBody": false,
+          "requestBodyContentKeys": [],
+          "responseKeys": [
+            "200"
+          ],
+          "responseSummaries": [],
+          "querystringParameters": 1,
+          "nestedSchemasReachable": true,
+          "sourcePointer": "/paths/~1invalid/query"
+        }
+      ]
+    },
+    {
+      "fixture": "empty-additional.yaml",
+      "classification": "PARSER_ACCEPTS",
+      "valid": true,
+      "diagnostics": [],
+      "preservedOperations": [
+        {
+          "path": "/empty",
+          "sourceKind": "fixed",
+          "declaredFieldOrKey": "get",
+          "httpMethod": "GET",
+          "operationId": "stillGet",
+          "parameterCount": 0,
+          "pathParameterCount": 0,
+          "hasRequestBody": false,
+          "requestBodyContentKeys": [],
+          "responseKeys": [
+            "200"
+          ],
+          "responseSummaries": [],
+          "querystringParameters": 0,
+          "nestedSchemasReachable": false,
+          "sourcePointer": "/paths/~1empty/get"
+        }
+      ]
+    },
+    {
+      "fixture": "invalid-additional-value.yaml",
+      "classification": "PARSER_PRESERVES_WITH_DIAGNOSTIC",
+      "valid": false,
+      "diagnostics": [
+        {
+          "message": "if must match \"else\" schema",
+          "path": "/paths/~1invalid"
+        },
+        {
+          "message": "type must be object",
+          "path": "/paths/~1invalid/additionalOperations/COPY"
+        }
+      ],
+      "preservedOperations": []
+    },
+    {
+      "fixture": "duplicate-operation-id.yaml",
+      "classification": "PARSER_ACCEPTS",
+      "valid": true,
+      "diagnostics": [],
+      "preservedOperations": [
+        {
+          "path": "/duplicate",
+          "sourceKind": "fixed",
+          "declaredFieldOrKey": "get",
+          "httpMethod": "GET",
+          "operationId": "duplicateId",
+          "parameterCount": 0,
+          "pathParameterCount": 0,
+          "hasRequestBody": false,
+          "requestBodyContentKeys": [],
+          "responseKeys": [
+            "200"
+          ],
+          "responseSummaries": [],
+          "querystringParameters": 0,
+          "nestedSchemasReachable": false,
+          "sourcePointer": "/paths/~1duplicate/get"
+        },
+        {
+          "path": "/duplicate",
+          "sourceKind": "fixed",
+          "declaredFieldOrKey": "query",
+          "httpMethod": "QUERY",
+          "operationId": "duplicateId",
+          "parameterCount": 0,
+          "pathParameterCount": 0,
+          "hasRequestBody": false,
+          "requestBodyContentKeys": [],
+          "responseKeys": [
+            "200"
+          ],
+          "responseSummaries": [],
+          "querystringParameters": 0,
+          "nestedSchemasReachable": false,
+          "sourcePointer": "/paths/~1duplicate/query"
+        },
+        {
+          "path": "/duplicate",
+          "sourceKind": "additional",
+          "declaredFieldOrKey": "COPY",
+          "httpMethod": "COPY",
+          "operationId": "duplicateId",
+          "parameterCount": 0,
+          "pathParameterCount": 0,
+          "hasRequestBody": false,
+          "requestBodyContentKeys": [],
+          "responseKeys": [
+            "200"
+          ],
+          "responseSummaries": [],
+          "querystringParameters": 0,
+          "nestedSchemasReachable": false,
+          "sourcePointer": "/paths/~1duplicate/additionalOperations/COPY"
+        }
+      ]
+    }
+  ],
+  "typescript": {
+    "publishedDeclarationFilesScanned": 69,
+    "query": true,
+    "additionalOperations": true,
+    "matchingFiles": [
+      "dist/configuration/index.d.ts",
+      "dist/schemas/v3.2/schema.d.ts"
+    ],
+    "runtimeQueryPreserved": true,
+    "runtimeAdditionalOperationsPreserved": true,
+    "compilerIssue": "skipLibCheck:true required, inherited candidate dependency declaration incompatibilities from SPIKE-001"
+  },
+  "unexpectedBehavior": [
+    "Referenced lifecycle paths again contain an [object Object] segment and are unsuitable as canonical OAIT pointers."
+  ],
+  "mutation": {
+    "changed": false,
+    "beforeHashes": {
+      "fixtures/cross-version/openapi-3.0.yaml": "da4403f982e6d964e237c35a386e5541284fd010f2bbed4d6a1172613d03253b",
+      "fixtures/cross-version/openapi-3.1.yaml": "c35b9ab5d1678f3efb3ca94b9dd1b75cc39c3f11d4ebf12d813805ab8fcd3ae8",
+      "fixtures/invalid/duplicate-operation-id.yaml": "f13bb793ef1fcae40f9084794bb1566cb4924af21d19d5fae2a6efba259bdedd",
+      "fixtures/invalid/duplicate-querystring.yaml": "8e08c2279a468905cdb2b7fc8ba7946dc1b020e478ab74433e179af741c6bdc3",
+      "fixtures/invalid/empty-additional.yaml": "c8e0f9ca336c7973c67ccae3c0423f61b7746f93258d1a000a0532e2c2a95a3a",
+      "fixtures/invalid/fixed-collision.yaml": "7f6bf63cf03675d7082a53c70cf02355bad9596dedfb4b288a10d3fb37249b05",
+      "fixtures/invalid/invalid-additional-value.yaml": "5c715bd872dd1907e3e2207fc3cbc800062e3c696c9f3aac6fca70d178e66389",
+      "fixtures/invalid/query-and-querystring.yaml": "07c7a3d5667de85f91349686851e934b8f4fd2e007834dcd36c0cd6a2914284f",
+      "fixtures/referenced/openapi.yaml": "bf648682e9827382f70d9d5bf3b27736a5ec9f72b86aefcc8755bb3a3dc8d816",
+      "fixtures/referenced/parameters.yaml": "5e8c4390489f2a3b9e7e0b1b12678d4712ab852241b6a191fbbb324f4279fcff",
+      "fixtures/referenced/paths/pets.yaml": "1260dd68313192697af73e25d849abad4e904aad82832d3d22f8ef7db0547489",
+      "fixtures/referenced/schemas.yaml": "56eaf5f03e6da3e242733599d66ff6d928f389b75462e0646cad7bccadc4ad31",
+      "fixtures/valid/additional-operations.yaml": "41e2b6e8c26a10497984e7836a46278bd91b46f2f50a419da488829876efbfbe",
+      "fixtures/valid/additional-querystring.yaml": "bfda547328a8090527c152be3ab27cd287ddeac879a8666b99237aff11e94b5a",
+      "fixtures/valid/all-fixed.yaml": "b357e02a6eec7db18b7d172e714412291f217df9c6c25f1d90e1f5900f81a6cd",
+      "fixtures/valid/method-case.yaml": "d6e223ec3715bed5f3bd247d4f4ace6acb2bba67cdfaf7fce88a769d171fd923",
+      "fixtures/valid/mixed.yaml": "71892c29110de7277b01778c48c6bbd325550441c77b66ac871e0c9292794a3b",
+      "fixtures/valid/multiple-paths.yaml": "6fb2a50a5c23902c5333f2bca4d532d4b1a5443d42f4b14dc8675383ac5dae21",
+      "fixtures/valid/operation-ids.yaml": "4c24b482bb6c806cfbe90e3b13d7201a8d4147cbf972e12d4cddaf22917d2c1c",
+      "fixtures/valid/parameter-overrides.yaml": "1df3f1d472ee890b0b471e87491f0db0e9d37b11b380656cb9b0ffb33f64e749",
+      "fixtures/valid/path-parameters.yaml": "0895c071369cffa2f32cfdf70e4f4b641d7967c61e118008087da23a8b828393",
+      "fixtures/valid/query-minimal.yaml": "4f71901b8ed14763324107f7d17230ec31e65dff84d26976b77934911648fea8",
+      "fixtures/valid/querystring.yaml": "d011e71e8773bafd589b6e37dc09ed0a5281f6a415bb9b54be9353815419c93a",
+      "fixtures/valid/request-bodies.yaml": "df3a21c4fd3a0a8da6b478f3426baf09f62bfd9a01d8f3b8fb4bdabf73b5f436",
+      "fixtures/valid/response-summary.yaml": "a58c0b020ab632e6cbd62746c3ac8ea17bfdc30af69b62b335e318e6599289c0"
+    },
+    "afterHashes": {
+      "fixtures/cross-version/openapi-3.0.yaml": "da4403f982e6d964e237c35a386e5541284fd010f2bbed4d6a1172613d03253b",
+      "fixtures/cross-version/openapi-3.1.yaml": "c35b9ab5d1678f3efb3ca94b9dd1b75cc39c3f11d4ebf12d813805ab8fcd3ae8",
+      "fixtures/invalid/duplicate-operation-id.yaml": "f13bb793ef1fcae40f9084794bb1566cb4924af21d19d5fae2a6efba259bdedd",
+      "fixtures/invalid/duplicate-querystring.yaml": "8e08c2279a468905cdb2b7fc8ba7946dc1b020e478ab74433e179af741c6bdc3",
+      "fixtures/invalid/empty-additional.yaml": "c8e0f9ca336c7973c67ccae3c0423f61b7746f93258d1a000a0532e2c2a95a3a",
+      "fixtures/invalid/fixed-collision.yaml": "7f6bf63cf03675d7082a53c70cf02355bad9596dedfb4b288a10d3fb37249b05",
+      "fixtures/invalid/invalid-additional-value.yaml": "5c715bd872dd1907e3e2207fc3cbc800062e3c696c9f3aac6fca70d178e66389",
+      "fixtures/invalid/query-and-querystring.yaml": "07c7a3d5667de85f91349686851e934b8f4fd2e007834dcd36c0cd6a2914284f",
+      "fixtures/referenced/openapi.yaml": "bf648682e9827382f70d9d5bf3b27736a5ec9f72b86aefcc8755bb3a3dc8d816",
+      "fixtures/referenced/parameters.yaml": "5e8c4390489f2a3b9e7e0b1b12678d4712ab852241b6a191fbbb324f4279fcff",
+      "fixtures/referenced/paths/pets.yaml": "1260dd68313192697af73e25d849abad4e904aad82832d3d22f8ef7db0547489",
+      "fixtures/referenced/schemas.yaml": "56eaf5f03e6da3e242733599d66ff6d928f389b75462e0646cad7bccadc4ad31",
+      "fixtures/valid/additional-operations.yaml": "41e2b6e8c26a10497984e7836a46278bd91b46f2f50a419da488829876efbfbe",
+      "fixtures/valid/additional-querystring.yaml": "bfda547328a8090527c152be3ab27cd287ddeac879a8666b99237aff11e94b5a",
+      "fixtures/valid/all-fixed.yaml": "b357e02a6eec7db18b7d172e714412291f217df9c6c25f1d90e1f5900f81a6cd",
+      "fixtures/valid/method-case.yaml": "d6e223ec3715bed5f3bd247d4f4ace6acb2bba67cdfaf7fce88a769d171fd923",
+      "fixtures/valid/mixed.yaml": "71892c29110de7277b01778c48c6bbd325550441c77b66ac871e0c9292794a3b",
+      "fixtures/valid/multiple-paths.yaml": "6fb2a50a5c23902c5333f2bca4d532d4b1a5443d42f4b14dc8675383ac5dae21",
+      "fixtures/valid/operation-ids.yaml": "4c24b482bb6c806cfbe90e3b13d7201a8d4147cbf972e12d4cddaf22917d2c1c",
+      "fixtures/valid/parameter-overrides.yaml": "1df3f1d472ee890b0b471e87491f0db0e9d37b11b380656cb9b0ffb33f64e749",
+      "fixtures/valid/path-parameters.yaml": "0895c071369cffa2f32cfdf70e4f4b641d7967c61e118008087da23a8b828393",
+      "fixtures/valid/query-minimal.yaml": "4f71901b8ed14763324107f7d17230ec31e65dff84d26976b77934911648fea8",
+      "fixtures/valid/querystring.yaml": "d011e71e8773bafd589b6e37dc09ed0a5281f6a415bb9b54be9353815419c93a",
+      "fixtures/valid/request-bodies.yaml": "df3a21c4fd3a0a8da6b478f3426baf09f62bfd9a01d8f3b8fb4bdabf73b5f436",
+      "fixtures/valid/response-summary.yaml": "a58c0b020ab632e6cbd62746c3ac8ea17bfdc30af69b62b335e318e6599289c0"
+    }
+  },
+  "mandatoryGates": {
+    "traditionalFixedOperations": true,
+    "fixedQuery": true,
+    "additionalOperations": true,
+    "exactMethodKeys": true,
+    "operationObjectsBothForms": true,
+    "operationId": true,
+    "parameters": true,
+    "responses": true,
+    "referencedPathItemOperations": true,
+    "rawNormalizationEvidence": true,
+    "versionAwareDifferentiation": true,
+    "publicApisOnly": true
+  },
+  "allMandatoryGatesPassed": true,
+  "resultHash": "34c4347b37b549e488ed3dd9684451cccba057980035be7f3224b9836471bd9f",
+  "resultHashScope": "SHA-256 of compact JSON excluding resultHash/resultHashScope."
+}

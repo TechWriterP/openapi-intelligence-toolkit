@@ -1,0 +1,2 @@
+Tenant: { name: tenant, in: header, schema: { type: string } }
+Search: { name: search, in: querystring, content: { application/x-www-form-urlencoded: { schema: { type: object } } } }

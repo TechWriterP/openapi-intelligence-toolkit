@@ -1,0 +1,9 @@
+openapi: 3.0.4
+info: { title: Control 3.0, version: 1.0.0 }
+paths:
+  /control:
+    post: { operationId: controlPost30, responses: { '200': { description: ok } } }
+    query: { operationId: rawQuery30, responses: { '200': { description: raw } } }
+    additionalOperations:
+      COPY: { operationId: rawCopy30, responses: { '200': { description: raw } } }
+    someFutureField: { operationId: misleading30, responses: { '200': { description: raw } } }

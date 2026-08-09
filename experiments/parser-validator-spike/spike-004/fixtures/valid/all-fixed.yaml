@@ -1,0 +1,13 @@
+openapi: 3.2.0
+info: { title: All fixed, version: 1.0.0 }
+paths:
+  /all:
+    get: { operationId: allGet, responses: { '200': { description: ok } } }
+    put: { operationId: allPut, responses: { '200': { description: ok } } }
+    post: { operationId: allPost, responses: { '200': { description: ok } } }
+    delete: { operationId: allDelete, responses: { '204': { description: ok } } }
+    options: { operationId: allOptions, responses: { '200': { description: ok } } }
+    head: { operationId: allHead, responses: { '200': { description: ok } } }
+    patch: { operationId: allPatch, responses: { '200': { description: ok } } }
+    trace: { operationId: allTrace, responses: { '200': { description: ok } } }
+    query: { operationId: allQuery, responses: { '200': { description: ok } } }

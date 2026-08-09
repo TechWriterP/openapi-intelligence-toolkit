@@ -1,0 +1,17 @@
+openapi: 3.2.0
+info: { title: Overrides, version: 1.0.0 }
+paths:
+  /tenant:
+    parameters:
+      - { name: tenant, in: header, schema: { type: string } }
+    query:
+      operationId: tenantQuery
+      parameters:
+        - { name: tenant, in: header, description: query override, schema: { type: string } }
+      responses: { '200': { description: ok } }
+    additionalOperations:
+      COPY:
+        operationId: tenantCopy
+        parameters:
+          - { name: tenant, in: header, description: copy override, schema: { type: string } }
+        responses: { '200': { description: ok } }

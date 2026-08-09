@@ -1,0 +1,17 @@
+parameters:
+  - $ref: ../parameters.yaml#/Tenant
+query:
+  operationId: referencedQuery
+  parameters:
+    - $ref: ../parameters.yaml#/Search
+  responses:
+    '200':
+      description: Results
+      content: { application/json: { schema: { $ref: ../schemas.yaml#/Pet } } }
+additionalOperations:
+  COPY:
+    operationId: referencedCopy
+    responses:
+      '200':
+        description: Copied
+        content: { application/json: { schema: { $ref: ../schemas.yaml#/Pet } } }

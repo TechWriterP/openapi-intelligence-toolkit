@@ -1,0 +1,9 @@
+openapi: 3.2.0
+info: { title: IDs, version: 1.0.0 }
+paths:
+  /ids:
+    get: { operationId: getPets, responses: { '200': { description: ok } } }
+    query: { operationId: queryPets, responses: { '200': { description: ok } } }
+    additionalOperations:
+      COPY: { operationId: copyPet, responses: { '200': { description: ok } } }
+      PURGE: { operationId: purgePet, responses: { '204': { description: ok } } }

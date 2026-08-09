@@ -1,0 +1,6 @@
+openapi: 3.2.0
+info: { title: Empty additional, version: 1.0.0 }
+paths:
+  /empty:
+    get: { operationId: stillGet, responses: { '200': { description: ok } } }
+    additionalOperations: {}

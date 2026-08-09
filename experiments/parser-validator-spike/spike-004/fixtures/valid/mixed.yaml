@@ -1,0 +1,12 @@
+openapi: 3.2.0
+info: { title: Mixed, version: 1.0.0 }
+paths:
+  /pets/{id}:
+    parameters:
+      - { name: id, in: path, required: true, schema: { type: string } }
+    get: { operationId: getPet, responses: { '200': { description: Found } } }
+    post: { operationId: postPet, responses: { '200': { description: Posted } } }
+    query: { operationId: queryPet, responses: { '4XX': { description: Query failed } } }
+    additionalOperations:
+      COPY: { operationId: copyPet, responses: { '200': { description: Copied } } }
+      PURGE: { operationId: purgePet, responses: { default: { description: Purged } } }

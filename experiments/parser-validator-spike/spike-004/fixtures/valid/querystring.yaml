@@ -1,0 +1,13 @@
+openapi: 3.2.0
+info: { title: Querystring, version: 1.0.0 }
+paths:
+  /search:
+    query:
+      operationId: structuredSearch
+      parameters:
+        - name: search
+          in: querystring
+          content:
+            application/x-www-form-urlencoded:
+              schema: { type: object, properties: { q: { type: string }, limit: { type: integer } } }
+      responses: { '200': { description: Results } }
