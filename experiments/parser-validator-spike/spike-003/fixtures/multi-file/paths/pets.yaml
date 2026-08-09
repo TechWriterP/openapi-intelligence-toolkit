@@ -1,0 +1,8 @@
+get:
+  operationId: listPets
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema: { $ref: '../schemas/Pet.yaml' }

@@ -1,0 +1,14 @@
+openapi: 3.1.2
+info: { title: Duplicate Values, version: 1.0.0 }
+paths:
+  /one:
+    get:
+      responses:
+        '200': { description: Identifier }
+  /two:
+    get:
+      responses:
+        '200': { description: Identifier }
+components:
+  schemas:
+    Identifier: { type: string, description: Identifier }

@@ -1,0 +1,8 @@
+openapi: 3.1.2
+info: { title: Multi File Location, version: 1.0.0 }
+paths:
+  /pets: { $ref: './paths/pets.yaml' }
+components:
+  schemas:
+    Pet: { $ref: './schemas/Pet.yaml' }
+    Error: { $ref: './schemas/Error.yaml' }
