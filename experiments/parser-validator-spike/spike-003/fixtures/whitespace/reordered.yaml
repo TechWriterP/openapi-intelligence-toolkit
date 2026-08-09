@@ -1,0 +1,7 @@
+paths:
+  /pets:
+    get:
+      responses: { '200': { description: OK } }
+      operationId: listPets
+info: { version: 1.0.0, title: Whitespace }
+openapi: 3.1.2

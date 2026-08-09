@@ -1,0 +1,927 @@
+{
+  "candidate": "@scalar/openapi-parser",
+  "version": "0.28.10",
+  "supportingPublicPackage": {
+    "name": "@scalar/json-magic",
+    "version": "0.12.19"
+  },
+  "runtime": {
+    "node": "v24.18.0"
+  },
+  "candidateApis": [
+    "validate(source)",
+    "bundle(input, { readFiles(), hooks, urlMap })"
+  ],
+  "nativeValidDocumentsProcessed": {
+    "yaml": true,
+    "json": true
+  },
+  "evidenceClassification": {
+    "validNode": {
+      "documentUri": "DERIVABLE",
+      "pointer": "OAIT_OWNED_REQUIRED",
+      "line": "NOT_AVAILABLE",
+      "column": "NOT_AVAILABLE",
+      "range": "NOT_AVAILABLE",
+      "astNode": "NOT_AVAILABLE"
+    },
+    "diagnostic": {
+      "documentUri": "OAIT_OWNED_REQUIRED",
+      "pointer": "NATIVE",
+      "line": "OAIT_OWNED_REQUIRED",
+      "column": "OAIT_OWNED_REQUIRED"
+    },
+    "ownedIndex": {
+      "documentUri": "OAIT_OWNED_REQUIRED",
+      "pointer": "OAIT_OWNED_REQUIRED",
+      "line": "OAIT_OWNED_REQUIRED",
+      "column": "OAIT_OWNED_REQUIRED"
+    }
+  },
+  "tests": [
+    {
+      "id": "SOURCE_DOCUMENT_VALID_NODE",
+      "status": "PARTIAL",
+      "evidence": "Input file is caller-known but not attached to returned valid nodes."
+    },
+    {
+      "id": "JSON_POINTER_VALID_NODE",
+      "status": "NOT_SUPPORTED",
+      "operationLifecyclePath": {
+        "keys": [
+          "operationId",
+          "tags",
+          "responses"
+        ],
+        "path": [
+          "paths",
+          "/pets/{petId}",
+          "get"
+        ]
+      },
+      "evidence": "Lifecycle paths are bundle traversal paths; nested paths can contain noncanonical object-string segments."
+    },
+    {
+      "id": "LINE_VALID_NODE",
+      "status": "NOT_SUPPORTED"
+    },
+    {
+      "id": "COLUMN_VALID_NODE",
+      "status": "NOT_SUPPORTED"
+    },
+    {
+      "id": "SCHEMA_PROPERTY_LOCATION",
+      "status": "NOT_SUPPORTED"
+    },
+    {
+      "id": "ARRAY_ITEM_LOCATION",
+      "status": "NOT_SUPPORTED"
+    },
+    {
+      "id": "REF_DECLARATION_LOCATION",
+      "status": "PARTIAL",
+      "evidence": "Hook can observe a traversal path and raw ref, but provides no physical document or coordinates and becomes noncanonical after nesting."
+    },
+    {
+      "id": "REF_TARGET_LOCATION",
+      "status": "PARTIAL",
+      "evidence": "urlMap identifies target resources but supplies no original target pointer or coordinates."
+    },
+    {
+      "id": "NESTED_HOP_LOCATIONS",
+      "status": "FAIL",
+      "anomalousNestedPaths": [
+        {
+          "keys": [
+            "Pet"
+          ],
+          "path": [
+            "x-ext",
+            "296657b",
+            "[object Object]"
+          ]
+        },
+        {
+          "keys": [
+            "type",
+            "properties"
+          ],
+          "path": [
+            "x-ext",
+            "296657b",
+            "[object Object]",
+            "Pet"
+          ]
+        },
+        {
+          "keys": [
+            "id"
+          ],
+          "path": [
+            "x-ext",
+            "296657b",
+            "[object Object]",
+            "Pet",
+            "properties"
+          ]
+        },
+        {
+          "keys": [
+            "$ref"
+          ],
+          "path": [
+            "x-ext",
+            "296657b",
+            "[object Object]",
+            "Pet",
+            "properties",
+            "id"
+          ]
+        },
+        {
+          "keys": [
+            "Identifier"
+          ],
+          "path": [
+            "x-ext",
+            "829a1f2",
+            "[object Object]"
+          ]
+        },
+        {
+          "keys": [
+            "type"
+          ],
+          "path": [
+            "x-ext",
+            "829a1f2",
+            "[object Object]",
+            "Identifier"
+          ]
+        }
+      ],
+      "marker": "NOT_SUITABLE_AS_CANONICAL_POINTER"
+    },
+    {
+      "id": "MULTI_FILE_ORIGINAL_LOCATION",
+      "status": "NOT_SUPPORTED"
+    },
+    {
+      "id": "ERROR_DOCUMENT",
+      "status": "PARTIAL",
+      "evidence": "Caller knows input document; Scalar error object does not attach it."
+    },
+    {
+      "id": "ERROR_POINTER",
+      "status": "PASS",
+      "diagnostics": [
+        {
+          "message": "if must match \"else\" schema",
+          "path": "/paths/~1pets~1{petId}"
+        },
+        {
+          "message": "if must match \"then\" schema",
+          "path": "/paths/~1pets~1{petId}/get/parameters/0"
+        },
+        {
+          "message": "if must match \"else\" schema",
+          "path": "/paths/~1pets~1{petId}/get/parameters/0"
+        },
+        {
+          "message": "const must be equal to constant",
+          "path": "/paths/~1pets~1{petId}/get/parameters/0/required"
+        }
+      ]
+    },
+    {
+      "id": "ERROR_LINE",
+      "status": "PARTIAL",
+      "malformed": {
+        "threw": true,
+        "error": {
+          "type": "YAMLParseError",
+          "message": "Flow sequence in block collection must be sufficiently indented and end with a ] at line 6, column 1:\n\npaths: [not closed\n\n^\n",
+          "code": "BAD_INDENT",
+          "linePos": [
+            {
+              "line": 6,
+              "col": 1
+            },
+            {
+              "line": 6,
+              "col": 2
+            }
+          ],
+          "pos": [
+            73,
+            74
+          ]
+        }
+      },
+      "observationalOnly": "Thrown YAMLParseError carried structured 1-based linePos, but Scalar does not document this error contract."
+    },
+    {
+      "id": "ERROR_COLUMN",
+      "status": "PARTIAL",
+      "malformed": {
+        "threw": true,
+        "error": {
+          "type": "YAMLParseError",
+          "message": "Flow sequence in block collection must be sufficiently indented and end with a ] at line 6, column 1:\n\npaths: [not closed\n\n^\n",
+          "code": "BAD_INDENT",
+          "linePos": [
+            {
+              "line": 6,
+              "col": 1
+            },
+            {
+              "line": 6,
+              "col": 2
+            }
+          ],
+          "pos": [
+            73,
+            74
+          ]
+        }
+      },
+      "observationalOnly": "Thrown YAMLParseError carried structured 1-based linePos and offsets, but Scalar does not document this error contract."
+    },
+    {
+      "id": "STABLE_UNDER_WHITESPACE",
+      "status": "PASS",
+      "evidenceSource": "OAIT-owned feasibility proof"
+    },
+    {
+      "id": "CANONICAL_POINTER_CONVERSION",
+      "status": "FAIL",
+      "marker": "NOT_SUITABLE_AS_CANONICAL_POINTER",
+      "evidence": "Scalar nested lifecycle paths are ambiguous; source AST indexing is required."
+    },
+    {
+      "id": "YAML_LOCATION_INDEX_FEASIBILITY",
+      "status": "PASS",
+      "evidenceSource": "OAIT-owned proof"
+    },
+    {
+      "id": "JSON_LOCATION_INDEX_FEASIBILITY",
+      "status": "PASS",
+      "evidenceSource": "OAIT-owned proof"
+    },
+    {
+      "id": "DUPLICATE_SCALAR_VALUES",
+      "status": "PASS",
+      "evidenceSource": "OAIT-owned structural index"
+    },
+    {
+      "id": "POINTER_ESCAPING",
+      "status": "PASS",
+      "evidenceSource": "OAIT-owned proof"
+    },
+    {
+      "id": "DOCUMENTED_API_ONLY",
+      "status": "PASS",
+      "undocumentedOrPrivateApisUsed": false
+    }
+  ],
+  "oaitOwnedFeasibilityProof": {
+    "technology": "yaml@2.8.3 public parseDocument + LineCounter APIs (feasibility proof only)",
+    "classification": "OAIT_OWNED_REQUIRED",
+    "indexingConvention": "RFC 6901 pointers; key-token anchor; 1-based line and column",
+    "samples": [
+      {
+        "kind": "root",
+        "pointer": "",
+        "yaml": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/yaml/openapi.yaml",
+          "filePath": "fixtures/yaml/openapi.yaml",
+          "pointer": "",
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "json": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/json/openapi.json",
+          "filePath": "fixtures/json/openapi.json",
+          "pointer": "",
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "yamlExpected": {
+          "line": 1,
+          "column": 1
+        },
+        "jsonExpected": {
+          "line": 1,
+          "column": 1
+        },
+        "yamlExact": true,
+        "jsonExact": true
+      },
+      {
+        "kind": "info",
+        "pointer": "/info",
+        "yaml": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/yaml/openapi.yaml",
+          "filePath": "fixtures/yaml/openapi.yaml",
+          "pointer": "/info",
+          "line": 2,
+          "column": 1,
+          "offset": 15
+        },
+        "json": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/json/openapi.json",
+          "filePath": "fixtures/json/openapi.json",
+          "pointer": "/info",
+          "line": 3,
+          "column": 3,
+          "offset": 26
+        },
+        "yamlExpected": {
+          "line": 2,
+          "column": 1
+        },
+        "jsonExpected": {
+          "line": 3,
+          "column": 3
+        },
+        "yamlExact": true,
+        "jsonExact": true
+      },
+      {
+        "kind": "tag",
+        "pointer": "/tags/0",
+        "yaml": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/yaml/openapi.yaml",
+          "filePath": "fixtures/yaml/openapi.yaml",
+          "pointer": "/tags/0",
+          "line": 6,
+          "column": 5,
+          "offset": 79
+        },
+        "json": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/json/openapi.json",
+          "filePath": "fixtures/json/openapi.json",
+          "pointer": "/tags/0",
+          "line": 7,
+          "column": 12,
+          "offset": 113
+        },
+        "yamlExpected": {
+          "line": 6,
+          "column": 5
+        },
+        "jsonExpected": {
+          "line": 7,
+          "column": 12
+        },
+        "yamlExact": true,
+        "jsonExact": true
+      },
+      {
+        "kind": "pathItem",
+        "pointer": "/paths/~1pets~1{petId}",
+        "yaml": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/yaml/openapi.yaml",
+          "filePath": "fixtures/yaml/openapi.yaml",
+          "pointer": "/paths/~1pets~1{petId}",
+          "line": 8,
+          "column": 3,
+          "offset": 99
+        },
+        "json": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/json/openapi.json",
+          "filePath": "fixtures/json/openapi.json",
+          "pointer": "/paths/~1pets~1{petId}",
+          "line": 9,
+          "column": 5,
+          "offset": 151
+        },
+        "yamlExpected": {
+          "line": 8,
+          "column": 3
+        },
+        "jsonExpected": {
+          "line": 9,
+          "column": 5
+        },
+        "yamlExact": true,
+        "jsonExact": true
+      },
+      {
+        "kind": "operation",
+        "pointer": "/paths/~1pets~1{petId}/get",
+        "yaml": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/yaml/openapi.yaml",
+          "filePath": "fixtures/yaml/openapi.yaml",
+          "pointer": "/paths/~1pets~1{petId}/get",
+          "line": 20,
+          "column": 5,
+          "offset": 370
+        },
+        "json": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/json/openapi.json",
+          "filePath": "fixtures/json/openapi.json",
+          "pointer": "/paths/~1pets~1{petId}/get",
+          "line": 15,
+          "column": 7,
+          "offset": 452
+        },
+        "yamlExpected": {
+          "line": 20,
+          "column": 5
+        },
+        "jsonExpected": {
+          "line": 15,
+          "column": 7
+        },
+        "yamlExact": true,
+        "jsonExact": true
+      },
+      {
+        "kind": "parameter0",
+        "pointer": "/paths/~1pets~1{petId}/parameters/0",
+        "yaml": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/yaml/openapi.yaml",
+          "filePath": "fixtures/yaml/openapi.yaml",
+          "pointer": "/paths/~1pets~1{petId}/parameters/0",
+          "line": 10,
+          "column": 9,
+          "offset": 138
+        },
+        "json": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/json/openapi.json",
+          "filePath": "fixtures/json/openapi.json",
+          "pointer": "/paths/~1pets~1{petId}/parameters/0",
+          "line": 11,
+          "column": 9,
+          "offset": 200
+        },
+        "yamlExpected": {
+          "line": 10,
+          "column": 9
+        },
+        "jsonExpected": {
+          "line": 11,
+          "column": 9
+        },
+        "yamlExact": true,
+        "jsonExact": true
+      },
+      {
+        "kind": "parameter1",
+        "pointer": "/paths/~1pets~1{petId}/parameters/1",
+        "yaml": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/yaml/openapi.yaml",
+          "filePath": "fixtures/yaml/openapi.yaml",
+          "pointer": "/paths/~1pets~1{petId}/parameters/1",
+          "line": 14,
+          "column": 9,
+          "offset": 231
+        },
+        "json": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/json/openapi.json",
+          "filePath": "fixtures/json/openapi.json",
+          "pointer": "/paths/~1pets~1{petId}/parameters/1",
+          "line": 12,
+          "column": 9,
+          "offset": 293
+        },
+        "yamlExpected": {
+          "line": 14,
+          "column": 9
+        },
+        "jsonExpected": {
+          "line": 12,
+          "column": 9
+        },
+        "yamlExact": true,
+        "jsonExact": true
+      },
+      {
+        "kind": "parameter2",
+        "pointer": "/paths/~1pets~1{petId}/parameters/2",
+        "yaml": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/yaml/openapi.yaml",
+          "filePath": "fixtures/yaml/openapi.yaml",
+          "pointer": "/paths/~1pets~1{petId}/parameters/2",
+          "line": 17,
+          "column": 9,
+          "offset": 302
+        },
+        "json": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/json/openapi.json",
+          "filePath": "fixtures/json/openapi.json",
+          "pointer": "/paths/~1pets~1{petId}/parameters/2",
+          "line": 13,
+          "column": 9,
+          "offset": 369
+        },
+        "yamlExpected": {
+          "line": 17,
+          "column": 9
+        },
+        "jsonExpected": {
+          "line": 13,
+          "column": 9
+        },
+        "yamlExact": true,
+        "jsonExact": true
+      },
+      {
+        "kind": "requestBody",
+        "pointer": "/paths/~1pets/post/requestBody",
+        "yaml": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/yaml/openapi.yaml",
+          "filePath": "fixtures/yaml/openapi.yaml",
+          "pointer": "/paths/~1pets/post/requestBody",
+          "line": 38,
+          "column": 7,
+          "offset": 835
+        },
+        "json": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/json/openapi.json",
+          "filePath": "fixtures/json/openapi.json",
+          "pointer": "/paths/~1pets/post/requestBody",
+          "line": 27,
+          "column": 9,
+          "offset": 922
+        },
+        "yamlExpected": {
+          "line": 38,
+          "column": 7
+        },
+        "jsonExpected": {
+          "line": 27,
+          "column": 9
+        },
+        "yamlExact": true,
+        "jsonExact": true
+      },
+      {
+        "kind": "response200",
+        "pointer": "/paths/~1pets~1{petId}/get/responses/200",
+        "yaml": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/yaml/openapi.yaml",
+          "filePath": "fixtures/yaml/openapi.yaml",
+          "pointer": "/paths/~1pets~1{petId}/get/responses/200",
+          "line": 25,
+          "column": 9,
+          "offset": 473
+        },
+        "json": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/json/openapi.json",
+          "filePath": "fixtures/json/openapi.json",
+          "pointer": "/paths/~1pets~1{petId}/get/responses/200",
+          "line": 19,
+          "column": 11,
+          "offset": 553
+        },
+        "yamlExpected": {
+          "line": 25,
+          "column": 9
+        },
+        "jsonExpected": {
+          "line": 19,
+          "column": 11
+        },
+        "yamlExact": true,
+        "jsonExact": true
+      },
+      {
+        "kind": "schema",
+        "pointer": "/components/schemas/Pet",
+        "yaml": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/yaml/openapi.yaml",
+          "filePath": "fixtures/yaml/openapi.yaml",
+          "pointer": "/components/schemas/Pet",
+          "line": 47,
+          "column": 5,
+          "offset": 1060
+        },
+        "json": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/json/openapi.json",
+          "filePath": "fixtures/json/openapi.json",
+          "pointer": "/components/schemas/Pet",
+          "line": 34,
+          "column": 7,
+          "offset": 1172
+        },
+        "yamlExpected": {
+          "line": 47,
+          "column": 5
+        },
+        "jsonExpected": {
+          "line": 34,
+          "column": 7
+        },
+        "yamlExact": true,
+        "jsonExact": true
+      },
+      {
+        "kind": "schemaProperty",
+        "pointer": "/components/schemas/Pet/properties/id",
+        "yaml": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/yaml/openapi.yaml",
+          "filePath": "fixtures/yaml/openapi.yaml",
+          "pointer": "/components/schemas/Pet/properties/id",
+          "line": 50,
+          "column": 9,
+          "offset": 1110
+        },
+        "json": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/json/openapi.json",
+          "filePath": "fixtures/json/openapi.json",
+          "pointer": "/components/schemas/Pet/properties/id",
+          "line": 34,
+          "column": 50,
+          "offset": 1215
+        },
+        "yamlExpected": {
+          "line": 50,
+          "column": 9
+        },
+        "jsonExpected": {
+          "line": 34,
+          "column": 50
+        },
+        "yamlExact": true,
+        "jsonExact": true
+      },
+      {
+        "kind": "escapedProperty",
+        "pointer": "/components/schemas/Pet/properties/a~1b~0c",
+        "yaml": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/yaml/openapi.yaml",
+          "filePath": "fixtures/yaml/openapi.yaml",
+          "pointer": "/components/schemas/Pet/properties/a~1b~0c",
+          "line": 51,
+          "column": 9,
+          "offset": 1164
+        },
+        "json": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/json/openapi.json",
+          "filePath": "fixtures/json/openapi.json",
+          "pointer": "/components/schemas/Pet/properties/a~1b~0c",
+          "line": 34,
+          "column": 107,
+          "offset": 1272
+        },
+        "yamlExpected": {
+          "line": 51,
+          "column": 9
+        },
+        "jsonExpected": {
+          "line": 34,
+          "column": 107
+        },
+        "yamlExact": true,
+        "jsonExact": true
+      },
+      {
+        "kind": "securityScheme",
+        "pointer": "/components/securitySchemes/ApiKeyAuth",
+        "yaml": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/yaml/openapi.yaml",
+          "filePath": "fixtures/yaml/openapi.yaml",
+          "pointer": "/components/securitySchemes/ApiKeyAuth",
+          "line": 57,
+          "column": 5,
+          "offset": 1318
+        },
+        "json": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/json/openapi.json",
+          "filePath": "fixtures/json/openapi.json",
+          "pointer": "/components/securitySchemes/ApiKeyAuth",
+          "line": 37,
+          "column": 26,
+          "offset": 1455
+        },
+        "yamlExpected": {
+          "line": 57,
+          "column": 5
+        },
+        "jsonExpected": {
+          "line": 37,
+          "column": 26
+        },
+        "yamlExact": true,
+        "jsonExact": true
+      },
+      {
+        "kind": "refDeclaration",
+        "pointer": "/paths/~1pets~1{petId}/get/responses/200/content/application~1json/schema/$ref",
+        "yaml": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/yaml/openapi.yaml",
+          "filePath": "fixtures/yaml/openapi.yaml",
+          "pointer": "/paths/~1pets~1{petId}/get/responses/200/content/application~1json/schema/$ref",
+          "line": 29,
+          "column": 25,
+          "offset": 587
+        },
+        "json": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/json/openapi.json",
+          "filePath": "fixtures/json/openapi.json",
+          "pointer": "/paths/~1pets~1{petId}/get/responses/200/content/application~1json/schema/$ref",
+          "line": 19,
+          "column": 96,
+          "offset": 638
+        },
+        "yamlExpected": {
+          "line": 29,
+          "column": 25
+        },
+        "jsonExpected": {
+          "line": 19,
+          "column": 96
+        },
+        "yamlExact": true,
+        "jsonExact": true
+      }
+    ],
+    "allYamlSamplesExact": true,
+    "allJsonSamplesExact": true,
+    "duplicateScalarLocations": [
+      {
+        "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/duplicate-values/openapi.yaml",
+        "filePath": "fixtures/duplicate-values/openapi.yaml",
+        "pointer": "/paths/~1one/get/responses/200/description",
+        "line": 7,
+        "column": 18,
+        "offset": 123
+      },
+      {
+        "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/duplicate-values/openapi.yaml",
+        "filePath": "fixtures/duplicate-values/openapi.yaml",
+        "pointer": "/paths/~1two/get/responses/200/description",
+        "line": 11,
+        "column": 18,
+        "offset": 200
+      },
+      {
+        "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/duplicate-values/openapi.yaml",
+        "filePath": "fixtures/duplicate-values/openapi.yaml",
+        "pointer": "/components/schemas/Identifier/description",
+        "line": 14,
+        "column": 33,
+        "offset": 281
+      }
+    ],
+    "duplicateValuesRemainDistinct": true,
+    "whitespace": {
+      "compact": {
+        "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/whitespace/compact.yaml",
+        "filePath": "fixtures/whitespace/compact.yaml",
+        "pointer": "/paths/~1pets/get",
+        "line": 5,
+        "column": 5,
+        "offset": 79
+      },
+      "expanded": {
+        "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/whitespace/expanded.yaml",
+        "filePath": "fixtures/whitespace/expanded.yaml",
+        "pointer": "/paths/~1pets/get",
+        "line": 12,
+        "column": 5,
+        "offset": 170
+      },
+      "reordered": {
+        "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/whitespace/reordered.yaml",
+        "filePath": "fixtures/whitespace/reordered.yaml",
+        "pointer": "/paths/~1pets/get",
+        "line": 3,
+        "column": 5,
+        "offset": 20
+      },
+      "pointerStable": true,
+      "presentationMoved": true
+    },
+    "nestedReferenceHops": [
+      {
+        "declaration": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/references/openapi.yaml",
+          "filePath": "fixtures/references/openapi.yaml",
+          "pointer": "/components/schemas/Pet/$ref",
+          "line": 6,
+          "column": 12,
+          "offset": 108
+        },
+        "target": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/references/models.yaml",
+          "filePath": "fixtures/references/models.yaml",
+          "pointer": "/Pet",
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        }
+      },
+      {
+        "declaration": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/references/models.yaml",
+          "filePath": "fixtures/references/models.yaml",
+          "pointer": "/Pet/properties/id/$ref",
+          "line": 4,
+          "column": 11,
+          "offset": 44
+        },
+        "target": {
+          "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/references/common.yaml",
+          "filePath": "fixtures/references/common.yaml",
+          "pointer": "/Identifier",
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        }
+      }
+    ],
+    "multiFile": {
+      "operation": {
+        "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/multi-file/paths/pets.yaml",
+        "filePath": "fixtures/multi-file/paths/pets.yaml",
+        "pointer": "/get",
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "refDeclaration": {
+        "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/multi-file/paths/pets.yaml",
+        "filePath": "fixtures/multi-file/paths/pets.yaml",
+        "pointer": "/get/responses/200/content/application~1json/schema/$ref",
+        "line": 8,
+        "column": 21,
+        "offset": 136
+      },
+      "petTarget": {
+        "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/multi-file/schemas/Pet.yaml",
+        "filePath": "fixtures/multi-file/schemas/Pet.yaml",
+        "pointer": "",
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "nestedDeclaration": {
+        "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/multi-file/schemas/Pet.yaml",
+        "filePath": "fixtures/multi-file/schemas/Pet.yaml",
+        "pointer": "/properties/id/$ref",
+        "line": 4,
+        "column": 5,
+        "offset": 35
+      },
+      "identifierTarget": {
+        "documentUri": "file:///Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003/fixtures/multi-file/schemas/common.yaml",
+        "filePath": "fixtures/multi-file/schemas/common.yaml",
+        "pointer": "/Identifier",
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      }
+    }
+  },
+  "mutation": {
+    "fixtureFilesChanged": false,
+    "beforeHashes": {
+      "fixtures/duplicate-values/openapi.yaml": "2e51d1539c344a2956363f60675e30ef8e68032cf3697cef4da2f61b00ce9c64",
+      "fixtures/invalid/malformed.yaml": "7cb44e875a26667e787c33553e4dde07404d516c52c580ed175860c6f38b364a",
+      "fixtures/invalid/structural.yaml": "c508604da41d2b4827f07d0fc9049921aad8e1e7d2deaffd471d8135116bd199",
+      "fixtures/invalid/unresolved-ref.yaml": "3be1a3c2e8bb3748a6c3abfc0f8e97cda414807758e9c759e1fc0910e175ae94",
+      "fixtures/json/openapi.json": "6c5f0619413ec27a03e8c882b7e7fee886735a02c3ea5f89c0f5618e9cf2a65a",
+      "fixtures/multi-file/openapi.yaml": "3c163b31307e2303def88a835dac6e2d5e55594a5ba860af247e3063768baffd",
+      "fixtures/multi-file/paths/pets.yaml": "e4c338982894bfb25c1865baedc7538ba84bb458ff9f70bc7e7659cedf984703",
+      "fixtures/multi-file/schemas/Error.yaml": "fd1377eef58605ba7fd3d48e5923d3e59493155c1af6eafd7e7924e17160f42c",
+      "fixtures/multi-file/schemas/Pet.yaml": "4c1454060b289b1d4ff49632cc2d9a6700ab68e15d3192ec8704f962a7d46189",
+      "fixtures/multi-file/schemas/common.yaml": "a61b2b8ceb70b38c1c40fe91bc3ba26b0829062d758761970093719f8f37cbb2",
+      "fixtures/references/common.yaml": "421419955276f0060d7d07ce41bdb49f2bc1636286ccf1dff602bed5cf7690d5",
+      "fixtures/references/models.yaml": "14cb9b1d58bb9bec1519ab96f383f5a79c82248578d4aff9e5aae65d75ab8684",
+      "fixtures/references/openapi.yaml": "808106ed991b98ce40a1d75d1e4f7134efb889a6e00e3f07a798f8641de7588f",
+      "fixtures/whitespace/compact.yaml": "8fc978dc7bbd0474dadb3abb8131a2182d30604c57d270bb74d331ad093ec4d6",
+      "fixtures/whitespace/expanded.yaml": "080bc59adadbee2505209911bd5f21a66d35ac9135109c4f2e79668ad4eab3fe",
+      "fixtures/whitespace/reordered.yaml": "3ea51f1eaa38efa9b7fd462dba0ee4152c78624ae40b2550d4473a356de7bd7a",
+      "fixtures/yaml/openapi.yaml": "f73613bbc84d1196f0e8029efe4e49c9943dc9a16b8a684c0f168cb816aaca5f"
+    },
+    "afterHashes": {
+      "fixtures/duplicate-values/openapi.yaml": "2e51d1539c344a2956363f60675e30ef8e68032cf3697cef4da2f61b00ce9c64",
+      "fixtures/invalid/malformed.yaml": "7cb44e875a26667e787c33553e4dde07404d516c52c580ed175860c6f38b364a",
+      "fixtures/invalid/structural.yaml": "c508604da41d2b4827f07d0fc9049921aad8e1e7d2deaffd471d8135116bd199",
+      "fixtures/invalid/unresolved-ref.yaml": "3be1a3c2e8bb3748a6c3abfc0f8e97cda414807758e9c759e1fc0910e175ae94",
+      "fixtures/json/openapi.json": "6c5f0619413ec27a03e8c882b7e7fee886735a02c3ea5f89c0f5618e9cf2a65a",
+      "fixtures/multi-file/openapi.yaml": "3c163b31307e2303def88a835dac6e2d5e55594a5ba860af247e3063768baffd",
+      "fixtures/multi-file/paths/pets.yaml": "e4c338982894bfb25c1865baedc7538ba84bb458ff9f70bc7e7659cedf984703",
+      "fixtures/multi-file/schemas/Error.yaml": "fd1377eef58605ba7fd3d48e5923d3e59493155c1af6eafd7e7924e17160f42c",
+      "fixtures/multi-file/schemas/Pet.yaml": "4c1454060b289b1d4ff49632cc2d9a6700ab68e15d3192ec8704f962a7d46189",
+      "fixtures/multi-file/schemas/common.yaml": "a61b2b8ceb70b38c1c40fe91bc3ba26b0829062d758761970093719f8f37cbb2",
+      "fixtures/references/common.yaml": "421419955276f0060d7d07ce41bdb49f2bc1636286ccf1dff602bed5cf7690d5",
+      "fixtures/references/models.yaml": "14cb9b1d58bb9bec1519ab96f383f5a79c82248578d4aff9e5aae65d75ab8684",
+      "fixtures/references/openapi.yaml": "808106ed991b98ce40a1d75d1e4f7134efb889a6e00e3f07a798f8641de7588f",
+      "fixtures/whitespace/compact.yaml": "8fc978dc7bbd0474dadb3abb8131a2182d30604c57d270bb74d331ad093ec4d6",
+      "fixtures/whitespace/expanded.yaml": "080bc59adadbee2505209911bd5f21a66d35ac9135109c4f2e79668ad4eab3fe",
+      "fixtures/whitespace/reordered.yaml": "3ea51f1eaa38efa9b7fd462dba0ee4152c78624ae40b2550d4473a356de7bd7a",
+      "fixtures/yaml/openapi.yaml": "f73613bbc84d1196f0e8029efe4e49c9943dc9a16b8a684c0f168cb816aaca5f"
+    }
+  },
+  "typescript": {
+    "compiler": "typescript 5.9.2",
+    "compiledWithSkipLibCheck": true
+  },
+  "workspaceRoot": "/Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-003"
+}

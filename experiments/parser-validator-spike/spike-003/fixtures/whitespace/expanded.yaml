@@ -1,0 +1,16 @@
+# Same logical API with comments and blank lines
+openapi: 3.1.2
+
+info:
+  title: Whitespace
+  version: 1.0.0
+
+paths:
+  /pets:
+
+    # Operation moves, pointer does not
+    get:
+      operationId: listPets
+      responses:
+        '200':
+          description: OK

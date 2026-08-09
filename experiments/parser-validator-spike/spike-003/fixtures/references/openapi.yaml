@@ -1,0 +1,6 @@
+openapi: 3.1.2
+info: { title: Nested Location, version: 1.0.0 }
+paths: {}
+components:
+  schemas:
+    Pet: { $ref: './models.yaml#/Pet' }

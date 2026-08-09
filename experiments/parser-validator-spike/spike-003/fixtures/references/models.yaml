@@ -1,0 +1,4 @@
+Pet:
+  type: object
+  properties:
+    id: { $ref: './common.yaml#/Identifier' }

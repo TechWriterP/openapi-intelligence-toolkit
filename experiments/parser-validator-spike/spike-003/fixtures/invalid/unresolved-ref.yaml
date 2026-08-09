@@ -1,0 +1,6 @@
+openapi: 3.1.2
+info: { title: Invalid Reference, version: 1.0.0 }
+paths: {}
+components:
+  schemas:
+    Broken: { $ref: '#/components/schemas/DoesNotExist' }
