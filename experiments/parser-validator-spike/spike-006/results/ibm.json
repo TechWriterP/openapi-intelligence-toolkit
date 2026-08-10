@@ -1,0 +1,3671 @@
+{
+  "environment": {
+    "date": "2026-08-10T13:50:53.486Z",
+    "node": "v24.18.0",
+    "platform": "darwin",
+    "architecture": "arm64",
+    "typescript": "5.9.2",
+    "module": "ESM/NodeNext",
+    "skipLibCheck": true
+  },
+  "candidate": "ibm-openapi-validator",
+  "versions": {
+    "@scalar/openapi-parser": "0.28.10",
+    "@scalar/json-magic": "0.12.19",
+    "@redocly/openapi-core": "2.40.0",
+    "ibm-openapi-validator": "1.37.15",
+    "typescript": "5.9.2",
+    "tsx": "4.20.4",
+    "yaml": "2.8.3"
+  },
+  "candidateMode": "documented CLI JSON, errors only, custom spectral:oas ruleset; two repeat runs",
+  "candidateApis": [
+    "lint-openapi --json --errors-only --ruleset <file>"
+  ],
+  "configuration": {
+    "ruleset": "ibm/oas-ruleset.yaml",
+    "extends": [
+      "spectral:oas"
+    ],
+    "ibmGovernanceRules": false
+  },
+  "fixtureHashes": {
+    "before": {
+      "fixtures/multi-error/multiple.yaml": "4271b7de532f9115505af82b9ae73aa80a950c588757410e92f52fac116dc347",
+      "fixtures/multi-file/openapi.yaml": "7377f5cb014bff0f5378ab87d3bdce91476b2dfe4679ab1ff684ea8b28a689a4",
+      "fixtures/multi-file/schemas/external.yaml": "6564cc0a18fa925b93bcf7b58849e692080c441c0f887d82a8c6135733ccc48b",
+      "fixtures/operations/v22-duplicate-operation-id.yaml": "c76a6b965f871c05ef22b3068c70fc21e577d0ecaf68997e260702f941fcd4b6",
+      "fixtures/operations/v23-case-sensitive.yaml": "ed865da00b28a8d74958581b16ce83620f389bfd4279afcf58e77840e2b8d2d5",
+      "fixtures/parameters/v10-both-schema-content.yaml": "bb9f4559be0e875b42bf37b648eec2e5631e18f57f6837ecc75f346962a8e8f9",
+      "fixtures/parameters/v11-duplicate.yaml": "9611ce9dfb212cce582735a9b95e3343fa2aa60b43a137ed39d8d14ecad2ccce",
+      "fixtures/parameters/v12-valid-override.yaml": "448219c5fd82c6ad017f4e8e87d3d99bcdd990abe285a796b619f1e142053fde",
+      "fixtures/parameters/v5-template-missing.yaml": "bfa5707a1ade270b999b953b132a8515127021b08a747462605b35d09ac9210d",
+      "fixtures/parameters/v6-template-similar.yaml": "3fd3fc2c903897ed403e6d83c9cb5350e109c018c175e2b465da42a57dc5d753",
+      "fixtures/parameters/v7-required-false.yaml": "23fdf8ea878b36694c03a82421fbac90b7ab4714094f2eb92ea21df66f5c3833",
+      "fixtures/parameters/v8-required-missing.yaml": "0ec081f40308be64c91f1c0ed1c640d7601111c2af4be3407b15dee436a9b450",
+      "fixtures/parameters/v9-neither-schema-content.yaml": "61d13993752704d03273193bc724a2e6aa6df0c3d8ca5efd2338426039be5c1e",
+      "fixtures/references/v13-missing-internal.yaml": "86ffadd31c178f2246b2bf377fe9d84638caabddcaf82569efccf096f6c0997d",
+      "fixtures/references/v14-missing-file.yaml": "dc20469dddaf3ebe1ab11383f8edcc0cbb848d28dca26b348356a53dedc867c7",
+      "fixtures/references/v15-recursive.yaml": "c2c21be7ca94348b20997bb3451169dd8e72d3cdb8a04625dd13d1c1210761ce",
+      "fixtures/responses/v16-empty-3.0.4.yaml": "d872f83ca86c0423311c9aaa308869a242fb556c76b8977667e7caa97ce71a5a",
+      "fixtures/responses/v16-empty-3.1.2.yaml": "178a1b7ac2422e1c6e98a809b8b0fba7ea09b0e1d19d280bf7c1500cc9a57c5a",
+      "fixtures/responses/v16-empty-3.2.0.yaml": "c288ba1c6262403e1cb15cd0aa178c4d6cf754e4830ee36c054809a1740dbd26",
+      "fixtures/responses/v17-oas30-missing.yaml": "267d7e251366c47a276ef739363aa40e88d003f8c9bc16a15f5512a57980be76",
+      "fixtures/responses/v18-missing-3.1.2.yaml": "64ab8d0d7fcb6b5a4ba1723e3461bb896dc9217e433b091e8f3af6a0f9ad703a",
+      "fixtures/responses/v18-missing-3.2.0.yaml": "27e5cd4b7a2a287ba20f8c50dbd9faa6163c863578b29f6e1742b9daf570619e",
+      "fixtures/responses/v19-missing-description.yaml": "2f41ac703bd3330e8058537632fd9881b80aa681212a1222d64ec885d6e89046",
+      "fixtures/responses/v20-missing-description.yaml": "79b41c2c9e8f6891a211737130795e1a1b20dfc15a39e3f93d830e0fd4242bfe",
+      "fixtures/responses/v21-missing-description.yaml": "18df726643eb3dc801b4cd840ad71484f0e3b6a760f9550e6d038da907cc130f",
+      "fixtures/root/v2-missing-info-3.0.4.yaml": "1594a23c5e3313c15917a788399faa98d893c41091b61ae117234b43efee8589",
+      "fixtures/root/v2-missing-info-3.1.2.yaml": "de16a4f3983af990dba5b5003e0c924077967966b9c229b7e22cafb6d6eb987c",
+      "fixtures/root/v2-missing-info-3.2.0.yaml": "a35c80843754959aabd0134e10be8bd5d81a99051f9605366648a5a241f6729f",
+      "fixtures/root/v3-missing-title.yaml": "7acb6c310fea004486baf88d10aea960d59461395c1903926659f2ee12abaca7",
+      "fixtures/root/v3-missing-version.yaml": "4b5d8ebb11b97b20d8c0dbe7048c011b3b6130f416fee186162765fe763780c8",
+      "fixtures/root/v4-components-only-3.1.2.yaml": "4136fbf739da2c0393b0b805b27dff7be99fe6e770067605c6072fb66ddccda6",
+      "fixtures/root/v4-components-only-3.2.0.yaml": "a3116be692af42cc5d397b39cdd84a360fdd5015c02177505fbe28278f4f72f5",
+      "fixtures/root/v4-oas30-missing-paths.yaml": "92b9d7b2feee35e44fc95ad9a91fbbba71781ec0bdf5682d63b7509ce30f8513",
+      "fixtures/security/v24-undeclared.yaml": "5939a4240b8fdae843fd107358fdefba130a92eac03885f356d73f399875ab35",
+      "fixtures/security/v25-declared.yaml": "6cc73f8adeaad1772cd1b804a906b7fff9acf00c9165a899536c2241421155b2",
+      "fixtures/valid/oas-3.0.4.yaml": "61e0d7a86e87a19c5b4fd97e79d87056beec77d9dbe2f69c2a6126a91e9d15ee",
+      "fixtures/valid/oas-3.1.2.yaml": "6cc73f8adeaad1772cd1b804a906b7fff9acf00c9165a899536c2241421155b2",
+      "fixtures/valid/oas-3.2.0.yaml": "37c90921af06d6e076172145a0b0e5b014d15fffa20320779e5811c49ed60f1d",
+      "fixtures/version-awareness/v26-query.yaml": "6ce680c09742f8159765a7ebd97d075e980681bad9b9490854fc1ead046c741f",
+      "fixtures/version-awareness/v27-additional-operations.yaml": "fe8674a7d08d8ff9d5eb072c994b7710332b14bdb9b60c7071b0fc52e7f2f397",
+      "fixtures/version-awareness/v28-querystring.yaml": "58d85b3f48d97753da9f36fc6d26d0856fdf0c3d6d399f33913918e230193ecc",
+      "fixtures/version-awareness/v29-boolean.yaml": "8a1c29a412075417a08df4575fae5a4cf302e31dde199c415e465e2ff898d998",
+      "fixtures/version-awareness/v30-boolean.yaml": "810c4ece871a3a6df18b35a0b1db6abcf443203c9e6bb86958d875902b444e2b",
+      "fixtures/version-awareness/v31-unknown-3.1.2.yaml": "b050b5d2b3ec7479216aba9f2bc528da53f3e53a1975e3864d2cbbc6c4d02ad4",
+      "fixtures/version-awareness/v31-unknown-3.2.0.yaml": "638cf38f0dc7bb865bd9a544bcaa791006a57c6eba5c7db89a0329a89b743e4d",
+      "fixtures/version-awareness/v32-unknown-3.0.4.yaml": "9bed482506871ec9e8cc51d33c71019dac564c2f2dac1c7b13273dc35b302e21"
+    },
+    "after": {
+      "fixtures/multi-error/multiple.yaml": "4271b7de532f9115505af82b9ae73aa80a950c588757410e92f52fac116dc347",
+      "fixtures/multi-file/openapi.yaml": "7377f5cb014bff0f5378ab87d3bdce91476b2dfe4679ab1ff684ea8b28a689a4",
+      "fixtures/multi-file/schemas/external.yaml": "6564cc0a18fa925b93bcf7b58849e692080c441c0f887d82a8c6135733ccc48b",
+      "fixtures/operations/v22-duplicate-operation-id.yaml": "c76a6b965f871c05ef22b3068c70fc21e577d0ecaf68997e260702f941fcd4b6",
+      "fixtures/operations/v23-case-sensitive.yaml": "ed865da00b28a8d74958581b16ce83620f389bfd4279afcf58e77840e2b8d2d5",
+      "fixtures/parameters/v10-both-schema-content.yaml": "bb9f4559be0e875b42bf37b648eec2e5631e18f57f6837ecc75f346962a8e8f9",
+      "fixtures/parameters/v11-duplicate.yaml": "9611ce9dfb212cce582735a9b95e3343fa2aa60b43a137ed39d8d14ecad2ccce",
+      "fixtures/parameters/v12-valid-override.yaml": "448219c5fd82c6ad017f4e8e87d3d99bcdd990abe285a796b619f1e142053fde",
+      "fixtures/parameters/v5-template-missing.yaml": "bfa5707a1ade270b999b953b132a8515127021b08a747462605b35d09ac9210d",
+      "fixtures/parameters/v6-template-similar.yaml": "3fd3fc2c903897ed403e6d83c9cb5350e109c018c175e2b465da42a57dc5d753",
+      "fixtures/parameters/v7-required-false.yaml": "23fdf8ea878b36694c03a82421fbac90b7ab4714094f2eb92ea21df66f5c3833",
+      "fixtures/parameters/v8-required-missing.yaml": "0ec081f40308be64c91f1c0ed1c640d7601111c2af4be3407b15dee436a9b450",
+      "fixtures/parameters/v9-neither-schema-content.yaml": "61d13993752704d03273193bc724a2e6aa6df0c3d8ca5efd2338426039be5c1e",
+      "fixtures/references/v13-missing-internal.yaml": "86ffadd31c178f2246b2bf377fe9d84638caabddcaf82569efccf096f6c0997d",
+      "fixtures/references/v14-missing-file.yaml": "dc20469dddaf3ebe1ab11383f8edcc0cbb848d28dca26b348356a53dedc867c7",
+      "fixtures/references/v15-recursive.yaml": "c2c21be7ca94348b20997bb3451169dd8e72d3cdb8a04625dd13d1c1210761ce",
+      "fixtures/responses/v16-empty-3.0.4.yaml": "d872f83ca86c0423311c9aaa308869a242fb556c76b8977667e7caa97ce71a5a",
+      "fixtures/responses/v16-empty-3.1.2.yaml": "178a1b7ac2422e1c6e98a809b8b0fba7ea09b0e1d19d280bf7c1500cc9a57c5a",
+      "fixtures/responses/v16-empty-3.2.0.yaml": "c288ba1c6262403e1cb15cd0aa178c4d6cf754e4830ee36c054809a1740dbd26",
+      "fixtures/responses/v17-oas30-missing.yaml": "267d7e251366c47a276ef739363aa40e88d003f8c9bc16a15f5512a57980be76",
+      "fixtures/responses/v18-missing-3.1.2.yaml": "64ab8d0d7fcb6b5a4ba1723e3461bb896dc9217e433b091e8f3af6a0f9ad703a",
+      "fixtures/responses/v18-missing-3.2.0.yaml": "27e5cd4b7a2a287ba20f8c50dbd9faa6163c863578b29f6e1742b9daf570619e",
+      "fixtures/responses/v19-missing-description.yaml": "2f41ac703bd3330e8058537632fd9881b80aa681212a1222d64ec885d6e89046",
+      "fixtures/responses/v20-missing-description.yaml": "79b41c2c9e8f6891a211737130795e1a1b20dfc15a39e3f93d830e0fd4242bfe",
+      "fixtures/responses/v21-missing-description.yaml": "18df726643eb3dc801b4cd840ad71484f0e3b6a760f9550e6d038da907cc130f",
+      "fixtures/root/v2-missing-info-3.0.4.yaml": "1594a23c5e3313c15917a788399faa98d893c41091b61ae117234b43efee8589",
+      "fixtures/root/v2-missing-info-3.1.2.yaml": "de16a4f3983af990dba5b5003e0c924077967966b9c229b7e22cafb6d6eb987c",
+      "fixtures/root/v2-missing-info-3.2.0.yaml": "a35c80843754959aabd0134e10be8bd5d81a99051f9605366648a5a241f6729f",
+      "fixtures/root/v3-missing-title.yaml": "7acb6c310fea004486baf88d10aea960d59461395c1903926659f2ee12abaca7",
+      "fixtures/root/v3-missing-version.yaml": "4b5d8ebb11b97b20d8c0dbe7048c011b3b6130f416fee186162765fe763780c8",
+      "fixtures/root/v4-components-only-3.1.2.yaml": "4136fbf739da2c0393b0b805b27dff7be99fe6e770067605c6072fb66ddccda6",
+      "fixtures/root/v4-components-only-3.2.0.yaml": "a3116be692af42cc5d397b39cdd84a360fdd5015c02177505fbe28278f4f72f5",
+      "fixtures/root/v4-oas30-missing-paths.yaml": "92b9d7b2feee35e44fc95ad9a91fbbba71781ec0bdf5682d63b7509ce30f8513",
+      "fixtures/security/v24-undeclared.yaml": "5939a4240b8fdae843fd107358fdefba130a92eac03885f356d73f399875ab35",
+      "fixtures/security/v25-declared.yaml": "6cc73f8adeaad1772cd1b804a906b7fff9acf00c9165a899536c2241421155b2",
+      "fixtures/valid/oas-3.0.4.yaml": "61e0d7a86e87a19c5b4fd97e79d87056beec77d9dbe2f69c2a6126a91e9d15ee",
+      "fixtures/valid/oas-3.1.2.yaml": "6cc73f8adeaad1772cd1b804a906b7fff9acf00c9165a899536c2241421155b2",
+      "fixtures/valid/oas-3.2.0.yaml": "37c90921af06d6e076172145a0b0e5b014d15fffa20320779e5811c49ed60f1d",
+      "fixtures/version-awareness/v26-query.yaml": "6ce680c09742f8159765a7ebd97d075e980681bad9b9490854fc1ead046c741f",
+      "fixtures/version-awareness/v27-additional-operations.yaml": "fe8674a7d08d8ff9d5eb072c994b7710332b14bdb9b60c7071b0fc52e7f2f397",
+      "fixtures/version-awareness/v28-querystring.yaml": "58d85b3f48d97753da9f36fc6d26d0856fdf0c3d6d399f33913918e230193ecc",
+      "fixtures/version-awareness/v29-boolean.yaml": "8a1c29a412075417a08df4575fae5a4cf302e31dde199c415e465e2ff898d998",
+      "fixtures/version-awareness/v30-boolean.yaml": "810c4ece871a3a6df18b35a0b1db6abcf443203c9e6bb86958d875902b444e2b",
+      "fixtures/version-awareness/v31-unknown-3.1.2.yaml": "b050b5d2b3ec7479216aba9f2bc528da53f3e53a1975e3864d2cbbc6c4d02ad4",
+      "fixtures/version-awareness/v31-unknown-3.2.0.yaml": "638cf38f0dc7bb865bd9a544bcaa791006a57c6eba5c7db89a0329a89b743e4d",
+      "fixtures/version-awareness/v32-unknown-3.0.4.yaml": "9bed482506871ec9e8cc51d33c71019dac564c2f2dac1c7b13273dc35b302e21"
+    },
+    "changed": false
+  },
+  "oracle": [
+    {
+      "fixtureId": "V1-3.0.4",
+      "path": "valid/oas-3.0.4.yaml",
+      "openApiVersion": "3.0.4",
+      "expectedValid": true,
+      "expectedDocument": "valid/oas-3.0.4.yaml",
+      "controlType": "VALID_CONTROL"
+    },
+    {
+      "fixtureId": "V1-3.1.2",
+      "path": "valid/oas-3.1.2.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": true,
+      "expectedDocument": "valid/oas-3.1.2.yaml",
+      "controlType": "VALID_CONTROL"
+    },
+    {
+      "fixtureId": "V1-3.2.0",
+      "path": "valid/oas-3.2.0.yaml",
+      "openApiVersion": "3.2.0",
+      "expectedValid": true,
+      "expectedDocument": "valid/oas-3.2.0.yaml",
+      "controlType": "VALID_CONTROL"
+    },
+    {
+      "fixtureId": "V2-3.0.4",
+      "path": "root/v2-missing-info-3.0.4.yaml",
+      "openApiVersion": "3.0.4",
+      "expectedValid": false,
+      "violationClass": "missing-root-info",
+      "oaitRuleTarget": "OAIT-CON-002",
+      "expectedPointer": "/info",
+      "expectedDocument": "root/v2-missing-info-3.0.4.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "V2-3.1.2",
+      "path": "root/v2-missing-info-3.1.2.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": false,
+      "violationClass": "missing-root-info",
+      "oaitRuleTarget": "OAIT-CON-002",
+      "expectedPointer": "/info",
+      "expectedDocument": "root/v2-missing-info-3.1.2.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "V2-3.2.0",
+      "path": "root/v2-missing-info-3.2.0.yaml",
+      "openApiVersion": "3.2.0",
+      "expectedValid": false,
+      "violationClass": "missing-root-info",
+      "oaitRuleTarget": "OAIT-CON-002",
+      "expectedPointer": "/info",
+      "expectedDocument": "root/v2-missing-info-3.2.0.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "V3-title",
+      "path": "root/v3-missing-title.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": false,
+      "violationClass": "missing-info-title",
+      "oaitRuleTarget": "OAIT-CON-002",
+      "expectedPointer": "/info/title",
+      "expectedDocument": "root/v3-missing-title.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "V3-version",
+      "path": "root/v3-missing-version.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": false,
+      "violationClass": "missing-info-version",
+      "oaitRuleTarget": "OAIT-CON-002",
+      "expectedPointer": "/info/version",
+      "expectedDocument": "root/v3-missing-version.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "V4-3.0",
+      "path": "root/v4-oas30-missing-paths.yaml",
+      "openApiVersion": "3.0.4",
+      "expectedValid": false,
+      "violationClass": "missing-required-paths",
+      "oaitRuleTarget": "OAIT-CON-002",
+      "expectedPointer": "/paths",
+      "expectedDocument": "root/v4-oas30-missing-paths.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "V4-3.1.2",
+      "path": "root/v4-components-only-3.1.2.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": true,
+      "expectedDocument": "root/v4-components-only-3.1.2.yaml",
+      "controlType": "VALID_CONTROL"
+    },
+    {
+      "fixtureId": "V4-3.2.0",
+      "path": "root/v4-components-only-3.2.0.yaml",
+      "openApiVersion": "3.2.0",
+      "expectedValid": true,
+      "expectedDocument": "root/v4-components-only-3.2.0.yaml",
+      "controlType": "VALID_CONTROL"
+    },
+    {
+      "fixtureId": "V5",
+      "path": "parameters/v5-template-missing.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": false,
+      "violationClass": "path-template-parameter-missing",
+      "oaitRuleTarget": "OAIT-CON-004",
+      "expectedPointer": "/paths/~1pets~1{petId}",
+      "expectedDocument": "parameters/v5-template-missing.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "V6",
+      "path": "parameters/v6-template-similar.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": false,
+      "violationClass": "path-template-parameter-name-mismatch",
+      "oaitRuleTarget": "OAIT-CON-004",
+      "expectedPointer": "/paths/~1pets~1{petId}",
+      "expectedDocument": "parameters/v6-template-similar.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "V7",
+      "path": "parameters/v7-required-false.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": false,
+      "violationClass": "path-parameter-required-false",
+      "oaitRuleTarget": "OAIT-CON-005",
+      "expectedPointer": "/paths/~1pets~1{petId}/get/parameters/0/required",
+      "expectedDocument": "parameters/v7-required-false.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "V8",
+      "path": "parameters/v8-required-missing.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": false,
+      "violationClass": "path-parameter-required-missing",
+      "oaitRuleTarget": "OAIT-CON-005",
+      "expectedPointer": "/paths/~1pets~1{petId}/get/parameters/0/required",
+      "expectedDocument": "parameters/v8-required-missing.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "V9",
+      "path": "parameters/v9-neither-schema-content.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": false,
+      "violationClass": "parameter-neither-schema-nor-content",
+      "oaitRuleTarget": "OAIT-CON-006",
+      "expectedPointer": "/paths/~1pets~1{petId}/get/parameters/1",
+      "expectedDocument": "parameters/v9-neither-schema-content.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "V10",
+      "path": "parameters/v10-both-schema-content.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": false,
+      "violationClass": "parameter-both-schema-and-content",
+      "oaitRuleTarget": "OAIT-CON-006",
+      "expectedPointer": "/paths/~1pets~1{petId}/get/parameters/1",
+      "expectedDocument": "parameters/v10-both-schema-content.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "V11",
+      "path": "parameters/v11-duplicate.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": false,
+      "violationClass": "duplicate-parameter-identity",
+      "oaitRuleTarget": "OAIT-CON-007",
+      "expectedPointer": "/paths/~1pets~1{petId}/get/parameters/2",
+      "expectedDocument": "parameters/v11-duplicate.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "V12",
+      "path": "parameters/v12-valid-override.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": true,
+      "expectedDocument": "parameters/v12-valid-override.yaml",
+      "controlType": "VALID_CONTROL"
+    },
+    {
+      "fixtureId": "V13",
+      "path": "references/v13-missing-internal.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": false,
+      "violationClass": "unresolved-internal-reference",
+      "oaitRuleTarget": "OAIT-CON-003",
+      "expectedPointer": "/components/schemas/Broken/$ref",
+      "expectedDocument": "references/v13-missing-internal.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "V14",
+      "path": "references/v14-missing-file.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": false,
+      "violationClass": "unresolved-file-reference",
+      "oaitRuleTarget": "OAIT-CON-003",
+      "expectedPointer": "/components/schemas/Broken/$ref",
+      "expectedDocument": "references/v14-missing-file.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "V15",
+      "path": "references/v15-recursive.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": true,
+      "expectedDocument": "references/v15-recursive.yaml",
+      "controlType": "VALID_CONTROL"
+    },
+    {
+      "fixtureId": "V16-3.0.4",
+      "path": "responses/v16-empty-3.0.4.yaml",
+      "openApiVersion": "3.0.4",
+      "expectedValid": false,
+      "violationClass": "empty-responses",
+      "oaitRuleTarget": "OAIT-CON-008",
+      "expectedPointer": "/paths/~1pets~1{petId}/get/responses",
+      "expectedDocument": "responses/v16-empty-3.0.4.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "V16-3.1.2",
+      "path": "responses/v16-empty-3.1.2.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": false,
+      "violationClass": "empty-responses",
+      "oaitRuleTarget": "OAIT-CON-008",
+      "expectedPointer": "/paths/~1pets~1{petId}/get/responses",
+      "expectedDocument": "responses/v16-empty-3.1.2.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "V16-3.2.0",
+      "path": "responses/v16-empty-3.2.0.yaml",
+      "openApiVersion": "3.2.0",
+      "expectedValid": false,
+      "violationClass": "empty-responses",
+      "oaitRuleTarget": "OAIT-CON-008",
+      "expectedPointer": "/paths/~1pets~1{petId}/get/responses",
+      "expectedDocument": "responses/v16-empty-3.2.0.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "V17",
+      "path": "responses/v17-oas30-missing.yaml",
+      "openApiVersion": "3.0.4",
+      "expectedValid": false,
+      "violationClass": "oas30-missing-responses",
+      "oaitRuleTarget": "OAIT-CON-009",
+      "expectedPointer": "/paths/~1pets~1{petId}/get/responses",
+      "expectedDocument": "responses/v17-oas30-missing.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "V18-3.1.2",
+      "path": "responses/v18-missing-3.1.2.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": true,
+      "expectedDocument": "responses/v18-missing-3.1.2.yaml",
+      "controlType": "VALID_CONTROL"
+    },
+    {
+      "fixtureId": "V18-3.2.0",
+      "path": "responses/v18-missing-3.2.0.yaml",
+      "openApiVersion": "3.2.0",
+      "expectedValid": true,
+      "expectedDocument": "responses/v18-missing-3.2.0.yaml",
+      "controlType": "VALID_CONTROL"
+    },
+    {
+      "fixtureId": "V19",
+      "path": "responses/v19-missing-description.yaml",
+      "openApiVersion": "3.0.4",
+      "expectedValid": false,
+      "violationClass": "response-description-required",
+      "oaitRuleTarget": "OAIT-CON-002",
+      "expectedPointer": "/paths/~1pets~1{petId}/get/responses/200/description",
+      "expectedDocument": "responses/v19-missing-description.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "V20",
+      "path": "responses/v20-missing-description.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": false,
+      "violationClass": "response-description-required",
+      "oaitRuleTarget": "OAIT-CON-002",
+      "expectedPointer": "/paths/~1pets~1{petId}/get/responses/200/description",
+      "expectedDocument": "responses/v20-missing-description.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "V21",
+      "path": "responses/v21-missing-description.yaml",
+      "openApiVersion": "3.2.0",
+      "expectedValid": true,
+      "expectedDocument": "responses/v21-missing-description.yaml",
+      "controlType": "VALID_CONTROL"
+    },
+    {
+      "fixtureId": "V22",
+      "path": "operations/v22-duplicate-operation-id.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": false,
+      "violationClass": "duplicate-operation-id",
+      "oaitRuleTarget": "OAIT-CNS-001",
+      "expectedPointer": "/paths/~1animals/get/operationId",
+      "expectedDocument": "operations/v22-duplicate-operation-id.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "V23",
+      "path": "operations/v23-case-sensitive.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": true,
+      "expectedDocument": "operations/v23-case-sensitive.yaml",
+      "controlType": "VALID_CONTROL"
+    },
+    {
+      "fixtureId": "V24",
+      "path": "security/v24-undeclared.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": false,
+      "violationClass": "unresolved-security-requirement",
+      "oaitRuleTarget": "OAIT-CON-010",
+      "expectedPointer": "/paths/~1pets~1{petId}/get/security/0/missingScheme",
+      "expectedDocument": "security/v24-undeclared.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "V25",
+      "path": "security/v25-declared.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": true,
+      "expectedDocument": "security/v25-declared.yaml",
+      "controlType": "VALID_CONTROL"
+    },
+    {
+      "fixtureId": "V26",
+      "path": "version-awareness/v26-query.yaml",
+      "openApiVersion": "3.2.0",
+      "expectedValid": true,
+      "expectedDocument": "version-awareness/v26-query.yaml",
+      "controlType": "VALID_CONTROL"
+    },
+    {
+      "fixtureId": "V27",
+      "path": "version-awareness/v27-additional-operations.yaml",
+      "openApiVersion": "3.2.0",
+      "expectedValid": true,
+      "expectedDocument": "version-awareness/v27-additional-operations.yaml",
+      "controlType": "VALID_CONTROL"
+    },
+    {
+      "fixtureId": "V28",
+      "path": "version-awareness/v28-querystring.yaml",
+      "openApiVersion": "3.2.0",
+      "expectedValid": true,
+      "expectedDocument": "version-awareness/v28-querystring.yaml",
+      "controlType": "VALID_CONTROL"
+    },
+    {
+      "fixtureId": "V29",
+      "path": "version-awareness/v29-boolean.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": true,
+      "expectedDocument": "version-awareness/v29-boolean.yaml",
+      "controlType": "VALID_CONTROL"
+    },
+    {
+      "fixtureId": "V30",
+      "path": "version-awareness/v30-boolean.yaml",
+      "openApiVersion": "3.2.0",
+      "expectedValid": true,
+      "expectedDocument": "version-awareness/v30-boolean.yaml",
+      "controlType": "VALID_CONTROL"
+    },
+    {
+      "fixtureId": "V31-3.1.2",
+      "path": "version-awareness/v31-unknown-3.1.2.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": true,
+      "expectedDocument": "version-awareness/v31-unknown-3.1.2.yaml",
+      "controlType": "VALID_CONTROL"
+    },
+    {
+      "fixtureId": "V31-3.2.0",
+      "path": "version-awareness/v31-unknown-3.2.0.yaml",
+      "openApiVersion": "3.2.0",
+      "expectedValid": true,
+      "expectedDocument": "version-awareness/v31-unknown-3.2.0.yaml",
+      "controlType": "VALID_CONTROL"
+    },
+    {
+      "fixtureId": "V32",
+      "path": "version-awareness/v32-unknown-3.0.4.yaml",
+      "openApiVersion": "3.0.4",
+      "expectedValid": false,
+      "violationClass": "unsupported-oas30-schema-keyword",
+      "oaitRuleTarget": "OAIT-CON-002",
+      "expectedPointer": "/components/schemas/Custom/acmeQualityScore",
+      "expectedDocument": "version-awareness/v32-unknown-3.0.4.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "MF",
+      "path": "multi-file/openapi.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": false,
+      "violationClass": "referenced-file-schema-invalid",
+      "oaitRuleTarget": "OAIT-CON-002",
+      "expectedPointer": "/required",
+      "expectedDocument": "multi-file/schemas/external.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    {
+      "fixtureId": "MULTI",
+      "path": "multi-error/multiple.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": false,
+      "violationClass": "multiple-independent-violations",
+      "expectedPointer": "",
+      "expectedDocument": "multi-error/multiple.yaml",
+      "controlType": "INVALID_CASE"
+    }
+  ],
+  "results": [
+    {
+      "oracle": {
+        "fixtureId": "V1-3.0.4",
+        "path": "valid/oas-3.0.4.yaml",
+        "openApiVersion": "3.0.4",
+        "expectedValid": true,
+        "expectedDocument": "valid/oas-3.0.4.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [],
+      "rawDiagnostics": [],
+      "accuracy": "TRUE_NEGATIVE",
+      "detected": false,
+      "unsupported": false,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V1-3.1.2",
+        "path": "valid/oas-3.1.2.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": true,
+        "expectedDocument": "valid/oas-3.1.2.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [],
+      "rawDiagnostics": [],
+      "accuracy": "TRUE_NEGATIVE",
+      "detected": false,
+      "unsupported": false,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V1-3.2.0",
+        "path": "valid/oas-3.2.0.yaml",
+        "openApiVersion": "3.2.0",
+        "expectedValid": true,
+        "expectedDocument": "valid/oas-3.2.0.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "Command failed: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/node_modules/.bin/lint-openapi --json --errors-only --ruleset /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/ibm/oas-ruleset.yaml /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/valid/oas-3.2.0.yaml\n[ERROR] Invalid input file: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/valid/oas-3.2.0.yaml. See below for details.\n[ERROR] Only OpenAPI 3.0.x and 3.1.x documents are currently supported.\n",
+          "versionContext": "3.2.0",
+          "raw": {
+            "exitCode": 1
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "exitCode": 1
+        }
+      ],
+      "accuracy": "NOT_SUPPORTED",
+      "detected": false,
+      "unsupported": true,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V2-3.0.4",
+        "path": "root/v2-missing-info-3.0.4.yaml",
+        "openApiVersion": "3.0.4",
+        "expectedValid": false,
+        "violationClass": "missing-root-info",
+        "oaitRuleTarget": "OAIT-CON-002",
+        "expectedPointer": "/info",
+        "expectedDocument": "root/v2-missing-info-3.0.4.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "must have required property \"info\".",
+          "severity": "error",
+          "ruleId": "oas3-schema",
+          "objectPath": [],
+          "pointer": "",
+          "line": 1,
+          "versionContext": "3.0.4",
+          "raw": {
+            "message": "must have required property \"info\".",
+            "path": [],
+            "rule": "oas3-schema",
+            "line": 1
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "message": "must have required property \"info\".",
+          "path": [],
+          "rule": "oas3-schema",
+          "line": 1
+        }
+      ],
+      "accuracy": "TRUE_POSITIVE",
+      "detected": true,
+      "unsupported": false,
+      "diagnosticIdentity": "DIRECT_CODE",
+      "sourceCorrelation": "AMBIGUOUS",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V2-3.1.2",
+        "path": "root/v2-missing-info-3.1.2.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": false,
+        "violationClass": "missing-root-info",
+        "oaitRuleTarget": "OAIT-CON-002",
+        "expectedPointer": "/info",
+        "expectedDocument": "root/v2-missing-info-3.1.2.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "must have required property \"info\".",
+          "severity": "error",
+          "ruleId": "oas3-schema",
+          "objectPath": [],
+          "pointer": "",
+          "line": 1,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "must have required property \"info\".",
+            "path": [],
+            "rule": "oas3-schema",
+            "line": 1
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "message": "must have required property \"info\".",
+          "path": [],
+          "rule": "oas3-schema",
+          "line": 1
+        }
+      ],
+      "accuracy": "TRUE_POSITIVE",
+      "detected": true,
+      "unsupported": false,
+      "diagnosticIdentity": "DIRECT_CODE",
+      "sourceCorrelation": "AMBIGUOUS",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V2-3.2.0",
+        "path": "root/v2-missing-info-3.2.0.yaml",
+        "openApiVersion": "3.2.0",
+        "expectedValid": false,
+        "violationClass": "missing-root-info",
+        "oaitRuleTarget": "OAIT-CON-002",
+        "expectedPointer": "/info",
+        "expectedDocument": "root/v2-missing-info-3.2.0.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "Command failed: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/node_modules/.bin/lint-openapi --json --errors-only --ruleset /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/ibm/oas-ruleset.yaml /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/root/v2-missing-info-3.2.0.yaml\n[ERROR] Invalid input file: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/root/v2-missing-info-3.2.0.yaml. See below for details.\n[ERROR] Only OpenAPI 3.0.x and 3.1.x documents are currently supported.\n",
+          "versionContext": "3.2.0",
+          "raw": {
+            "exitCode": 1
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "exitCode": 1
+        }
+      ],
+      "accuracy": "NOT_SUPPORTED",
+      "detected": false,
+      "unsupported": true,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V3-title",
+        "path": "root/v3-missing-title.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": false,
+        "violationClass": "missing-info-title",
+        "oaitRuleTarget": "OAIT-CON-002",
+        "expectedPointer": "/info/title",
+        "expectedDocument": "root/v3-missing-title.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "\"info\" property must have required property \"title\".",
+          "severity": "error",
+          "ruleId": "oas3-schema",
+          "objectPath": [
+            "info"
+          ],
+          "pointer": "/info",
+          "line": 2,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "\"info\" property must have required property \"title\".",
+            "path": [
+              "info"
+            ],
+            "rule": "oas3-schema",
+            "line": 2
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "message": "\"info\" property must have required property \"title\".",
+          "path": [
+            "info"
+          ],
+          "rule": "oas3-schema",
+          "line": 2
+        }
+      ],
+      "accuracy": "TRUE_POSITIVE",
+      "detected": true,
+      "unsupported": false,
+      "diagnosticIdentity": "DIRECT_CODE",
+      "sourceCorrelation": "AMBIGUOUS",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V3-version",
+        "path": "root/v3-missing-version.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": false,
+        "violationClass": "missing-info-version",
+        "oaitRuleTarget": "OAIT-CON-002",
+        "expectedPointer": "/info/version",
+        "expectedDocument": "root/v3-missing-version.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "\"info\" property must have required property \"version\".",
+          "severity": "error",
+          "ruleId": "oas3-schema",
+          "objectPath": [
+            "info"
+          ],
+          "pointer": "/info",
+          "line": 2,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "\"info\" property must have required property \"version\".",
+            "path": [
+              "info"
+            ],
+            "rule": "oas3-schema",
+            "line": 2
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "message": "\"info\" property must have required property \"version\".",
+          "path": [
+            "info"
+          ],
+          "rule": "oas3-schema",
+          "line": 2
+        }
+      ],
+      "accuracy": "TRUE_POSITIVE",
+      "detected": true,
+      "unsupported": false,
+      "diagnosticIdentity": "DIRECT_CODE",
+      "sourceCorrelation": "AMBIGUOUS",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V4-3.0",
+        "path": "root/v4-oas30-missing-paths.yaml",
+        "openApiVersion": "3.0.4",
+        "expectedValid": false,
+        "violationClass": "missing-required-paths",
+        "oaitRuleTarget": "OAIT-CON-002",
+        "expectedPointer": "/paths",
+        "expectedDocument": "root/v4-oas30-missing-paths.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "must have required property \"paths\".",
+          "severity": "error",
+          "ruleId": "oas3-schema",
+          "objectPath": [],
+          "pointer": "",
+          "line": 1,
+          "versionContext": "3.0.4",
+          "raw": {
+            "message": "must have required property \"paths\".",
+            "path": [],
+            "rule": "oas3-schema",
+            "line": 1
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "message": "must have required property \"paths\".",
+          "path": [],
+          "rule": "oas3-schema",
+          "line": 1
+        }
+      ],
+      "accuracy": "TRUE_POSITIVE",
+      "detected": true,
+      "unsupported": false,
+      "diagnosticIdentity": "DIRECT_CODE",
+      "sourceCorrelation": "AMBIGUOUS",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V4-3.1.2",
+        "path": "root/v4-components-only-3.1.2.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": true,
+        "expectedDocument": "root/v4-components-only-3.1.2.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [],
+      "rawDiagnostics": [],
+      "accuracy": "TRUE_NEGATIVE",
+      "detected": false,
+      "unsupported": false,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V4-3.2.0",
+        "path": "root/v4-components-only-3.2.0.yaml",
+        "openApiVersion": "3.2.0",
+        "expectedValid": true,
+        "expectedDocument": "root/v4-components-only-3.2.0.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "Command failed: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/node_modules/.bin/lint-openapi --json --errors-only --ruleset /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/ibm/oas-ruleset.yaml /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/root/v4-components-only-3.2.0.yaml\n[ERROR] Invalid input file: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/root/v4-components-only-3.2.0.yaml. See below for details.\n[ERROR] Only OpenAPI 3.0.x and 3.1.x documents are currently supported.\n",
+          "versionContext": "3.2.0",
+          "raw": {
+            "exitCode": 1
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "exitCode": 1
+        }
+      ],
+      "accuracy": "NOT_SUPPORTED",
+      "detected": false,
+      "unsupported": true,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V5",
+        "path": "parameters/v5-template-missing.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": false,
+        "violationClass": "path-template-parameter-missing",
+        "oaitRuleTarget": "OAIT-CON-004",
+        "expectedPointer": "/paths/~1pets~1{petId}",
+        "expectedDocument": "parameters/v5-template-missing.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "Operation must define parameter \"{petId}\" as expected by path \"/pets/{petId}\".",
+          "severity": "error",
+          "ruleId": "path-params",
+          "objectPath": [
+            "paths",
+            "/pets/{petId}",
+            "get"
+          ],
+          "pointer": "/paths//pets/{petId}/get",
+          "line": 7,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "Operation must define parameter \"{petId}\" as expected by path \"/pets/{petId}\".",
+            "path": [
+              "paths",
+              "/pets/{petId}",
+              "get"
+            ],
+            "rule": "path-params",
+            "line": 7
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "message": "Operation must define parameter \"{petId}\" as expected by path \"/pets/{petId}\".",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get"
+          ],
+          "rule": "path-params",
+          "line": 7
+        }
+      ],
+      "accuracy": "TRUE_POSITIVE",
+      "detected": true,
+      "unsupported": false,
+      "diagnosticIdentity": "DIRECT_CODE",
+      "sourceCorrelation": "AMBIGUOUS",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V6",
+        "path": "parameters/v6-template-similar.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": false,
+        "violationClass": "path-template-parameter-name-mismatch",
+        "oaitRuleTarget": "OAIT-CON-004",
+        "expectedPointer": "/paths/~1pets~1{petId}",
+        "expectedDocument": "parameters/v6-template-similar.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "Operation must define parameter \"{petId}\" as expected by path \"/pets/{petId}\".",
+          "severity": "error",
+          "ruleId": "path-params",
+          "objectPath": [
+            "paths",
+            "/pets/{petId}",
+            "get"
+          ],
+          "pointer": "/paths//pets/{petId}/get",
+          "line": 7,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "Operation must define parameter \"{petId}\" as expected by path \"/pets/{petId}\".",
+            "path": [
+              "paths",
+              "/pets/{petId}",
+              "get"
+            ],
+            "rule": "path-params",
+            "line": 7
+          }
+        },
+        {
+          "candidate": "IBM",
+          "message": "Parameter \"petID\" must be used in path \"/pets/{petId}\".",
+          "severity": "error",
+          "ruleId": "path-params",
+          "objectPath": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "parameters",
+            "0"
+          ],
+          "pointer": "/paths//pets/{petId}/get/parameters/0",
+          "line": 10,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "Parameter \"petID\" must be used in path \"/pets/{petId}\".",
+            "path": [
+              "paths",
+              "/pets/{petId}",
+              "get",
+              "parameters",
+              "0"
+            ],
+            "rule": "path-params",
+            "line": 10
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "message": "Operation must define parameter \"{petId}\" as expected by path \"/pets/{petId}\".",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get"
+          ],
+          "rule": "path-params",
+          "line": 7
+        },
+        {
+          "message": "Parameter \"petID\" must be used in path \"/pets/{petId}\".",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "parameters",
+            "0"
+          ],
+          "rule": "path-params",
+          "line": 10
+        }
+      ],
+      "accuracy": "TRUE_POSITIVE",
+      "detected": true,
+      "unsupported": false,
+      "diagnosticIdentity": "DIRECT_CODE",
+      "sourceCorrelation": "AMBIGUOUS",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V7",
+        "path": "parameters/v7-required-false.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": false,
+        "violationClass": "path-parameter-required-false",
+        "oaitRuleTarget": "OAIT-CON-005",
+        "expectedPointer": "/paths/~1pets~1{petId}/get/parameters/0/required",
+        "expectedDocument": "parameters/v7-required-false.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "Path parameter \"petId\" must have \"required\" property that is set to \"true\".",
+          "severity": "error",
+          "ruleId": "path-params",
+          "objectPath": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "parameters",
+            "0"
+          ],
+          "pointer": "/paths//pets/{petId}/get/parameters/0",
+          "line": 10,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "Path parameter \"petId\" must have \"required\" property that is set to \"true\".",
+            "path": [
+              "paths",
+              "/pets/{petId}",
+              "get",
+              "parameters",
+              "0"
+            ],
+            "rule": "path-params",
+            "line": 10
+          }
+        },
+        {
+          "candidate": "IBM",
+          "message": "\"required\" property must be equal to constant.",
+          "severity": "error",
+          "ruleId": "oas3-schema",
+          "objectPath": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "parameters",
+            "0",
+            "required"
+          ],
+          "pointer": "/paths//pets/{petId}/get/parameters/0/required",
+          "line": 12,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "\"required\" property must be equal to constant.",
+            "path": [
+              "paths",
+              "/pets/{petId}",
+              "get",
+              "parameters",
+              "0",
+              "required"
+            ],
+            "rule": "oas3-schema",
+            "line": 12
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "message": "Path parameter \"petId\" must have \"required\" property that is set to \"true\".",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "parameters",
+            "0"
+          ],
+          "rule": "path-params",
+          "line": 10
+        },
+        {
+          "message": "\"required\" property must be equal to constant.",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "parameters",
+            "0",
+            "required"
+          ],
+          "rule": "oas3-schema",
+          "line": 12
+        }
+      ],
+      "accuracy": "TRUE_POSITIVE",
+      "detected": true,
+      "unsupported": false,
+      "diagnosticIdentity": "DIRECT_CODE",
+      "sourceCorrelation": "AMBIGUOUS",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V8",
+        "path": "parameters/v8-required-missing.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": false,
+        "violationClass": "path-parameter-required-missing",
+        "oaitRuleTarget": "OAIT-CON-005",
+        "expectedPointer": "/paths/~1pets~1{petId}/get/parameters/0/required",
+        "expectedDocument": "parameters/v8-required-missing.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "\"0\" property must have required property \"required\".",
+          "severity": "error",
+          "ruleId": "oas3-schema",
+          "objectPath": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "parameters",
+            "0"
+          ],
+          "pointer": "/paths//pets/{petId}/get/parameters/0",
+          "line": 10,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "\"0\" property must have required property \"required\".",
+            "path": [
+              "paths",
+              "/pets/{petId}",
+              "get",
+              "parameters",
+              "0"
+            ],
+            "rule": "oas3-schema",
+            "line": 10
+          }
+        },
+        {
+          "candidate": "IBM",
+          "message": "Path parameter \"petId\" must have \"required\" property that is set to \"true\".",
+          "severity": "error",
+          "ruleId": "path-params",
+          "objectPath": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "parameters",
+            "0"
+          ],
+          "pointer": "/paths//pets/{petId}/get/parameters/0",
+          "line": 10,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "Path parameter \"petId\" must have \"required\" property that is set to \"true\".",
+            "path": [
+              "paths",
+              "/pets/{petId}",
+              "get",
+              "parameters",
+              "0"
+            ],
+            "rule": "path-params",
+            "line": 10
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "message": "\"0\" property must have required property \"required\".",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "parameters",
+            "0"
+          ],
+          "rule": "oas3-schema",
+          "line": 10
+        },
+        {
+          "message": "Path parameter \"petId\" must have \"required\" property that is set to \"true\".",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "parameters",
+            "0"
+          ],
+          "rule": "path-params",
+          "line": 10
+        }
+      ],
+      "accuracy": "TRUE_POSITIVE",
+      "detected": true,
+      "unsupported": false,
+      "diagnosticIdentity": "DIRECT_CODE",
+      "sourceCorrelation": "AMBIGUOUS",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V9",
+        "path": "parameters/v9-neither-schema-content.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": false,
+        "violationClass": "parameter-neither-schema-nor-content",
+        "oaitRuleTarget": "OAIT-CON-006",
+        "expectedPointer": "/paths/~1pets~1{petId}/get/parameters/1",
+        "expectedDocument": "parameters/v9-neither-schema-content.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "\"1\" property must have required property \"schema\".",
+          "severity": "error",
+          "ruleId": "oas3-schema",
+          "objectPath": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "parameters",
+            "1"
+          ],
+          "pointer": "/paths//pets/{petId}/get/parameters/1",
+          "line": 15,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "\"1\" property must have required property \"schema\".",
+            "path": [
+              "paths",
+              "/pets/{petId}",
+              "get",
+              "parameters",
+              "1"
+            ],
+            "rule": "oas3-schema",
+            "line": 15
+          }
+        },
+        {
+          "candidate": "IBM",
+          "message": "\"1\" property must have required property \"content\".",
+          "severity": "error",
+          "ruleId": "oas3-schema",
+          "objectPath": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "parameters",
+            "1"
+          ],
+          "pointer": "/paths//pets/{petId}/get/parameters/1",
+          "line": 15,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "\"1\" property must have required property \"content\".",
+            "path": [
+              "paths",
+              "/pets/{petId}",
+              "get",
+              "parameters",
+              "1"
+            ],
+            "rule": "oas3-schema",
+            "line": 15
+          }
+        },
+        {
+          "candidate": "IBM",
+          "message": "\"1\" property must match exactly one schema in oneOf.",
+          "severity": "error",
+          "ruleId": "oas3-schema",
+          "objectPath": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "parameters",
+            "1"
+          ],
+          "pointer": "/paths//pets/{petId}/get/parameters/1",
+          "line": 15,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "\"1\" property must match exactly one schema in oneOf.",
+            "path": [
+              "paths",
+              "/pets/{petId}",
+              "get",
+              "parameters",
+              "1"
+            ],
+            "rule": "oas3-schema",
+            "line": 15
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "message": "\"1\" property must have required property \"schema\".",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "parameters",
+            "1"
+          ],
+          "rule": "oas3-schema",
+          "line": 15
+        },
+        {
+          "message": "\"1\" property must have required property \"content\".",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "parameters",
+            "1"
+          ],
+          "rule": "oas3-schema",
+          "line": 15
+        },
+        {
+          "message": "\"1\" property must match exactly one schema in oneOf.",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "parameters",
+            "1"
+          ],
+          "rule": "oas3-schema",
+          "line": 15
+        }
+      ],
+      "accuracy": "TRUE_POSITIVE",
+      "detected": true,
+      "unsupported": false,
+      "diagnosticIdentity": "DIRECT_CODE",
+      "sourceCorrelation": "AMBIGUOUS",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V10",
+        "path": "parameters/v10-both-schema-content.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": false,
+        "violationClass": "parameter-both-schema-and-content",
+        "oaitRuleTarget": "OAIT-CON-006",
+        "expectedPointer": "/paths/~1pets~1{petId}/get/parameters/1",
+        "expectedDocument": "parameters/v10-both-schema-content.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "\"1\" property must match exactly one schema in oneOf.",
+          "severity": "error",
+          "ruleId": "oas3-schema",
+          "objectPath": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "parameters",
+            "1"
+          ],
+          "pointer": "/paths//pets/{petId}/get/parameters/1",
+          "line": 15,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "\"1\" property must match exactly one schema in oneOf.",
+            "path": [
+              "paths",
+              "/pets/{petId}",
+              "get",
+              "parameters",
+              "1"
+            ],
+            "rule": "oas3-schema",
+            "line": 15
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "message": "\"1\" property must match exactly one schema in oneOf.",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "parameters",
+            "1"
+          ],
+          "rule": "oas3-schema",
+          "line": 15
+        }
+      ],
+      "accuracy": "TRUE_POSITIVE",
+      "detected": true,
+      "unsupported": false,
+      "diagnosticIdentity": "DIRECT_CODE",
+      "sourceCorrelation": "AMBIGUOUS",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V11",
+        "path": "parameters/v11-duplicate.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": false,
+        "violationClass": "duplicate-parameter-identity",
+        "oaitRuleTarget": "OAIT-CON-007",
+        "expectedPointer": "/paths/~1pets~1{petId}/get/parameters/2",
+        "expectedDocument": "parameters/v11-duplicate.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [],
+      "rawDiagnostics": [],
+      "accuracy": "FALSE_NEGATIVE",
+      "detected": false,
+      "unsupported": false,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V12",
+        "path": "parameters/v12-valid-override.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": true,
+        "expectedDocument": "parameters/v12-valid-override.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [],
+      "rawDiagnostics": [],
+      "accuracy": "TRUE_NEGATIVE",
+      "detected": false,
+      "unsupported": false,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V13",
+        "path": "references/v13-missing-internal.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": false,
+        "violationClass": "unresolved-internal-reference",
+        "oaitRuleTarget": "OAIT-CON-003",
+        "expectedPointer": "/components/schemas/Broken/$ref",
+        "expectedDocument": "references/v13-missing-internal.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "'#/components/schemas/DoesNotExist' does not exist",
+          "severity": "error",
+          "ruleId": "invalid-ref",
+          "objectPath": [
+            "components",
+            "schemas",
+            "Broken",
+            "$ref"
+          ],
+          "pointer": "/components/schemas/Broken/$ref",
+          "line": 30,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "'#/components/schemas/DoesNotExist' does not exist",
+            "path": [
+              "components",
+              "schemas",
+              "Broken",
+              "$ref"
+            ],
+            "rule": "invalid-ref",
+            "line": 30
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "message": "'#/components/schemas/DoesNotExist' does not exist",
+          "path": [
+            "components",
+            "schemas",
+            "Broken",
+            "$ref"
+          ],
+          "rule": "invalid-ref",
+          "line": 30
+        }
+      ],
+      "accuracy": "TRUE_POSITIVE",
+      "detected": true,
+      "unsupported": false,
+      "diagnosticIdentity": "DIRECT_CODE",
+      "sourceCorrelation": "AMBIGUOUS",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V14",
+        "path": "references/v14-missing-file.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": false,
+        "violationClass": "unresolved-file-reference",
+        "oaitRuleTarget": "OAIT-CON-003",
+        "expectedPointer": "/components/schemas/Broken/$ref",
+        "expectedDocument": "references/v14-missing-file.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "ENOENT: no such file or directory, open '/Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/references/does-not-exist.yaml'",
+          "severity": "error",
+          "ruleId": "invalid-ref",
+          "objectPath": [
+            "components",
+            "schemas",
+            "Broken",
+            "$ref"
+          ],
+          "pointer": "/components/schemas/Broken/$ref",
+          "line": 30,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "ENOENT: no such file or directory, open '/Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/references/does-not-exist.yaml'",
+            "path": [
+              "components",
+              "schemas",
+              "Broken",
+              "$ref"
+            ],
+            "rule": "invalid-ref",
+            "line": 30
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "message": "ENOENT: no such file or directory, open '/Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/references/does-not-exist.yaml'",
+          "path": [
+            "components",
+            "schemas",
+            "Broken",
+            "$ref"
+          ],
+          "rule": "invalid-ref",
+          "line": 30
+        }
+      ],
+      "accuracy": "TRUE_POSITIVE",
+      "detected": true,
+      "unsupported": false,
+      "diagnosticIdentity": "DIRECT_CODE",
+      "sourceCorrelation": "AMBIGUOUS",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V15",
+        "path": "references/v15-recursive.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": true,
+        "expectedDocument": "references/v15-recursive.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [],
+      "rawDiagnostics": [],
+      "accuracy": "TRUE_NEGATIVE",
+      "detected": false,
+      "unsupported": false,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V16-3.0.4",
+        "path": "responses/v16-empty-3.0.4.yaml",
+        "openApiVersion": "3.0.4",
+        "expectedValid": false,
+        "violationClass": "empty-responses",
+        "oaitRuleTarget": "OAIT-CON-008",
+        "expectedPointer": "/paths/~1pets~1{petId}/get/responses",
+        "expectedDocument": "responses/v16-empty-3.0.4.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "\"responses\" property must not have fewer than 1 properties.",
+          "severity": "error",
+          "ruleId": "oas3-schema",
+          "objectPath": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "responses"
+          ],
+          "pointer": "/paths//pets/{petId}/get/responses",
+          "line": 15,
+          "versionContext": "3.0.4",
+          "raw": {
+            "message": "\"responses\" property must not have fewer than 1 properties.",
+            "path": [
+              "paths",
+              "/pets/{petId}",
+              "get",
+              "responses"
+            ],
+            "rule": "oas3-schema",
+            "line": 15
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "message": "\"responses\" property must not have fewer than 1 properties.",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "responses"
+          ],
+          "rule": "oas3-schema",
+          "line": 15
+        }
+      ],
+      "accuracy": "TRUE_POSITIVE",
+      "detected": true,
+      "unsupported": false,
+      "diagnosticIdentity": "DIRECT_CODE",
+      "sourceCorrelation": "AMBIGUOUS",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V16-3.1.2",
+        "path": "responses/v16-empty-3.1.2.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": false,
+        "violationClass": "empty-responses",
+        "oaitRuleTarget": "OAIT-CON-008",
+        "expectedPointer": "/paths/~1pets~1{petId}/get/responses",
+        "expectedDocument": "responses/v16-empty-3.1.2.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "\"responses\" property must have required property \"default\".",
+          "severity": "error",
+          "ruleId": "oas3-schema",
+          "objectPath": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "responses"
+          ],
+          "pointer": "/paths//pets/{petId}/get/responses",
+          "line": 15,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "\"responses\" property must have required property \"default\".",
+            "path": [
+              "paths",
+              "/pets/{petId}",
+              "get",
+              "responses"
+            ],
+            "rule": "oas3-schema",
+            "line": 15
+          }
+        },
+        {
+          "candidate": "IBM",
+          "message": "\"responses\" property must not have fewer than 1 properties.",
+          "severity": "error",
+          "ruleId": "oas3-schema",
+          "objectPath": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "responses"
+          ],
+          "pointer": "/paths//pets/{petId}/get/responses",
+          "line": 15,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "\"responses\" property must not have fewer than 1 properties.",
+            "path": [
+              "paths",
+              "/pets/{petId}",
+              "get",
+              "responses"
+            ],
+            "rule": "oas3-schema",
+            "line": 15
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "message": "\"responses\" property must have required property \"default\".",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "responses"
+          ],
+          "rule": "oas3-schema",
+          "line": 15
+        },
+        {
+          "message": "\"responses\" property must not have fewer than 1 properties.",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "responses"
+          ],
+          "rule": "oas3-schema",
+          "line": 15
+        }
+      ],
+      "accuracy": "TRUE_POSITIVE",
+      "detected": true,
+      "unsupported": false,
+      "diagnosticIdentity": "DIRECT_CODE",
+      "sourceCorrelation": "AMBIGUOUS",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V16-3.2.0",
+        "path": "responses/v16-empty-3.2.0.yaml",
+        "openApiVersion": "3.2.0",
+        "expectedValid": false,
+        "violationClass": "empty-responses",
+        "oaitRuleTarget": "OAIT-CON-008",
+        "expectedPointer": "/paths/~1pets~1{petId}/get/responses",
+        "expectedDocument": "responses/v16-empty-3.2.0.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "Command failed: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/node_modules/.bin/lint-openapi --json --errors-only --ruleset /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/ibm/oas-ruleset.yaml /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/responses/v16-empty-3.2.0.yaml\n[ERROR] Invalid input file: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/responses/v16-empty-3.2.0.yaml. See below for details.\n[ERROR] Only OpenAPI 3.0.x and 3.1.x documents are currently supported.\n",
+          "versionContext": "3.2.0",
+          "raw": {
+            "exitCode": 1
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "exitCode": 1
+        }
+      ],
+      "accuracy": "NOT_SUPPORTED",
+      "detected": false,
+      "unsupported": true,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V17",
+        "path": "responses/v17-oas30-missing.yaml",
+        "openApiVersion": "3.0.4",
+        "expectedValid": false,
+        "violationClass": "oas30-missing-responses",
+        "oaitRuleTarget": "OAIT-CON-009",
+        "expectedPointer": "/paths/~1pets~1{petId}/get/responses",
+        "expectedDocument": "responses/v17-oas30-missing.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "\"get\" property must have required property \"responses\".",
+          "severity": "error",
+          "ruleId": "oas3-schema",
+          "objectPath": [
+            "paths",
+            "/pets/{petId}",
+            "get"
+          ],
+          "pointer": "/paths//pets/{petId}/get",
+          "line": 7,
+          "versionContext": "3.0.4",
+          "raw": {
+            "message": "\"get\" property must have required property \"responses\".",
+            "path": [
+              "paths",
+              "/pets/{petId}",
+              "get"
+            ],
+            "rule": "oas3-schema",
+            "line": 7
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "message": "\"get\" property must have required property \"responses\".",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get"
+          ],
+          "rule": "oas3-schema",
+          "line": 7
+        }
+      ],
+      "accuracy": "TRUE_POSITIVE",
+      "detected": true,
+      "unsupported": false,
+      "diagnosticIdentity": "DIRECT_CODE",
+      "sourceCorrelation": "AMBIGUOUS",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V18-3.1.2",
+        "path": "responses/v18-missing-3.1.2.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": true,
+        "expectedDocument": "responses/v18-missing-3.1.2.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [],
+      "rawDiagnostics": [],
+      "accuracy": "TRUE_NEGATIVE",
+      "detected": false,
+      "unsupported": false,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V18-3.2.0",
+        "path": "responses/v18-missing-3.2.0.yaml",
+        "openApiVersion": "3.2.0",
+        "expectedValid": true,
+        "expectedDocument": "responses/v18-missing-3.2.0.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "Command failed: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/node_modules/.bin/lint-openapi --json --errors-only --ruleset /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/ibm/oas-ruleset.yaml /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/responses/v18-missing-3.2.0.yaml\n[ERROR] Invalid input file: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/responses/v18-missing-3.2.0.yaml. See below for details.\n[ERROR] Only OpenAPI 3.0.x and 3.1.x documents are currently supported.\n",
+          "versionContext": "3.2.0",
+          "raw": {
+            "exitCode": 1
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "exitCode": 1
+        }
+      ],
+      "accuracy": "NOT_SUPPORTED",
+      "detected": false,
+      "unsupported": true,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V19",
+        "path": "responses/v19-missing-description.yaml",
+        "openApiVersion": "3.0.4",
+        "expectedValid": false,
+        "violationClass": "response-description-required",
+        "oaitRuleTarget": "OAIT-CON-002",
+        "expectedPointer": "/paths/~1pets~1{petId}/get/responses/200/description",
+        "expectedDocument": "responses/v19-missing-description.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "\"200\" property must have required property \"description\".",
+          "severity": "error",
+          "ruleId": "oas3-schema",
+          "objectPath": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "responses",
+            "200"
+          ],
+          "pointer": "/paths//pets/{petId}/get/responses/200",
+          "line": 16,
+          "versionContext": "3.0.4",
+          "raw": {
+            "message": "\"200\" property must have required property \"description\".",
+            "path": [
+              "paths",
+              "/pets/{petId}",
+              "get",
+              "responses",
+              "200"
+            ],
+            "rule": "oas3-schema",
+            "line": 16
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "message": "\"200\" property must have required property \"description\".",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "responses",
+            "200"
+          ],
+          "rule": "oas3-schema",
+          "line": 16
+        }
+      ],
+      "accuracy": "TRUE_POSITIVE",
+      "detected": true,
+      "unsupported": false,
+      "diagnosticIdentity": "DIRECT_CODE",
+      "sourceCorrelation": "AMBIGUOUS",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V20",
+        "path": "responses/v20-missing-description.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": false,
+        "violationClass": "response-description-required",
+        "oaitRuleTarget": "OAIT-CON-002",
+        "expectedPointer": "/paths/~1pets~1{petId}/get/responses/200/description",
+        "expectedDocument": "responses/v20-missing-description.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "\"200\" property must have required property \"description\".",
+          "severity": "error",
+          "ruleId": "oas3-schema",
+          "objectPath": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "responses",
+            "200"
+          ],
+          "pointer": "/paths//pets/{petId}/get/responses/200",
+          "line": 16,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "\"200\" property must have required property \"description\".",
+            "path": [
+              "paths",
+              "/pets/{petId}",
+              "get",
+              "responses",
+              "200"
+            ],
+            "rule": "oas3-schema",
+            "line": 16
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "message": "\"200\" property must have required property \"description\".",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "responses",
+            "200"
+          ],
+          "rule": "oas3-schema",
+          "line": 16
+        }
+      ],
+      "accuracy": "TRUE_POSITIVE",
+      "detected": true,
+      "unsupported": false,
+      "diagnosticIdentity": "DIRECT_CODE",
+      "sourceCorrelation": "AMBIGUOUS",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V21",
+        "path": "responses/v21-missing-description.yaml",
+        "openApiVersion": "3.2.0",
+        "expectedValid": true,
+        "expectedDocument": "responses/v21-missing-description.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "Command failed: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/node_modules/.bin/lint-openapi --json --errors-only --ruleset /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/ibm/oas-ruleset.yaml /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/responses/v21-missing-description.yaml\n[ERROR] Invalid input file: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/responses/v21-missing-description.yaml. See below for details.\n[ERROR] Only OpenAPI 3.0.x and 3.1.x documents are currently supported.\n",
+          "versionContext": "3.2.0",
+          "raw": {
+            "exitCode": 1
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "exitCode": 1
+        }
+      ],
+      "accuracy": "NOT_SUPPORTED",
+      "detected": false,
+      "unsupported": true,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V22",
+        "path": "operations/v22-duplicate-operation-id.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": false,
+        "violationClass": "duplicate-operation-id",
+        "oaitRuleTarget": "OAIT-CNS-001",
+        "expectedPointer": "/paths/~1animals/get/operationId",
+        "expectedDocument": "operations/v22-duplicate-operation-id.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "Every operation must have unique \"operationId\".",
+          "severity": "error",
+          "ruleId": "operation-operationId-unique",
+          "objectPath": [
+            "paths",
+            "/animals",
+            "get",
+            "operationId"
+          ],
+          "pointer": "/paths//animals/get/operationId",
+          "line": 22,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "Every operation must have unique \"operationId\".",
+            "path": [
+              "paths",
+              "/animals",
+              "get",
+              "operationId"
+            ],
+            "rule": "operation-operationId-unique",
+            "line": 22
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "message": "Every operation must have unique \"operationId\".",
+          "path": [
+            "paths",
+            "/animals",
+            "get",
+            "operationId"
+          ],
+          "rule": "operation-operationId-unique",
+          "line": 22
+        }
+      ],
+      "accuracy": "TRUE_POSITIVE",
+      "detected": true,
+      "unsupported": false,
+      "diagnosticIdentity": "DIRECT_CODE",
+      "sourceCorrelation": "AMBIGUOUS",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V23",
+        "path": "operations/v23-case-sensitive.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": true,
+        "expectedDocument": "operations/v23-case-sensitive.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [],
+      "rawDiagnostics": [],
+      "accuracy": "TRUE_NEGATIVE",
+      "detected": false,
+      "unsupported": false,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V24",
+        "path": "security/v24-undeclared.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": false,
+        "violationClass": "unresolved-security-requirement",
+        "oaitRuleTarget": "OAIT-CON-010",
+        "expectedPointer": "/paths/~1pets~1{petId}/get/security/0/missingScheme",
+        "expectedDocument": "security/v24-undeclared.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [],
+      "rawDiagnostics": [],
+      "accuracy": "FALSE_NEGATIVE",
+      "detected": false,
+      "unsupported": false,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V25",
+        "path": "security/v25-declared.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": true,
+        "expectedDocument": "security/v25-declared.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [],
+      "rawDiagnostics": [],
+      "accuracy": "TRUE_NEGATIVE",
+      "detected": false,
+      "unsupported": false,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V26",
+        "path": "version-awareness/v26-query.yaml",
+        "openApiVersion": "3.2.0",
+        "expectedValid": true,
+        "expectedDocument": "version-awareness/v26-query.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "Command failed: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/node_modules/.bin/lint-openapi --json --errors-only --ruleset /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/ibm/oas-ruleset.yaml /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/version-awareness/v26-query.yaml\n[ERROR] Invalid input file: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/version-awareness/v26-query.yaml. See below for details.\n[ERROR] Only OpenAPI 3.0.x and 3.1.x documents are currently supported.\n",
+          "versionContext": "3.2.0",
+          "raw": {
+            "exitCode": 1
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "exitCode": 1
+        }
+      ],
+      "accuracy": "NOT_SUPPORTED",
+      "detected": false,
+      "unsupported": true,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V27",
+        "path": "version-awareness/v27-additional-operations.yaml",
+        "openApiVersion": "3.2.0",
+        "expectedValid": true,
+        "expectedDocument": "version-awareness/v27-additional-operations.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "Command failed: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/node_modules/.bin/lint-openapi --json --errors-only --ruleset /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/ibm/oas-ruleset.yaml /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/version-awareness/v27-additional-operations.yaml\n[ERROR] Invalid input file: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/version-awareness/v27-additional-operations.yaml. See below for details.\n[ERROR] Only OpenAPI 3.0.x and 3.1.x documents are currently supported.\n",
+          "versionContext": "3.2.0",
+          "raw": {
+            "exitCode": 1
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "exitCode": 1
+        }
+      ],
+      "accuracy": "NOT_SUPPORTED",
+      "detected": false,
+      "unsupported": true,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V28",
+        "path": "version-awareness/v28-querystring.yaml",
+        "openApiVersion": "3.2.0",
+        "expectedValid": true,
+        "expectedDocument": "version-awareness/v28-querystring.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "Command failed: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/node_modules/.bin/lint-openapi --json --errors-only --ruleset /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/ibm/oas-ruleset.yaml /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/version-awareness/v28-querystring.yaml\n[ERROR] Invalid input file: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/version-awareness/v28-querystring.yaml. See below for details.\n[ERROR] Only OpenAPI 3.0.x and 3.1.x documents are currently supported.\n",
+          "versionContext": "3.2.0",
+          "raw": {
+            "exitCode": 1
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "exitCode": 1
+        }
+      ],
+      "accuracy": "NOT_SUPPORTED",
+      "detected": false,
+      "unsupported": true,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V29",
+        "path": "version-awareness/v29-boolean.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": true,
+        "expectedDocument": "version-awareness/v29-boolean.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [],
+      "rawDiagnostics": [],
+      "accuracy": "TRUE_NEGATIVE",
+      "detected": false,
+      "unsupported": false,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V30",
+        "path": "version-awareness/v30-boolean.yaml",
+        "openApiVersion": "3.2.0",
+        "expectedValid": true,
+        "expectedDocument": "version-awareness/v30-boolean.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "Command failed: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/node_modules/.bin/lint-openapi --json --errors-only --ruleset /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/ibm/oas-ruleset.yaml /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/version-awareness/v30-boolean.yaml\n[ERROR] Invalid input file: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/version-awareness/v30-boolean.yaml. See below for details.\n[ERROR] Only OpenAPI 3.0.x and 3.1.x documents are currently supported.\n",
+          "versionContext": "3.2.0",
+          "raw": {
+            "exitCode": 1
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "exitCode": 1
+        }
+      ],
+      "accuracy": "NOT_SUPPORTED",
+      "detected": false,
+      "unsupported": true,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V31-3.1.2",
+        "path": "version-awareness/v31-unknown-3.1.2.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": true,
+        "expectedDocument": "version-awareness/v31-unknown-3.1.2.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [],
+      "rawDiagnostics": [],
+      "accuracy": "TRUE_NEGATIVE",
+      "detected": false,
+      "unsupported": false,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V31-3.2.0",
+        "path": "version-awareness/v31-unknown-3.2.0.yaml",
+        "openApiVersion": "3.2.0",
+        "expectedValid": true,
+        "expectedDocument": "version-awareness/v31-unknown-3.2.0.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "Command failed: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/node_modules/.bin/lint-openapi --json --errors-only --ruleset /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/ibm/oas-ruleset.yaml /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/version-awareness/v31-unknown-3.2.0.yaml\n[ERROR] Invalid input file: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/version-awareness/v31-unknown-3.2.0.yaml. See below for details.\n[ERROR] Only OpenAPI 3.0.x and 3.1.x documents are currently supported.\n",
+          "versionContext": "3.2.0",
+          "raw": {
+            "exitCode": 1
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "exitCode": 1
+        }
+      ],
+      "accuracy": "NOT_SUPPORTED",
+      "detected": false,
+      "unsupported": true,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V32",
+        "path": "version-awareness/v32-unknown-3.0.4.yaml",
+        "openApiVersion": "3.0.4",
+        "expectedValid": false,
+        "violationClass": "unsupported-oas30-schema-keyword",
+        "oaitRuleTarget": "OAIT-CON-002",
+        "expectedPointer": "/components/schemas/Custom/acmeQualityScore",
+        "expectedDocument": "version-awareness/v32-unknown-3.0.4.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "Property \"acmeQualityScore\" is not expected to be here.",
+          "severity": "error",
+          "ruleId": "oas3-schema",
+          "objectPath": [
+            "components",
+            "schemas",
+            "Custom",
+            "acmeQualityScore"
+          ],
+          "pointer": "/components/schemas/Custom/acmeQualityScore",
+          "line": 31,
+          "versionContext": "3.0.4",
+          "raw": {
+            "message": "Property \"acmeQualityScore\" is not expected to be here.",
+            "path": [
+              "components",
+              "schemas",
+              "Custom",
+              "acmeQualityScore"
+            ],
+            "rule": "oas3-schema",
+            "line": 31
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "message": "Property \"acmeQualityScore\" is not expected to be here.",
+          "path": [
+            "components",
+            "schemas",
+            "Custom",
+            "acmeQualityScore"
+          ],
+          "rule": "oas3-schema",
+          "line": 31
+        }
+      ],
+      "accuracy": "TRUE_POSITIVE",
+      "detected": true,
+      "unsupported": false,
+      "diagnosticIdentity": "DIRECT_CODE",
+      "sourceCorrelation": "AMBIGUOUS",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "MF",
+        "path": "multi-file/openapi.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": false,
+        "violationClass": "referenced-file-schema-invalid",
+        "oaitRuleTarget": "OAIT-CON-002",
+        "expectedPointer": "/required",
+        "expectedDocument": "multi-file/schemas/external.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [],
+      "rawDiagnostics": [],
+      "accuracy": "FALSE_NEGATIVE",
+      "detected": false,
+      "unsupported": false,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "MULTI",
+        "path": "multi-error/multiple.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": false,
+        "violationClass": "multiple-independent-violations",
+        "expectedPointer": "",
+        "expectedDocument": "multi-error/multiple.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "must have required property \"info\".",
+          "severity": "error",
+          "ruleId": "oas3-schema",
+          "objectPath": [],
+          "pointer": "",
+          "line": 1,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "must have required property \"info\".",
+            "path": [],
+            "rule": "oas3-schema",
+            "line": 1
+          }
+        },
+        {
+          "candidate": "IBM",
+          "message": "Path parameter \"petId\" must have \"required\" property that is set to \"true\".",
+          "severity": "error",
+          "ruleId": "path-params",
+          "objectPath": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "parameters",
+            "0"
+          ],
+          "pointer": "/paths//pets/{petId}/get/parameters/0",
+          "line": 7,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "Path parameter \"petId\" must have \"required\" property that is set to \"true\".",
+            "path": [
+              "paths",
+              "/pets/{petId}",
+              "get",
+              "parameters",
+              "0"
+            ],
+            "rule": "path-params",
+            "line": 7
+          }
+        },
+        {
+          "candidate": "IBM",
+          "message": "\"required\" property must be equal to constant.",
+          "severity": "error",
+          "ruleId": "oas3-schema",
+          "objectPath": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "parameters",
+            "0",
+            "required"
+          ],
+          "pointer": "/paths//pets/{petId}/get/parameters/0/required",
+          "line": 9,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "\"required\" property must be equal to constant.",
+            "path": [
+              "paths",
+              "/pets/{petId}",
+              "get",
+              "parameters",
+              "0",
+              "required"
+            ],
+            "rule": "oas3-schema",
+            "line": 9
+          }
+        },
+        {
+          "candidate": "IBM",
+          "message": "\"responses\" property must have required property \"default\".",
+          "severity": "error",
+          "ruleId": "oas3-schema",
+          "objectPath": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "responses"
+          ],
+          "pointer": "/paths//pets/{petId}/get/responses",
+          "line": 12,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "\"responses\" property must have required property \"default\".",
+            "path": [
+              "paths",
+              "/pets/{petId}",
+              "get",
+              "responses"
+            ],
+            "rule": "oas3-schema",
+            "line": 12
+          }
+        },
+        {
+          "candidate": "IBM",
+          "message": "\"responses\" property must not have fewer than 1 properties.",
+          "severity": "error",
+          "ruleId": "oas3-schema",
+          "objectPath": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "responses"
+          ],
+          "pointer": "/paths//pets/{petId}/get/responses",
+          "line": 12,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "\"responses\" property must not have fewer than 1 properties.",
+            "path": [
+              "paths",
+              "/pets/{petId}",
+              "get",
+              "responses"
+            ],
+            "rule": "oas3-schema",
+            "line": 12
+          }
+        },
+        {
+          "candidate": "IBM",
+          "message": "Every operation must have unique \"operationId\".",
+          "severity": "error",
+          "ruleId": "operation-operationId-unique",
+          "objectPath": [
+            "paths",
+            "/other",
+            "get",
+            "operationId"
+          ],
+          "pointer": "/paths//other/get/operationId",
+          "line": 17,
+          "versionContext": "3.1.2",
+          "raw": {
+            "message": "Every operation must have unique \"operationId\".",
+            "path": [
+              "paths",
+              "/other",
+              "get",
+              "operationId"
+            ],
+            "rule": "operation-operationId-unique",
+            "line": 17
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "message": "must have required property \"info\".",
+          "path": [],
+          "rule": "oas3-schema",
+          "line": 1
+        },
+        {
+          "message": "Path parameter \"petId\" must have \"required\" property that is set to \"true\".",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "parameters",
+            "0"
+          ],
+          "rule": "path-params",
+          "line": 7
+        },
+        {
+          "message": "\"required\" property must be equal to constant.",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "parameters",
+            "0",
+            "required"
+          ],
+          "rule": "oas3-schema",
+          "line": 9
+        },
+        {
+          "message": "\"responses\" property must have required property \"default\".",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "responses"
+          ],
+          "rule": "oas3-schema",
+          "line": 12
+        },
+        {
+          "message": "\"responses\" property must not have fewer than 1 properties.",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "responses"
+          ],
+          "rule": "oas3-schema",
+          "line": 12
+        },
+        {
+          "message": "Every operation must have unique \"operationId\".",
+          "path": [
+            "paths",
+            "/other",
+            "get",
+            "operationId"
+          ],
+          "rule": "operation-operationId-unique",
+          "line": 17
+        }
+      ],
+      "accuracy": "TRUE_POSITIVE",
+      "detected": true,
+      "unsupported": false,
+      "diagnosticIdentity": "DIRECT_CODE",
+      "sourceCorrelation": "AMBIGUOUS",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    }
+  ],
+  "counts": {
+    "truePositive": 21,
+    "trueNegative": 10,
+    "falsePositive": 0,
+    "falseNegative": 3,
+    "notSupported": 11
+  },
+  "rateDenominators": {
+    "applicableValid": 10,
+    "applicableInvalid": 24,
+    "notSupportedExcluded": true
+  },
+  "falsePositiveRate": 0,
+  "falseNegativeRate": 0.125,
+  "determinism": {
+    "allRepeatRunsStable": true,
+    "runsPerFixture": 2
+  },
+  "sourceLocationEvidence": "JSON output exposes structured path, line and rule; physical source is recorded when emitted.",
+  "oaitMappingEvidence": [
+    {
+      "ruleTarget": "OAIT-CON-002",
+      "identityCategories": [
+        "DIRECT_CODE",
+        "NOT_DETECTED"
+      ],
+      "fixtureAccuracy": [
+        {
+          "fixtureId": "V2-3.0.4",
+          "accuracy": "TRUE_POSITIVE"
+        },
+        {
+          "fixtureId": "V2-3.1.2",
+          "accuracy": "TRUE_POSITIVE"
+        },
+        {
+          "fixtureId": "V2-3.2.0",
+          "accuracy": "NOT_SUPPORTED"
+        },
+        {
+          "fixtureId": "V3-title",
+          "accuracy": "TRUE_POSITIVE"
+        },
+        {
+          "fixtureId": "V3-version",
+          "accuracy": "TRUE_POSITIVE"
+        },
+        {
+          "fixtureId": "V4-3.0",
+          "accuracy": "TRUE_POSITIVE"
+        },
+        {
+          "fixtureId": "V19",
+          "accuracy": "TRUE_POSITIVE"
+        },
+        {
+          "fixtureId": "V20",
+          "accuracy": "TRUE_POSITIVE"
+        },
+        {
+          "fixtureId": "V32",
+          "accuracy": "TRUE_POSITIVE"
+        },
+        {
+          "fixtureId": "MF",
+          "accuracy": "FALSE_NEGATIVE"
+        }
+      ]
+    },
+    {
+      "ruleTarget": "OAIT-CON-004",
+      "identityCategories": [
+        "DIRECT_CODE"
+      ],
+      "fixtureAccuracy": [
+        {
+          "fixtureId": "V5",
+          "accuracy": "TRUE_POSITIVE"
+        },
+        {
+          "fixtureId": "V6",
+          "accuracy": "TRUE_POSITIVE"
+        }
+      ]
+    },
+    {
+      "ruleTarget": "OAIT-CON-005",
+      "identityCategories": [
+        "DIRECT_CODE"
+      ],
+      "fixtureAccuracy": [
+        {
+          "fixtureId": "V7",
+          "accuracy": "TRUE_POSITIVE"
+        },
+        {
+          "fixtureId": "V8",
+          "accuracy": "TRUE_POSITIVE"
+        }
+      ]
+    },
+    {
+      "ruleTarget": "OAIT-CON-006",
+      "identityCategories": [
+        "DIRECT_CODE"
+      ],
+      "fixtureAccuracy": [
+        {
+          "fixtureId": "V9",
+          "accuracy": "TRUE_POSITIVE"
+        },
+        {
+          "fixtureId": "V10",
+          "accuracy": "TRUE_POSITIVE"
+        }
+      ]
+    },
+    {
+      "ruleTarget": "OAIT-CON-007",
+      "identityCategories": [
+        "NOT_DETECTED"
+      ],
+      "fixtureAccuracy": [
+        {
+          "fixtureId": "V11",
+          "accuracy": "FALSE_NEGATIVE"
+        }
+      ]
+    },
+    {
+      "ruleTarget": "OAIT-CON-003",
+      "identityCategories": [
+        "DIRECT_CODE"
+      ],
+      "fixtureAccuracy": [
+        {
+          "fixtureId": "V13",
+          "accuracy": "TRUE_POSITIVE"
+        },
+        {
+          "fixtureId": "V14",
+          "accuracy": "TRUE_POSITIVE"
+        }
+      ]
+    },
+    {
+      "ruleTarget": "OAIT-CON-008",
+      "identityCategories": [
+        "DIRECT_CODE",
+        "NOT_DETECTED"
+      ],
+      "fixtureAccuracy": [
+        {
+          "fixtureId": "V16-3.0.4",
+          "accuracy": "TRUE_POSITIVE"
+        },
+        {
+          "fixtureId": "V16-3.1.2",
+          "accuracy": "TRUE_POSITIVE"
+        },
+        {
+          "fixtureId": "V16-3.2.0",
+          "accuracy": "NOT_SUPPORTED"
+        }
+      ]
+    },
+    {
+      "ruleTarget": "OAIT-CON-009",
+      "identityCategories": [
+        "DIRECT_CODE"
+      ],
+      "fixtureAccuracy": [
+        {
+          "fixtureId": "V17",
+          "accuracy": "TRUE_POSITIVE"
+        }
+      ]
+    },
+    {
+      "ruleTarget": "OAIT-CNS-001",
+      "identityCategories": [
+        "DIRECT_CODE"
+      ],
+      "fixtureAccuracy": [
+        {
+          "fixtureId": "V22",
+          "accuracy": "TRUE_POSITIVE"
+        }
+      ]
+    },
+    {
+      "ruleTarget": "OAIT-CON-010",
+      "identityCategories": [
+        "NOT_DETECTED"
+      ],
+      "fixtureAccuracy": [
+        {
+          "fixtureId": "V24",
+          "accuracy": "FALSE_NEGATIVE"
+        }
+      ]
+    }
+  ],
+  "versionAwarenessResults": [
+    {
+      "oracle": {
+        "fixtureId": "V18-3.1.2",
+        "path": "responses/v18-missing-3.1.2.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": true,
+        "expectedDocument": "responses/v18-missing-3.1.2.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [],
+      "rawDiagnostics": [],
+      "accuracy": "TRUE_NEGATIVE",
+      "detected": false,
+      "unsupported": false,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V18-3.2.0",
+        "path": "responses/v18-missing-3.2.0.yaml",
+        "openApiVersion": "3.2.0",
+        "expectedValid": true,
+        "expectedDocument": "responses/v18-missing-3.2.0.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "Command failed: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/node_modules/.bin/lint-openapi --json --errors-only --ruleset /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/ibm/oas-ruleset.yaml /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/responses/v18-missing-3.2.0.yaml\n[ERROR] Invalid input file: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/responses/v18-missing-3.2.0.yaml. See below for details.\n[ERROR] Only OpenAPI 3.0.x and 3.1.x documents are currently supported.\n",
+          "versionContext": "3.2.0",
+          "raw": {
+            "exitCode": 1
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "exitCode": 1
+        }
+      ],
+      "accuracy": "NOT_SUPPORTED",
+      "detected": false,
+      "unsupported": true,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V21",
+        "path": "responses/v21-missing-description.yaml",
+        "openApiVersion": "3.2.0",
+        "expectedValid": true,
+        "expectedDocument": "responses/v21-missing-description.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "Command failed: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/node_modules/.bin/lint-openapi --json --errors-only --ruleset /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/ibm/oas-ruleset.yaml /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/responses/v21-missing-description.yaml\n[ERROR] Invalid input file: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/responses/v21-missing-description.yaml. See below for details.\n[ERROR] Only OpenAPI 3.0.x and 3.1.x documents are currently supported.\n",
+          "versionContext": "3.2.0",
+          "raw": {
+            "exitCode": 1
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "exitCode": 1
+        }
+      ],
+      "accuracy": "NOT_SUPPORTED",
+      "detected": false,
+      "unsupported": true,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V26",
+        "path": "version-awareness/v26-query.yaml",
+        "openApiVersion": "3.2.0",
+        "expectedValid": true,
+        "expectedDocument": "version-awareness/v26-query.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "Command failed: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/node_modules/.bin/lint-openapi --json --errors-only --ruleset /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/ibm/oas-ruleset.yaml /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/version-awareness/v26-query.yaml\n[ERROR] Invalid input file: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/version-awareness/v26-query.yaml. See below for details.\n[ERROR] Only OpenAPI 3.0.x and 3.1.x documents are currently supported.\n",
+          "versionContext": "3.2.0",
+          "raw": {
+            "exitCode": 1
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "exitCode": 1
+        }
+      ],
+      "accuracy": "NOT_SUPPORTED",
+      "detected": false,
+      "unsupported": true,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V27",
+        "path": "version-awareness/v27-additional-operations.yaml",
+        "openApiVersion": "3.2.0",
+        "expectedValid": true,
+        "expectedDocument": "version-awareness/v27-additional-operations.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "Command failed: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/node_modules/.bin/lint-openapi --json --errors-only --ruleset /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/ibm/oas-ruleset.yaml /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/version-awareness/v27-additional-operations.yaml\n[ERROR] Invalid input file: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/version-awareness/v27-additional-operations.yaml. See below for details.\n[ERROR] Only OpenAPI 3.0.x and 3.1.x documents are currently supported.\n",
+          "versionContext": "3.2.0",
+          "raw": {
+            "exitCode": 1
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "exitCode": 1
+        }
+      ],
+      "accuracy": "NOT_SUPPORTED",
+      "detected": false,
+      "unsupported": true,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V28",
+        "path": "version-awareness/v28-querystring.yaml",
+        "openApiVersion": "3.2.0",
+        "expectedValid": true,
+        "expectedDocument": "version-awareness/v28-querystring.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "Command failed: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/node_modules/.bin/lint-openapi --json --errors-only --ruleset /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/ibm/oas-ruleset.yaml /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/version-awareness/v28-querystring.yaml\n[ERROR] Invalid input file: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/version-awareness/v28-querystring.yaml. See below for details.\n[ERROR] Only OpenAPI 3.0.x and 3.1.x documents are currently supported.\n",
+          "versionContext": "3.2.0",
+          "raw": {
+            "exitCode": 1
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "exitCode": 1
+        }
+      ],
+      "accuracy": "NOT_SUPPORTED",
+      "detected": false,
+      "unsupported": true,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V29",
+        "path": "version-awareness/v29-boolean.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": true,
+        "expectedDocument": "version-awareness/v29-boolean.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [],
+      "rawDiagnostics": [],
+      "accuracy": "TRUE_NEGATIVE",
+      "detected": false,
+      "unsupported": false,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V30",
+        "path": "version-awareness/v30-boolean.yaml",
+        "openApiVersion": "3.2.0",
+        "expectedValid": true,
+        "expectedDocument": "version-awareness/v30-boolean.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "Command failed: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/node_modules/.bin/lint-openapi --json --errors-only --ruleset /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/ibm/oas-ruleset.yaml /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/version-awareness/v30-boolean.yaml\n[ERROR] Invalid input file: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/version-awareness/v30-boolean.yaml. See below for details.\n[ERROR] Only OpenAPI 3.0.x and 3.1.x documents are currently supported.\n",
+          "versionContext": "3.2.0",
+          "raw": {
+            "exitCode": 1
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "exitCode": 1
+        }
+      ],
+      "accuracy": "NOT_SUPPORTED",
+      "detected": false,
+      "unsupported": true,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V31-3.1.2",
+        "path": "version-awareness/v31-unknown-3.1.2.yaml",
+        "openApiVersion": "3.1.2",
+        "expectedValid": true,
+        "expectedDocument": "version-awareness/v31-unknown-3.1.2.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [],
+      "rawDiagnostics": [],
+      "accuracy": "TRUE_NEGATIVE",
+      "detected": false,
+      "unsupported": false,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V31-3.2.0",
+        "path": "version-awareness/v31-unknown-3.2.0.yaml",
+        "openApiVersion": "3.2.0",
+        "expectedValid": true,
+        "expectedDocument": "version-awareness/v31-unknown-3.2.0.yaml",
+        "controlType": "VALID_CONTROL"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "Command failed: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/node_modules/.bin/lint-openapi --json --errors-only --ruleset /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/ibm/oas-ruleset.yaml /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/version-awareness/v31-unknown-3.2.0.yaml\n[ERROR] Invalid input file: /Users/prashanta/Documents/GitHub/openapi-intelligence-toolkit/experiments/parser-validator-spike/spike-006/fixtures/version-awareness/v31-unknown-3.2.0.yaml. See below for details.\n[ERROR] Only OpenAPI 3.0.x and 3.1.x documents are currently supported.\n",
+          "versionContext": "3.2.0",
+          "raw": {
+            "exitCode": 1
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "exitCode": 1
+        }
+      ],
+      "accuracy": "NOT_SUPPORTED",
+      "detected": false,
+      "unsupported": true,
+      "diagnosticIdentity": "NOT_DETECTED",
+      "sourceCorrelation": "NOT_CORRELATABLE",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    },
+    {
+      "oracle": {
+        "fixtureId": "V32",
+        "path": "version-awareness/v32-unknown-3.0.4.yaml",
+        "openApiVersion": "3.0.4",
+        "expectedValid": false,
+        "violationClass": "unsupported-oas30-schema-keyword",
+        "oaitRuleTarget": "OAIT-CON-002",
+        "expectedPointer": "/components/schemas/Custom/acmeQualityScore",
+        "expectedDocument": "version-awareness/v32-unknown-3.0.4.yaml",
+        "controlType": "INVALID_CASE"
+      },
+      "diagnostics": [
+        {
+          "candidate": "IBM",
+          "message": "Property \"acmeQualityScore\" is not expected to be here.",
+          "severity": "error",
+          "ruleId": "oas3-schema",
+          "objectPath": [
+            "components",
+            "schemas",
+            "Custom",
+            "acmeQualityScore"
+          ],
+          "pointer": "/components/schemas/Custom/acmeQualityScore",
+          "line": 31,
+          "versionContext": "3.0.4",
+          "raw": {
+            "message": "Property \"acmeQualityScore\" is not expected to be here.",
+            "path": [
+              "components",
+              "schemas",
+              "Custom",
+              "acmeQualityScore"
+            ],
+            "rule": "oas3-schema",
+            "line": 31
+          }
+        }
+      ],
+      "rawDiagnostics": [
+        {
+          "message": "Property \"acmeQualityScore\" is not expected to be here.",
+          "path": [
+            "components",
+            "schemas",
+            "Custom",
+            "acmeQualityScore"
+          ],
+          "rule": "oas3-schema",
+          "line": 31
+        }
+      ],
+      "accuracy": "TRUE_POSITIVE",
+      "detected": true,
+      "unsupported": false,
+      "diagnosticIdentity": "DIRECT_CODE",
+      "sourceCorrelation": "AMBIGUOUS",
+      "repeatDeterministic": true,
+      "mutationObserved": false
+    }
+  ],
+  "multiFileResults": {
+    "oracle": {
+      "fixtureId": "MF",
+      "path": "multi-file/openapi.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": false,
+      "violationClass": "referenced-file-schema-invalid",
+      "oaitRuleTarget": "OAIT-CON-002",
+      "expectedPointer": "/required",
+      "expectedDocument": "multi-file/schemas/external.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    "diagnostics": [],
+    "rawDiagnostics": [],
+    "accuracy": "FALSE_NEGATIVE",
+    "detected": false,
+    "unsupported": false,
+    "diagnosticIdentity": "NOT_DETECTED",
+    "sourceCorrelation": "NOT_CORRELATABLE",
+    "repeatDeterministic": true,
+    "mutationObserved": false
+  },
+  "multiErrorResults": {
+    "oracle": {
+      "fixtureId": "MULTI",
+      "path": "multi-error/multiple.yaml",
+      "openApiVersion": "3.1.2",
+      "expectedValid": false,
+      "violationClass": "multiple-independent-violations",
+      "expectedPointer": "",
+      "expectedDocument": "multi-error/multiple.yaml",
+      "controlType": "INVALID_CASE"
+    },
+    "diagnostics": [
+      {
+        "candidate": "IBM",
+        "message": "must have required property \"info\".",
+        "severity": "error",
+        "ruleId": "oas3-schema",
+        "objectPath": [],
+        "pointer": "",
+        "line": 1,
+        "versionContext": "3.1.2",
+        "raw": {
+          "message": "must have required property \"info\".",
+          "path": [],
+          "rule": "oas3-schema",
+          "line": 1
+        }
+      },
+      {
+        "candidate": "IBM",
+        "message": "Path parameter \"petId\" must have \"required\" property that is set to \"true\".",
+        "severity": "error",
+        "ruleId": "path-params",
+        "objectPath": [
+          "paths",
+          "/pets/{petId}",
+          "get",
+          "parameters",
+          "0"
+        ],
+        "pointer": "/paths//pets/{petId}/get/parameters/0",
+        "line": 7,
+        "versionContext": "3.1.2",
+        "raw": {
+          "message": "Path parameter \"petId\" must have \"required\" property that is set to \"true\".",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "parameters",
+            "0"
+          ],
+          "rule": "path-params",
+          "line": 7
+        }
+      },
+      {
+        "candidate": "IBM",
+        "message": "\"required\" property must be equal to constant.",
+        "severity": "error",
+        "ruleId": "oas3-schema",
+        "objectPath": [
+          "paths",
+          "/pets/{petId}",
+          "get",
+          "parameters",
+          "0",
+          "required"
+        ],
+        "pointer": "/paths//pets/{petId}/get/parameters/0/required",
+        "line": 9,
+        "versionContext": "3.1.2",
+        "raw": {
+          "message": "\"required\" property must be equal to constant.",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "parameters",
+            "0",
+            "required"
+          ],
+          "rule": "oas3-schema",
+          "line": 9
+        }
+      },
+      {
+        "candidate": "IBM",
+        "message": "\"responses\" property must have required property \"default\".",
+        "severity": "error",
+        "ruleId": "oas3-schema",
+        "objectPath": [
+          "paths",
+          "/pets/{petId}",
+          "get",
+          "responses"
+        ],
+        "pointer": "/paths//pets/{petId}/get/responses",
+        "line": 12,
+        "versionContext": "3.1.2",
+        "raw": {
+          "message": "\"responses\" property must have required property \"default\".",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "responses"
+          ],
+          "rule": "oas3-schema",
+          "line": 12
+        }
+      },
+      {
+        "candidate": "IBM",
+        "message": "\"responses\" property must not have fewer than 1 properties.",
+        "severity": "error",
+        "ruleId": "oas3-schema",
+        "objectPath": [
+          "paths",
+          "/pets/{petId}",
+          "get",
+          "responses"
+        ],
+        "pointer": "/paths//pets/{petId}/get/responses",
+        "line": 12,
+        "versionContext": "3.1.2",
+        "raw": {
+          "message": "\"responses\" property must not have fewer than 1 properties.",
+          "path": [
+            "paths",
+            "/pets/{petId}",
+            "get",
+            "responses"
+          ],
+          "rule": "oas3-schema",
+          "line": 12
+        }
+      },
+      {
+        "candidate": "IBM",
+        "message": "Every operation must have unique \"operationId\".",
+        "severity": "error",
+        "ruleId": "operation-operationId-unique",
+        "objectPath": [
+          "paths",
+          "/other",
+          "get",
+          "operationId"
+        ],
+        "pointer": "/paths//other/get/operationId",
+        "line": 17,
+        "versionContext": "3.1.2",
+        "raw": {
+          "message": "Every operation must have unique \"operationId\".",
+          "path": [
+            "paths",
+            "/other",
+            "get",
+            "operationId"
+          ],
+          "rule": "operation-operationId-unique",
+          "line": 17
+        }
+      }
+    ],
+    "rawDiagnostics": [
+      {
+        "message": "must have required property \"info\".",
+        "path": [],
+        "rule": "oas3-schema",
+        "line": 1
+      },
+      {
+        "message": "Path parameter \"petId\" must have \"required\" property that is set to \"true\".",
+        "path": [
+          "paths",
+          "/pets/{petId}",
+          "get",
+          "parameters",
+          "0"
+        ],
+        "rule": "path-params",
+        "line": 7
+      },
+      {
+        "message": "\"required\" property must be equal to constant.",
+        "path": [
+          "paths",
+          "/pets/{petId}",
+          "get",
+          "parameters",
+          "0",
+          "required"
+        ],
+        "rule": "oas3-schema",
+        "line": 9
+      },
+      {
+        "message": "\"responses\" property must have required property \"default\".",
+        "path": [
+          "paths",
+          "/pets/{petId}",
+          "get",
+          "responses"
+        ],
+        "rule": "oas3-schema",
+        "line": 12
+      },
+      {
+        "message": "\"responses\" property must not have fewer than 1 properties.",
+        "path": [
+          "paths",
+          "/pets/{petId}",
+          "get",
+          "responses"
+        ],
+        "rule": "oas3-schema",
+        "line": 12
+      },
+      {
+        "message": "Every operation must have unique \"operationId\".",
+        "path": [
+          "paths",
+          "/other",
+          "get",
+          "operationId"
+        ],
+        "rule": "operation-operationId-unique",
+        "line": 17
+      }
+    ],
+    "accuracy": "TRUE_POSITIVE",
+    "detected": true,
+    "unsupported": false,
+    "diagnosticIdentity": "DIRECT_CODE",
+    "sourceCorrelation": "AMBIGUOUS",
+    "repeatDeterministic": true,
+    "mutationObserved": false
+  },
+  "oas32Classification": "REJECTED_AS_UNSUPPORTED",
+  "typescript": {
+    "programmaticApi": "NOT_SUPPORTED",
+    "reason": "Installed public package documents CLI/JavaScript use but exports no package-root programmatic API; internals were not imported.",
+    "compilation": "NOT_APPLICABLE to CLI"
+  },
+  "cli": {
+    "status": "PASS",
+    "jsonOutput": true,
+    "errorsOnly": true
+  },
+  "unexpectedBehavior": [],
+  "limitations": [
+    "No documented package-root programmatic entry point was available.",
+    "Published support is OAS 3.0.x and 3.1.x; 3.2 observations are classified experimentally."
+  ],
+  "mandatoryGates": {
+    "VG01": "PARTIAL",
+    "VG02": "PARTIAL",
+    "VG03": "PARTIAL",
+    "VG04": "PARTIAL",
+    "VG05": "PASS",
+    "VG06": "PASS",
+    "VG07": "PASS",
+    "VG08": "PARTIAL",
+    "VG09": "PARTIAL",
+    "VG10": "PARTIAL",
+    "VG11": "PASS",
+    "VG12": "PASS"
+  },
+  "viability": "COMPOSITE_ROLE_VIABLE",
+  "internalResultHash": "f106d8bfbc63efd613cb2e0262ecbfcf7c708b59fc2bb57b00cd0f3ff55e46aa"
+}
