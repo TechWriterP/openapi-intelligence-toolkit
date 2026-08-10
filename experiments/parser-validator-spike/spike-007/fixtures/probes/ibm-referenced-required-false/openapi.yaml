@@ -1,0 +1,7 @@
+openapi: 3.1.2
+info:
+  title: IBM Referenced Validation Probe
+  version: 1.0.0
+paths:
+  /pets/{petId}:
+    $ref: ./path-item.yaml

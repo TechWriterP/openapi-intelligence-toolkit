@@ -1,0 +1,108 @@
+openapi: 3.2.0
+info:
+  title: OAIT operational benchmark 100
+  version: 1.0.0
+  description: Deterministically generated realistic benchmark API
+paths:
+  /resources/0:
+    $ref: ./paths/paths-00.yaml#/~1resources~10
+  /resources/1:
+    $ref: ./paths/paths-00.yaml#/~1resources~11
+  /resources/2:
+    $ref: ./paths/paths-00.yaml#/~1resources~12
+  /resources/3:
+    $ref: ./paths/paths-00.yaml#/~1resources~13
+  /resources/4:
+    $ref: ./paths/paths-00.yaml#/~1resources~14
+  /resources/5:
+    $ref: ./paths/paths-00.yaml#/~1resources~15
+  /resources/6:
+    $ref: ./paths/paths-00.yaml#/~1resources~16
+  /resources/7:
+    $ref: ./paths/paths-00.yaml#/~1resources~17
+  /resources/8:
+    $ref: ./paths/paths-00.yaml#/~1resources~18
+  /resources/9:
+    $ref: ./paths/paths-00.yaml#/~1resources~19
+  /resources/10:
+    $ref: ./paths/paths-00.yaml#/~1resources~110
+  /resources/11:
+    $ref: ./paths/paths-00.yaml#/~1resources~111
+  /resources/12:
+    $ref: ./paths/paths-00.yaml#/~1resources~112
+  /resources/13:
+    $ref: ./paths/paths-00.yaml#/~1resources~113
+  /resources/14:
+    $ref: ./paths/paths-00.yaml#/~1resources~114
+  /resources/15:
+    $ref: ./paths/paths-00.yaml#/~1resources~115
+  /resources/16:
+    $ref: ./paths/paths-00.yaml#/~1resources~116
+  /resources/17:
+    $ref: ./paths/paths-00.yaml#/~1resources~117
+  /resources/18:
+    $ref: ./paths/paths-00.yaml#/~1resources~118
+  /resources/19:
+    $ref: ./paths/paths-00.yaml#/~1resources~119
+  /resources/20:
+    $ref: ./paths/paths-00.yaml#/~1resources~120
+  /resources/21:
+    $ref: ./paths/paths-00.yaml#/~1resources~121
+  /resources/22:
+    $ref: ./paths/paths-00.yaml#/~1resources~122
+  /resources/23:
+    $ref: ./paths/paths-00.yaml#/~1resources~123
+  /resources/24:
+    $ref: ./paths/paths-00.yaml#/~1resources~124
+  /resources/25:
+    $ref: ./paths/paths-01.yaml#/~1resources~125
+  /resources/26:
+    $ref: ./paths/paths-01.yaml#/~1resources~126
+  /resources/27:
+    $ref: ./paths/paths-01.yaml#/~1resources~127
+  /resources/28:
+    $ref: ./paths/paths-01.yaml#/~1resources~128
+  /resources/29:
+    $ref: ./paths/paths-01.yaml#/~1resources~129
+  /resources/30:
+    $ref: ./paths/paths-01.yaml#/~1resources~130
+  /resources/31:
+    $ref: ./paths/paths-01.yaml#/~1resources~131
+  /resources/32:
+    $ref: ./paths/paths-01.yaml#/~1resources~132
+  /resources/33:
+    $ref: ./paths/paths-01.yaml#/~1resources~133
+  /resources/34:
+    $ref: ./paths/paths-01.yaml#/~1resources~134
+  /resources/35:
+    $ref: ./paths/paths-01.yaml#/~1resources~135
+  /resources/36:
+    $ref: ./paths/paths-01.yaml#/~1resources~136
+  /resources/37:
+    $ref: ./paths/paths-01.yaml#/~1resources~137
+  /resources/38:
+    $ref: ./paths/paths-01.yaml#/~1resources~138
+  /resources/39:
+    $ref: ./paths/paths-01.yaml#/~1resources~139
+  /resources/40:
+    $ref: ./paths/paths-01.yaml#/~1resources~140
+  /resources/41:
+    $ref: ./paths/paths-01.yaml#/~1resources~141
+  /resources/42:
+    $ref: ./paths/paths-01.yaml#/~1resources~142
+  /resources/43:
+    $ref: ./paths/paths-01.yaml#/~1resources~143
+  /resources/44:
+    $ref: ./paths/paths-01.yaml#/~1resources~144
+  /resources/45:
+    $ref: ./paths/paths-01.yaml#/~1resources~145
+  /resources/46:
+    $ref: ./paths/paths-01.yaml#/~1resources~146
+  /resources/47:
+    $ref: ./paths/paths-01.yaml#/~1resources~147
+  /resources/48:
+    $ref: ./paths/paths-01.yaml#/~1resources~148
+  /resources/49:
+    $ref: ./paths/paths-01.yaml#/~1resources~149
+components:
+  $ref: ./components.yaml

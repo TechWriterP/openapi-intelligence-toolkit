@@ -1,0 +1,535 @@
+{
+  "capturedAt": "2026-08-10T16:10:48.095Z",
+  "candidate": "ibm-openapi-validator@1.37.15",
+  "command": "lint-openapi --json --errors-only --ruleset ibm/oas-ruleset.yaml <fixture>",
+  "violation": "path parameter required:false; reliably detected inline in SPIKE-006",
+  "probeHashes": {
+    "probes/ibm-inline-required-false.yaml": "6506f3a1c9c7c28d4e97de1d9040e1c8a6449fc22edcef3070e48dc734fc8f28",
+    "probes/ibm-referenced-required-false/openapi.yaml": "680467ae2438fe2f643fec08a526c5995d74bcf16391e514a0ae0bf7b1ff1a33",
+    "probes/ibm-referenced-required-false/path-item.yaml": "e38b6bbd047b913ebdb123dd681cf0f567b9d908b81912c1e50fe4d4f6801164"
+  },
+  "inline": {
+    "relativePath": "probes/ibm-inline-required-false.yaml",
+    "exitCode": 1,
+    "stdout": "{\n  \"error\": {\n    \"results\": [\n      {\n        \"message\": \"Path parameter \\\"petId\\\" must have \\\"required\\\" property that is set to \\\"true\\\".\",\n        \"path\": [\n          \"paths\",\n          \"/pets/{petId}\",\n          \"get\",\n          \"parameters\",\n          \"0\"\n        ],\n        \"rule\": \"path-params\",\n        \"line\": 9\n      },\n      {\n        \"message\": \"\\\"required\\\" property must be equal to constant.\",\n        \"path\": [\n          \"paths\",\n          \"/pets/{petId}\",\n          \"get\",\n          \"parameters\",\n          \"0\",\n          \"required\"\n        ],\n        \"rule\": \"oas3-schema\",\n        \"line\": 11\n      }\n    ],\n    \"summary\": {\n      \"total\": 2,\n      \"entries\": [\n        {\n          \"generalizedMessage\": \"Path parameter \\\"petId\\\" must have \\\"required\\\" property that is set to \\\"true\\\".\",\n          \"count\": 1,\n          \"percentage\": 50\n        },\n        {\n          \"generalizedMessage\": \"\\\"required\\\" property must be equal to constant.\",\n          \"count\": 1,\n          \"percentage\": 50\n        }\n      ]\n    }\n  },\n  \"warning\": {\n    \"results\": [],\n    \"summary\": {\n      \"total\": 0,\n      \"entries\": []\n    }\n  },\n  \"info\": {\n    \"results\": [],\n    \"summary\": {\n      \"total\": 0,\n      \"entries\": []\n    }\n  },\n  \"hint\": {\n    \"results\": [],\n    \"summary\": {\n      \"total\": 0,\n      \"entries\": []\n    }\n  },\n  \"hasResults\": true,\n  \"impactScore\": {\n    \"categorizedSummary\": {\n      \"usability\": 91,\n      \"security\": 77,\n      \"robustness\": 91,\n      \"evolution\": 86,\n      \"overall\": 86\n    },\n    \"scoringData\": [\n      {\n        \"rule\": \"path-params\",\n        \"count\": 1,\n        \"func\": \"1×3÷operations\",\n        \"demerits\": {\n          \"usability\": 3,\n          \"security\": 15,\n          \"robustness\": 6,\n          \"evolution\": 9,\n          \"total\": 33\n        }\n      },\n      {\n        \"rule\": \"oas3-schema\",\n        \"count\": 1,\n        \"func\": \"1×3\",\n        \"demerits\": {\n          \"usability\": 3,\n          \"total\": 3\n        }\n      }\n    ]\n  }\n}\n",
+    "stderr": "",
+    "parsed": {
+      "error": {
+        "results": [
+          {
+            "message": "Path parameter \"petId\" must have \"required\" property that is set to \"true\".",
+            "path": [
+              "paths",
+              "/pets/{petId}",
+              "get",
+              "parameters",
+              "0"
+            ],
+            "rule": "path-params",
+            "line": 9
+          },
+          {
+            "message": "\"required\" property must be equal to constant.",
+            "path": [
+              "paths",
+              "/pets/{petId}",
+              "get",
+              "parameters",
+              "0",
+              "required"
+            ],
+            "rule": "oas3-schema",
+            "line": 11
+          }
+        ],
+        "summary": {
+          "total": 2,
+          "entries": [
+            {
+              "generalizedMessage": "Path parameter \"petId\" must have \"required\" property that is set to \"true\".",
+              "count": 1,
+              "percentage": 50
+            },
+            {
+              "generalizedMessage": "\"required\" property must be equal to constant.",
+              "count": 1,
+              "percentage": 50
+            }
+          ]
+        }
+      },
+      "warning": {
+        "results": [],
+        "summary": {
+          "total": 0,
+          "entries": []
+        }
+      },
+      "info": {
+        "results": [],
+        "summary": {
+          "total": 0,
+          "entries": []
+        }
+      },
+      "hint": {
+        "results": [],
+        "summary": {
+          "total": 0,
+          "entries": []
+        }
+      },
+      "hasResults": true,
+      "impactScore": {
+        "categorizedSummary": {
+          "usability": 91,
+          "security": 77,
+          "robustness": 91,
+          "evolution": 86,
+          "overall": 86
+        },
+        "scoringData": [
+          {
+            "rule": "path-params",
+            "count": 1,
+            "func": "1×3÷operations",
+            "demerits": {
+              "usability": 3,
+              "security": 15,
+              "robustness": 6,
+              "evolution": 9,
+              "total": 33
+            }
+          },
+          {
+            "rule": "oas3-schema",
+            "count": 1,
+            "func": "1×3",
+            "demerits": {
+              "usability": 3,
+              "total": 3
+            }
+          }
+        ]
+      }
+    },
+    "errorCount": 2
+  },
+  "referenced": {
+    "relativePath": "probes/ibm-referenced-required-false/openapi.yaml",
+    "exitCode": 1,
+    "stdout": "{\n  \"error\": {\n    \"results\": [\n      {\n        \"message\": \"\\\"~1pets~1{petId}\\\" property must not have unevaluated properties.\",\n        \"path\": [\n          \"paths\",\n          \"/pets/{petId}\"\n        ],\n        \"rule\": \"oas3-schema\",\n        \"line\": 6\n      },\n      {\n        \"message\": \"Path parameter \\\"petId\\\" must have \\\"required\\\" property that is set to \\\"true\\\".\",\n        \"path\": [\n          \"get\",\n          \"parameters\",\n          \"0\"\n        ],\n        \"rule\": \"path-params\",\n        \"line\": 3\n      }\n    ],\n    \"summary\": {\n      \"total\": 2,\n      \"entries\": [\n        {\n          \"generalizedMessage\": \"\\\"~1pets~1{petId}\\\" property must not have unevaluated properties.\",\n          \"count\": 1,\n          \"percentage\": 50\n        },\n        {\n          \"generalizedMessage\": \"Path parameter \\\"petId\\\" must have \\\"required\\\" property that is set to \\\"true\\\".\",\n          \"count\": 1,\n          \"percentage\": 50\n        }\n      ]\n    }\n  },\n  \"warning\": {\n    \"results\": [],\n    \"summary\": {\n      \"total\": 0,\n      \"entries\": []\n    }\n  },\n  \"info\": {\n    \"results\": [],\n    \"summary\": {\n      \"total\": 0,\n      \"entries\": []\n    }\n  },\n  \"hint\": {\n    \"results\": [],\n    \"summary\": {\n      \"total\": 0,\n      \"entries\": []\n    }\n  },\n  \"hasResults\": true,\n  \"impactScore\": {\n    \"categorizedSummary\": {\n      \"usability\": 0,\n      \"security\": 0,\n      \"robustness\": 0,\n      \"evolution\": 0,\n      \"overall\": 0\n    },\n    \"scoringData\": [\n      {\n        \"rule\": \"oas3-schema\",\n        \"count\": 1,\n        \"func\": \"1×3\",\n        \"demerits\": {\n          \"usability\": 3,\n          \"total\": 3\n        }\n      },\n      {\n        \"rule\": \"path-params\",\n        \"count\": 1,\n        \"func\": \"1×3÷operations\",\n        \"demerits\": {\n          \"usability\": null,\n          \"security\": null,\n          \"robustness\": null,\n          \"evolution\": null,\n          \"total\": null\n        }\n      }\n    ]\n  }\n}\n",
+    "stderr": "",
+    "parsed": {
+      "error": {
+        "results": [
+          {
+            "message": "\"~1pets~1{petId}\" property must not have unevaluated properties.",
+            "path": [
+              "paths",
+              "/pets/{petId}"
+            ],
+            "rule": "oas3-schema",
+            "line": 6
+          },
+          {
+            "message": "Path parameter \"petId\" must have \"required\" property that is set to \"true\".",
+            "path": [
+              "get",
+              "parameters",
+              "0"
+            ],
+            "rule": "path-params",
+            "line": 3
+          }
+        ],
+        "summary": {
+          "total": 2,
+          "entries": [
+            {
+              "generalizedMessage": "\"~1pets~1{petId}\" property must not have unevaluated properties.",
+              "count": 1,
+              "percentage": 50
+            },
+            {
+              "generalizedMessage": "Path parameter \"petId\" must have \"required\" property that is set to \"true\".",
+              "count": 1,
+              "percentage": 50
+            }
+          ]
+        }
+      },
+      "warning": {
+        "results": [],
+        "summary": {
+          "total": 0,
+          "entries": []
+        }
+      },
+      "info": {
+        "results": [],
+        "summary": {
+          "total": 0,
+          "entries": []
+        }
+      },
+      "hint": {
+        "results": [],
+        "summary": {
+          "total": 0,
+          "entries": []
+        }
+      },
+      "hasResults": true,
+      "impactScore": {
+        "categorizedSummary": {
+          "usability": 0,
+          "security": 0,
+          "robustness": 0,
+          "evolution": 0,
+          "overall": 0
+        },
+        "scoringData": [
+          {
+            "rule": "oas3-schema",
+            "count": 1,
+            "func": "1×3",
+            "demerits": {
+              "usability": 3,
+              "total": 3
+            }
+          },
+          {
+            "rule": "path-params",
+            "count": 1,
+            "func": "1×3÷operations",
+            "demerits": {
+              "usability": null,
+              "security": null,
+              "robustness": null,
+              "evolution": null,
+              "total": null
+            }
+          }
+        ]
+      }
+    },
+    "errorCount": 2
+  },
+  "findings": {
+    "referenceExistenceResolved": true,
+    "referencedFileLoadedAndTraversed": true,
+    "knownViolationDetectedInline": true,
+    "knownViolationDetectedReferenced": true,
+    "fullReferencedFileConformanceUniversallyDemonstrated": false,
+    "reason": "The targeted violation is detected through the external Path Item, proving load/traversal for this class; one probe cannot establish complete conformance coverage."
+  },
+  "mainCorpus": {
+    "relativePath": "multi-file/large/oas-3.1.2/openapi.yaml",
+    "exitCode": 1,
+    "errorCount": 304,
+    "ruleCounts": {
+      "invalid-ref": 53,
+      "oas3-schema": 251
+    },
+    "diagnosticSample": [
+      {
+        "message": "'#/components/parameters/TraceId' does not exist",
+        "path": [
+          "/resources/0",
+          "get",
+          "parameters",
+          "0",
+          "$ref"
+        ],
+        "rule": "invalid-ref",
+        "line": 1
+      },
+      {
+        "message": "'#/components/schemas/Entity0' does not exist",
+        "path": [
+          "/resources/0",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "$ref"
+        ],
+        "rule": "invalid-ref",
+        "line": 1
+      },
+      {
+        "message": "'#/components/responses/Problem' does not exist",
+        "path": [
+          "/resources/0",
+          "get",
+          "responses",
+          "default",
+          "$ref"
+        ],
+        "rule": "invalid-ref",
+        "line": 1
+      },
+      {
+        "message": "'#/components/schemas/Entity1' does not exist",
+        "path": [
+          "/resources/0",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "$ref"
+        ],
+        "rule": "invalid-ref",
+        "line": 1
+      },
+      {
+        "message": "'#/components/schemas/Entity2' does not exist",
+        "path": [
+          "/resources/1",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "$ref"
+        ],
+        "rule": "invalid-ref",
+        "line": 1
+      },
+      {
+        "message": "'#/components/schemas/Entity3' does not exist",
+        "path": [
+          "/resources/1",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "$ref"
+        ],
+        "rule": "invalid-ref",
+        "line": 1
+      },
+      {
+        "message": "'#/components/schemas/Entity20' does not exist",
+        "path": [
+          "/resources/10",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "$ref"
+        ],
+        "rule": "invalid-ref",
+        "line": 1
+      },
+      {
+        "message": "'#/components/schemas/Entity21' does not exist",
+        "path": [
+          "/resources/10",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "$ref"
+        ],
+        "rule": "invalid-ref",
+        "line": 1
+      },
+      {
+        "message": "'#/components/schemas/Entity22' does not exist",
+        "path": [
+          "/resources/11",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "$ref"
+        ],
+        "rule": "invalid-ref",
+        "line": 1
+      },
+      {
+        "message": "'#/components/schemas/Entity23' does not exist",
+        "path": [
+          "/resources/11",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "$ref"
+        ],
+        "rule": "invalid-ref",
+        "line": 1
+      },
+      {
+        "message": "'#/components/schemas/Entity24' does not exist",
+        "path": [
+          "/resources/12",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "$ref"
+        ],
+        "rule": "invalid-ref",
+        "line": 1
+      },
+      {
+        "message": "'#/components/schemas/Entity25' does not exist",
+        "path": [
+          "/resources/12",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "$ref"
+        ],
+        "rule": "invalid-ref",
+        "line": 1
+      },
+      {
+        "message": "'#/components/schemas/Entity26' does not exist",
+        "path": [
+          "/resources/13",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "$ref"
+        ],
+        "rule": "invalid-ref",
+        "line": 1
+      },
+      {
+        "message": "'#/components/schemas/Entity27' does not exist",
+        "path": [
+          "/resources/13",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "$ref"
+        ],
+        "rule": "invalid-ref",
+        "line": 1
+      },
+      {
+        "message": "'#/components/schemas/Entity28' does not exist",
+        "path": [
+          "/resources/14",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "$ref"
+        ],
+        "rule": "invalid-ref",
+        "line": 1
+      },
+      {
+        "message": "'#/components/schemas/Entity29' does not exist",
+        "path": [
+          "/resources/14",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "$ref"
+        ],
+        "rule": "invalid-ref",
+        "line": 1
+      },
+      {
+        "message": "'#/components/schemas/Entity30' does not exist",
+        "path": [
+          "/resources/15",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "$ref"
+        ],
+        "rule": "invalid-ref",
+        "line": 1
+      },
+      {
+        "message": "'#/components/schemas/Entity31' does not exist",
+        "path": [
+          "/resources/15",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "$ref"
+        ],
+        "rule": "invalid-ref",
+        "line": 1
+      },
+      {
+        "message": "'#/components/schemas/Entity32' does not exist",
+        "path": [
+          "/resources/16",
+          "get",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "$ref"
+        ],
+        "rule": "invalid-ref",
+        "line": 1
+      },
+      {
+        "message": "'#/components/schemas/Entity33' does not exist",
+        "path": [
+          "/resources/16",
+          "post",
+          "responses",
+          "200",
+          "content",
+          "application/json",
+          "schema",
+          "$ref"
+        ],
+        "rule": "invalid-ref",
+        "line": 1
+      }
+    ],
+    "successfulEquivalentValidation": false,
+    "reason": "External path shards contain document-relative component refs that are unresolved in shard scope, and the entry Components Object uses an unsupported whole-object $ref. The CLI returns a diagnostic-heavy nonzero result rather than validating a logically equivalent valid API."
+  },
+  "internalResultHash": "41cb94cc90960fd320ef36670276364f96fbdafbe65713009ea20363eba5bec2"
+}

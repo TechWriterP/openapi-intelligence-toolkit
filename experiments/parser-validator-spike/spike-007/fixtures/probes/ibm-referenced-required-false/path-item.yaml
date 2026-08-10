@@ -1,0 +1,10 @@
+get:
+  parameters:
+    - name: petId
+      in: path
+      required: false
+      schema:
+        type: string
+  responses:
+    "200":
+      description: OK

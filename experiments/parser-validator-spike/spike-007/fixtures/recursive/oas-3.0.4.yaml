@@ -1,0 +1,495 @@
+openapi: 3.0.4
+info:
+  title: OAIT operational benchmark 12
+  version: 1.0.0
+  description: Deterministically generated realistic benchmark API
+paths:
+  /resources/0:
+    get:
+      operationId: getResource0
+      summary: GET resource 0
+      description: Realistic get operation for resource 0
+      parameters:
+        - $ref: "#/components/parameters/TraceId"
+        - name: verbose
+          in: query
+          description: Include nested details
+          schema:
+            type: boolean
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Entity0"
+        default:
+          $ref: "#/components/responses/Problem"
+      security:
+        - ApiKeyAuth: []
+    post:
+      operationId: postResource1
+      summary: POST resource 1
+      description: Realistic post operation for resource 1
+      parameters:
+        - $ref: "#/components/parameters/TraceId"
+        - name: verbose
+          in: query
+          description: Include nested details
+          schema:
+            type: boolean
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Entity1"
+        default:
+          $ref: "#/components/responses/Problem"
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        required: true
+        description: Resource payload
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity1"
+  /resources/1:
+    get:
+      operationId: getResource2
+      summary: GET resource 2
+      description: Realistic get operation for resource 2
+      parameters:
+        - $ref: "#/components/parameters/TraceId"
+        - name: verbose
+          in: query
+          description: Include nested details
+          schema:
+            type: boolean
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Entity2"
+        default:
+          $ref: "#/components/responses/Problem"
+      security:
+        - ApiKeyAuth: []
+    post:
+      operationId: postResource3
+      summary: POST resource 3
+      description: Realistic post operation for resource 3
+      parameters:
+        - $ref: "#/components/parameters/TraceId"
+        - name: verbose
+          in: query
+          description: Include nested details
+          schema:
+            type: boolean
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Entity3"
+        default:
+          $ref: "#/components/responses/Problem"
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        required: true
+        description: Resource payload
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity3"
+  /resources/2:
+    get:
+      operationId: getResource4
+      summary: GET resource 4
+      description: Realistic get operation for resource 4
+      parameters:
+        - $ref: "#/components/parameters/TraceId"
+        - name: verbose
+          in: query
+          description: Include nested details
+          schema:
+            type: boolean
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Entity4"
+        default:
+          $ref: "#/components/responses/Problem"
+      security:
+        - ApiKeyAuth: []
+    post:
+      operationId: postResource5
+      summary: POST resource 5
+      description: Realistic post operation for resource 5
+      parameters:
+        - $ref: "#/components/parameters/TraceId"
+        - name: verbose
+          in: query
+          description: Include nested details
+          schema:
+            type: boolean
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Entity5"
+        default:
+          $ref: "#/components/responses/Problem"
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        required: true
+        description: Resource payload
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity5"
+  /resources/3:
+    get:
+      operationId: getResource6
+      summary: GET resource 6
+      description: Realistic get operation for resource 6
+      parameters:
+        - $ref: "#/components/parameters/TraceId"
+        - name: verbose
+          in: query
+          description: Include nested details
+          schema:
+            type: boolean
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Entity0"
+        default:
+          $ref: "#/components/responses/Problem"
+      security:
+        - ApiKeyAuth: []
+    post:
+      operationId: postResource7
+      summary: POST resource 7
+      description: Realistic post operation for resource 7
+      parameters:
+        - $ref: "#/components/parameters/TraceId"
+        - name: verbose
+          in: query
+          description: Include nested details
+          schema:
+            type: boolean
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Entity1"
+        default:
+          $ref: "#/components/responses/Problem"
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        required: true
+        description: Resource payload
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity1"
+  /resources/4:
+    get:
+      operationId: getResource8
+      summary: GET resource 8
+      description: Realistic get operation for resource 8
+      parameters:
+        - $ref: "#/components/parameters/TraceId"
+        - name: verbose
+          in: query
+          description: Include nested details
+          schema:
+            type: boolean
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Entity2"
+        default:
+          $ref: "#/components/responses/Problem"
+      security:
+        - ApiKeyAuth: []
+    post:
+      operationId: postResource9
+      summary: POST resource 9
+      description: Realistic post operation for resource 9
+      parameters:
+        - $ref: "#/components/parameters/TraceId"
+        - name: verbose
+          in: query
+          description: Include nested details
+          schema:
+            type: boolean
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Entity3"
+        default:
+          $ref: "#/components/responses/Problem"
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        required: true
+        description: Resource payload
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity3"
+  /resources/5:
+    get:
+      operationId: getResource10
+      summary: GET resource 10
+      description: Realistic get operation for resource 10
+      parameters:
+        - $ref: "#/components/parameters/TraceId"
+        - name: verbose
+          in: query
+          description: Include nested details
+          schema:
+            type: boolean
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Entity4"
+        default:
+          $ref: "#/components/responses/Problem"
+      security:
+        - ApiKeyAuth: []
+    post:
+      operationId: postResource11
+      summary: POST resource 11
+      description: Realistic post operation for resource 11
+      parameters:
+        - $ref: "#/components/parameters/TraceId"
+        - name: verbose
+          in: query
+          description: Include nested details
+          schema:
+            type: boolean
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Entity5"
+        default:
+          $ref: "#/components/responses/Problem"
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        required: true
+        description: Resource payload
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity5"
+  /tree:
+    get:
+      operationId: getTree
+      responses:
+        "200":
+          description: Recursive tree
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RecursiveNode"
+components:
+  schemas:
+    Entity0:
+      type: object
+      description: Reusable entity 0
+      required:
+        - id
+        - name
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        metadata:
+          type: object
+          properties:
+            createdAt:
+              type: string
+              format: date-time
+            tags:
+              type: array
+              items:
+                type: string
+        related:
+          type: string
+    Entity1:
+      type: object
+      description: Reusable entity 1
+      required:
+        - id
+        - name
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        metadata:
+          type: object
+          properties:
+            createdAt:
+              type: string
+              format: date-time
+            tags:
+              type: array
+              items:
+                type: string
+        related:
+          $ref: "#/components/schemas/Entity0"
+    Entity2:
+      type: object
+      description: Reusable entity 2
+      required:
+        - id
+        - name
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        metadata:
+          type: object
+          properties:
+            createdAt:
+              type: string
+              format: date-time
+            tags:
+              type: array
+              items:
+                type: string
+        related:
+          $ref: "#/components/schemas/Entity1"
+    Entity3:
+      type: object
+      description: Reusable entity 3
+      required:
+        - id
+        - name
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        metadata:
+          type: object
+          properties:
+            createdAt:
+              type: string
+              format: date-time
+            tags:
+              type: array
+              items:
+                type: string
+        related:
+          $ref: "#/components/schemas/Entity2"
+    Entity4:
+      type: object
+      description: Reusable entity 4
+      required:
+        - id
+        - name
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        metadata:
+          type: object
+          properties:
+            createdAt:
+              type: string
+              format: date-time
+            tags:
+              type: array
+              items:
+                type: string
+        related:
+          $ref: "#/components/schemas/Entity3"
+    Entity5:
+      type: object
+      description: Reusable entity 5
+      required:
+        - id
+        - name
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        metadata:
+          type: object
+          properties:
+            createdAt:
+              type: string
+              format: date-time
+            tags:
+              type: array
+              items:
+                type: string
+        related:
+          $ref: "#/components/schemas/Entity4"
+    RecursiveNode:
+      type: object
+      properties:
+        value:
+          type: string
+        child:
+          $ref: "#/components/schemas/RecursiveNode"
+  parameters:
+    TraceId:
+      name: X-Trace-Id
+      in: header
+      required: false
+      description: Request trace identifier
+      schema:
+        type: string
+  responses:
+    Problem:
+      description: Problem response
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity0"
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key

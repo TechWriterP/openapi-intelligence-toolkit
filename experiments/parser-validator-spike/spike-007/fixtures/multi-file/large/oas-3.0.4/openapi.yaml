@@ -1,0 +1,508 @@
+openapi: 3.0.4
+info:
+  title: OAIT operational benchmark 500
+  version: 1.0.0
+  description: Deterministically generated realistic benchmark API
+paths:
+  /resources/0:
+    $ref: ./paths/paths-00.yaml#/~1resources~10
+  /resources/1:
+    $ref: ./paths/paths-00.yaml#/~1resources~11
+  /resources/2:
+    $ref: ./paths/paths-00.yaml#/~1resources~12
+  /resources/3:
+    $ref: ./paths/paths-00.yaml#/~1resources~13
+  /resources/4:
+    $ref: ./paths/paths-00.yaml#/~1resources~14
+  /resources/5:
+    $ref: ./paths/paths-00.yaml#/~1resources~15
+  /resources/6:
+    $ref: ./paths/paths-00.yaml#/~1resources~16
+  /resources/7:
+    $ref: ./paths/paths-00.yaml#/~1resources~17
+  /resources/8:
+    $ref: ./paths/paths-00.yaml#/~1resources~18
+  /resources/9:
+    $ref: ./paths/paths-00.yaml#/~1resources~19
+  /resources/10:
+    $ref: ./paths/paths-00.yaml#/~1resources~110
+  /resources/11:
+    $ref: ./paths/paths-00.yaml#/~1resources~111
+  /resources/12:
+    $ref: ./paths/paths-00.yaml#/~1resources~112
+  /resources/13:
+    $ref: ./paths/paths-00.yaml#/~1resources~113
+  /resources/14:
+    $ref: ./paths/paths-00.yaml#/~1resources~114
+  /resources/15:
+    $ref: ./paths/paths-00.yaml#/~1resources~115
+  /resources/16:
+    $ref: ./paths/paths-00.yaml#/~1resources~116
+  /resources/17:
+    $ref: ./paths/paths-00.yaml#/~1resources~117
+  /resources/18:
+    $ref: ./paths/paths-00.yaml#/~1resources~118
+  /resources/19:
+    $ref: ./paths/paths-00.yaml#/~1resources~119
+  /resources/20:
+    $ref: ./paths/paths-00.yaml#/~1resources~120
+  /resources/21:
+    $ref: ./paths/paths-00.yaml#/~1resources~121
+  /resources/22:
+    $ref: ./paths/paths-00.yaml#/~1resources~122
+  /resources/23:
+    $ref: ./paths/paths-00.yaml#/~1resources~123
+  /resources/24:
+    $ref: ./paths/paths-00.yaml#/~1resources~124
+  /resources/25:
+    $ref: ./paths/paths-01.yaml#/~1resources~125
+  /resources/26:
+    $ref: ./paths/paths-01.yaml#/~1resources~126
+  /resources/27:
+    $ref: ./paths/paths-01.yaml#/~1resources~127
+  /resources/28:
+    $ref: ./paths/paths-01.yaml#/~1resources~128
+  /resources/29:
+    $ref: ./paths/paths-01.yaml#/~1resources~129
+  /resources/30:
+    $ref: ./paths/paths-01.yaml#/~1resources~130
+  /resources/31:
+    $ref: ./paths/paths-01.yaml#/~1resources~131
+  /resources/32:
+    $ref: ./paths/paths-01.yaml#/~1resources~132
+  /resources/33:
+    $ref: ./paths/paths-01.yaml#/~1resources~133
+  /resources/34:
+    $ref: ./paths/paths-01.yaml#/~1resources~134
+  /resources/35:
+    $ref: ./paths/paths-01.yaml#/~1resources~135
+  /resources/36:
+    $ref: ./paths/paths-01.yaml#/~1resources~136
+  /resources/37:
+    $ref: ./paths/paths-01.yaml#/~1resources~137
+  /resources/38:
+    $ref: ./paths/paths-01.yaml#/~1resources~138
+  /resources/39:
+    $ref: ./paths/paths-01.yaml#/~1resources~139
+  /resources/40:
+    $ref: ./paths/paths-01.yaml#/~1resources~140
+  /resources/41:
+    $ref: ./paths/paths-01.yaml#/~1resources~141
+  /resources/42:
+    $ref: ./paths/paths-01.yaml#/~1resources~142
+  /resources/43:
+    $ref: ./paths/paths-01.yaml#/~1resources~143
+  /resources/44:
+    $ref: ./paths/paths-01.yaml#/~1resources~144
+  /resources/45:
+    $ref: ./paths/paths-01.yaml#/~1resources~145
+  /resources/46:
+    $ref: ./paths/paths-01.yaml#/~1resources~146
+  /resources/47:
+    $ref: ./paths/paths-01.yaml#/~1resources~147
+  /resources/48:
+    $ref: ./paths/paths-01.yaml#/~1resources~148
+  /resources/49:
+    $ref: ./paths/paths-01.yaml#/~1resources~149
+  /resources/50:
+    $ref: ./paths/paths-02.yaml#/~1resources~150
+  /resources/51:
+    $ref: ./paths/paths-02.yaml#/~1resources~151
+  /resources/52:
+    $ref: ./paths/paths-02.yaml#/~1resources~152
+  /resources/53:
+    $ref: ./paths/paths-02.yaml#/~1resources~153
+  /resources/54:
+    $ref: ./paths/paths-02.yaml#/~1resources~154
+  /resources/55:
+    $ref: ./paths/paths-02.yaml#/~1resources~155
+  /resources/56:
+    $ref: ./paths/paths-02.yaml#/~1resources~156
+  /resources/57:
+    $ref: ./paths/paths-02.yaml#/~1resources~157
+  /resources/58:
+    $ref: ./paths/paths-02.yaml#/~1resources~158
+  /resources/59:
+    $ref: ./paths/paths-02.yaml#/~1resources~159
+  /resources/60:
+    $ref: ./paths/paths-02.yaml#/~1resources~160
+  /resources/61:
+    $ref: ./paths/paths-02.yaml#/~1resources~161
+  /resources/62:
+    $ref: ./paths/paths-02.yaml#/~1resources~162
+  /resources/63:
+    $ref: ./paths/paths-02.yaml#/~1resources~163
+  /resources/64:
+    $ref: ./paths/paths-02.yaml#/~1resources~164
+  /resources/65:
+    $ref: ./paths/paths-02.yaml#/~1resources~165
+  /resources/66:
+    $ref: ./paths/paths-02.yaml#/~1resources~166
+  /resources/67:
+    $ref: ./paths/paths-02.yaml#/~1resources~167
+  /resources/68:
+    $ref: ./paths/paths-02.yaml#/~1resources~168
+  /resources/69:
+    $ref: ./paths/paths-02.yaml#/~1resources~169
+  /resources/70:
+    $ref: ./paths/paths-02.yaml#/~1resources~170
+  /resources/71:
+    $ref: ./paths/paths-02.yaml#/~1resources~171
+  /resources/72:
+    $ref: ./paths/paths-02.yaml#/~1resources~172
+  /resources/73:
+    $ref: ./paths/paths-02.yaml#/~1resources~173
+  /resources/74:
+    $ref: ./paths/paths-02.yaml#/~1resources~174
+  /resources/75:
+    $ref: ./paths/paths-03.yaml#/~1resources~175
+  /resources/76:
+    $ref: ./paths/paths-03.yaml#/~1resources~176
+  /resources/77:
+    $ref: ./paths/paths-03.yaml#/~1resources~177
+  /resources/78:
+    $ref: ./paths/paths-03.yaml#/~1resources~178
+  /resources/79:
+    $ref: ./paths/paths-03.yaml#/~1resources~179
+  /resources/80:
+    $ref: ./paths/paths-03.yaml#/~1resources~180
+  /resources/81:
+    $ref: ./paths/paths-03.yaml#/~1resources~181
+  /resources/82:
+    $ref: ./paths/paths-03.yaml#/~1resources~182
+  /resources/83:
+    $ref: ./paths/paths-03.yaml#/~1resources~183
+  /resources/84:
+    $ref: ./paths/paths-03.yaml#/~1resources~184
+  /resources/85:
+    $ref: ./paths/paths-03.yaml#/~1resources~185
+  /resources/86:
+    $ref: ./paths/paths-03.yaml#/~1resources~186
+  /resources/87:
+    $ref: ./paths/paths-03.yaml#/~1resources~187
+  /resources/88:
+    $ref: ./paths/paths-03.yaml#/~1resources~188
+  /resources/89:
+    $ref: ./paths/paths-03.yaml#/~1resources~189
+  /resources/90:
+    $ref: ./paths/paths-03.yaml#/~1resources~190
+  /resources/91:
+    $ref: ./paths/paths-03.yaml#/~1resources~191
+  /resources/92:
+    $ref: ./paths/paths-03.yaml#/~1resources~192
+  /resources/93:
+    $ref: ./paths/paths-03.yaml#/~1resources~193
+  /resources/94:
+    $ref: ./paths/paths-03.yaml#/~1resources~194
+  /resources/95:
+    $ref: ./paths/paths-03.yaml#/~1resources~195
+  /resources/96:
+    $ref: ./paths/paths-03.yaml#/~1resources~196
+  /resources/97:
+    $ref: ./paths/paths-03.yaml#/~1resources~197
+  /resources/98:
+    $ref: ./paths/paths-03.yaml#/~1resources~198
+  /resources/99:
+    $ref: ./paths/paths-03.yaml#/~1resources~199
+  /resources/100:
+    $ref: ./paths/paths-04.yaml#/~1resources~1100
+  /resources/101:
+    $ref: ./paths/paths-04.yaml#/~1resources~1101
+  /resources/102:
+    $ref: ./paths/paths-04.yaml#/~1resources~1102
+  /resources/103:
+    $ref: ./paths/paths-04.yaml#/~1resources~1103
+  /resources/104:
+    $ref: ./paths/paths-04.yaml#/~1resources~1104
+  /resources/105:
+    $ref: ./paths/paths-04.yaml#/~1resources~1105
+  /resources/106:
+    $ref: ./paths/paths-04.yaml#/~1resources~1106
+  /resources/107:
+    $ref: ./paths/paths-04.yaml#/~1resources~1107
+  /resources/108:
+    $ref: ./paths/paths-04.yaml#/~1resources~1108
+  /resources/109:
+    $ref: ./paths/paths-04.yaml#/~1resources~1109
+  /resources/110:
+    $ref: ./paths/paths-04.yaml#/~1resources~1110
+  /resources/111:
+    $ref: ./paths/paths-04.yaml#/~1resources~1111
+  /resources/112:
+    $ref: ./paths/paths-04.yaml#/~1resources~1112
+  /resources/113:
+    $ref: ./paths/paths-04.yaml#/~1resources~1113
+  /resources/114:
+    $ref: ./paths/paths-04.yaml#/~1resources~1114
+  /resources/115:
+    $ref: ./paths/paths-04.yaml#/~1resources~1115
+  /resources/116:
+    $ref: ./paths/paths-04.yaml#/~1resources~1116
+  /resources/117:
+    $ref: ./paths/paths-04.yaml#/~1resources~1117
+  /resources/118:
+    $ref: ./paths/paths-04.yaml#/~1resources~1118
+  /resources/119:
+    $ref: ./paths/paths-04.yaml#/~1resources~1119
+  /resources/120:
+    $ref: ./paths/paths-04.yaml#/~1resources~1120
+  /resources/121:
+    $ref: ./paths/paths-04.yaml#/~1resources~1121
+  /resources/122:
+    $ref: ./paths/paths-04.yaml#/~1resources~1122
+  /resources/123:
+    $ref: ./paths/paths-04.yaml#/~1resources~1123
+  /resources/124:
+    $ref: ./paths/paths-04.yaml#/~1resources~1124
+  /resources/125:
+    $ref: ./paths/paths-05.yaml#/~1resources~1125
+  /resources/126:
+    $ref: ./paths/paths-05.yaml#/~1resources~1126
+  /resources/127:
+    $ref: ./paths/paths-05.yaml#/~1resources~1127
+  /resources/128:
+    $ref: ./paths/paths-05.yaml#/~1resources~1128
+  /resources/129:
+    $ref: ./paths/paths-05.yaml#/~1resources~1129
+  /resources/130:
+    $ref: ./paths/paths-05.yaml#/~1resources~1130
+  /resources/131:
+    $ref: ./paths/paths-05.yaml#/~1resources~1131
+  /resources/132:
+    $ref: ./paths/paths-05.yaml#/~1resources~1132
+  /resources/133:
+    $ref: ./paths/paths-05.yaml#/~1resources~1133
+  /resources/134:
+    $ref: ./paths/paths-05.yaml#/~1resources~1134
+  /resources/135:
+    $ref: ./paths/paths-05.yaml#/~1resources~1135
+  /resources/136:
+    $ref: ./paths/paths-05.yaml#/~1resources~1136
+  /resources/137:
+    $ref: ./paths/paths-05.yaml#/~1resources~1137
+  /resources/138:
+    $ref: ./paths/paths-05.yaml#/~1resources~1138
+  /resources/139:
+    $ref: ./paths/paths-05.yaml#/~1resources~1139
+  /resources/140:
+    $ref: ./paths/paths-05.yaml#/~1resources~1140
+  /resources/141:
+    $ref: ./paths/paths-05.yaml#/~1resources~1141
+  /resources/142:
+    $ref: ./paths/paths-05.yaml#/~1resources~1142
+  /resources/143:
+    $ref: ./paths/paths-05.yaml#/~1resources~1143
+  /resources/144:
+    $ref: ./paths/paths-05.yaml#/~1resources~1144
+  /resources/145:
+    $ref: ./paths/paths-05.yaml#/~1resources~1145
+  /resources/146:
+    $ref: ./paths/paths-05.yaml#/~1resources~1146
+  /resources/147:
+    $ref: ./paths/paths-05.yaml#/~1resources~1147
+  /resources/148:
+    $ref: ./paths/paths-05.yaml#/~1resources~1148
+  /resources/149:
+    $ref: ./paths/paths-05.yaml#/~1resources~1149
+  /resources/150:
+    $ref: ./paths/paths-06.yaml#/~1resources~1150
+  /resources/151:
+    $ref: ./paths/paths-06.yaml#/~1resources~1151
+  /resources/152:
+    $ref: ./paths/paths-06.yaml#/~1resources~1152
+  /resources/153:
+    $ref: ./paths/paths-06.yaml#/~1resources~1153
+  /resources/154:
+    $ref: ./paths/paths-06.yaml#/~1resources~1154
+  /resources/155:
+    $ref: ./paths/paths-06.yaml#/~1resources~1155
+  /resources/156:
+    $ref: ./paths/paths-06.yaml#/~1resources~1156
+  /resources/157:
+    $ref: ./paths/paths-06.yaml#/~1resources~1157
+  /resources/158:
+    $ref: ./paths/paths-06.yaml#/~1resources~1158
+  /resources/159:
+    $ref: ./paths/paths-06.yaml#/~1resources~1159
+  /resources/160:
+    $ref: ./paths/paths-06.yaml#/~1resources~1160
+  /resources/161:
+    $ref: ./paths/paths-06.yaml#/~1resources~1161
+  /resources/162:
+    $ref: ./paths/paths-06.yaml#/~1resources~1162
+  /resources/163:
+    $ref: ./paths/paths-06.yaml#/~1resources~1163
+  /resources/164:
+    $ref: ./paths/paths-06.yaml#/~1resources~1164
+  /resources/165:
+    $ref: ./paths/paths-06.yaml#/~1resources~1165
+  /resources/166:
+    $ref: ./paths/paths-06.yaml#/~1resources~1166
+  /resources/167:
+    $ref: ./paths/paths-06.yaml#/~1resources~1167
+  /resources/168:
+    $ref: ./paths/paths-06.yaml#/~1resources~1168
+  /resources/169:
+    $ref: ./paths/paths-06.yaml#/~1resources~1169
+  /resources/170:
+    $ref: ./paths/paths-06.yaml#/~1resources~1170
+  /resources/171:
+    $ref: ./paths/paths-06.yaml#/~1resources~1171
+  /resources/172:
+    $ref: ./paths/paths-06.yaml#/~1resources~1172
+  /resources/173:
+    $ref: ./paths/paths-06.yaml#/~1resources~1173
+  /resources/174:
+    $ref: ./paths/paths-06.yaml#/~1resources~1174
+  /resources/175:
+    $ref: ./paths/paths-07.yaml#/~1resources~1175
+  /resources/176:
+    $ref: ./paths/paths-07.yaml#/~1resources~1176
+  /resources/177:
+    $ref: ./paths/paths-07.yaml#/~1resources~1177
+  /resources/178:
+    $ref: ./paths/paths-07.yaml#/~1resources~1178
+  /resources/179:
+    $ref: ./paths/paths-07.yaml#/~1resources~1179
+  /resources/180:
+    $ref: ./paths/paths-07.yaml#/~1resources~1180
+  /resources/181:
+    $ref: ./paths/paths-07.yaml#/~1resources~1181
+  /resources/182:
+    $ref: ./paths/paths-07.yaml#/~1resources~1182
+  /resources/183:
+    $ref: ./paths/paths-07.yaml#/~1resources~1183
+  /resources/184:
+    $ref: ./paths/paths-07.yaml#/~1resources~1184
+  /resources/185:
+    $ref: ./paths/paths-07.yaml#/~1resources~1185
+  /resources/186:
+    $ref: ./paths/paths-07.yaml#/~1resources~1186
+  /resources/187:
+    $ref: ./paths/paths-07.yaml#/~1resources~1187
+  /resources/188:
+    $ref: ./paths/paths-07.yaml#/~1resources~1188
+  /resources/189:
+    $ref: ./paths/paths-07.yaml#/~1resources~1189
+  /resources/190:
+    $ref: ./paths/paths-07.yaml#/~1resources~1190
+  /resources/191:
+    $ref: ./paths/paths-07.yaml#/~1resources~1191
+  /resources/192:
+    $ref: ./paths/paths-07.yaml#/~1resources~1192
+  /resources/193:
+    $ref: ./paths/paths-07.yaml#/~1resources~1193
+  /resources/194:
+    $ref: ./paths/paths-07.yaml#/~1resources~1194
+  /resources/195:
+    $ref: ./paths/paths-07.yaml#/~1resources~1195
+  /resources/196:
+    $ref: ./paths/paths-07.yaml#/~1resources~1196
+  /resources/197:
+    $ref: ./paths/paths-07.yaml#/~1resources~1197
+  /resources/198:
+    $ref: ./paths/paths-07.yaml#/~1resources~1198
+  /resources/199:
+    $ref: ./paths/paths-07.yaml#/~1resources~1199
+  /resources/200:
+    $ref: ./paths/paths-08.yaml#/~1resources~1200
+  /resources/201:
+    $ref: ./paths/paths-08.yaml#/~1resources~1201
+  /resources/202:
+    $ref: ./paths/paths-08.yaml#/~1resources~1202
+  /resources/203:
+    $ref: ./paths/paths-08.yaml#/~1resources~1203
+  /resources/204:
+    $ref: ./paths/paths-08.yaml#/~1resources~1204
+  /resources/205:
+    $ref: ./paths/paths-08.yaml#/~1resources~1205
+  /resources/206:
+    $ref: ./paths/paths-08.yaml#/~1resources~1206
+  /resources/207:
+    $ref: ./paths/paths-08.yaml#/~1resources~1207
+  /resources/208:
+    $ref: ./paths/paths-08.yaml#/~1resources~1208
+  /resources/209:
+    $ref: ./paths/paths-08.yaml#/~1resources~1209
+  /resources/210:
+    $ref: ./paths/paths-08.yaml#/~1resources~1210
+  /resources/211:
+    $ref: ./paths/paths-08.yaml#/~1resources~1211
+  /resources/212:
+    $ref: ./paths/paths-08.yaml#/~1resources~1212
+  /resources/213:
+    $ref: ./paths/paths-08.yaml#/~1resources~1213
+  /resources/214:
+    $ref: ./paths/paths-08.yaml#/~1resources~1214
+  /resources/215:
+    $ref: ./paths/paths-08.yaml#/~1resources~1215
+  /resources/216:
+    $ref: ./paths/paths-08.yaml#/~1resources~1216
+  /resources/217:
+    $ref: ./paths/paths-08.yaml#/~1resources~1217
+  /resources/218:
+    $ref: ./paths/paths-08.yaml#/~1resources~1218
+  /resources/219:
+    $ref: ./paths/paths-08.yaml#/~1resources~1219
+  /resources/220:
+    $ref: ./paths/paths-08.yaml#/~1resources~1220
+  /resources/221:
+    $ref: ./paths/paths-08.yaml#/~1resources~1221
+  /resources/222:
+    $ref: ./paths/paths-08.yaml#/~1resources~1222
+  /resources/223:
+    $ref: ./paths/paths-08.yaml#/~1resources~1223
+  /resources/224:
+    $ref: ./paths/paths-08.yaml#/~1resources~1224
+  /resources/225:
+    $ref: ./paths/paths-09.yaml#/~1resources~1225
+  /resources/226:
+    $ref: ./paths/paths-09.yaml#/~1resources~1226
+  /resources/227:
+    $ref: ./paths/paths-09.yaml#/~1resources~1227
+  /resources/228:
+    $ref: ./paths/paths-09.yaml#/~1resources~1228
+  /resources/229:
+    $ref: ./paths/paths-09.yaml#/~1resources~1229
+  /resources/230:
+    $ref: ./paths/paths-09.yaml#/~1resources~1230
+  /resources/231:
+    $ref: ./paths/paths-09.yaml#/~1resources~1231
+  /resources/232:
+    $ref: ./paths/paths-09.yaml#/~1resources~1232
+  /resources/233:
+    $ref: ./paths/paths-09.yaml#/~1resources~1233
+  /resources/234:
+    $ref: ./paths/paths-09.yaml#/~1resources~1234
+  /resources/235:
+    $ref: ./paths/paths-09.yaml#/~1resources~1235
+  /resources/236:
+    $ref: ./paths/paths-09.yaml#/~1resources~1236
+  /resources/237:
+    $ref: ./paths/paths-09.yaml#/~1resources~1237
+  /resources/238:
+    $ref: ./paths/paths-09.yaml#/~1resources~1238
+  /resources/239:
+    $ref: ./paths/paths-09.yaml#/~1resources~1239
+  /resources/240:
+    $ref: ./paths/paths-09.yaml#/~1resources~1240
+  /resources/241:
+    $ref: ./paths/paths-09.yaml#/~1resources~1241
+  /resources/242:
+    $ref: ./paths/paths-09.yaml#/~1resources~1242
+  /resources/243:
+    $ref: ./paths/paths-09.yaml#/~1resources~1243
+  /resources/244:
+    $ref: ./paths/paths-09.yaml#/~1resources~1244
+  /resources/245:
+    $ref: ./paths/paths-09.yaml#/~1resources~1245
+  /resources/246:
+    $ref: ./paths/paths-09.yaml#/~1resources~1246
+  /resources/247:
+    $ref: ./paths/paths-09.yaml#/~1resources~1247
+  /resources/248:
+    $ref: ./paths/paths-09.yaml#/~1resources~1248
+  /resources/249:
+    $ref: ./paths/paths-09.yaml#/~1resources~1249
+components:
+  $ref: ./components.yaml
