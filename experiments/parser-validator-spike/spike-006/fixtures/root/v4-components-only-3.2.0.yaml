@@ -1,0 +1,18 @@
+openapi: 3.2.0
+info:
+  title: OAIT Validator Spike API
+  version: 1.0.0
+components:
+  schemas:
+    Pet:
+      type: object
+      required:
+        - id
+      properties:
+        id:
+          type: string
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key

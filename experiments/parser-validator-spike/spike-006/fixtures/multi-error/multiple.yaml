@@ -1,0 +1,34 @@
+openapi: 3.1.2
+paths:
+  /pets/{petId}:
+    get:
+      operationId: getPet
+      parameters:
+        - name: petId
+          in: path
+          required: false
+          schema:
+            type: string
+      responses: {}
+      security:
+        - ApiKeyAuth: []
+  /other:
+    get:
+      operationId: getPet
+      responses:
+        "200":
+          description: OK
+components:
+  schemas:
+    Pet:
+      type: object
+      required:
+        - id
+      properties:
+        id:
+          type: string
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
