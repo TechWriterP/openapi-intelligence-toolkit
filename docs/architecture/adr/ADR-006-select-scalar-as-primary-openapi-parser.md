@@ -1,6 +1,6 @@
 # ADR-006: Select Scalar as Primary OpenAPI Semantic Parser
 
-**Status:** Proposed
+**Status:** Accepted
 **Date:** 2026-08-10
 **Decision owners:** OAIT Architecture
 **Applies to:** OAIT v0.1 and later
