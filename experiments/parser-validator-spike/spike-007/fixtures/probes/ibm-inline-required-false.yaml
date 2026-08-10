@@ -1,0 +1,16 @@
+openapi: 3.1.2
+info:
+  title: IBM Inline Validation Probe
+  version: 1.0.0
+paths:
+  /pets/{petId}:
+    get:
+      parameters:
+        - name: petId
+          in: path
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK

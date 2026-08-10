@@ -1,0 +1,1178 @@
+schemas:
+  Entity0:
+    type: object
+    description: Reusable entity 0
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        type: string
+  Entity1:
+    type: object
+    description: Reusable entity 1
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity0"
+  Entity2:
+    type: object
+    description: Reusable entity 2
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity1"
+  Entity3:
+    type: object
+    description: Reusable entity 3
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity2"
+  Entity4:
+    type: object
+    description: Reusable entity 4
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity3"
+  Entity5:
+    type: object
+    description: Reusable entity 5
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity4"
+  Entity6:
+    type: object
+    description: Reusable entity 6
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity5"
+  Entity7:
+    type: object
+    description: Reusable entity 7
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity6"
+  Entity8:
+    type: object
+    description: Reusable entity 8
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity7"
+  Entity9:
+    type: object
+    description: Reusable entity 9
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity8"
+  Entity10:
+    type: object
+    description: Reusable entity 10
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity9"
+  Entity11:
+    type: object
+    description: Reusable entity 11
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity10"
+  Entity12:
+    type: object
+    description: Reusable entity 12
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity11"
+  Entity13:
+    type: object
+    description: Reusable entity 13
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity12"
+  Entity14:
+    type: object
+    description: Reusable entity 14
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity13"
+  Entity15:
+    type: object
+    description: Reusable entity 15
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity14"
+  Entity16:
+    type: object
+    description: Reusable entity 16
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity15"
+  Entity17:
+    type: object
+    description: Reusable entity 17
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity16"
+  Entity18:
+    type: object
+    description: Reusable entity 18
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity17"
+  Entity19:
+    type: object
+    description: Reusable entity 19
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity18"
+  Entity20:
+    type: object
+    description: Reusable entity 20
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity19"
+  Entity21:
+    type: object
+    description: Reusable entity 21
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity20"
+  Entity22:
+    type: object
+    description: Reusable entity 22
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity21"
+  Entity23:
+    type: object
+    description: Reusable entity 23
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity22"
+  Entity24:
+    type: object
+    description: Reusable entity 24
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity23"
+  Entity25:
+    type: object
+    description: Reusable entity 25
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity24"
+  Entity26:
+    type: object
+    description: Reusable entity 26
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity25"
+  Entity27:
+    type: object
+    description: Reusable entity 27
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity26"
+  Entity28:
+    type: object
+    description: Reusable entity 28
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity27"
+  Entity29:
+    type: object
+    description: Reusable entity 29
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity28"
+  Entity30:
+    type: object
+    description: Reusable entity 30
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity29"
+  Entity31:
+    type: object
+    description: Reusable entity 31
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity30"
+  Entity32:
+    type: object
+    description: Reusable entity 32
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity31"
+  Entity33:
+    type: object
+    description: Reusable entity 33
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity32"
+  Entity34:
+    type: object
+    description: Reusable entity 34
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity33"
+  Entity35:
+    type: object
+    description: Reusable entity 35
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity34"
+  Entity36:
+    type: object
+    description: Reusable entity 36
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity35"
+  Entity37:
+    type: object
+    description: Reusable entity 37
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity36"
+  Entity38:
+    type: object
+    description: Reusable entity 38
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity37"
+  Entity39:
+    type: object
+    description: Reusable entity 39
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity38"
+  Entity40:
+    type: object
+    description: Reusable entity 40
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity39"
+  Entity41:
+    type: object
+    description: Reusable entity 41
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity40"
+  Entity42:
+    type: object
+    description: Reusable entity 42
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity41"
+  Entity43:
+    type: object
+    description: Reusable entity 43
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity42"
+  Entity44:
+    type: object
+    description: Reusable entity 44
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity43"
+  Entity45:
+    type: object
+    description: Reusable entity 45
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity44"
+  Entity46:
+    type: object
+    description: Reusable entity 46
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity45"
+  Entity47:
+    type: object
+    description: Reusable entity 47
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity46"
+  Entity48:
+    type: object
+    description: Reusable entity 48
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity47"
+  Entity49:
+    type: object
+    description: Reusable entity 49
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      metadata:
+        type: object
+        properties:
+          createdAt:
+            type: string
+            format: date-time
+          tags:
+            type: array
+            items:
+              type: string
+      related:
+        $ref: "#/components/schemas/Entity48"
+  RecursiveNode:
+    type: object
+    properties:
+      value:
+        type: string
+      child:
+        $ref: "#/components/schemas/RecursiveNode"
+parameters:
+  TraceId:
+    name: X-Trace-Id
+    in: header
+    required: false
+    description: Request trace identifier
+    schema:
+      type: string
+responses:
+  Problem:
+    description: Problem response
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/Entity0"
+securitySchemes:
+  ApiKeyAuth:
+    type: apiKey
+    in: header
+    name: X-API-Key

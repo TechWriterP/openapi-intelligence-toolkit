@@ -1,0 +1,1300 @@
+/resources/50:
+  get:
+    operationId: getResource100
+    summary: GET resource 100
+    description: Realistic get operation for resource 100
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity0"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource101
+    summary: POST resource 101
+    description: Realistic post operation for resource 101
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity1"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity1"
+/resources/51:
+  get:
+    operationId: getResource102
+    summary: GET resource 102
+    description: Realistic get operation for resource 102
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity2"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource103
+    summary: POST resource 103
+    description: Realistic post operation for resource 103
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity3"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity3"
+/resources/52:
+  get:
+    operationId: getResource104
+    summary: GET resource 104
+    description: Realistic get operation for resource 104
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity4"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource105
+    summary: POST resource 105
+    description: Realistic post operation for resource 105
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity5"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity5"
+/resources/53:
+  get:
+    operationId: getResource106
+    summary: GET resource 106
+    description: Realistic get operation for resource 106
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity6"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource107
+    summary: POST resource 107
+    description: Realistic post operation for resource 107
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity7"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity7"
+/resources/54:
+  get:
+    operationId: getResource108
+    summary: GET resource 108
+    description: Realistic get operation for resource 108
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity8"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource109
+    summary: POST resource 109
+    description: Realistic post operation for resource 109
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity9"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity9"
+/resources/55:
+  get:
+    operationId: getResource110
+    summary: GET resource 110
+    description: Realistic get operation for resource 110
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity10"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource111
+    summary: POST resource 111
+    description: Realistic post operation for resource 111
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity11"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity11"
+/resources/56:
+  get:
+    operationId: getResource112
+    summary: GET resource 112
+    description: Realistic get operation for resource 112
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity12"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource113
+    summary: POST resource 113
+    description: Realistic post operation for resource 113
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity13"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity13"
+/resources/57:
+  get:
+    operationId: getResource114
+    summary: GET resource 114
+    description: Realistic get operation for resource 114
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity14"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource115
+    summary: POST resource 115
+    description: Realistic post operation for resource 115
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity15"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity15"
+/resources/58:
+  get:
+    operationId: getResource116
+    summary: GET resource 116
+    description: Realistic get operation for resource 116
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity16"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource117
+    summary: POST resource 117
+    description: Realistic post operation for resource 117
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity17"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity17"
+/resources/59:
+  get:
+    operationId: getResource118
+    summary: GET resource 118
+    description: Realistic get operation for resource 118
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity18"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource119
+    summary: POST resource 119
+    description: Realistic post operation for resource 119
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity19"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity19"
+/resources/60:
+  get:
+    operationId: getResource120
+    summary: GET resource 120
+    description: Realistic get operation for resource 120
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity20"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource121
+    summary: POST resource 121
+    description: Realistic post operation for resource 121
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity21"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity21"
+/resources/61:
+  get:
+    operationId: getResource122
+    summary: GET resource 122
+    description: Realistic get operation for resource 122
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity22"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource123
+    summary: POST resource 123
+    description: Realistic post operation for resource 123
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity23"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity23"
+/resources/62:
+  get:
+    operationId: getResource124
+    summary: GET resource 124
+    description: Realistic get operation for resource 124
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity24"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource125
+    summary: POST resource 125
+    description: Realistic post operation for resource 125
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity25"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity25"
+/resources/63:
+  get:
+    operationId: getResource126
+    summary: GET resource 126
+    description: Realistic get operation for resource 126
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity26"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource127
+    summary: POST resource 127
+    description: Realistic post operation for resource 127
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity27"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity27"
+/resources/64:
+  get:
+    operationId: getResource128
+    summary: GET resource 128
+    description: Realistic get operation for resource 128
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity28"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource129
+    summary: POST resource 129
+    description: Realistic post operation for resource 129
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity29"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity29"
+/resources/65:
+  get:
+    operationId: getResource130
+    summary: GET resource 130
+    description: Realistic get operation for resource 130
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity30"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource131
+    summary: POST resource 131
+    description: Realistic post operation for resource 131
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity31"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity31"
+/resources/66:
+  get:
+    operationId: getResource132
+    summary: GET resource 132
+    description: Realistic get operation for resource 132
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity32"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource133
+    summary: POST resource 133
+    description: Realistic post operation for resource 133
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity33"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity33"
+/resources/67:
+  get:
+    operationId: getResource134
+    summary: GET resource 134
+    description: Realistic get operation for resource 134
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity34"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource135
+    summary: POST resource 135
+    description: Realistic post operation for resource 135
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity35"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity35"
+/resources/68:
+  get:
+    operationId: getResource136
+    summary: GET resource 136
+    description: Realistic get operation for resource 136
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity36"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource137
+    summary: POST resource 137
+    description: Realistic post operation for resource 137
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity37"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity37"
+/resources/69:
+  get:
+    operationId: getResource138
+    summary: GET resource 138
+    description: Realistic get operation for resource 138
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity38"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource139
+    summary: POST resource 139
+    description: Realistic post operation for resource 139
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity39"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity39"
+/resources/70:
+  get:
+    operationId: getResource140
+    summary: GET resource 140
+    description: Realistic get operation for resource 140
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity40"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource141
+    summary: POST resource 141
+    description: Realistic post operation for resource 141
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity41"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity41"
+/resources/71:
+  get:
+    operationId: getResource142
+    summary: GET resource 142
+    description: Realistic get operation for resource 142
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity42"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource143
+    summary: POST resource 143
+    description: Realistic post operation for resource 143
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity43"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity43"
+/resources/72:
+  get:
+    operationId: getResource144
+    summary: GET resource 144
+    description: Realistic get operation for resource 144
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity44"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource145
+    summary: POST resource 145
+    description: Realistic post operation for resource 145
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity45"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity45"
+/resources/73:
+  get:
+    operationId: getResource146
+    summary: GET resource 146
+    description: Realistic get operation for resource 146
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity46"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource147
+    summary: POST resource 147
+    description: Realistic post operation for resource 147
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity47"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity47"
+/resources/74:
+  get:
+    operationId: getResource148
+    summary: GET resource 148
+    description: Realistic get operation for resource 148
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity48"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+  post:
+    operationId: postResource149
+    summary: POST resource 149
+    description: Realistic post operation for resource 149
+    parameters:
+      - $ref: "#/components/parameters/TraceId"
+      - name: verbose
+        in: query
+        description: Include nested details
+        schema:
+          type: boolean
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Entity49"
+      default:
+        $ref: "#/components/responses/Problem"
+    security:
+      - ApiKeyAuth: []
+    requestBody:
+      required: true
+      description: Resource payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Entity49"
