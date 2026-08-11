@@ -1,0 +1,23 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./packages/core"
+    },
+    {
+      "path": "./packages/parser"
+    },
+    {
+      "path": "./packages/validator"
+    },
+    {
+      "path": "./packages/rules"
+    },
+    {
+      "path": "./packages/reporting"
+    },
+    {
+      "path": "./apps/cli"
+    }
+  ]
+}
