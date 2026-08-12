@@ -1,6 +1,4 @@
-/**
- * OAIT parser package boundary.
- *
- * Source processing, parser adapters, and normalization are intentionally deferred.
- */
-export {};
+export {
+  parseYamlSource,
+  type ParsedYamlSource,
+} from "./yaml-source-adapter.js";
