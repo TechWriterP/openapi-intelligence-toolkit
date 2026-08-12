@@ -1,0 +1,57 @@
+{
+  "workspaces": {
+    "@oait/core": {
+      "path": "packages/core",
+      "mayDependOn": [],
+      "candidateDependencies": []
+    },
+    "@oait/parser": {
+      "path": "packages/parser",
+      "mayDependOn": ["@oait/core"],
+      "candidateDependencies": [
+        "@scalar/json-magic",
+        "@scalar/openapi-parser",
+        "jsonc-parser",
+        "yaml"
+      ]
+    },
+    "@oait/validator": {
+      "path": "packages/validator",
+      "mayDependOn": ["@oait/core"],
+      "candidateDependencies": [
+        "@redocly/openapi-core",
+        "@scalar/openapi-parser",
+        "ibm-openapi-validator"
+      ]
+    },
+    "@oait/rules": {
+      "path": "packages/rules",
+      "mayDependOn": ["@oait/core"],
+      "candidateDependencies": []
+    },
+    "@oait/reporting": {
+      "path": "packages/reporting",
+      "mayDependOn": ["@oait/core"],
+      "candidateDependencies": []
+    },
+    "@oait/cli": {
+      "path": "apps/cli",
+      "mayDependOn": [
+        "@oait/core",
+        "@oait/parser",
+        "@oait/reporting",
+        "@oait/rules",
+        "@oait/validator"
+      ],
+      "candidateDependencies": []
+    }
+  },
+  "candidateDependencies": [
+    "@redocly/openapi-core",
+    "@scalar/json-magic",
+    "@scalar/openapi-parser",
+    "ibm-openapi-validator",
+    "jsonc-parser",
+    "yaml"
+  ]
+}
