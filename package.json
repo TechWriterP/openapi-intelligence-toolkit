@@ -11,7 +11,7 @@
     "check:architecture": "node scripts/check-architecture.mjs",
     "build": "npm run build --workspaces --if-present",
     "type-check": "npm run type-check --workspaces --if-present",
-    "test": "node scripts/run-tests.mjs"
+    "test": "npm run build --workspace @oait/core && node scripts/run-tests.mjs"
   },
   "devDependencies": {
     "typescript": "5.9.2"
