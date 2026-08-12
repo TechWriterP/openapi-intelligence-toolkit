@@ -44,3 +44,17 @@ export {
   createSourceProcessingSession,
   type SourceProcessingSession,
 } from "./source-processing-session.js";
+export {
+  createJsonPointer,
+  jsonPointerSegments,
+  parseJsonPointer,
+  sameJsonPointer,
+  type JsonPointer,
+  type JsonPointerSegment,
+} from "./json-pointer.js";
+export {
+  compareSourceRanges,
+  createSourceRange,
+  sourceRangeLength,
+  type SourceRange,
+} from "./source-range.js";
