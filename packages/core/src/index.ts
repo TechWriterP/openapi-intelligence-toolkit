@@ -27,3 +27,12 @@ export {
   type CanonicalizeSourceUriOptions,
   type CanonicalSourceUri,
 } from "./source-uri.js";
+export {
+  createFileSourceLoader,
+  detectSourceFormat,
+  type LoadedSource,
+  type SourceFormat,
+  type SourceLoader,
+  type SourceLoaderOptions,
+  type SourceLoadRequest,
+} from "./source-loader.js";
