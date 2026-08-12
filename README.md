@@ -79,9 +79,9 @@ The `experiments/` directory is intentionally excluded from the root workspace.
 Each spike retains its own package metadata, lockfile, dependencies, and commands.
 Root build, type-check, and test commands do not process experiment sources.
 
-No production test framework has been selected yet. Until test infrastructure is
-introduced, `npm test` truthfully succeeds without executing feature tests because
-the workspaces define no test scripts.
+Production tests use Node's built-in test runner and the conventions documented in
+`docs/testing.md`. The initial suite verifies the test foundation at each required
+scope; it does not claim production feature coverage.
 
 ## Architecture and planning
 
