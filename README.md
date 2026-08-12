@@ -34,6 +34,7 @@ baseline.
 
 ```bash
 npm install
+npm run check:architecture
 npm run type-check
 npm run build
 npm test
@@ -52,6 +53,27 @@ packages/reporting
 
 These workspaces currently contain boundary-only entry points. Product behavior
 is added incrementally through the implementation roadmap.
+
+### Package boundaries
+
+The allowed production dependency graph is deliberately one-way. Imports between
+workspaces must use only the exported package root; deep imports are rejected.
+
+| Workspace | May depend on |
+| --- | --- |
+| `@oait/core` | None |
+| `@oait/parser` | `@oait/core` |
+| `@oait/validator` | `@oait/core` |
+| `@oait/rules` | `@oait/core` |
+| `@oait/reporting` | `@oait/core` |
+| `@oait/cli` | Any production package through its public root |
+
+`architecture-boundaries.json` is the machine-readable policy. Candidate parser,
+source-index, and validator dependencies are restricted to their owning parser or
+validator package; exact future adapter directory names remain deferred. Production
+source must never import from `experiments/`. Run `npm run check:architecture` to
+check manifests, exports, internal and candidate imports, deep imports, undeclared
+workspace imports, and experiment isolation.
 
 The `experiments/` directory is intentionally excluded from the root workspace.
 Each spike retains its own package metadata, lockfile, dependencies, and commands.

@@ -8,6 +8,7 @@
     "packages/*"
   ],
   "scripts": {
+    "check:architecture": "node scripts/check-architecture.mjs",
     "build": "npm run build --workspaces --if-present",
     "type-check": "npm run type-check --workspaces --if-present",
     "test": "npm run test --workspaces --if-present"
