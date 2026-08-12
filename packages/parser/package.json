@@ -12,6 +12,10 @@
   "files": [
     "dist"
   ],
+  "dependencies": {
+    "@oait/core": "0.0.0",
+    "yaml": "2.8.3"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "type-check": "tsc -p tsconfig.json --noEmit"
