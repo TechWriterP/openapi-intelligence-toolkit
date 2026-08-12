@@ -36,3 +36,11 @@ export {
   type SourceLoaderOptions,
   type SourceLoadRequest,
 } from "./source-loader.js";
+export {
+  createSourceDocumentRegistry,
+  type SourceDocumentRegistry,
+} from "./source-document-registry.js";
+export {
+  createSourceProcessingSession,
+  type SourceProcessingSession,
+} from "./source-processing-session.js";
